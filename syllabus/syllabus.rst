@@ -119,7 +119,7 @@ Specifically, you should understand
 * Programming in C
 
 Lectures (Tuesday, Thursday 12:10 - 1:30 PM)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
@@ -134,4 +134,32 @@ Assignments and Tests
 Homeworks
 ~~~~~~~~~
 
+
+Labs
+~~~~
+
 These will primarily by Logisim assignments.
+
+Late assignments
+****************
+
+If you turn in a lab late, you will lose points. The percentage of points you will lose is given by the equation below.
+This will give you partial points up to 72 hours after the due date and penalizes you less if you barely miss the deadline.
+
+.. math::
+
+    fraction\ of\ points = \frac{-{hours\ late}^3}{72^3} + 1
+
+.. image:: late_policy.png
+    :width: 50%
+    :align: center
+
+.. _schedule:
+
+Schedule
+--------
+
+.. csv-table:: Schedule
+    :file: schedule.csv
+    :header-rows: 1
+    :widths: auto
