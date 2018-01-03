@@ -146,9 +146,12 @@ Late assignments
 If you turn in a lab late, you will lose points. The percentage of points you will lose is given by the equation below.
 This will give you partial points up to 72 hours after the due date and penalizes you less if you barely miss the deadline.
 
-.. math::
+.. GithHub doesn't like to render the above.
+    fraction\ of\ points = -1 \times \frac{{hours\ late}^3}{72^3} + 1
 
-    fraction\ of\ points = \frac{-{hours\ late}^3}{72^3} + 1
+
+.. image:: http://latex.codecogs.com/gif.latex?fraction%5C%20of%5C%20points%20%3D%20-1%20%5Ctimes%20%5Cfrac%7B%7Bhours%5C%20late%7D%5E3%7D%7B72%5E3%7D%20&plus;%201
+    :width: 40%
 
 .. image:: late_policy.png
     :width: 50%
