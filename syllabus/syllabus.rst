@@ -239,6 +239,11 @@ You can find the book at the `university bookstore`_ or through various sites on
 
 .. _university bookstore: http://ucdavisstores.com/SelectTermDept
 
+Schedule
+~~~~~~~~
+
+https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv
+
 .. csv-table:: Schedule
     :file: schedule.csv
     :header-rows: 1
