@@ -135,18 +135,18 @@ Assignments and Tests
 Grading breakdown
 ~~~~~~~~~~~~~~~~~
 
-============= ===
+=============  ===
 Participation  10%
 
-Labs (5x)     40%
+Labs (5x)      40%
 
-------------- ---
-Quizzes (3x)  15%
+-------------  ---
+Quizzes (3x)   15%
 
-Midterm       15%
+Midterm        15%
 
-Final         20%
-============= ===
+Final          20%
+=============  ===
 
 Participation
 ~~~~~~~~~~~~~
@@ -179,15 +179,15 @@ Half of your lab grade will come from a **one-on-one** interactive grading sessi
 You can sign up for interactive grading times once you have submitted your assignment for sometime the week of the submission deadline.
 Failure to sign up for an interactive grading time will result in a 0% for the assignment.
 
-.. _Lab 1: https://github.com/jlpteaching/ECS154B/lab1/lab1.rst
+.. _Lab 1: https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.rst
 
-.. _Lab 2: https://github.com/jlpteaching/ECS154B/lab2/lab2.rst
+.. _Lab 2: https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.rst
 
-.. _Lab 3: https://github.com/jlpteaching/ECS154B/lab3/lab3.rst
+.. _Lab 3: https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.rst
 
-.. _Lab 4: https://github.com/jlpteaching/ECS154B/lab4/lab4.rst
+.. _Lab 4: https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.rst
 
-.. _Lab 5: https://github.com/jlpteaching/ECS154B/lab5/lab5.rst
+.. _Lab 5: https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.rst
 
 Late assignments
 ****************
