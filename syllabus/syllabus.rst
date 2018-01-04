@@ -26,7 +26,9 @@ Instructor
 Professor Jason Lowe-Power (jlowepower@ucdavis.edu)
 
 Office Hours: Wednesday 1:30 - 3:00 PM, or by appointment.
+Please suggest a meeting time when you email me for an appointment.
 You can use `my calendar`_ to quickly find a time I am available.
+It's not guaranteed to be completely up-to-date, but it gives a good starting point.
 
 Office Location: 3049 Kemper Hall
 
@@ -92,7 +94,7 @@ We will change questions asked privately to public, if we deem it appropriate.
 If your question involves code you've written, or is about a personal issue, we will leave those private.
 
 10% of your grade is tied to participation, much of which will take place over piazza.
-The benchmark for good piazza participation is at least 10 questions asked, answered, or follow ups throughout the quater.
+The benchmark for good piazza participation is at least 10 questions asked, answered, or follow ups throughout the quarter.
 
 Regrade Requests
 ~~~~~~~~~~~~~~~~
@@ -108,37 +110,84 @@ Per `official UC Davis policy`_, if you have an accommodation request from the `
 .. _official UC Davis policy: http://catalog.ucdavis.edu/academicinfo/exams.html
 .. _Student Disability Center: https://sdc.ucdavis.edu/
 
+Academic Misconduct
+--------------------
+
+Academic misconduct is a serious issue.
+You can find the official UC Davis policy on the `Office of Student Support and Judicial Affairs`_ website.
+
+You are expected to *cite all of the work you reference*.
+Any ideas that are not specifically yours or generally known (e.g., caches hold data) should have a citation.
+When in doubt, cite.
+
+Any violations of this policy will result in reporting the violating student(s) to the Office of Student Support and Judicial Affairs.
+
+.. _`Office of Student Support and Judicial Affairs`: http://sja.ucdavis.edu/
+
 Prerequisites
 -------------
 
-Course 154A or both Electrical and Computer Engineering 170 and Electrical and Computer Engineering 180A
-
-Specifically, you should understand
-
-* Simple digital logic design (e.g., gates, how to build an adder, simple state machines).
-* Programming in C
-
-Lectures (Tuesday, Thursday 12:10 - 1:30 PM)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-Discussion (Friday 4:10 - 5:00 PM)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The discussion will be lead by Justin.
+Course 154A or both Electrical and Computer Engineering 170 and Electrical and Computer Engineering 180A.
 
 Assignments and Tests
 ---------------------
 
-Homeworks
-~~~~~~~~~
+Grading breakdown
+~~~~~~~~~~~~~~~~~
 
+============= ===
+Participation  10%
+
+Labs (5x)     40%
+
+------------- ---
+Quizzes (3x)  15%
+
+Midterm       15%
+
+Final         20%
+============= ===
+
+Participation
+~~~~~~~~~~~~~
+
+10% of your grade comes from actively participating in class (defined broadly).
+You are expected to participate on Piazza_ (e.g., at least 10 contributions), lecture discussions, discussion section discussions, and/or office hours.
 
 Labs
 ~~~~
 
-These will primarily by Logisim assignments.
+You will complete five lab assignments throughout this course.
+The labs can be found via the links below.
+All together, the labs are worth 40% of your final grade.
+Each lab is weighted based on the amount of time you are given to complete the lab.
+
+Labs are due at 9am on Monday mornings.
+
+* `Lab 1`_ (2 weeks, 8%). Due 9am 1/22
+* `Lab 2`_ (2 weeks, 8%). Due 9am 2/2
+* `Lab 3`_ (3 weeks, 12%). Due 9am 2/26
+* `Lab 4`_ (2 weeks, 8%). Due 9am 3/12
+* `Lab 5`_ (1 week, 4%). Due 9am 3/19
+
+For all labs, you will be working with a partner.
+You do not have to keep the same partner throughout the whole quarter; you can change who you are working with.
+I suggest using piazza to find partners.
+
+All labs except lab 5 *require* interactive grading.
+Half of your lab grade will come from a **one-on-one** interactive grading session with a TA.
+You can sign up for interactive grading times once you have submitted your assignment for sometime the week of the submission deadline.
+Failure to sign up for an interactive grading time will result in a 0% for the assignment.
+
+.. _Lab 1: https://github.com/jlpteaching/ECS154B/lab1/lab1.rst
+
+.. _Lab 2: https://github.com/jlpteaching/ECS154B/lab2/lab2.rst
+
+.. _Lab 3: https://github.com/jlpteaching/ECS154B/lab3/lab3.rst
+
+.. _Lab 4: https://github.com/jlpteaching/ECS154B/lab4/lab4.rst
+
+.. _Lab 5: https://github.com/jlpteaching/ECS154B/lab5/lab5.rst
 
 Late assignments
 ****************
@@ -146,7 +195,7 @@ Late assignments
 If you turn in a lab late, you will lose points. The percentage of points you will lose is given by the equation below.
 This will give you partial points up to 72 hours after the due date and penalizes you less if you barely miss the deadline.
 
-.. GithHub doesn't like to render the above.
+.. GitHub doesn't like to render the above.
     fraction\ of\ points = -1 \times \frac{{hours\ late}^3}{72^3} + 1
 
 
@@ -157,12 +206,40 @@ This will give you partial points up to 72 hours after the due date and penalize
     :width: 50%
     :align: center
 
+Quizzes
+~~~~~~~
+
+There will be quizzes during some discussion sections.
+The quizzes will be in a similar style to the midterm and the final, except they will be shorter (25 minutes).
+
+Midterm: Thursday, February 15th
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The midterm will cover Chapters 1, 2, and 4 from the book.
+This includes technology, measuring system performance, instruction sets, single cycle architecture, and pipeline architecture.
+
+Final: Tuesday, March 20th @ 8am
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The final will cover chanters 5 and 6 from the book.
+This includes memory technology, cache design, virtual memory, parallel programming, and parallel architectures.
+
 .. _schedule:
 
-Schedule
---------
+Reading List and Schedule
+--------------------------
+
+Textbook
+~~~~~~~~
+
+In this class we'll be closely following Computer Organization and Design MIPS Edition, Fifth Edition: The Hardware/Software Interface by D. A. Patterson and J. L. Hennessy.
+Importantly, you should get the *MIPS edition*, not the ARM edition.
+The correct version is white with a picture of an abacus on a tablet.
+You can find the book at the `university bookstore`_ or through various sites online.
+
+.. _university bookstore: http://ucdavisstores.com/SelectTermDept
 
 .. csv-table:: Schedule
     :file: schedule.csv
     :header-rows: 1
-    :widths: auto
+    :widths: 10, 10, 25, 12, 10
