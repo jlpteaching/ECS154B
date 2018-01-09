@@ -106,8 +106,6 @@ Assignment
 
 #. Implement a combinational circuit using a ROM.
 
-#. Implement a sequential circuit using only a ROM.
-
 For each circuit, please create a sub-circuit with appropriately named
 inputs and outputs.
 
