@@ -275,17 +275,17 @@ sub-circuit:
 |                       |                       | circuit.              |
 +-----------------------+-----------------------+-----------------------+
 
-+-----------------------+-----------------------+-----------------------+
-| Signal Name           | Radix                 | Description           |
-+-----------------------+-----------------------+-----------------------+
-| Input                 | 2                     | The concatenation of  |
-|                       |                       | In7-0.                |
-+-----------------------+-----------------------+-----------------------+
-| ROMCombinationalOutpu | 2                     | The concatenation of  |
-| t                     |                       | Out2-0 from the ROM   |
-|                       |                       | combinational         |
-|                       |                       | circuit.              |
-+-----------------------+-----------------------+-----------------------+
++------------------------+-----------------------+-----------------------+
+| Signal Name            | Radix                 | Description           |
++------------------------+-----------------------+-----------------------+
+| Input                  | 2                     | The concatenation of  |
+|                        |                       | In7-0.                |
++------------------------+-----------------------+-----------------------+
+| ROMCombinationalOutput | 2                     | The concatenation of  |
+|                        |                       | Out2-0 from the ROM   |
+|                        |                       | combinational         |
+|                        |                       | circuit.              |
++------------------------+-----------------------+-----------------------+
 
 To see if your circuit is correct, use the Python program,
 ``tester.py``, included with assignment. To use it, type, in your
@@ -334,11 +334,9 @@ Grading
 
 -  50% Implementation
 
-   -  12.5% for correct Part 1.
+   -  25% for correct Part 1.
 
-   -  12.5% for correct Part 2.
-
-   -  25% for correct Part 3.
+   -  25% for correct Part 2.
 
    -  Partial credit at the grader’s discretion.
 
