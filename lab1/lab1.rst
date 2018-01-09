@@ -1,6 +1,6 @@
 :Editors:
    Jason Lowe-Power
-   
+
    Bradley Wang
 
 **ECS 154B Lab 1, Winter 2018**
@@ -382,13 +382,6 @@ Hints
    it may be worthwhile to write a program to fill in the values for the
    ROM. If you don’t, you may have to fill in a large amount of numbers
    by hand. It is by no means required, though.
-
--  It is recommended to create an Excel spreadsheet for your sequential
-   circuit’s state transition table in order to save time and cut down
-   on errors. In particular, the functions ``DEC2BIN()``, ``BIN2HEX()``,
-   the ``&`` concatenation operator, and `this Stack Overflow
-   post <http://stackoverflow.com/questions/18191835/comparing-two-columns-and-returning-a-specific-adjacent-cell-in-excel>`__
-   may come in handy.
 
 -  If you need help, come to office hours for the TAs, or post your
    questions on Piazza.
