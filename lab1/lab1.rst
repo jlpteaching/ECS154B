@@ -1,6 +1,8 @@
-.. raw:: latex
+:Editors:
+   Jason Lowe-Power
+   
+   Bradley Wang
 
-   \LARGE
 
 **ECS 154B Lab 1, Spring 2017**
 
@@ -291,30 +293,14 @@ To see if your circuit is correct, use the Python program,
 ``tester.py``, included with assignment. To use it, type, in your
 command line, with all files in the same directory:
 
-.. raw:: latex
-
-   \vspace{12pt}
-
 ``python tester.py correct.txt your.txt``
-
-.. raw:: latex
-
-   \vspace{12pt}
 
 where ``correct.txt`` is the file that contains the correct signals, and
 ``your.txt`` is the name of the log file you have your signals in. For
 example, to test if your combinational circuit is correct, you would
 type:
 
-.. raw:: latex
-
-   \vspace{12pt}
-
 ``python tester.py part1correct.txt part1.txt``
-
-.. raw:: latex
-
-   \vspace{12pt}
 
 if your log file was named ``part1.txt``.
 
