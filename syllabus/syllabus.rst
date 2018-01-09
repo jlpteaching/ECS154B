@@ -27,7 +27,7 @@ Instructor
 
 **Professor Jason Lowe-Power** (jlowepower@ucdavis.edu)
 
-*Office Hours*: Wednesday 1:30 - 3:00 PM, or by appointment.
+*Office Hours*: Wednesday 4:00 - 5:30 PM, or by appointment.
 
 *Office Location*: 3049 Kemper Hall
 
