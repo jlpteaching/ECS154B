@@ -3,10 +3,9 @@
    
    Bradley Wang
 
+**ECS 154B Lab 1, Winter 2018**
 
-**ECS 154B Lab 1, Spring 2017**
-
-**Due by 11:59 PM on April 12, 2017**
+**Due by 8:59 AM on January 22, 2018**
 
 **Via Canvas**
 
