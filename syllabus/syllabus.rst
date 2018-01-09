@@ -65,8 +65,7 @@ GitHub will contain this document and the assignments.
 Canvas
 ~~~~~~
 
-We will be using Canvas_.
-Exactly what for is to be determined.
+We will be using Canvas_ for assignment submission and grade distribution.
 
 Gradescope
 ~~~~~~~~~~
