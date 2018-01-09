@@ -66,36 +66,35 @@ Example
 -------
 
 The following is an example of implementing the XOR function using
-microcode. Here is the truth table for XOR
-:math:`\left( \oplus \right)`.
+microcode. Here is the truth table for XOR ⊕.
 
-+---+---+--------------------+
-| X | Y | X :math:`\oplus` Y |
-+---+---+--------------------+
-| 0 | 0 | 0                  |
-+---+---+--------------------+
-| 0 | 1 | 1                  |
-+---+---+--------------------+
-| 1 | 0 | 1                  |
-+---+---+--------------------+
-| 1 | 1 | 0                  |
-+---+---+--------------------+
++---+---+--------+
+| X | Y | X ⊕ Y  |
++---+---+--------+
+| 0 | 0 | 0      |
++---+---+--------+
+| 0 | 1 | 1      |
++---+---+--------+
+| 1 | 0 | 1      |
++---+---+--------+
+| 1 | 1 | 0      |
++---+---+--------+
 
 Applying step 1, we first create a ROM with 2 address bits, because we
 have 2 inputs. Each entry is 1 bit wide, because there is only output.
 Next, we fill in the ROM using X and Y as the address bits.
 
-+---+---+----------------------------------------+-------+
-| X | Y | Address                                | Value |
-+===+===+========================================+=======+
-| 0 | 0 | :math:`00 \left( \mathtt{0x0} \right)` | 0     |
-+---+---+----------------------------------------+-------+
-| 0 | 1 | :math:`01 \left( \mathtt{0x1} \right)` | 1     |
-+---+---+----------------------------------------+-------+
-| 1 | 0 | :math:`10 \left( \mathtt{0x2} \right)` | 1     |
-+---+---+----------------------------------------+-------+
-| 1 | 1 | :math:`11 \left( \mathtt{0x3} \right)` | 0     |
-+---+---+----------------------------------------+-------+
++---+---+---------+-------+
+| X | Y | Address | Value |
++===+===+=========+=======+
+| 0 | 0 | ``0x0`` | 0     |
++---+---+---------+-------+
+| 0 | 1 | ``0x1`` | 1     |
++---+---+---------+-------+
+| 1 | 0 | ``0x2`` | 1     |
++---+---+---------+-------+
+| 1 | 1 | ``0x3`` | 0     |
++---+---+---------+-------+
 
 The Logisim implementation is included with the given files for the
 assignment, in the subcircuit **ROM XOR**.
@@ -184,7 +183,7 @@ Circuit Analyzer Tool
 Don’t be intimidated by the number of inputs when doing the
 combinational circuit. You can use Logisim’s **Analyze Circuit** tool,
 in the Project drop-down menu, to have Logisim build the circuit for
-you. To learn how to use it, click on Help :math:`\rightarrow` User’s
+you. To learn how to use it, click on Help → User’s
 Guide. In the User Guide, click on Combinational Analysis and read how
 to use it. You will find this tool very helpful in this and future labs.
 
@@ -253,7 +252,7 @@ results of your program, do the following:
 #. Attach a probe or pin to the wires that you want to log, and give it
    a name.
 
-#. Click Simulate :math:`\rightarrow` Logging.
+#. Click Simulate → Logging.
 
 #. In the Selection tab, select the signals you want to log.
 
@@ -318,7 +317,7 @@ file, you must perform the following steps:
    names of the signals.
 
 #. Reset your circuit by pressing Ctrl + R, or by going to Simulate
-   :math:`\rightarrow` Reset Simulation.
+   → Reset Simulation.
 
 #. Simulate again.
 
