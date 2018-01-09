@@ -177,6 +177,7 @@ x86 Assembly
 ------------
 
 .. code-block:: asm
+
     f1():
         movl Z, %eax
         leal 1(%eax), %edx
