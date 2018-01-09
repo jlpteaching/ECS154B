@@ -48,9 +48,9 @@ Teaching Assistants
 
 **Bradley Wang** (radwang@ucdavis.edu)
 
-*Office Hours*: TBA
+*Office Hours*: Monday 1:00 - 2:00 PM
 
-*Office Location*: TBA
+*Office Location*: 53 Kemper Hall
 
 GitHub
 ~~~~~~
