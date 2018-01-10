@@ -104,7 +104,9 @@ Assignment
 
 #. Implement a combinational circuit using combinational logic.
 
-#. Implement a combinational circuit using a ROM.
+#. Implement a simple combinational circuit using a ROM.
+
+#. Implement the combinational circuit from part 1 using a ROM
 
 For each circuit, please create a sub-circuit with appropriately named
 inputs and outputs.
@@ -130,37 +132,37 @@ Implement the circuit that has the following truth table using
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
 | In7 | In6 | In5 | In4 | In3 | In2 | In1 | In0 || Out2 | Out1 | Out0 |
 +=====+=====+=====+=====+=====+=====+=====+=====++======+======+======+
-| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   || 1    | 1    | 1    |
+| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   || 0    | 0    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   || 1    | 1    | 0    |
+| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   || 0    | 1    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   || 1    | 0    | 1    |
+| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   || 1    | 1    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 1   || 1    | 0    | 0    |
+| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 1   || 0    | 1    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 0   || 0    | 0    | 0    |
+| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 0   || 0    | 1    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 1   || 0    | 0    | 1    |
+| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 1   || 1    | 1    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 0   || 0    | 1    | 0    |
+| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 0   || 1    | 0    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 1   || 0    | 1    | 1    |
+| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 1   || 0    | 0    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0   || 0    | 0    | 1    |
+| 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0   || 1    | 0    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 1   | 0   | 1   | 0   || 0    | 1    | 1    |
+| 0   | 0   | 0   | 0   | 1   | 0   | 1   | 0   || 1    | 1    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
 | 0   | 0   | 0   | 0   | 1   | 1   | 0   | 0   || 1    | 0    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 0   | 0   | 1   | 1   | 1   | 0   || 1    | 1    | 1    |
+| 0   | 0   | 0   | 0   | 1   | 1   | 1   | 0   || 0    | 1    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 0   | 1   | 1   | D   | D   | D   | D   || 0    | 1    | 1    |
+| 0   | 0   | 0   | 1   | D   | D   | D   | D   || 0    | 1    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 0   | 1   | 1   | 1   | D   | D   | D   | D   || 1    | 0    | 0    |
+| 0   | 1   | 1   | 0   | D   | D   | D   | D   || 1    | 1    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 1   | 0   | 1   | 1   | D   | D   | D   | D   || 0    | 1    | 0    |
+| 1   | 0   | 1   | 0   | D   | D   | D   | D   || 1    | 1    | 0    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
-| 1   | 1   | 1   | 1   | D   | D   | D   | D   || 0    | 0    | 1    |
+| 1   | 1   | 1   | 0   | D   | D   | D   | D   || 0    | 1    | 1    |
 +-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
 
 Your sub-circuit should have the following inputs and outputs:
@@ -185,24 +187,70 @@ combinational circuit. You can use Logisim’s **Analyze Circuit** tool,
 in the Project drop-down menu, to have Logisim build the circuit for
 you. To learn how to use it, click on Help → User’s
 Guide. In the User Guide, click on Combinational Analysis and read how
-to use it. You will find this tool very helpful in this and future labs.
+to use it. You will find this tool very helpful in this and future labs,
+if implementing complex combinational logic with gates.
 
 Combinational Circuit - ROM
 ---------------------------
 
-Implement the same circuit from Part 1 using a **ROM**. The truth table
-is identical for both circuits. You may only use a ROM and splitters for
+First, implement the following simple truth table as follows using a **ROM**.
+You will find an example of how combinational logic is done in the **ROM XOR**
+circuit in the provided circuit file. You may only use a ROM and splitters for
 this part. Your sub-circuit should have the following inputs and
 outputs:
 
-.. _inputs-1:
+Inputs
+~~~~~~
+
+-  *SimpleInput*: the concatenation of the input bits.
+
+Outputs
+~~~~~~~
+
+-  *ROMSimpleCombinationalOutput*: The concatenation of *Out2-0*, with *Out2*
+   as the top-most (most significant) bit and *Out0* as the bottom-most
+   (least significant) bit.
+
++-----+-----+-----+-----++------+------+
+| In3 | In2 | In1 | In0 || Out1 | Out0 |
++=====+=====+=====+=====++======+======+
+| 0   | 0   | 0   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 0   | 0   | 1   || 1    | 0    |
++-----+-----+-----+-----++------+------+
+| 0   | 0   | 1   | 0   || 0    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 0   | 1   | 1   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 0   | 0   || 1    | 0    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 0   | 1   || 0    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 1   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 1   | 1   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 0   | 0   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 0   | 1   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 1   | 0   | 0   || 1    | 0    |
++-----+-----+-----+-----++------+------+
+| 1   | 1   | 1   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 1   | 1   | 1   || D    | D    |
++-----+-----+-----+-----++------+------+
+
+Then, once you have become familiar with using a ROM for combinational
+logic, implement the same circuit from Part 1 using a **ROM**. The truth
+table is identical for both circuits. You may only use a ROM and
+splitters for this part. Your sub-circuit should have the following
+inputs and outputs:
 
 Inputs
 ~~~~~~
 
 -  *Input*: the concatenation of the input bits.
-
-.. _outputs-1:
 
 Outputs
 ~~~~~~~
@@ -241,6 +289,13 @@ circuits are correct:
 
 -  **part2correct.txt**
 
+   -  The log file containing the correct outputs for the simple
+      logic circuit using a ROM.
+
+   -  The X’s in the file indicate don’t cares.
+   
+-  **part3correct.txt**
+
    -  The log file containing the correct outputs for the combinational
       logic circuit using a ROM.
 
@@ -274,6 +329,18 @@ sub-circuit:
 |                       |                       | combinational         |
 |                       |                       | circuit.              |
 +-----------------------+-----------------------+-----------------------+
+
++------------------------------+-----------------+-----------------------+
+| Signal Name                  | Radix           | Description           |
++------------------------------+-----------------+-----------------------+
+| SimpleInput                  | 2               | The concatenation of  |
+|                              |                 | SimpleIn3-0.          |
++------------------------------+-----------------+-----------------------+
+| ROMSimpleCombinationalOutput | 2               | The concatenation of  |
+|                              |                 | Out2-0 from the ROM   |
+|                              |                 | combinational         |
+|                              |                 | circuit.              |
++------------------------------+-----------------+-----------------------+
 
 +------------------------+-----------------------+-----------------------+
 | Signal Name            | Radix                 | Description           |
@@ -334,9 +401,11 @@ Grading
 
 -  50% Implementation
 
-   -  25% for correct Part 1.
+   -  12.5% for correct Part 1.
 
-   -  25% for correct Part 2.
+   -  12.5% for correct Part 2.
+   
+   -  25% for correct Part 3.
 
    -  Partial credit at the grader’s discretion.
 
