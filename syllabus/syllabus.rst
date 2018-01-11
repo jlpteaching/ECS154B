@@ -167,7 +167,7 @@ Each lab is weighted based on the amount of time you are given to complete the l
 Labs are due at 9 AM on Mondays.
 
 * `Lab 1`_ (2 weeks, 8%). Due January 22.
-* `Lab 2`_ (2 weeks, 8%). Due February 2.
+* `Lab 2`_ (2 weeks, 8%). Due February 5.
 * `Lab 3`_ (3 weeks, 12%). Due February 26.
 * `Lab 4`_ (2 weeks, 8%). Due March 12.
 * `Lab 5`_ (1 week, 4%). Due March 19.
