@@ -1,4 +1,4 @@
-Input	CombinationalOutput
+Input	ROMCombinationalOutput
 0000 0000	001
 0000 0001	010
 0000 0010	110
