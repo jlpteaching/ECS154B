@@ -190,7 +190,7 @@ Guide. In the User Guide, click on Combinational Analysis and read how
 to use it. You will find this tool very helpful in this and future labs,
 if implementing complex combinational logic with gates.
 
-Simple Combinational Circuit - ROM
+Small Combinational Circuit - ROM
 ---------------------------
 
 First, implement the following simple truth table as follows using a **ROM**.
