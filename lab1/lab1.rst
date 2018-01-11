@@ -1,6 +1,4 @@
-:Editors:
-   Bradley Wang
-   Jason Lowe-Power
+:Editors: Bradley Wang, Jason Lowe-Power
 
 
 **ECS 154B Lab 1, Winter 2018**
