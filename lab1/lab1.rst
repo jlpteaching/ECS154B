@@ -190,7 +190,7 @@ Guide. In the User Guide, click on Combinational Analysis and read how
 to use it. You will find this tool very helpful in this and future labs,
 if implementing complex combinational logic with gates.
 
-Combinational Circuit - ROM
+Simple Combinational Circuit - ROM
 ---------------------------
 
 First, implement the following simple truth table as follows using a **ROM**.
@@ -241,6 +241,9 @@ Outputs
 | 1   | 1   | 1   | 1   || D    | D    |
 +-----+-----+-----+-----++------+------+
 
+Large Combinational Circuit
+---------------------------
+
 Then, once you have become familiar with using a ROM for combinational
 logic, implement the same circuit from Part 1 using a **ROM**. The truth
 table is identical for both circuits. You may only use a ROM and
@@ -274,6 +277,18 @@ You will be provided with the following circuits to facilitate testing.
    -  **Outputs**:
 
       -  *Input*: The concatenation of the input signals *In7-In0* to
+         the combinational circuit.
+
+-  **Simple Input**: Generates the inputs for the simple combinational
+   circuit.
+
+   -  **Inputs**:
+
+      -  *Clock*: The system clock.
+
+   -  **Outputs**:
+
+      -  *SimpleInput*: The concatenation of the input signals *In3-In0* to
          the combinational circuit.
 
 
