@@ -1,17 +1,29 @@
+:Author: Jason Lowe-Power
 
 Reading Assembly Code
 ---------------------
+
+This is an "optional" homework assignment.
+You are not required to turn in your answers.
+However, you are **very strongly** encouraged to work on this assignment.
+You will see some *very similar* questions on your first quiz.
+Additionally, refreshing your assembly knowledge will help you when you start working on your CPU design.
+
+The answers will be posted on Piazza before the first quiz.
 
 Below are a set of function in MIPS assembly (the language covered in your book), ARM assembly and x86 assembly.
 You should upload a file "assembly.pdf" which contains the answers to the following questions.
 
 You can find more information on MIPS assembly, and assembly in general in Chapter 2 of your book and this `MIPS Green Sheet`_.
+Sean Davis also has a great `MIPS guide`_.
 You can find more information on x86 assembly with this `Cheat Sheet`_.
 You can find more information on ARM assembly with this not so short `ARM reference`_.
 Of course, you can Google for any of the instructions and the first hit will likely explain it.
 Finally, you can also use Piazza_ to leverage the knowledge of your classmates.
 
 .. _MIPS Green Sheet: http://booksite.elsevier.com/9780124077263/downloads/COD_5e_Greencard.pdf
+
+.. _MIPS guide: http://csiflabs.cs.ucdavis.edu/~ssdavis/50/ECS50mips.pdf
 
 .. _Cheat Sheet: http://pages.cs.wisc.edu/~powerjg/cs354-fall15/Handouts/Handout-x86-cheat-sheet.pdf
 
