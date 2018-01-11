@@ -111,8 +111,8 @@ Assignment
 For each circuit, please create a sub-circuit with appropriately named
 inputs and outputs.
 
-Combinatorial Circuit - Combinational Logic
--------------------------------------------
+1) Combinatorial Circuit - Combinational Logic
+----------------------------------------------
 
 Implement the circuit that has the following truth table using
 **combinational logic**.
@@ -190,8 +190,8 @@ Guide. In the User Guide, click on Combinational Analysis and read how
 to use it. You will find this tool very helpful in this and future labs,
 if implementing complex combinational logic with gates.
 
-Small Combinational Circuit - ROM
----------------------------
+2) Small Combinational Circuit - ROM
+------------------------------------
 
 First, implement the following simple truth table as follows using a **ROM**.
 You will find an example of how combinational logic is done in the **ROM XOR**
@@ -241,8 +241,8 @@ Outputs
 | 1   | 1   | 1   | 1   || D    | D    |
 +-----+-----+-----+-----++------+------+
 
-Large Combinational Circuit
----------------------------
+3) Large Combinational Circuit
+------------------------------
 
 Then, once you have become familiar with using a ROM for combinational
 logic, implement the same circuit from Part 1 using a **ROM**. The truth
