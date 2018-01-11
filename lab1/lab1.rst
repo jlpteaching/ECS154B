@@ -1,10 +1,11 @@
-.. raw:: latex
+:Editors:
+   Jason Lowe-Power
 
-   \LARGE
+   Bradley Wang
 
-**ECS 154B Lab 1, Spring 2017**
+**ECS 154B Lab 1, Winter 2018**
 
-**Due by 11:59 PM on April 12, 2017**
+**Due by 8:59 AM on January 22, 2018**
 
 **Via Canvas**
 
@@ -65,36 +66,35 @@ Example
 -------
 
 The following is an example of implementing the XOR function using
-microcode. Here is the truth table for XOR
-:math:`\left( \oplus \right)`.
+microcode. Here is the truth table for XOR ⊕.
 
-+---+---+--------------------+
-| X | Y | X :math:`\oplus` Y |
-+---+---+--------------------+
-| 0 | 0 | 0                  |
-+---+---+--------------------+
-| 0 | 1 | 1                  |
-+---+---+--------------------+
-| 1 | 0 | 1                  |
-+---+---+--------------------+
-| 1 | 1 | 0                  |
-+---+---+--------------------+
++---+---+--------+
+| X | Y | X ⊕ Y  |
++---+---+--------+
+| 0 | 0 | 0      |
++---+---+--------+
+| 0 | 1 | 1      |
++---+---+--------+
+| 1 | 0 | 1      |
++---+---+--------+
+| 1 | 1 | 0      |
++---+---+--------+
 
 Applying step 1, we first create a ROM with 2 address bits, because we
 have 2 inputs. Each entry is 1 bit wide, because there is only output.
 Next, we fill in the ROM using X and Y as the address bits.
 
-+---+---+----------------------------------------+-------+
-| X | Y | Address                                | Value |
-+===+===+========================================+=======+
-| 0 | 0 | :math:`00 \left( \mathtt{0x0} \right)` | 0     |
-+---+---+----------------------------------------+-------+
-| 0 | 1 | :math:`01 \left( \mathtt{0x1} \right)` | 1     |
-+---+---+----------------------------------------+-------+
-| 1 | 0 | :math:`10 \left( \mathtt{0x2} \right)` | 1     |
-+---+---+----------------------------------------+-------+
-| 1 | 1 | :math:`11 \left( \mathtt{0x3} \right)` | 0     |
-+---+---+----------------------------------------+-------+
++---+---+---------+-------+
+| X | Y | Address | Value |
++===+===+=========+=======+
+| 0 | 0 | ``0x0`` | 0     |
++---+---+---------+-------+
+| 0 | 1 | ``0x1`` | 1     |
++---+---+---------+-------+
+| 1 | 0 | ``0x2`` | 1     |
++---+---+---------+-------+
+| 1 | 1 | ``0x3`` | 0     |
++---+---+---------+-------+
 
 The Logisim implementation is included with the given files for the
 assignment, in the subcircuit **ROM XOR**.
@@ -104,7 +104,9 @@ Assignment
 
 #. Implement a combinational circuit using combinational logic.
 
-#. Implement a combinational circuit using a ROM.
+#. Implement a simple combinational circuit using a ROM.
+
+#. Implement the combinational circuit from part 1 using a ROM
 
 For each circuit, please create a sub-circuit with appropriately named
 inputs and outputs.
@@ -127,41 +129,41 @@ Implement the circuit that has the following truth table using
 -  All unspecified input and output combinations are don’t cares, as are
    the **D**\ s in the table.
 
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| In7 | In6 | In5 | In4 | In3 | In2 | In1 | In0 | Out2 | Out1 | Out0 |
-+=====+=====+=====+=====+=====+=====+=====+=====+======+======+======+
-| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1    | 1    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   | 1    | 1    | 0    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   | 1    | 0    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 1   | 1    | 0    | 0    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0    | 0    | 0    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 1   | 0    | 0    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 0   | 0    | 1    | 0    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 1   | 0    | 1    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0   | 0    | 0    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 1   | 0   | 1   | 0   | 0    | 1    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 1   | 1   | 0   | 0   | 1    | 0    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 0   | 0   | 1   | 1   | 1   | 0   | 1    | 1    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 0   | 1   | 1   | D   | D   | D   | D   | 0    | 1    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 0   | 1   | 1   | 1   | D   | D   | D   | D   | 1    | 0    | 0    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 1   | 0   | 1   | 1   | D   | D   | D   | D   | 0    | 1    | 0    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
-| 1   | 1   | 1   | 1   | D   | D   | D   | D   | 0    | 0    | 1    |
-+-----+-----+-----+-----+-----+-----+-----+-----+------+------+------+
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| In7 | In6 | In5 | In4 | In3 | In2 | In1 | In0 || Out2 | Out1 | Out0 |
++=====+=====+=====+=====+=====+=====+=====+=====++======+======+======+
+| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   || 0    | 0    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   || 0    | 1    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   || 1    | 1    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 1   || 0    | 1    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 0   || 0    | 1    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 1   || 1    | 1    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 0   || 1    | 0    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 0   | 1   | 1   | 1   || 0    | 0    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0   || 1    | 0    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 1   | 0   | 1   | 0   || 1    | 1    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 1   | 1   | 0   | 0   || 1    | 0    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 0   | 1   | 1   | 1   | 0   || 0    | 1    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 0   | 0   | 1   | D   | D   | D   | D   || 0    | 1    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 0   | 1   | 1   | 0   | D   | D   | D   | D   || 1    | 1    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 1   | 0   | 1   | 0   | D   | D   | D   | D   || 1    | 1    | 0    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
+| 1   | 1   | 1   | 0   | D   | D   | D   | D   || 0    | 1    | 1    |
++-----+-----+-----+-----+-----+-----+-----+-----++------+------+------+
 
 Your sub-circuit should have the following inputs and outputs:
 
@@ -183,26 +185,75 @@ Circuit Analyzer Tool
 Don’t be intimidated by the number of inputs when doing the
 combinational circuit. You can use Logisim’s **Analyze Circuit** tool,
 in the Project drop-down menu, to have Logisim build the circuit for
-you. To learn how to use it, click on Help :math:`\rightarrow` User’s
+you. To learn how to use it, click on Help → User’s
 Guide. In the User Guide, click on Combinational Analysis and read how
-to use it. You will find this tool very helpful in this and future labs.
+to use it. You will find this tool very helpful in this and future labs,
+if implementing complex combinational logic with gates.
 
-Combinational Circuit - ROM
+Small Combinational Circuit - ROM
 ---------------------------
 
-Implement the same circuit from Part 1 using a **ROM**. The truth table
-is identical for both circuits. You may only use a ROM and splitters for
+First, implement the following simple truth table as follows using a **ROM**.
+You will find an example of how combinational logic is done in the **ROM XOR**
+circuit in the provided circuit file. You may only use a ROM and splitters for
 this part. Your sub-circuit should have the following inputs and
 outputs:
 
-.. _inputs-1:
+Inputs
+~~~~~~
+
+-  *SimpleInput*: the concatenation of the input bits.
+
+Outputs
+~~~~~~~
+
+-  *ROMSimpleCombinationalOutput*: The concatenation of *Out2-0*, with *Out2*
+   as the top-most (most significant) bit and *Out0* as the bottom-most
+   (least significant) bit.
+
++-----+-----+-----+-----++------+------+
+| In3 | In2 | In1 | In0 || Out1 | Out0 |
++=====+=====+=====+=====++======+======+
+| 0   | 0   | 0   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 0   | 0   | 1   || 1    | 0    |
++-----+-----+-----+-----++------+------+
+| 0   | 0   | 1   | 0   || 0    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 0   | 1   | 1   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 0   | 0   || 1    | 0    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 0   | 1   || 0    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 1   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 0   | 1   | 1   | 1   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 0   | 0   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 0   | 1   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 1   | 0   | 0   || 1    | 0    |
++-----+-----+-----+-----++------+------+
+| 1   | 1   | 1   | 0   || 1    | 1    |
++-----+-----+-----+-----++------+------+
+| 1   | 1   | 1   | 1   || D    | D    |
++-----+-----+-----+-----++------+------+
+
+Large Combinational Circuit
+---------------------------
+
+Then, once you have become familiar with using a ROM for combinational
+logic, implement the same circuit from Part 1 using a **ROM**. The truth
+table is identical for both circuits. You may only use a ROM and
+splitters for this part. Your sub-circuit should have the following
+inputs and outputs:
 
 Inputs
 ~~~~~~
 
 -  *Input*: the concatenation of the input bits.
-
-.. _outputs-1:
 
 Outputs
 ~~~~~~~
@@ -228,6 +279,18 @@ You will be provided with the following circuits to facilitate testing.
       -  *Input*: The concatenation of the input signals *In7-In0* to
          the combinational circuit.
 
+-  **Simple Input**: Generates the inputs for the simple combinational
+   circuit.
+
+   -  **Inputs**:
+
+      -  *Clock*: The system clock.
+
+   -  **Outputs**:
+
+      -  *SimpleInput*: The concatenation of the input signals *In3-In0* to
+         the combinational circuit.
+
 
 You will also be provided with the following log files to test if your
 circuits are correct:
@@ -241,6 +304,13 @@ circuits are correct:
 
 -  **part2correct.txt**
 
+   -  The log file containing the correct outputs for the simple
+      logic circuit using a ROM.
+
+   -  The X’s in the file indicate don’t cares.
+   
+-  **part3correct.txt**
+
    -  The log file containing the correct outputs for the combinational
       logic circuit using a ROM.
 
@@ -252,7 +322,7 @@ results of your program, do the following:
 #. Attach a probe or pin to the wires that you want to log, and give it
    a name.
 
-#. Click Simulate :math:`\rightarrow` Logging.
+#. Click Simulate → Logging.
 
 #. In the Selection tab, select the signals you want to log.
 
@@ -275,46 +345,42 @@ sub-circuit:
 |                       |                       | circuit.              |
 +-----------------------+-----------------------+-----------------------+
 
-+-----------------------+-----------------------+-----------------------+
-| Signal Name           | Radix                 | Description           |
-+-----------------------+-----------------------+-----------------------+
-| Input                 | 2                     | The concatenation of  |
-|                       |                       | In7-0.                |
-+-----------------------+-----------------------+-----------------------+
-| ROMCombinationalOutpu | 2                     | The concatenation of  |
-| t                     |                       | Out2-0 from the ROM   |
-|                       |                       | combinational         |
-|                       |                       | circuit.              |
-+-----------------------+-----------------------+-----------------------+
++------------------------------+-----------------+-----------------------+
+| Signal Name                  | Radix           | Description           |
++------------------------------+-----------------+-----------------------+
+| SimpleInput                  | 2               | The concatenation of  |
+|                              |                 | SimpleIn3-0.          |
++------------------------------+-----------------+-----------------------+
+| ROMSimpleCombinationalOutput | 2               | The concatenation of  |
+|                              |                 | Out2-0 from the ROM   |
+|                              |                 | combinational         |
+|                              |                 | circuit.              |
++------------------------------+-----------------+-----------------------+
+
++------------------------+-----------------------+-----------------------+
+| Signal Name            | Radix                 | Description           |
++------------------------+-----------------------+-----------------------+
+| Input                  | 2                     | The concatenation of  |
+|                        |                       | In7-0.                |
++------------------------+-----------------------+-----------------------+
+| ROMCombinationalOutput | 2                     | The concatenation of  |
+|                        |                       | Out2-0 from the ROM   |
+|                        |                       | combinational         |
+|                        |                       | circuit.              |
++------------------------+-----------------------+-----------------------+
 
 To see if your circuit is correct, use the Python program,
 ``tester.py``, included with assignment. To use it, type, in your
 command line, with all files in the same directory:
 
-.. raw:: latex
-
-   \vspace{12pt}
-
 ``python tester.py correct.txt your.txt``
-
-.. raw:: latex
-
-   \vspace{12pt}
 
 where ``correct.txt`` is the file that contains the correct signals, and
 ``your.txt`` is the name of the log file you have your signals in. For
 example, to test if your combinational circuit is correct, you would
 type:
 
-.. raw:: latex
-
-   \vspace{12pt}
-
 ``python tester.py part1correct.txt part1.txt``
-
-.. raw:: latex
-
-   \vspace{12pt}
 
 if your log file was named ``part1.txt``.
 
@@ -333,7 +399,7 @@ file, you must perform the following steps:
    names of the signals.
 
 #. Reset your circuit by pressing Ctrl + R, or by going to Simulate
-   :math:`\rightarrow` Reset Simulation.
+   → Reset Simulation.
 
 #. Simulate again.
 
@@ -353,7 +419,7 @@ Grading
    -  12.5% for correct Part 1.
 
    -  12.5% for correct Part 2.
-
+   
    -  25% for correct Part 3.
 
    -  Partial credit at the grader’s discretion.
@@ -400,13 +466,6 @@ Hints
    it may be worthwhile to write a program to fill in the values for the
    ROM. If you don’t, you may have to fill in a large amount of numbers
    by hand. It is by no means required, though.
-
--  It is recommended to create an Excel spreadsheet for your sequential
-   circuit’s state transition table in order to save time and cut down
-   on errors. In particular, the functions ``DEC2BIN()``, ``BIN2HEX()``,
-   the ``&`` concatenation operator, and `this Stack Overflow
-   post <http://stackoverflow.com/questions/18191835/comparing-two-columns-and-returning-a-specific-adjacent-cell-in-excel>`__
-   may come in handy.
 
 -  If you need help, come to office hours for the TAs, or post your
    questions on Piazza.
