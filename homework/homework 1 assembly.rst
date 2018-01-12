@@ -84,6 +84,7 @@ MIPS Assembly
         bne $2,$0,$L7
         j $31
         li $2,15 # 0xf
+    L7:
         j $31
         li $2,7 # 0x7
 
@@ -95,6 +96,7 @@ MIPS Assembly
         la $5,X
         addu $3,$5,$3
         move $2,$0
+    L11:
         lw $4,0($3)
         addiu $3,$3,-4
         bne $3,$5,$L11
@@ -102,6 +104,7 @@ MIPS Assembly
         la $3,Z
         j $31
         sw $0,0($3)
+    L12:
         j $31
         move $2,$0
 
