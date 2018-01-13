@@ -382,6 +382,8 @@ type:
 
 if your log file was named ``part1.txt``.
 
+The output should be empty if no inconsistencies were found.
+
 The tester was written for Python 2.7. If you want to use Python 3, you
 will need to encapsulate each print statement’s argument with
 parentheses. If you are using Windows, you may want to add Python to
@@ -391,17 +393,24 @@ Resetting the Log Files
 =======================
 
 If your circuit has some errors the first time, in order to retest your
-file, you must perform the following steps:
+file, you should perform the following steps to guarantee a maximally
+clean, consistent log file:
 
-#. Delete the contents of your log file except for the headers, the
-   names of the signals.
+#. Disable logging file output through the logging window, under the
+   file tab.
 
-#. Reset your circuit by pressing Ctrl + R, or by going to Simulate
-   → Reset Simulation.
+#. Delete or move the previously generated log file.
+
+#. Reset your circuit with Ctrl + R, going to Simulate → Reset
+   Simulation, or whatever mechanism by which you return the circuit
+   to its intended starting state.
+
+#. Re-enable logging file output through the logging window.
 
 #. Simulate again.
 
 #. Run ``tester.py`` again.
+
 
 If the first line of your log file has a line in which the last number
 is missing, you may safely delete it. Additionally, if you reset your
