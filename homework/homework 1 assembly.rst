@@ -195,7 +195,7 @@ x86 Assembly
 
     f1():
         movl Z, %eax
-        leal 1(%eax), %edx
+        leal -1(%eax), %edx
         movl Y+8(,%eax,4), %eax
         cmpl X(,%edx,4), %eax
         setge %al
