@@ -12,7 +12,7 @@ Additionally, refreshing your assembly knowledge will help you when you start wo
 The answers will be posted on Piazza before the first quiz.
 
 Below are a set of function in MIPS assembly (the language covered in your book), ARM assembly and x86 assembly.
-You should upload a file "assembly.pdf" which contains the answers to the following questions.
+.. You should upload a file "assembly.pdf" which contains the answers to the following questions.
 
 You can find more information on MIPS assembly, and assembly in general in Chapter 2 of your book and this `MIPS Green Sheet`_.
 Sean Davis also has a great `MIPS guide`_.
