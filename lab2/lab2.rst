@@ -170,7 +170,7 @@ MIPS Architecture
 Instructions to Implement
 -------------------------
 
-A PDF, **MIPS Architecture.pdf**, was included to help you understand the
+A PDF, `MIPS Architecture.pdf`_, was included to help you understand the
 encoding of the instructions that you will need to implement. They are as
 follows:
 
@@ -184,6 +184,8 @@ follows:
 
 Note that you are not required to include a branch delay slot in this
 assignment.
+
+.. _MIPS Architecture.pdf: https://github.com/jlpteaching/ECS154B/blob/master/lab2/provided/MIPS%20Architecture.pdf
 
 ``JAL`` and ``JR``
 ------------------
