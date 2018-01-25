@@ -24,6 +24,9 @@ help you out.
 ** **DO NOT CHANGE THE GIVEN SUBCIRCUITS IN ANY WAY. DOING SO WILL LEAD TO AN
 AUTOMATIC ZERO.** **
 
+We will be testing circuits for plagiarism with a new circuit comparison tool
+courtesy of Christopher Nitta.
+
 Provided Blocks
 ===============
 
