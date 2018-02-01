@@ -4,6 +4,12 @@
 
 **Via Canvas**
 
+
+Interactive grading signup
+--------------------------
+You may only sign up after you have submitted your assignment.
+https://docs.google.com/spreadsheets/d/1otUNmfos6zf2uwn082mtFemHPNqR2E8lOrM1xDmXUV8/edit?usp=sharing
+
 Goals
 =====
 
