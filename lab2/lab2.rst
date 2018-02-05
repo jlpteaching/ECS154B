@@ -287,11 +287,11 @@ of the registers and memory locations should be.
 -  50% Implementation
 
    -  25% for correct implementation of non-control instructions:
-      registers 1 to 13 are all correct.
+      registers 1 to 10 are all correct.
 
    -  25% for correct implementation of control instructions ``BEQ``,
-      ``J``, ``JAL``, and ``JR``. In addition to the above, register 14
-      is correct, registers 27 to 30 are zero, register 31 is correct,
+      ``J``, ``JAL``, and ``JR``. In addition to the above, register 6
+      is correct, registers 11 to 14 are zero, register 31 is correct,
       and the program ends in the infinite loop.
 
    -  Partial credit at the grader’s discretion.
