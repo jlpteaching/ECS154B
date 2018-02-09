@@ -40,6 +40,8 @@ Your CPU must implement all instructions from Lab 2, and a few more:
 
 -  Control flow instructions: ``BEQ, J, JAL, JR``
 
+``SLL`` and ``SRL`` are new instructions you need to implement.
+
 The control signals for the ALU are mostly identical to Lab 2, and are
 reposted here:
 
