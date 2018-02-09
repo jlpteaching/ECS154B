@@ -285,3 +285,7 @@ Hints
 -  After finishing a portion of the lab, save that implementation as a
    separate circuit so that you have something to go back to in case you
    need to restart.
+   
+-  Using git may prove useful for this job of keeping history in case
+   you need go back. In that case however, make sure you commit at
+   reasonable times with reasonable messages :)
