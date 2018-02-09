@@ -31,7 +31,7 @@ AUTOMATIC ZERO.** **
 Details
 =======
 
-Your CPU must implement all instructions from Lab 3:
+Your CPU must implement all instructions from Lab 2, and a few more:
 
 -  Data instructions:
    ``ADD, ADDI, AND, ANDI, OR, ORI, SLL, SLT, SRL, SUB, XOR``
@@ -40,8 +40,8 @@ Your CPU must implement all instructions from Lab 3:
 
 -  Control flow instructions: ``BEQ, J, JAL, JR``
 
-The control signals for the ALU are identical to Lab 2, and are reposted
-here for your convenience:
+The control signals for the ALU are mostly identical to Lab 2, and are
+reposted here:
 
 +-----------+-------------+-------------+-------------+
 | Operation | **ALUCtl2** | **ALUCtl1** | **ALUCtl0** |
