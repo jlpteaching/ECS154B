@@ -215,11 +215,15 @@ Midterm: Thursday, February 15th at 12:10 PM
 The midterm will cover chapters 1, 2, and 4 from the book.
 This includes technology, measuring system performance, instruction sets, single cycle architecture, and pipeline architecture.
 
+You are allowed one 8.5x11 sheet of *handwritten* notes.
+
 Final: Tuesday, March 20, 2018 at 8 AM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The final will cover chapters 5 and 6 from the book.
 This includes memory technology, cache design, virtual memory, parallel programming, and parallel architectures.
+
+You are allowed one 8.5x11 sheet of *handwritten* notes.
 
 .. _schedule:
 
