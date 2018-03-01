@@ -35,6 +35,8 @@ If you're unsure if you've found a bug, post on piazza.
 If you find a bug, please open a pull request on github_.
 **You will receive 5 points of extra credit for each pull request I merge**.
 
+I will accept pull requests with style, grammar, wording updates, but they must be non-trivial to get the 5 points of extra credit.
+
 .. _github: https://github.com/jlpteaching/ECS154B/
 
 Details
@@ -77,6 +79,17 @@ You will need to implement the following functions:
 
 **DO NOT MODIFY THIS INTERFACE! OR THE IMPLEMENTATION OF THE NON-VIRTUAL FUNCTIONS.**
 
+There are two functions that are implemented in the base ``Cache`` class that you will need to use.
+
+- ``sendResponse``: Call this function when you want to send a response to the processor. It takes two arguments.
+    - ``int request_id``: When the processor sends a request it includes a request ID. This is needed for the processor to track which request it is receiving a response for. You must save this request ID from when the processor sent the request and use the *same* ID when responding.
+    - ``const uint8_t* data``: This is the data you are returning to the processor on loads. On stores, the data must be ``nullptr``. The processor will copy the data out of this pointer.
+- ``sendMemRequest``: Send a request to memory to either read or write an address. You will call this when writing back data from the cache or to fetch data on a miss. It takes four arguments:
+    - ``uint64_t address``: The address that you want to read or write.
+    - ``int size``: The size of the request (this should always be the memory line size).
+    - ``const uint8_t* data``: If writing back this pointer should hold the data to write. The memory will copy the data from this pointer.
+    - ``int request_id``: Like when the processor sends a request, when the cache sends a request to memory it needs a way to know which request it is getting a response for. Thus, you can choose any ``request_id`` you would like when sending the request to memory. When memory responds to the request, it will use that ID. I suggest using the MSHR table index.
+
 Memory
 ~~~~~~
 
@@ -113,7 +126,7 @@ The ``SRAMArray`` is a simple data storage array that only takes the size of the
 You will instantiate multiple tag and SRAM arrays for your set-associative cache implementation.
 
 Implementing a set-associative cache
------------------------------------
+------------------------------------
 
 You are given a file ``set_assoc.cc`` which has empty functions for each function you are required to implement.
 You will be modifying and turning in this file and ``set_assoc.hh``.
@@ -137,6 +150,7 @@ Much of the code will be shared between the set-associative and the non-blocking
 
 We discussed non-blocking caches in class.
 To implement a non-blocking cache, you must track the outstanding requests from the cache.
+This is usually done with a table of miss status handling registers (MSHRs).
 You may choose any software implementation of this you would like.
 However, you will be expected to explain how your software implementation would translate to hardware in interactive grading.
 
@@ -146,7 +160,7 @@ Grading/Testing
 ===============
 
 You should expect that we will test the following things:
-- Changing the size, associativity, and number of MSRHs of the cache.
+- Changing the size, associativity, and number of MSHRs of the cache.
 - Changing the line size of the memory.
 - Sending requests of any power-of-two size to the cache from the processor that are less than or equal to the line size.
 - Changing the address width.
@@ -228,6 +242,8 @@ adhere to the instructions will result in a loss of points.
 
 Hints
 =====
+
+- This is a new assignment. There may be bugs. I will update the git repository if/when bugs are found. It will be best for you to clone the repo so you can pull new changes as they happen.
 
 - We discussed the state machines for the caches in class. Use these ideas when implementing your cache models.
 
