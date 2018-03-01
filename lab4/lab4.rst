@@ -16,8 +16,8 @@ Objectives
 Description
 ===========
 
-In this lab, you will build a cache model of a set-associative non-blocking cache in C++.
-Computer architects often use high-level languages like C++ to *model* hardware in early research and development of new design.
+In this lab, you will build a cache model of a set-associative non-blocking caches in C++.
+Computer architects often use high-level languages like C++ to *model* hardware in early research and development of new designs.
 Using high-level languages gives architects more freedom and flexibility to quickly iterate with designs than using hardware description languages or actually making hardware.
 
 You will be given a simulation framework and an example direct-mapped cache implementation.
@@ -31,18 +31,18 @@ You will be graded in two ways:
 
 **EXTRA CREDIT**: This is my first time giving this assignment.
 I have written this code over the last couple of days, so it's likely there are bugs.
-If you're unsure if you've found a bug, post on piazza.
-If you find a bug, please open a pull request on github_.
+If you're unsure if you've found a bug, post on Piazza.
+If you find a bug, please open a pull request on Github_.
 **You will receive 5 points of extra credit for each pull request I merge**.
 
 I will accept pull requests with style, grammar, wording updates, but they must be non-trivial to get the 5 points of extra credit.
 
-.. _github: https://github.com/jlpteaching/ECS154B/
+.. _Github: https://github.com/jlpteaching/ECS154B/
 
 Details
 =======
 
-Given code
+Given Code
 ----------
 
 You will find the code in the ``lab4/provided/`` directory.
@@ -56,6 +56,7 @@ Then, the simulation is executed.
 
 Processor
 ~~~~~~~~~
+
 The processor drives the simulation.
 It sends memory requests to the cache by calling ``receiveRequest`` on the cache object.
 The processor will continually send requests to the cache until the cache responds that it is blocked (``receiveRequest`` returns ``false``).
@@ -66,18 +67,18 @@ This function populates a queue which is the "trace" of memory accesses.
 See ``processor.cc`` for details.
 
 Feel free to add your own tests and/or modify the tests in ``createRecords``.
-When we test your code we will use a different implementation of ``Processor::createRecords``.
-
+When we test your code, we will use a different implementation of ``Processor::createRecords``.
 
 Cache
 ~~~~~
+
 You will be inheriting from the ``Cache`` object.
 See the code in ``cache.hh`` for details of the interface you will implement.
 You will need to implement the following functions:
 - ``receiveRequest``: Called by the Processor when sending a new request.
 - ``receiveMemResponse``: Called by memory when it has finished reading the data previously requested by the cache.
 
-**DO NOT MODIFY THIS INTERFACE! OR THE IMPLEMENTATION OF THE NON-VIRTUAL FUNCTIONS.**
+**DO NOT MODIFY THIS INTERFACE OR THE IMPLEMENTATION OF THE NON-VIRTUAL FUNCTIONS.**
 
 There are two functions that are implemented in the base ``Cache`` class that you will need to use.
 
@@ -94,24 +95,28 @@ Memory
 ~~~~~~
 
 Memory receives requests from the cache.
-After some delay, it will respond to the request (the delay is guaranteed to be more than 1 tick).
+After some delay, it will respond to the request.
+The delay is guaranteed to be more than 1 tick.
 This object also has an interface for you to determine the line size.
 The memory line size is used as the cache line size.
 
 TickedObject
 ~~~~~~~~~~~~
+
 This object implements the discrete event simulation.
 Feel free to ignore it :).
 
 DirectMappedCache
 ~~~~~~~~~~~~~~~~~
+
 This is an example cache implementation.
-Feel free to base you implementation of the set associative cache on the direct mapped cache that is included.
-You can use any code from the class in your set associative cache.
+Feel free to base you implementation of the set-associative cache on the direct mapped cache that is included.
+You can use any code from the class in your set-associative cache.
 
 TagArray and SRAMArray
 ~~~~~~~~~~~~~~~~~~~~~~
-**DO NOT MODIFY THIS CODE IN ANY WAY**
+
+**DO NOT MODIFY THIS CODE IN ANY WAY**.
 
 You are required to use the ``TagArray`` and ``SRAMArray`` to hold tags/state and data, respectively.
 Constraining yourself to this interface will help ensure your cache controller design is realistic.
@@ -122,17 +127,16 @@ The ``TagArray`` takes the number of tag bits and data bits as parameters.
 We will check to make sure you use the correct number of tag and data bits.
 
 The ``SRAMArray`` is a simple data storage array that only takes the size of the data (cache block) and the number of elements to store as parameters.
-
 You will instantiate multiple tag and SRAM arrays for your set-associative cache implementation.
 
-Implementing a set-associative cache
+Implementing a Set-Associative Cache
 ------------------------------------
 
 You are given a file ``set_assoc.cc`` which has empty functions for each function you are required to implement.
 You will be modifying and turning in this file and ``set_assoc.hh``.
 Feel free to add new private/protected functions to the ``SetAssociativeCache``, but **DO NOT MODIFY THE PUBLIC INTERFACE**.
 
-You implementation of the set associative cache should behave *exactly the same* as the direct-mapped cache when there is only one way.
+You implementation of the set-associative cache should behave *exactly the same* as the direct-mapped cache when there is only one way.
 It should also be able to be any associative up to fully-associative (unless you explain why this is not possible as described below).
 
 You may choose to implement any replacement policy.
@@ -142,22 +146,20 @@ If this constrains your associativity, be sure to include assertions in your cod
 
 You **must** use the given TagArray and DataArray objects to store your tags and data.
 
-Implementing a non-blocking cache
+Implementing a Non-Blocking Cache
 ---------------------------------
 
-Your non-blocking cache should inherit from you set associative implementation as it must both non-blocking and set-associative.
+Your non-blocking cache should inherit from your set-associative implementation as it must be both non-blocking and set-associative.
 Much of the code will be shared between the set-associative and the non-blocking cache.
 
 We discussed non-blocking caches in class.
-To implement a non-blocking cache, you must track the outstanding requests from the cache.
+To implement a non-blocking cache, you must track outstanding requests from the cache.
 This is usually done with a table of miss status handling registers (MSHRs).
 You may choose any software implementation of this you would like.
 However, you will be expected to explain how your software implementation would translate to hardware in interactive grading.
 
-
-
-Grading/Testing
-===============
+Testing and Grading
+===================
 
 You should expect that we will test the following things:
 - Changing the size, associativity, and number of MSHRs of the cache.
@@ -172,6 +174,7 @@ The underlying implementation may change.
 You should perform simulations with your code to answer the following questions.
 Include the answers to these questions in your README when submitting your assignment.
 **You should include specific data that back up your answers**.
+
 - How can you determine the hit ratio of the cache?
 - How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the hit ratio?
 - How can you determine the performance of the system?
@@ -210,16 +213,14 @@ Think about the following questions for interactive grading:
 Submission
 ==========
 
-**Warning**: read the submission instructions carefully. Failure to
-adhere to the instructions will result in a loss of points.
+**Warning**: read the submission instructions carefully. Failure to adhere to the instructions will result in a loss of points.
 
 -  Upload to Canvas the zip/tar/tgz of your ``set_assoc.cc``, ``set_assoc.hh``, ``non_blocking.cc`` *and* ``non_blocking.hh`` file along with a README file that contains:
 
    -  The names of you and your partner.
-
    -  If there are any constraints on the associativity of your cache, explain what they are and why.
-
    -  Your answers to the following questions:
+
        - How can you determine the hit ratio of the cache?
        - How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the hit ratio?
        - How can you determine the performance of the system?
@@ -227,18 +228,12 @@ adhere to the instructions will result in a loss of points.
        - How does increasing the number of MSHRs affect the performance of the system?
 
    -  Any difficulties you had.
-
    -  Anything that doesn’t work correctly and why.
-
    -  Anything you feel that the graders should know.
 
--  **Copy and paste the README into the comment box when you are
-   submitting your assignment**, as well.
-
+-  **Copy and paste the README into the comment box when you are submitting your assignment**, as well.
 -  Only one partner should submit the assignment.
-
 -  You may submit your assignment as many times as you want.
-
 
 Hints
 =====
@@ -246,9 +241,6 @@ Hints
 - This is a new assignment. There may be bugs. I will update the git repository if/when bugs are found. It will be best for you to clone the repo so you can pull new changes as they happen.
 
 - We discussed the state machines for the caches in class. Use these ideas when implementing your cache models.
-
-- Use the DPRINT macro in ``util.hh`` for debugging. This allows you to insert extra debugging print statements that are easily turned off (see the makefile).
-
-- Using git may prove useful for keeping history in case you need go back. In that case however, make sure you commit at reasonable times with reasonable messages :)
-
-- If you find a bug, submit a pull request on github! You'll get 5pts extra credit on the assignment per PR that I accept!
+- Use the DPRINT macro in ``util.hh`` for debugging. This allows you to insert extra debugging print statements that are easily turned off (see the Makefile).
+- Using Git (or any other version control system) may prove useful for keeping history in case you need go back. Make sure you commit at reasonable times with reasonable messages :).
+- If you find a bug, submit a pull request on Github! You'll get 5 points of extra credit on the assignment per PR that I accept!
