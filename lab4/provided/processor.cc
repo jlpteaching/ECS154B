@@ -96,16 +96,16 @@ Processor::checkData(Record &record, const uint8_t* cache_data)
 void
 Processor::createRecords()
 {
-    //          Ticks   Write Address    ID#    size
-    trace.push({5,      1,    0x10000,   1,     8});
-    trace.push({5,      1,    0x10008,   2,     8});
-    trace.push({5,      1,    0x12000,   3,     8});
-    trace.push({5,      1,    0x1c000,   4,     8});
-    trace.push({5,      1,    0x10a00,   5,     8});
-    trace.push({5,      0,    0x10010,   6,     8});
-    trace.push({5,      0,    0x10018,   7,     8});
-    trace.push({5,      0,    0x10004,   8,     4});
-    trace.push({5,      0,    0x10008,   9,     4});
-    trace.push({5,      0,    0x1000c,   10,    4});
-    trace.push({5,      0,    0x110000,  11,    4});
+    //          Ticks   Write Address    ID#    size  data
+    trace.push({5,      1,    0x10000,   1,     8,    nullptr});
+    trace.push({5,      1,    0x10008,   2,     8,    nullptr});
+    trace.push({5,      1,    0x12000,   3,     8,    nullptr});
+    trace.push({5,      1,    0x1c000,   4,     8,    nullptr});
+    trace.push({5,      1,    0x10a00,   5,     8,    nullptr});
+    trace.push({5,      0,    0x10010,   6,     8,    nullptr});
+    trace.push({5,      0,    0x10018,   7,     8,    nullptr});
+    trace.push({5,      0,    0x10004,   8,     4,    nullptr});
+    trace.push({5,      0,    0x10008,   9,     4,    nullptr});
+    trace.push({5,      0,    0x1000c,   10,    4,    nullptr});
+    trace.push({5,      0,    0x110000,  11,    4,    nullptr});
 }
