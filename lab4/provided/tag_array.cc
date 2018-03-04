@@ -18,14 +18,16 @@ TagArray::TagArray(int lines, int state_bits, int tag_bits) :
 uint64_t
 TagArray::getTag(int line)
 {
-    uint64_t tag_mask = ((uint64_t)-1) >> (64 - tagBits);
+    assert(line >= 0);
+    assert(line < tags.size());
     return tags[line];
 }
 
 uint32_t
 TagArray::getState(int line)
 {
-    uint32_t state_mask = ((uint32_t)-1) >> (32 - stateBits);
+    assert(line >= 0);
+    assert(line < states.size());
     return states[line];
 }
 
