@@ -1,4 +1,7 @@
 
+#ifndef CSIM_SET_ASSOC_H
+#define CSIM_SET_ASSOC_H
+
 #include "cache.hh"
 
 class SetAssociativeCache: public Cache
@@ -49,3 +52,5 @@ class SetAssociativeCache: public Cache
   private:
     /// Put any code you want here.
 };
+
+#endif // CSIM_SET_ASSOC_H
