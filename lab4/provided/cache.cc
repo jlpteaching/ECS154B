@@ -6,7 +6,7 @@
 #include "processor.hh"
 
 Cache::Cache(int64_t size, Memory& memory, Processor& processor) :
-    memory(memory), processor(processor), size(size)
+    size(size), memory(memory), processor(processor)
 {
     memory.setCache(this);
     processor.setCache(this);
