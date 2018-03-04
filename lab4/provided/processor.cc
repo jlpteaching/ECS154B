@@ -1,4 +1,5 @@
 
+#include <cstring>
 #include <iostream>
 
 #include "memory.hh"
@@ -22,19 +23,15 @@ Processor::~Processor()
 void
 Processor::sendRequest(Record &r)
 {
-    uint8_t *data = nullptr;
     if (r.write) {
-        data = new uint8_t[r.size];
-        for (int i=0; i<r.size; i++) {
-            data[i] = (uint8_t)(r.requestId & 0xFF);
-        }
+        r.data = new uint8_t[r.size];
+        memset(r.data, (uint8_t)r.requestId, r.size);
     }
-    r.data = data;
 
     DPRINT("Sending request 0x" << std::hex << r.address
             << std::dec << ":" << r.size << " (" << r.requestId << ")");
     outstanding[r.requestId] = r;
-    if (cache->receiveRequest(r.address, r.size, data, r.requestId)) {
+    if (cache->receiveRequest(r.address, r.size, r.data, r.requestId)) {
         totalRequests++;
         trace.pop();
 
