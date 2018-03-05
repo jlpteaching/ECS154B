@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
 {
     Processor p;
     Memory m(8);
+    p.setMemory(&m);
     DirectMappedCache c(1 << 10, m, p);
 
     std::cout << "Running simulation" << std::endl;

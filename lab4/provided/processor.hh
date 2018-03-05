@@ -14,6 +14,7 @@ class Processor: public TickedObject
 {
   private:
     Cache *cache;
+    Memory *memory;
 
     struct Record {
         int64_t ticksFromNow;
@@ -36,6 +37,8 @@ class Processor: public TickedObject
 
     int64_t totalRequests;
 
+    void checkData(Record &record, const uint8_t* cache_data);
+
   public:
     Processor();
     ~Processor();
@@ -52,6 +55,11 @@ class Processor: public TickedObject
      * Connect the cache
      */
     void setCache(Cache *cache) { this->cache = cache; }
+
+    /**
+     * Connect memory for debugging and checking purposes
+     */
+    void setMemory(Memory *memory) {this->memory = memory; }
 
     /**
      * @return the number of bits in the address
