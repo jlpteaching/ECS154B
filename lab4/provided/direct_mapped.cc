@@ -79,15 +79,20 @@ DirectMappedCache::receiveRequest(uint64_t address, int size,
             DPRINT("Dirty, writing back");
             // If the line is dirty, then we need to evict it.
             uint8_t* line = dataArray.getLine(index);
+            // Calculate the address of the writeback.
+            uint64_t wb_address =
+                tagArray.getTag(index) << (processor.getAddrSize() - tagBits);
+            wb_address |= (index << memory.getLineBits());
             // No response for writes, no need for valid request_id
-            sendMemRequest(address, memory.getLineSize(), line, -1);
+            sendMemRequest(wb_address, memory.getLineSize(), line, -1);
         }
         // Mark the line invalid.
         tagArray.setState(index, Invalid);
         // Forward to memory and block the cache.
         // no need for req id since there is only one outstanding request.
         // We need to read whether the request is a read or write.
-        sendMemRequest(address, memory.getLineSize(), nullptr, 0);
+        uint64_t block_address = address & ~(memory.getLineSize() -1);
+        sendMemRequest(block_address, memory.getLineSize(), nullptr, 0);
 
         // remember the CPU's request id
         mshr.savedId = request_id;
