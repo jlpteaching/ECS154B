@@ -49,6 +49,7 @@ class TagArray
 
   private:
 
+    int lines;
     int stateBits;
     int tagBits;
 

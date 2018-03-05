@@ -5,7 +5,7 @@
 #include "tag_array.hh"
 
 TagArray::TagArray(int lines, int state_bits, int tag_bits) :
-    stateBits(state_bits), tagBits(tag_bits)
+    lines(lines), stateBits(state_bits), tagBits(tag_bits)
 {
     assert(stateBits <= 32);
     assert(tagBits <= 64);
@@ -22,7 +22,7 @@ uint64_t
 TagArray::getTag(int line)
 {
     assert(line >= 0);
-    assert(line < tags.size());
+    assert(line < lines);
     return tags[line];
 }
 
@@ -30,7 +30,7 @@ uint32_t
 TagArray::getState(int line)
 {
     assert(line >= 0);
-    assert(line < states.size());
+    assert(line < lines);
     return states[line];
 }
 
