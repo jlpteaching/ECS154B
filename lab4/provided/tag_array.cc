@@ -1,5 +1,6 @@
 
 #include <cassert>
+#include <iostream>
 
 #include "tag_array.hh"
 
@@ -13,6 +14,8 @@ TagArray::TagArray(int lines, int state_bits, int tag_bits) :
 
     tags.resize(lines, 0);
     states.resize(lines, 0);
+
+    totalSize += getSize();
 }
 
 uint64_t
@@ -46,3 +49,18 @@ TagArray::setState(int line, uint32_t state)
     assert((state & state_mask) == state);
     states[line] = state;
 }
+
+int64_t
+TagArray::getSize()
+{
+    int64_t bits = (stateBits + tagBits) * tags.size();
+    return bits/8;
+}
+
+int64_t
+TagArray::getTotalSize()
+{
+    return totalSize;
+}
+
+int64_t TagArray::totalSize = 0;

@@ -37,6 +37,16 @@ class TagArray
      */
     void setState(int line, uint32_t state);
 
+    /**
+     * Return the size in bytes.
+     */
+    int64_t getSize();
+
+    /**
+     * Returns the total size of all SRAM arrays.
+     */
+    static int64_t getTotalSize();
+
   private:
 
     int stateBits;
@@ -47,6 +57,9 @@ class TagArray
 
     /// The storage for the state. Cheating and using more bits that needed.
     std::vector<uint32_t> states;
+
+    /// Sum of the size of all tag arrays.
+    static int64_t totalSize;
 };
 
 #endif // CSIM_SRAM_ARRAY_H
