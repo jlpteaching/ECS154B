@@ -80,13 +80,9 @@ DirectMappedCache::receiveRequest(uint64_t address, int size,
             // If the line is dirty, then we need to evict it.
             uint8_t* line = dataArray.getLine(index);
             sendMemRequest(address, memory.getLineSize(), line, -1);
-            // No response for writes, no need for valid request_id
-            // Mark the line as invalid
-            tagArray.setState(index, Invalid);
-        } else {
-            // Since it is not dirty, just invalidate the line.
-            tagArray.setState(index, Invalid);
         }
+        // Mark the line invalid.
+        tagArray.setState(index, Invalid);
         // Forward to memory and block the cache.
         // no need for req id since there is only one outstanding request.
         // We need to read whether the request is a read or write.
