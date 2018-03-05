@@ -79,6 +79,7 @@ DirectMappedCache::receiveRequest(uint64_t address, int size,
             DPRINT("Dirty, writing back");
             // If the line is dirty, then we need to evict it.
             uint8_t* line = dataArray.getLine(index);
+            // No response for writes, no need for valid request_id
             sendMemRequest(address, memory.getLineSize(), line, -1);
         }
         // Mark the line invalid.
