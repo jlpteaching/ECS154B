@@ -1,4 +1,7 @@
 
+#ifndef CSIM_NON_BLOCKING_H
+#define CSIM_NON_BLOCKING_H
+
 #include "set_assoc.hh"
 
 class NonBlockingCache: public SetAssociativeCache
@@ -49,3 +52,5 @@ class NonBlockingCache: public SetAssociativeCache
   private:
     /// Put any code you want here.
 };
+
+#endif // CSIM_NON_BLOCKING_H

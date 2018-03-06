@@ -21,4 +21,6 @@ int main(int argc, char *argv[])
 
     std::cout << "Tag size: ";
     std::cout << ((float)TagArray::getTotalSize())/1024 << "KB" << std::endl;
+
+    return 0;
 }
