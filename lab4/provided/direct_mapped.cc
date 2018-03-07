@@ -156,9 +156,8 @@ DirectMappedCache::hit(uint64_t address)
     int index = getIndex(address);
     State state = (State)tagArray.getState(index);
     uint64_t line_tag = tagArray.getTag(index);
-    if ((state == Valid || state == Dirty) && // dirty implies valid
-        line_tag == getTag(address)) return true;
-    else return false;
+    // dirty implies valid
+    return (state == Valid || state == Dirty) && line_tag == getTag(address);
 }
 
 bool
@@ -166,6 +165,5 @@ DirectMappedCache::dirty(uint64_t address)
 {
     int index = getIndex(address);
     State state = (State)tagArray.getState(index);
-    if (state == Dirty) return true;
-    else return false;
+    return state == Dirty;
 }
