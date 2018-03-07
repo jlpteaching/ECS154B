@@ -33,7 +33,8 @@ class Memory : public TickedObject
     int getLineSize();
 
     /**
-     * @return the line size in bytes
+     * @return the line size as a power of 2 (i.e. 2^getLineBits() or
+     * log2(getLineSize()))
      */
     int getLineBits();
 
