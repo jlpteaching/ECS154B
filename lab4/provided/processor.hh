@@ -9,21 +9,14 @@
 
 #include "cache.hh"
 #include "ticked_object.hh"
+#include "record_store.hh"
 
 class Processor: public TickedObject
 {
-  private:
+  protected:
     Cache *cache;
     Memory *memory;
 
-    struct Record {
-        int64_t ticksFromNow;
-        bool write;
-        uint64_t address;
-        int requestId;
-        int size;
-        uint8_t* data;
-    };
 
     std::queue<Record> trace;
 
