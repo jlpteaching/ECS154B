@@ -10,7 +10,7 @@
 Processor::Processor() : cache(nullptr), memory(nullptr), blocked(false),
     totalRequests(0)
 {
-    createRecords();
+    //
 }
 
 Processor::~Processor()
