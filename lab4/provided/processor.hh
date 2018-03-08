@@ -20,7 +20,7 @@ class Processor: public TickedObject
 
     std::queue<Record> trace;
 
-    std::map<int, Record> outstanding;
+    std::map<int, Record*> outstanding;
 
     void sendRequest(Record &r);
 

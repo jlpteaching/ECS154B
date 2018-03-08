@@ -25,7 +25,7 @@ Processor::sendRequest(Record &r)
 {
     DPRINT("Sending request 0x" << std::hex << r.address
             << std::dec << ":" << r.size << " (" << r.requestId << ")");
-    outstanding[r.requestId] = r;
+    outstanding[r.requestId] = &r;
     if (cache->receiveRequest(r.address, r.size, &r.dataVec[0], r.requestId)) {
         totalRequests++;
         trace.pop();
@@ -53,7 +53,7 @@ Processor::receiveResponse(int request_id, const uint8_t* data)
 
     auto it = outstanding.find(request_id);
     assert(it != outstanding.end());
-    checkData(it->second, data);
+    checkData(*it->second, data);
     outstanding.erase(it);
 
     if (blocked) {
