@@ -9,9 +9,9 @@ istream& operator>>(istream& is, Record& r) {
     r.dataVec.reserve(r.size);
     if (r.write) {
         for (int i = 0; i < r.size; ++i) {
-            uint8_t byte;
+            int byte;
             is >> hex >> byte >> dec;
-            r.dataVec.push_back(byte);
+            r.dataVec.push_back((uint8_t) byte);
         }
     }
 
