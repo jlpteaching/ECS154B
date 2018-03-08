@@ -1,6 +1,7 @@
 #include "record_store.hh"
 
 #include <fstream>
+#include <sstream>
 
 istream& operator>>(istream& is, Record& r) {
     is >> r.ticksFromNow >> r.write >> hex >> r.address >> dec >> r.requestId >> r.size;
@@ -49,10 +50,8 @@ bool RecordStore::loadRecords() {
     if (!in) return false;
 
     records.clear();
-    while (in) {
-        Record r;
-        in >> r;
-
+    Record r;
+    while (in >> r) {
         records.push_back(r);
     }
 
