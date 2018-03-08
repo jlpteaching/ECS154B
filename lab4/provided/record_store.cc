@@ -19,13 +19,13 @@ istream& operator>>(istream& is, Record& r) {
 }
 
 ostream& operator<<(ostream& os, Record& r) {
-    os << r.ticksFromNow << ' ' << r.write << ' ' << hex << r.address << dec << ' ' << r.requestId << ' ' << r.size; 
+    os << r.ticksFromNow << ' ' << r.write << ' ' << hex << "0x" << r.address << dec << ' ' << r.requestId << ' ' << r.size; 
 
     if (r.write) {
         for (int i = 0; i < r.size; ++i) {
             if (i != r.size - 1)
                 os << ' ';
-            os << hex << r.dataVec[i] << dec;
+            os << hex << "0x" << r.dataVec[i] << dec;
         }
     }
 

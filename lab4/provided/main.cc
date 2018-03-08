@@ -9,8 +9,12 @@ int main(int argc, char *argv[])
 {
     Processor p;
     Memory m(8);
+    RecordStore records("simple.txt");
+    records.loadRecords();
     p.setMemory(&m);
+    p.setRecords(&records);
     DirectMappedCache c(1 << 10, m, p);
+    p.run();
 
     std::cout << "Running simulation" << std::endl;
     TickedObject::runSimulation();
