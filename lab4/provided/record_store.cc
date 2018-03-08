@@ -25,7 +25,7 @@ ostream& operator<<(ostream& os, Record& r) {
         for (int i = 0; i < r.size; ++i) {
             if (i != r.size - 1)
                 os << ' ';
-            os << hex << "0x" << r.dataVec[i] << dec;
+            os << hex << "0x" << int(r.dataVec[i]) << dec;
         }
     }
 
