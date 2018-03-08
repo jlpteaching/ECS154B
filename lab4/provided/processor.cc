@@ -91,7 +91,7 @@ Processor::checkData(Record &record, const uint8_t* cache_data)
 void
 Processor::createRecords()
 {
-    vector<Record>& recVec= records->getRecords();
+    vector<Record>& recVec = records->getRecords();
     for (int i = 0; i < recVec.size(); ++i) {
         trace.push(&recVec[i]);
     }

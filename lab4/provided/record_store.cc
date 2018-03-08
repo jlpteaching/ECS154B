@@ -40,6 +40,10 @@ RecordStore::RecordStore(string filename):
     //
 }
 
+vector<Record>& RecordStore::getRecords() {
+    return records;
+}
+
 bool RecordStore::loadRecords() {
     ifstream in(filename.c_str());
 
