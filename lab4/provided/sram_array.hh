@@ -4,13 +4,14 @@
 
 #include <cstdint>
 #include <iostream>
+#include <vector>
 
 class SRAMArray
 {
     int64_t lines;
     int lineBytes;
 
-    uint8_t *data;
+    std::vector<uint8_t> data;
 
     /// Sum of the size of all SRAM arrays.
     static int64_t totalSize;
@@ -19,8 +20,6 @@ class SRAMArray
      * Allocates a new SRAM array. Total size is lines * line_bytes
      */
     SRAMArray(int64_t lines, int line_bytes);
-
-    ~SRAMArray();
 
     /**
      * @return a pointer to the data for the line in the SRAM array.
