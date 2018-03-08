@@ -9,9 +9,24 @@ SRAMArray::SRAMArray(int64_t lines, int line_bytes) :
     totalSize += getSize();
 }
 
+SRAMArray::SRAMArray(SRAMArray&& other)
+{
+    // Move the pointer
+    other.data = data;
+    // We no longer have a valid pointer
+    data = nullptr;
+
+    // Copy other data over
+    other.lines = lines;
+    other.lineBytes = lineBytes;
+}
+
 SRAMArray::~SRAMArray()
 {
     delete[] data;
+
+    // Don't double count if something is deleted/moved
+    totalSize -= getSize();
 }
 
 uint8_t*
