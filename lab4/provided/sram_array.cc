@@ -2,22 +2,17 @@
 #include "sram_array.hh"
 
 SRAMArray::SRAMArray(int64_t lines, int line_bytes) :
-    lines(lines), lineBytes(line_bytes), data(nullptr)
+    lines(lines), lineBytes(line_bytes)
 {
-    data = new uint8_t[lines * lineBytes];
+    data.resize(lines * lineBytes);
 
     totalSize += getSize();
-}
-
-SRAMArray::~SRAMArray()
-{
-    delete[] data;
 }
 
 uint8_t*
 SRAMArray::getLine(int index)
 {
-    return &data[index * lineBytes];
+    return &data.data()[index * lineBytes];
 }
 
 int64_t
