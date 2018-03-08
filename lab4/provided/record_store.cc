@@ -3,7 +3,7 @@
 #include <fstream>
 
 istream& operator>>(istream& is, Record& r) {
-    is >> r.ticksFromNow >> r.write >> r.address >> r.requestId >> r.size;
+    is >> r.ticksFromNow >> r.write >> hex >> r.address >> dec >> r.requestId >> r.size;
 
     r.dataVec.clear();
     r.dataVec.reserve(r.size);
