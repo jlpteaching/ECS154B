@@ -26,7 +26,7 @@ Processor::sendRequest(Record &r)
     DPRINT("Sending request 0x" << std::hex << r.address
             << std::dec << ":" << r.size << " (" << r.requestId << ")");
     outstanding[r.requestId] = &r;
-    if (cache->receiveRequest(r.address, r.size, &r.dataVec[0], r.requestId)) {
+    if (cache->receiveRequest(r.address, r.size, r.write ? &r.dataVec[0] : nullptr, r.requestId)) {
         totalRequests++;
         trace.pop();
 
