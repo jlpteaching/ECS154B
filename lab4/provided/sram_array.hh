@@ -20,16 +20,6 @@ class SRAMArray
      */
     SRAMArray(int64_t lines, int line_bytes);
 
-    /**
-     * Do not allow SRAMArray to be copied
-     */
-    SRAMArray(const SRAMArray&) = delete;
-
-    /**
-     * Move constructor for SRAMArray
-     */
-    SRAMArray(SRAMArray&& other);
-
     ~SRAMArray();
 
     /**
