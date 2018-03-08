@@ -22,6 +22,9 @@ void
 Processor::run()
 {
     createRecords();
+
+    if (trace.empty()) return;
+
     Record &r = *trace.front();
     schedule(r.ticksFromNow, [this, &r]{sendRequest(r);});
 }
