@@ -33,6 +33,10 @@ Other rules:
 
 - Do not use any libraries except the C++ STL.
 - Your code must compile on the lab machines with no changes.
+- To test your code, we will extract your set_assoc.hh, set_assoc.cc, non_blocking.hh,
+  and non_blocking.cc files from your submission and building it with the most up-to-
+  date library files. Any code you write should go into these files, and make sure
+  that you test against the latest versions of code on github.
 
 **EXTRA CREDIT**: This is my first time giving this assignment.
 I have written this code over the last couple of days, so it's likely there are bugs.
