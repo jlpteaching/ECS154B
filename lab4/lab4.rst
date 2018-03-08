@@ -236,16 +236,16 @@ Submission
 
 -  Upload to Canvas the zip/tar/tgz of your ``set_assoc.cc``, ``set_assoc.hh``, ``non_blocking.cc`` *and* ``non_blocking.hh`` file along with a README file that contains:
 
-  -  The names of you and your partner.
+   -  The names of you and your partner.
   
-  -  If there are any constraints on the associativity of your cache, explain what they are and why.
-  
-  -  Any difficulties you had.
-  
-  -  Anything that doesn’t work correctly and why.
-  
-  -  Anything you feel that the graders should know.
-  
+   -  If there are any constraints on the associativity of your cache, explain what they are and why.
+
+   -  Any difficulties you had.
+
+   -  Anything that doesn’t work correctly and why.
+
+   -  Anything you feel that the graders should know.
+
 -  **Copy and paste the README into the comment box when you are submitting your assignment**, as well.
 
 -  Only one partner should submit the assignment.
