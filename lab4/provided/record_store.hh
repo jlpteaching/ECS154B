@@ -13,20 +13,18 @@ public:
     uint64_t address;
     int requestId;
     int size;
-    uint8_t* data;
+    vector<uint8_t> dataVec;
 
-    Record(int64_t ticks = 5, bool wr = false, uint64_t addr = 0x10000, int reqId = 0, int size = 4, uint8_t* dat = nullptr):
+    Record(int64_t ticks = 5, bool wr = false, uint64_t addr = 0x10000, int reqId = 0, int size = 4, vector<uint8_t> data = {}):
         ticksFromNow(ticks),
         write(wr),
         address(addr),
         requestId(reqId),
         size(size),
-        data(dat)
+        dataVec(data)
         {}
-    ~Record() {
-        if (data)
-            delete[] data;
-    }
+    friend istream& operator>>(istream& is, Record& r);
+    friend ostream& operator<<(ostream& os, Record& r);
 };
 
 class RecordStore
@@ -42,5 +40,4 @@ public:
 
     bool loadRecords();
     bool writeRecords();
-    //
 };
