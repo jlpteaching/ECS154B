@@ -92,7 +92,7 @@ Processor::checkData(Record &record, const uint8_t* cache_data)
 void
 Processor::createRecords()
 {
-    trace = {}; // clear any previous queued requests.
+    while (!trace.empty()) trace.pop(); // clear any previous queued requests.
     if (records) {
         vector<Record>& recVec = records->getRecords();
         for (auto& record : recVec) {
