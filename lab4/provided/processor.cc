@@ -7,13 +7,9 @@
 #include "ticked_object.hh"
 #include "util.hh"
 
-Processor::Processor() : cache(nullptr), memory(nullptr), blocked(false),
-    totalRequests(0)
-{
-    createRecords();
-    Record &r = trace.front();
-    schedule(r.ticksFromNow, [this, &r]{sendRequest(r);});
-}
+Processor::Processor() : cache(nullptr), memory(nullptr), records(nullptr),
+    blocked(false), totalRequests(0)
+{}
 
 Processor::~Processor()
 {
@@ -21,17 +17,23 @@ Processor::~Processor()
 }
 
 void
+Processor::scheduleForSimulation()
+{
+    createRecords();
+
+    if (trace.empty()) return;
+
+    Record &r = trace.front();
+    schedule(r.ticksFromNow, [this, &r]{sendRequest(r);});
+}
+
+void
 Processor::sendRequest(Record &r)
 {
-    if (r.write) {
-        r.data = new uint8_t[r.size];
-        memset(r.data, (uint8_t)r.requestId, r.size);
-    }
-
     DPRINT("Sending request 0x" << std::hex << r.address
             << std::dec << ":" << r.size << " (" << r.requestId << ")");
-    outstanding[r.requestId] = r;
-    if (cache->receiveRequest(r.address, r.size, r.data, r.requestId)) {
+    outstanding[r.requestId] = &r;
+    if (cache->receiveRequest(r.address, r.size, r.write ? r.dataVec.data() : nullptr, r.requestId)) {
         totalRequests++;
         trace.pop();
 
@@ -58,10 +60,7 @@ Processor::receiveResponse(int request_id, const uint8_t* data)
 
     auto it = outstanding.find(request_id);
     assert(it != outstanding.end());
-    checkData(it->second, data);
-    if (it->second.write) {
-        delete[] it->second.data;
-    }
+    checkData(*it->second, data);
     outstanding.erase(it);
 
     if (blocked) {
@@ -84,7 +83,7 @@ Processor::checkData(Record &record, const uint8_t* cache_data)
 {
     assert(memory);
     if (record.write) {
-        memory->processorWrite(record.address, record.size, record.data);
+        memory->processorWrite(record.address, record.size, record.dataVec.data());
     } else {
         memory->checkRead(record.address, record.size, cache_data);
     }
@@ -93,16 +92,34 @@ Processor::checkData(Record &record, const uint8_t* cache_data)
 void
 Processor::createRecords()
 {
-    //          Ticks   Write Address    ID#    size  data
-    trace.push({5,      1,    0x10000,   1,     8,    nullptr});
-    trace.push({5,      1,    0x10008,   2,     8,    nullptr});
-    trace.push({5,      1,    0x12000,   3,     8,    nullptr});
-    trace.push({5,      1,    0x1c000,   4,     8,    nullptr});
-    trace.push({5,      1,    0x10a00,   5,     8,    nullptr});
-    trace.push({5,      0,    0x10010,   6,     8,    nullptr});
-    trace.push({5,      0,    0x10018,   7,     8,    nullptr});
-    trace.push({5,      0,    0x10004,   8,     4,    nullptr});
-    trace.push({5,      0,    0x10008,   9,     4,    nullptr});
-    trace.push({5,      0,    0x1000c,   10,    4,    nullptr});
-    trace.push({5,      0,    0x110000,  11,    4,    nullptr});
+    if (records) {
+        vector<Record>& recVec = records->getRecords();
+        for (auto& record : recVec) {
+            trace.push(record);
+        }
+    } else {
+        //               Ticks   Write  Address   ID#   size   data
+        trace.push(Record(5,      1,    0x10000,   1,     8,
+                    {0x1, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      1,    0x10008,   2,     8,
+                    {0x2, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      1,    0x12000,   3,     8,
+                    {0x3, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      1,    0x1c000,   4,     8,
+                    {0x4, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      1,    0x10a00,   5,     8,
+                    {0x5, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      0,    0x10010,   6,     8,
+                    {0x6, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      0,    0x10018,   7,     8,
+                    {0x7, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      0,    0x10004,   8,     4,
+                    {0x8, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      0,    0x10008,   9,     4,
+                    {0x9, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      0,    0x1000c,   10,    4,
+                    {0xa, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+        trace.push(Record(5,      0,    0x110000,  11,    4,
+                    {0xb, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+    }
 }

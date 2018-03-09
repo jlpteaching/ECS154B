@@ -14,6 +14,7 @@ objs := \
 	memory.o \
 	non_blocking.o \
 	processor.o \
+	record_store.o \
 	set_assoc.o \
 	sram_array.o \
 	tag_array.o \
