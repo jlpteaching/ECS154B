@@ -20,7 +20,7 @@ istream& operator>>(istream& is, Record& r) {
 }
 
 ostream& operator<<(ostream& os, Record& r) {
-    os << r.ticksFromNow << ' ' << r.write << ' ' << hex << "0x" << r.address << dec << ' ' << r.requestId << ' ' << r.size; 
+    os << r.ticksFromNow << ' ' << r.write << ' ' << hex << "0x" << r.address << dec << ' ' << r.requestId << ' ' << r.size;
 
     if (r.write) {
         for (int i = 0; i < r.size; ++i) {
@@ -63,9 +63,11 @@ bool RecordStore::writeRecords() {
 
     if (!out) return false;
 
-    for (int i = 0; i < records.size(); ++i) {
-        out << records[i];
+    for (auto& record : records) {
+        out << record;
     }
 
     out.close();
+
+    return true;
 }
