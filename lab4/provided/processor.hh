@@ -41,7 +41,7 @@ class Processor: public TickedObject
     /**
      * Called to schedule the processor to run in the simulation.
      */
-    void run();
+    void scheduleForSimulation();
 
     /**
      * Called by the cache when it sends a response.

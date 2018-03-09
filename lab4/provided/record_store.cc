@@ -36,9 +36,7 @@ ostream& operator<<(ostream& os, Record& r) {
 
 RecordStore::RecordStore(string filename):
     filename(filename)
-{
-    //
-}
+{}
 
 vector<Record>& RecordStore::getRecords() {
     return records;

@@ -17,7 +17,7 @@ Processor::~Processor()
 }
 
 void
-Processor::run()
+Processor::scheduleForSimulation()
 {
     createRecords();
 
@@ -33,7 +33,7 @@ Processor::sendRequest(Record &r)
     DPRINT("Sending request 0x" << std::hex << r.address
             << std::dec << ":" << r.size << " (" << r.requestId << ")");
     outstanding[r.requestId] = &r;
-    if (cache->receiveRequest(r.address, r.size, r.write ? &r.dataVec[0] : nullptr, r.requestId)) {
+    if (cache->receiveRequest(r.address, r.size, r.write ? r.dataVec.data() : nullptr, r.requestId)) {
         totalRequests++;
         trace.pop();
 
@@ -83,7 +83,7 @@ Processor::checkData(Record &record, const uint8_t* cache_data)
 {
     assert(memory);
     if (record.write) {
-        memory->processorWrite(record.address, record.size, &record.dataVec[0]);
+        memory->processorWrite(record.address, record.size, record.dataVec.data());
     } else {
         memory->checkRead(record.address, record.size, cache_data);
     }

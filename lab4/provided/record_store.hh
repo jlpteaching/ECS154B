@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CSIM_RECORD_STORE_HH
+#define CSIM_RECORD_STORE_HH
 
 #include <cstdint>
 #include <string>
@@ -41,3 +42,4 @@ public:
     bool loadRecords();
     bool writeRecords();
 };
+#endif
