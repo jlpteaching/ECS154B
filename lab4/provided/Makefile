@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -std=gnu++11
+CXXFLAGS := -std=gnu++11 -Wall
 
 ifneq ($(D),)
 CXXFLAGS += -g -DDEBUG

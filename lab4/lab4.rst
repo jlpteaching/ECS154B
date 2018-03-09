@@ -155,6 +155,11 @@ If this constrains your associativity, be sure to include assertions in your cod
 
 You **must** use the given TagArray and DataArray objects to store your tags and data.
 
+It may help testing your implementation to think about the following questions: (You will be answering these questions in lab 5.)
+
+- How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the hit ratio?
+- How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the performance of the system?
+
 Implementing a Non-Blocking Cache
 ---------------------------------
 
@@ -166,6 +171,10 @@ To implement a non-blocking cache, you must track outstanding requests from the 
 This is usually done with a table of miss status handling registers (MSHRs).
 You may choose any software implementation of this you would like.
 However, you will be expected to explain how your software implementation would translate to hardware in interactive grading.
+
+It may help testing your implementation to think about the following questions: (You will be answering these questions in lab 5.)
+
+- How does increasing the number of MSHRs affect the performance of the system?
 
 Testing and Grading
 ===================
@@ -180,17 +189,18 @@ Note, we may use different implementations of ``TagArray``, ``SRAMArray``, ``Mem
 The only thing you can rely on is the interfaces in the header files.
 The underlying implementation may change.
 
-You should perform simulations with your code to answer the following questions.
-Include the answers to these questions in your README when submitting your assignment.
-**You should include specific data that back up your answers**.
+..  You should perform simulations with your code to answer the following questions.
+  Include the answers to these questions in your README when submitting your assignment.
+  **You should include specific data that back up your answers**.
 
-- How can you determine the hit ratio of the cache?
-- How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the hit ratio?
-- How can you determine the performance of the system?
-- How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the performance of the system?
-- How does increasing the number of MSHRs affect the performance of the system?
+  - How can you determine the hit ratio of the cache?
+  - How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the hit ratio?
+  - How can you determine the performance of the system?
+  - How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the performance of the system?
+  - How does increasing the number of MSHRs affect the performance of the system?
 
 Think about the following questions for interactive grading:
+
 - How does my software implementation compare to a real hardware implementation?
 - What parts of the hardware does your code model explicitly and which parts of the hardware design are not modeled?
 
@@ -227,21 +237,19 @@ Submission
 -  Upload to Canvas the zip/tar/tgz of your ``set_assoc.cc``, ``set_assoc.hh``, ``non_blocking.cc`` *and* ``non_blocking.hh`` file along with a README file that contains:
 
    -  The names of you and your partner.
+  
    -  If there are any constraints on the associativity of your cache, explain what they are and why.
-   -  Your answers to the following questions:
-
-       - How can you determine the hit ratio of the cache?
-       - How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the hit ratio?
-       - How can you determine the performance of the system?
-       - How does increasing the set-associativity from direct-mapped to 8-way set-associative affect the performance of the system?
-       - How does increasing the number of MSHRs affect the performance of the system?
 
    -  Any difficulties you had.
+
    -  Anything that doesn’t work correctly and why.
+
    -  Anything you feel that the graders should know.
 
 -  **Copy and paste the README into the comment box when you are submitting your assignment**, as well.
+
 -  Only one partner should submit the assignment.
+
 -  You may submit your assignment as many times as you want.
 
 Hints
