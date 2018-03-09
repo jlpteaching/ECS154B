@@ -23,7 +23,7 @@ Processor::scheduleForSimulation()
 
     if (trace.empty()) return;
 
-    Record &r = trace.front();
+    Record &r = *trace.front();
     schedule(r.ticksFromNow, [this, &r]{sendRequest(r);});
 }
 
@@ -40,7 +40,7 @@ Processor::sendRequest(Record &r)
         if (trace.empty()) return;
 
         // Queue the next request.
-        Record &next = trace.front();
+        Record &next = *trace.front();
         schedule(r.ticksFromNow, [this, &next]{sendRequest(next);});
     } else {
         DPRINT("Cache is blocked. Wait for later.");
@@ -67,7 +67,7 @@ Processor::receiveResponse(int request_id, const uint8_t* data)
         // unblock now.
         DPRINT("Unblocking processor at " << curTick());
         blocked = false;
-        Record &r = trace.front();
+        Record &r = *trace.front();
         schedule(r.ticksFromNow, [this, &r]{sendRequest(r);});
     }
 }
@@ -95,7 +95,7 @@ Processor::createRecords()
     if (records) {
         vector<Record>& recVec = records->getRecords();
         for (auto& record : recVec) {
-            trace.push(record);
+            trace.push(&record);
         }
     } else {
         //               Ticks   Write  Address   ID#   size   data
