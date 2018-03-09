@@ -92,13 +92,16 @@ Processor::checkData(Record &record, const uint8_t* cache_data)
 void
 Processor::createRecords()
 {
+    trace.clear();
     if (records) {
         vector<Record>& recVec = records->getRecords();
         for (auto& record : recVec) {
             trace.push(&record);
         }
     } else {
-        //               Ticks   Write  Address   ID#   size   data
+        // Commented out because the queue of pointers needs a backing
+        // array of memory to work correctly.
+        /*//               Ticks   Write  Address   ID#   size   data
         trace.push(Record(5,      1,    0x10000,   1,     8,
                     {0x1, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
         trace.push(Record(5,      1,    0x10008,   2,     8,
@@ -120,6 +123,6 @@ Processor::createRecords()
         trace.push(Record(5,      0,    0x1000c,   10,    4,
                     {0xa, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
         trace.push(Record(5,      0,    0x110000,  11,    4,
-                    {0xb, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));
+                    {0xb, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0}));*/
     }
 }
