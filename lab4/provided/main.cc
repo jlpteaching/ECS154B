@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     p.setMemory(&m);
     p.setRecords(&records);
     DirectMappedCache c(1 << 10, m, p);
-    p.run();
+    p.scheduleForSimulation();
 
     std::cout << "Running simulation" << std::endl;
     TickedObject::runSimulation();
