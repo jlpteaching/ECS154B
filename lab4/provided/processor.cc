@@ -7,7 +7,7 @@
 #include "ticked_object.hh"
 #include "util.hh"
 
-Processor::Processor() : cache(nullptr), memory(nullptr), records(nullptr),
+Processor::Processor(int addrSize) : addressSize(addrSize), cache(nullptr), memory(nullptr), records(nullptr),
     blocked(false), totalRequests(0)
 {}
 
@@ -75,7 +75,7 @@ Processor::receiveResponse(int request_id, const uint8_t* data)
 int
 Processor::getAddrSize()
 {
-    return 32;
+    return addressSize;
 }
 
 void

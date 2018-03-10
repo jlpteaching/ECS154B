@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         std::cout << "Usage: cache_simulator [records file]" << std::endl;
     }
 
-    Processor p;
+    Processor p(32);
     Memory m(8);
     RecordStore records(recordFile);
     if (!records.loadRecords()) {

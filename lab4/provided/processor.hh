@@ -15,6 +15,8 @@
 class Processor: public TickedObject
 {
   protected:
+    int addressSize;
+
     Cache *cache;
     Memory *memory;
 
@@ -35,7 +37,7 @@ class Processor: public TickedObject
     void checkData(Record &record, const uint8_t* cache_data);
 
   public:
-    Processor();
+    Processor(int addrSize = 32);
     ~Processor();
 
     /**
