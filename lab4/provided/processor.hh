@@ -22,7 +22,7 @@ class Processor: public TickedObject
 
     RecordStore *records;
 
-    std::queue<Record> trace;
+    std::queue<Record*> trace;
 
     std::map<int, Record*> outstanding;
 
