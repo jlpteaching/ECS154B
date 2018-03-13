@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     int block_size = 64;
 
     assert(sizebits > 6 && sizebits <= 22);
-    assert(ways < ((1 << sizebits) / block_size));
+    assert(ways <= ((1 << sizebits) / block_size));
     assert(mshrs > 0);
 
     Processor p(32);
