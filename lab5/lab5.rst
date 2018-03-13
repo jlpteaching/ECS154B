@@ -35,6 +35,42 @@ The accesses sizes are 16, 32, and 64 B (randomly chosen), and there are 25% wri
 
 Run all of your experiments with a 64B block size.
 
+Hints
+=====
+
+You'll likely want to add command line options to set the associativity and the size of the cache.
+For instance, I used the following code.
+
+.. code-block:: c++
+
+    char* recordFile = argv[1];
+    int sizebits = atoi(argv[2]);
+    int ways = atoi(argv[3]);
+
+    Processor p(32);
+    Memory m(64);
+    RecordStore records(recordFile);
+    if (!records.loadRecords()) {
+        std::cerr << "Could not load file: " << recordFile << std::endl;
+        return 1;
+    }
+    p.setMemory(&m);
+    p.setRecords(&records);
+    SetAssociativeCache c(1 << sizebits, m, p, ways);
+    p.scheduleForSimulation();
+
+Also, using grep is your friend. For instance, used the following command to run cache sizes from 1K to 16K and get the total number of misses.
+This works in bash.
+I don't know about tsch, etc.
+
+.. code-block:: sh
+
+    for i in 10 11 12 13 14
+    do
+        ./cache_simulator ../../lab5/long_trace.txt $i 1 | grep Misses
+    done
+
+
 Questions
 =========
 
@@ -48,24 +84,11 @@ Make a graph of the **miss ratio** for each cache size.
 
 - **Question 1b**: What is the minimum miss ratio? Why is it not 0?
 
-Question 2: Average memory access time
---------------------------------------
-
-Using the data from your previous tests, calculate the average memory access time for each cache size.
-Use the value of 15 ticks/cycles for the cache miss penalty and 1 tick/cycle for the cache hit time.
-Make a graph of the predicted performance for each cache size by multiplying the AMAT with the number of memory accesses.
-
-*On the same plot*, also include the total execution time as reported by the simulator.
-
-- **Question 2a**: How well does the AMAT model predict performance? (Remember to back up your answer with data.)
-
-- **Question 2b**: You've now used two different types of models to predict performance: a C++ timing model (the code) and a simple analytic model (AMAT). Which model would you choose if you had to evaluate some new system? Why?
-
-Question 3: Set-associative caches
+Question 2: Set-associative caches
 ----------------------------------
 
-Run your model with a cache size of 64 KB.
-Run the direct-mapped cache, then run your set associative cache with associativities of 1, 2, 4, 8, 16, 32.
+Run your model with a cache size of 16 KB.
+Run the direct-mapped cache, then run your set associative cache with all possible (power-of-two) associativities from 2-way to fully associative.
 
 Make two plots, one of the miss ratio as you vary the associativity and one of the total execution time as you vary the associativity.
 
@@ -73,10 +96,10 @@ Make two plots, one of the miss ratio as you vary the associativity and one of t
 
 - **Question 3b**: As you increase the set associativity, is it always worth it? Is there a point where increasing the set associativity starts helping less? Assume that the "cost" of set associativity grows quadradically, (e.g., a 2-way SA cache costs 4 times as much as a 1-way and a 16-way costs 64 times as much as a 2-way).
 
-Question 4: Non-blocking cache performance
+Question 3: Non-blocking cache performance
 ------------------------------------------
 
-Use a 64 KB 8-way set associative cache for this experiement.
+Use a 16 KB 8-way set associative cache for this experiement.
 Run your model with 1, 2, 4, 8, 16, 32, and 64 MSHRs.
 Plot the *performance* of the system as you vary the number of MSHRs.
 
@@ -84,7 +107,7 @@ Plot the *performance* of the system as you vary the number of MSHRs.
 
 - **Extra credit question 4b**: (You will get 10pts extra credit for a correct answer). Assume the cache receives a request on average every 0.667 cycles and that memory takes, on average, 15 cycles to respond. How many MSHRs do you need to minimize stalling? You must show your work to receive points. Hint: Use Little's Law.
 
-Question 5: Real systems
+Question 4: Real systems
 ------------------------
 
 You can find a blocked matrix-multiply implementation on github (mm.cc) along with a Makefile.
