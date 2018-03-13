@@ -92,9 +92,9 @@ Run the direct-mapped cache, then run your set associative cache with all possib
 
 Make two plots, one of the miss ratio as you vary the associativity and one of the total execution time as you vary the associativity.
 
-- **Question 3a**: What is the relationship between *execution time* and *miss ratio*? Is this any different between the set associative cache and the direct-mapped cache.
+- **Question 2a**: What is the relationship between *execution time* and *miss ratio*? Is this any different between the set associative cache and the direct-mapped cache.
 
-- **Question 3b**: As you increase the set associativity, is it always worth it? Is there a point where increasing the set associativity starts helping less? Assume that the "cost" of set associativity grows quadradically, (e.g., a 2-way SA cache costs 4 times as much as a 1-way and a 16-way costs 64 times as much as a 2-way).
+- **Question 2b**: As you increase the set associativity, is it always worth it? Is there a point where increasing the set associativity starts helping less? Assume that the "cost" of set associativity grows quadradically, (e.g., a 2-way SA cache costs 4 times as much as a 1-way and a 16-way costs 64 times as much as a 2-way).
 
 Question 3: Non-blocking cache performance
 ------------------------------------------
@@ -103,9 +103,9 @@ Use a 16 KB 8-way set associative cache for this experiement.
 Run your model with 1, 2, 4, 8, 16, 32, and 64 MSHRs.
 Plot the *performance* of the system as you vary the number of MSHRs.
 
-- **Question 4a**: As you increase the number of MSHRs, do you see a linear performance improvement (e.g., 2x the MSHRs means the trace runs 2x faster)? Why or why not?
+- **Question 3a**: As you increase the number of MSHRs, do you see a linear performance improvement (e.g., 2x the MSHRs means the trace runs 2x faster)? Why or why not?
 
-- **Extra credit question 4b**: (You will get 10pts extra credit for a correct answer). Assume the cache receives a request on average every 0.667 cycles and that memory takes, on average, 15 cycles to respond. How many MSHRs do you need to minimize stalling? You must show your work to receive points. Hint: Use Little's Law.
+- **Extra credit question 3b**: (You will get 10pts extra credit for a correct answer). Assume the cache receives a request on average every 0.667 cycles and that memory takes, on average, 15 cycles to respond. How many MSHRs do you need to minimize stalling? You must show your work to receive points. Hint: Use Little's Law.
 
 Question 4: Real systems
 ------------------------
@@ -124,9 +124,9 @@ This will run a matrix multiplication of two 1024x1024 matricies.
 Plot the runtime of this application for each block size and the non-blocking version.
 Use this plot to answer the following questions.
 
-- **Question 5a**: What block size shows the fastes runtime on your computer? Why do you think smaller block sizes are slower? Why do you think larger block sizes are slower?
+- **Question 4a**: What block size shows the fastes runtime on your computer? Why do you think smaller block sizes are slower? Why do you think larger block sizes are slower?
 
-- **Question 5b**: What if you ran this on a different computer, for instance, your smart phone? Do you think the fastest block size will be the same or different? **Why?**
+- **Question 4b**: What if you ran this on a different computer, for instance, your smart phone? Do you think the fastest block size will be the same or different? **Why?**
 
 
 Submission
