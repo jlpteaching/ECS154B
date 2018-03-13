@@ -3,7 +3,9 @@
 **ECS 154B Lab 5, Winter 2018**
 
 **Due by 9:00 AM on Mar 19, 2018**
+
 **NOTE: LATE POLICY CHANGE!!**
+
 No late turn-ins will be accepted for this assignment.
 
 **Via Canvas**
