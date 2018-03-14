@@ -31,12 +31,6 @@ NonBlockingCache::receiveRequest(uint64_t address, int size,
     assert(address < ((uint64_t)1 << processor.getAddrSize()));
     assert((address &  (size - 1)) == 0); // naturally aligned
 
-    if (blocked) {
-        DPRINT("Cache is blocked!");
-        // Cache is currently blocked, so it cannot receive a new request
-        return false;
-    }
-
     (++nextVictim) %= ways;
 
     int index = getIndex(address);
@@ -60,6 +54,11 @@ NonBlockingCache::receiveRequest(uint64_t address, int size,
             sendResponse(request_id, &line[block_offset]);
         }
     } else {
+        if (blocked) {
+            DPRINT("Cache is blocked!");
+            // Cache is currently blocked, so it cannot handle another miss
+            return false;
+        }
         if (busy(address)) {
             return false; // Stall if the address is busy.
         }
