@@ -28,10 +28,11 @@ Below is a set of questions.
 For each question, answer the question and provide a graph that backs up your answer.
 You should provide the graphs and a one paragraph (a few sentences) answer to each question.
 
-For all of the questions, use the long_trace.txt file from github.
-This file has 40,000 accesses to 4 different "arrays" of sizes 10 KB, 30 KB, 60 KB, and 900 KB.
+For all of the questions, use the **long_trace.txt** file from github.
+This file has 120,000 accesses to 4 different "arrays" of sizes 10 KB, 30 KB, 60 KB, and 900 KB.
 The smaller arrays are accessed more often.
-The accesses sizes are 16, 32, and 64 B (randomly chosen), and there are 25% writes.
+The accesses sizes are all 64 B to reduce the runtime of the model.
+There are 25% writes.
 
 Run all of your experiments with a 64B block size.
 
