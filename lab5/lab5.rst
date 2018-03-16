@@ -68,7 +68,7 @@ I don't know about tsch, etc.
 
     for i in 10 11 12 13 14
     do
-        ./cache_simulator ../../lab5/long_trace.txt $i 1 | grep Misses
+        ./cache_simulator ../../lab5/long_trace.txt $i 1 1 | grep Misses
     done
 
 
