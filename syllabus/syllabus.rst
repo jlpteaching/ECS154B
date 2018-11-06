@@ -2,8 +2,8 @@
 
 .. _Canvas: https://canvas.ucdavis.edu/
 .. _GitHub: https://github.com/jlpteaching/ECS154B
-.. _Gradescope: https://gradescope.com/courses/13842
-.. _Piazza: https://piazza.com/class/jc0wjo8xjr77
+.. _Gradescope: https://gradescope.com/courses/
+.. _Piazza: https://piazza.com/class/
 
 ================================
 ECS 154B - Computer Architecture
@@ -15,11 +15,11 @@ Important Information
 Time and Location
 ~~~~~~~~~~~~~~~~~
 
-**202 Wellman Hall**
+**SOMEWHERE**
 
-*Lecture*: Tuesday, Thursday 12:10 - 1:30 PM
+*Lecture*: Some times
 
-*Discussion*: Friday 4:10 - 5:00 PM
+*Discussion*: Some time
 
 
 Instructor
@@ -27,7 +27,7 @@ Instructor
 
 **Professor Jason Lowe-Power** (jlowepower@ucdavis.edu)
 
-*Office Hours*: Wednesday 4:00 - 5:30 PM, or by appointment.
+*Office Hours*: TBA, or by appointment.
 
 *Office Location*: 3049 Kemper Hall
 
@@ -40,17 +40,11 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 Teaching Assistants
 ~~~~~~~~~~~~~~~~~~~
 
-**Justin Perona** (jlperona@ucdavis.edu)
+**TBA** (@ucdavis.edu)
 
-*Office Hours*: Thursday 3:10 - 4:00 PM
+*Office Hours*: TBA
 
-*Office Location*: 3106 Kemper Hall
-
-**Bradley Wang** (radwang@ucdavis.edu)
-
-*Office Hours*: Monday 1:00 - 2:00 PM
-
-*Office Location*: 53 Kemper Hall
+*Office Location*: TBA
 
 GitHub
 ~~~~~~
@@ -129,6 +123,14 @@ Prerequisites
 -------------
 
 ECS 154A; or both EEC 170 and EEC 180A.
+
+PTAs
+----
+
+Before asking for a PTA, be sure that you have read the `Computer Science Department's PTA Policy`_.
+PTA numbers will only be issued after the 12th day of instruction, and PTA numbers are only issued for extenuating circumstances related to graduation.
+
+.. _Computer Science Department's PTA Policy: http://www.cs.ucdavis.edu/blog/pta-policy/
 
 Assignments and Tests
 ---------------------
@@ -233,13 +235,21 @@ Reading List and Schedule
 Textbook
 ~~~~~~~~
 
-In this class, we'll be closely following *Computer Organization and Design MIPS Edition, Fifth Edition: The Hardware/Software Interface* by D. A. Patterson and J. L. Hennessy.
+In this class, we'll be closely following *Computer Organization and Design RISC-V Edition: The Hardware/Software Interface* by D. A. Patterson and J. L. Hennessy.
 
-Importantly, you should get the *MIPS edition*, not the ARM edition.
+Importantly, you should get the *RISC-V edition*, not the ARM edition and not the MIPS edition.
+This is different from versions in years past.
 The correct version is white with a picture of an abacus on a tablet.
-You can find the book at the `university bookstore`_ or through various sites online.
+
+Additionally, you may find *The RISC-V Reader: An Open Architecture Atlas* a useful companion, but this book is not required.
+We will be implementing a RISC-V processor in this class and having a physical book with the RISC-V instructions described will be useful.
+If you prefer to not buy yet another book (though I do think it's a useful book to have), you can also use the online version of `the RISC-V specification`_.
+Note: the specification has fewer pretty pictures than the book.
+
+You can find these books at the `university bookstore`_ or through various sites online.
 
 .. _university bookstore: http://ucdavisstores.com/SelectTermDept
+.. _the RISC-V specification: https://riscv.org/specifications/
 
 Schedule
 ~~~~~~~~
