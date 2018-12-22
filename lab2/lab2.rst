@@ -1,23 +1,14 @@
-**ECS 154B Lab 2, Winter 2018**
+**ECS 154B Lab 2, Winter 2019**
 
-**Due by 9:00 AM on February 5, 2018**
+**Due at 12:00 AM on Monday, <TODO>**
 
-**Via Canvas**
-
-
-Interactive grading signup
-==========================
-
-You may only sign up after you have submitted your assignment.
-https://docs.google.com/spreadsheets/d/1otUNmfos6zf2uwn082mtFemHPNqR2E8lOrM1xDmXUV8/edit?usp=sharing
+**Via Gradescope**
 
 Goals
 =====
 
--  Build and test a single cycle MIPS CPU that implements a subset of
-   the MIPS instruction set.
-
--  Design a combinational logic control unit.
+- Build a single cycle RISC-V processor
+- Execute example RISC-V applications on the processor
 
 Description
 ===========
