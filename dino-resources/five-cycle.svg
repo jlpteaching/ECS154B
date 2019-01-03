@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="single-cycle.svg">
+   sodipodi:docname="five-cycle.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="385.00793"
-     inkscape:cy="424.33062"
+     inkscape:zoom="0.7"
+     inkscape:cx="311.53184"
+     inkscape:cy="402.49062"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1091,5 +1091,153 @@
        d="m 237.33534,240.8734 v 47.03943 H 121.07309 v -4.81085"
        id="path2588"
        inkscape:connector-curvature="0" />
+    <g
+       id="g5581-7"
+       transform="matrix(0.72168962,0,0,0.72156217,-51.24572,47.501375)"
+       style="stroke-width:1.38575959">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5552-1"
+         d="M 193.50314,198.37755 Z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         d="m 193.10223,61.62337 -3.34087,4.31739 -3.34086,-4.31739 m 0,0 h 6.68174 v 249.30409 h -6.68174 z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path5554-1" />
+      <text
+         id="text5560-1"
+         y="214.54735"
+         x="187.86243"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36664885"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.36664885"
+           y="214.54735"
+           x="187.86243"
+           id="tspan5558-7"
+           sodipodi:role="line">IF</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="217.36957"
+           x="187.86243"
+           sodipodi:role="line"
+           id="tspan3422">ID</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="220.19179"
+           x="187.86243"
+           sodipodi:role="line"
+           id="tspan3373" /></text>
+    </g>
+    <g
+       id="g5581-7-9"
+       transform="matrix(0.72168962,0,0,0.72156217,-0.13230838,47.744088)"
+       style="stroke-width:1.38575959">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5552-1-8"
+         d="M 193.50314,198.37755 Z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         d="m 193.10223,191.42854 -3.34087,4.31739 -3.34086,-4.31739 m 0,0 h 6.68174 v 42.49585 h -6.68174 z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path5554-1-1" />
+      <text
+         id="text5560-1-3"
+         y="214.54735"
+         x="187.86243"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36664885"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.36664885"
+           y="214.54735"
+           x="187.86243"
+           id="tspan5558-7-3"
+           sodipodi:role="line">ID</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="217.36957"
+           x="187.86243"
+           sodipodi:role="line"
+           id="tspan3420">EX</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="220.19179"
+           x="187.86243"
+           sodipodi:role="line"
+           id="tspan3373-3" /></text>
+    </g>
+    <g
+       id="g5581-7-9-7"
+       transform="matrix(0.72168962,0,0,0.72156217,72.779258,46.789139)"
+       style="stroke-width:1.38575959">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5552-1-8-9"
+         d="M 193.50314,198.37755 Z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         d="m 193.10223,191.42854 -3.34087,4.31739 -3.34086,-4.31739 m 0,0 h 6.68174 v 42.49585 h -6.68174 z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path5554-1-1-8" />
+      <text
+         id="text5560-1-3-6"
+         y="214.54735"
+         x="186.39597"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36664885"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.36664885"
+           y="214.54735"
+           x="186.39597"
+           id="tspan5558-7-3-7"
+           sodipodi:role="line">EX</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="217.36957"
+           x="186.39597"
+           sodipodi:role="line"
+           id="tspan3420-0">MEM</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="220.19179"
+           x="186.39597"
+           sodipodi:role="line"
+           id="tspan3373-3-4" /></text>
+    </g>
+    <g
+       id="g5581-7-9-7-8"
+       transform="matrix(0.72168962,0,0,0.72156217,126.23317,48.927295)"
+       style="stroke-width:1.38575959">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5552-1-8-9-4"
+         d="M 193.50314,198.37755 Z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         d="m 193.10223,191.42854 -3.34087,4.31739 -3.34086,-4.31739 m 0,0 h 6.68174 v 42.49585 h -6.68174 z"
+         style="fill:none;stroke:#000000;stroke-width:0.36664885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="path5554-1-1-8-8" />
+      <text
+         id="text5560-1-3-6-1"
+         y="214.54735"
+         x="186.39597"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222223px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.36664885"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.36664885"
+           y="214.54735"
+           x="186.39597"
+           sodipodi:role="line"
+           id="tspan3420-0-8">MEM</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="217.36957"
+           x="186.39597"
+           sodipodi:role="line"
+           id="tspan3492">WB</tspan><tspan
+           style="stroke-width:0.36664885"
+           y="220.19179"
+           x="186.39597"
+           sodipodi:role="line"
+           id="tspan3373-3-4-5" /></text>
+    </g>
   </g>
 </svg>
