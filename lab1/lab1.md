@@ -7,7 +7,7 @@ title: ECS 154B Lab 1, Winter 2019
 
 **Due by 12:00 AM on January 21, 2019**
 
-**Via Gradescope**
+**Turn in Via Gradescope** [See below for details](#Submission)
 
 # Introduction
 
@@ -54,7 +54,7 @@ Explain some about chisel and where to get resources for it
 To start sbt in the REPL (Read-eval-print loop), run the following code in the base DINO directory.
 
 ```
-singularity run library://jlowepower/dinocpu
+singularity run library://jlowepower/default/dinocpu
 ```
 
 ## Working with the DINO CPU code
