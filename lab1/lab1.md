@@ -45,6 +45,10 @@ Explain some about chisel and where to get resources for it
 
 - Using singularity
 - Other options (note: these will not be supported!)
+- Installed on CSIF machines
+  - However, these files are large, so you may run out of disk space
+  - To get some disk space back you can clear the singularity cache by running `rm -rf ~/.singularity/cache`
+  - You can also download the images to `/tmp/<your username>` and point singularity to that location. <TODO: Expand this with an example>.
 
 ### Using scala, sbt, etc.
 
