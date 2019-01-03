@@ -97,6 +97,16 @@ You are expected to *cite all of the work you reference*. Any ideas that are not
 Any violations of this policy will result in reporting the violating student(s) to the Office of Student Support and Judicial Affairs.
 This can result in a 0 on the assignment or an F in the class.
 
+Student support
+---------------
+
+As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of  motivation.
+These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities.
+The UC Davis is committed to advancing the mental health and well-being of its students.
+If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available. You can learn more about the broad range of confidential mental health services available on campus via https://shcs.ucdavis.edu/.
+
+You can also contact me during office hours, via email, or by making a separate office hour appointment: [jlowepower@ucdavis.edu](mailto:jlowepower@ucdavis.edu).
+
 Prerequisites
 -------------
 
@@ -195,3 +205,5 @@ You can find these books at the [university bookstore](http://ucdavisstores.com/
 ### Schedule
 
 <https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv>
+
+
