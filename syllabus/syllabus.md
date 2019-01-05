@@ -29,7 +29,17 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 
 ### Teaching Assistants
 
-**TBA** (@ucdavis.edu)
+#### Justin Perona (@ucdavis.edu)
+
+<Insert short bio here>
+
+*Office Hours*: TBA
+
+*Office Location*: TBA
+
+#### Filipe Eduardo Borges (@ucdavis.edu)
+
+<Insert short bio here>
 
 *Office Hours*: TBA
 
@@ -123,14 +133,11 @@ Assignments and Tests
 
 ### Grading Breakdown
 
-TODO: fix the below
-
 |Category     |Percentage|
 |-------------|---|
 |Participation|10%|
 |Labs (5x)    |40%|
-|Quizzes (3x) |15%|
-|Midterm      |15%|
+|Midterm (2x) |30%|
 |Final        |20%|
 
 ### Participation
@@ -147,13 +154,11 @@ Each lab is weighted based on the amount of time you are given to complete the l
 
 Labs are due at 12 AM (midnight) on Sunday night / Monday morning.
 
-TODO: Dates
-
--   [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.rst) (1 week, 4%). Due January .
--   [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.rst) (2 weeks, 8%). Due February .
--   [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.rst) (3 weeks, 12%). Due February .
--   [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.rst) (2 weeks, 8%). Due March .
--   [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.rst) (2 week, 8%). Due March .
+-   [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 week, 8%). Due January 21.
+-   [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 8%). Due February 4.
+-   [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 8%). Due February 18.
+-   [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 8%). Due March 4.
+-   [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (2 week, 8%). Due March 15. **Thursday night midnight / Friday morning**
 
 #### Late Assignments
 
@@ -168,22 +173,32 @@ This will give you partial points up to 72 hours after the due date and penalize
 Note: When submitting late the reduction in points will not immediately appear in Gradescope.
 Rest assured, we will go through and double check all of the submission times ;).
 
-### Quizzes
+### Tests
 
-There will be quizzes during some discussion sections.
-The quizzes will be in a similar style to the midterm and the final, except they will be shorter (25 minutes).
+Note that for each test, there will be a practice test available at least four days in advance.
+The practice test will have similar questions to the actual tests.
 
-### Midterm: February
+The two midterms will be held during the discussion time and will be 50 minute tests.
 
-<TODO: The midterm will cover something...>
+The final will be cumulative during the final time and will use the full 2 hours.
+
+#### Midterm 1: January 31
+
+You are allowed **one** 8.5x11 sheet of *handwritten* notes.
+
+The first midterm will cover technology, performance and CPU design basics.
+
+#### Midterm 2: February 28
 
 You are allowed **one** 8.5x11 sheet of *handwritten* notes.
 
-### Final: Tuesday, March 20, 2018 at 1 AM
+The second midterm will cover piplined CPU design, memory technology, and memory hierarchy.
 
-<TODO: The final will cover something, or it will be cumulative.>
+#### Final: Tuesday, March 20, 2018 at 1 AM
 
-You are allowed **one** 8.5x11 sheet of *handwritten* notes.
+You are allowed **two** 8.5x11 sheets of *handwritten* notes.
+
+The final will be cumulative with a focus on coalescing the knowledge gained throughout the quarter.
 
 Reading List and Schedule
 -------------------------
