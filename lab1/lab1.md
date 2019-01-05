@@ -92,7 +92,7 @@ For more details on how each component works, the I/O, etc. see the given code.
 # Grading
 
 Grading will be done on gradescope.
-See [Submission](# Submission) for more information on how to submit to gradescope.
+See [Submission](#Submission) for more information on how to submit to gradescope.
 
 |                    |     |
 |--------------------|-----|
@@ -100,7 +100,8 @@ See [Submission](# Submission) for more information on how to submit to gradesco
 | Diagram            | 25% |
 | Add                | 10% |
 | Other instructions | 20% |
-| Multiple cycles    | 20% |
+| Multiple cycles    | 10% |
+| Feedback           | 10% |
 
 
 # Part I: Implement the ALU Control
@@ -347,12 +348,23 @@ sbt> testOnly CODCPU.SingleCycleCPUTesterLab1 -- -z addfwd
 
 <TODO>
 
+## Part VI: Feedback
+
+On the back of the core diagram is a short feedback form.
+This the first time we have used these assignments, so we are soliciting feedback to improve them for future quarters.
+Filling out the feedback is worth 10% of your grade on the assignment.
+There are no wrong answers, so as long as you have completed the form you will receive the points.
+(Note: The more detailed feedback you give the better we can improve the assignments.)
+
 # Submission
 
 **Warning**: read the submission instructions carefully. Failure to adhere to the instructions will result in a loss of points.
 
 Describe how to submit to gradescope here.
 <I think we want them to upload just the files they touched (`components/alu-control.scala`, and `single-cycle/cpu.scala`). We need to figure out how to get these files in the right places.>
+
+Also talk about how to upload the filled out diagram and the feedback form to gradescope.
+Gradescope provides students with a [great overview of how to upload paper assignments in their help section](http://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf).
 
 ## Academic misconduct reminder
 
