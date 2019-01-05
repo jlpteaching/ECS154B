@@ -6,6 +6,31 @@ Title: ECS 154B - Computer Architecture
 ECS 154B - Computer Architecture
 ================================
 
+* [Important Information](#important-information)
+    * [Time and Location](#time-and-location)
+    * [Instructor](#instructor)
+    * [Teaching Assistants](#teaching-assistants)
+    * [GitHub](#github)
+    * [Canvas](#canvas)
+    * [Gradescope](#gradescope)
+    * [Piazza](#piazza)
+    * [Regrade Requests](#regrade-requests)
+    * [Accommodations](#accommodations)
+* [Academic Misconduct](#academic-misconduct)
+* [Student support](#student-support)
+* [Prerequisites](#prerequisites)
+* [PTAs](#ptas)
+* [Assignments and Tests](#assignments-and-tests)
+    * [Grading Breakdown](#grading-breakdown)
+    * [Participation](#participation)
+    * [Labs](#labs)
+       * [Late Assignments](#late-assignments)
+    * [Tests](#tests)
+* [Reading List and Schedule](#reading-list-and-schedule)
+    * [Textbook](#textbook)
+    * [Schedule](#schedule)
+
+
 Important Information
 ---------------------
 
