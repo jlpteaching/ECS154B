@@ -120,12 +120,62 @@ The following table details the `operation` input and which values produce which
 | 0001 | ... |
 ... and so on <TODO: FILL THIS IN>
 
-You must take the RISC-V ISA specification, which you can find on the first page of the Computer Organization and Design book, on page 16 in the RISC-V reader, or [on the web](FIND THIS) and implement the proper control to choose the right ALU operation.
+You must take the RISC-V ISA specification, which you can find on the first page of the Computer Organization and Design book, on page 16 in the RISC-V reader, or [on the web](https://riscv.org/specifications/) and implement the proper control to choose the right ALU operation.
 
-The ALU control takes three inputs the `memory` which comes from the control unit (you will implement this in the next lab), `funct7`, and `funct3` which come from the instruction.
-You can ignore the `memory` for now, assume it is always `false`.
+
+|31--25 |24--20|19--15|14--12|11--7|6--0     |  |
+|-------|------|------|------|-----|---------|--|
+|funct7 | rs2  | rs1  |funct3| rd  | opcode  |R-type|
+|-------|------|------|------|-----|---------|--|
+|0000000| rs2  | rs1  | 000  | rd  | 0110011 | ADD |
+|0100000| rs2  | rs1  | 000  | rd  | 0110011 | SUB |
+|0000000| rs2  | rs1  | 001  | rd  | 0110011 | SLL |
+|0000000| rs2  | rs1  | 010  | rd  | 0110011 | SLT |
+|0000000| rs2  | rs1  | 011  | rd  | 0110011 | SLTU |
+|0000000| rs2  | rs1  | 100  | rd  | 0110011 | XOR |
+|0000000| rs2  | rs1  | 101  | rd  | 0110011 | SRL |
+|0100000| rs2  | rs1  | 101  | rd  | 0110011 | SRA |
+|0000000| rs2  | rs1  | 110  | rd  | 0110011 | OR |
+|0000000| rs2  | rs1  | 111  | rd  | 0110011 | AND |
+
+This table is from the RISC-V User-level ISA Spec v2.2 page 104.
+You can find the same information in Chapter 2 of the Spec, Chapter 2 of the RISC-V reader, or in the front of the Computer Organization and Design book.
+
+The ALU control takes four inputs the `add` and `immediate` which comes from the control unit (you will implement this in the next lab so), `funct7`, and `funct3` which come from the instruction.
+You can ignore the `add` and `immediate` for now, assume it is always `false`.
 
 Given these inputs, you must generate the correct output on the operation wire.
+The template code from `src/main/scala/components/alucontrol.scala` is shown below.
+You will fill in where it says "Your code goes here".
+
+```
+/**
+ * The ALU control unit
+ *
+ * Input:  add, if true, add no matter what the other bits are
+ * Input:  immediate, if true, ignore funct7 when computing the operation
+ * Input:  funct7, the most significant bits of the instruction
+ * Input:  funct3, the middle three bits of the instruction (12-14)
+ * Output: operation, What we want the ALU to do.
+ *
+ * For more information, see Section 4.4 and A.5 of Patterson and Hennessy
+ * This follows figure 4.12
+ */
+class ALUControl extends Module {
+  val io = IO(new Bundle {
+    val add       = Input(Bool())
+    val immediate = Input(Bool())
+    val funct7    = Input(UInt(7.W))
+    val funct3    = Input(UInt(3.W))
+
+    val operation = Output(UInt(4.W))
+  })
+
+  io.operation := 15.U // invalid operation
+
+  // Your code goes here
+}
+```
 
 **HINT** Use Chisel's `switch` / `is`,  `when` / `elsewhen` / `otherwise`, or `MuxCase` syntax.
 
