@@ -54,13 +54,15 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 
 ### Teaching Assistants
 
-#### Justin Perona (@ucdavis.edu)
+#### Justin Perona (<jlperona@ucdavis.edu>)
 
-<Insert short bio here>
+I have a lot of experience teaching computer architecture.
+This is my 8th time TAing for ECS 154B.
+In addition, I taught (as instructor) ECS 154A in Summer Session II 2018.
 
 *Office Hours*: TBA
 
-*Office Location*: TBA
+*Office Location*: 3039 Kemper
 
 #### Filipe Eduardo Borges (@ucdavis.edu)
 
