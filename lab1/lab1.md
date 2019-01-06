@@ -9,6 +9,34 @@ title: ECS 154B Lab 1, Winter 2019
 
 **Turn in Via Gradescope** [See below for details](#Submission)
 
+# Table of Contents
+
+* [Introduction](#introduction)
+  * [Goals](#goals)
+  * [Chisel](#chisel)
+      * [Using the Singularity image/container](#using-the-singularity-imagecontainer)
+      * [Using scala, sbt, etc.](#using-scala-sbt-etc)
+  * [Working with the DINO CPU code](#working-with-the-dino-cpu-code)
+* [Grading](#grading)
+* [Part I: Implement the ALU Control](#part-i-implement-the-alu-control)
+  * [Testing your ALU control unit](#testing-your-alu-control-unit)
+* [Part II: Draw a diagram for implementing R-type instructions](#part-ii-draw-a-diagram-for-implementing-r-type-instructions)
+* [Part III: Implement the add instruction](#part-iii-implement-the-add-instruction)
+  * [Testing](#testing)
+  * [Debugging with the simulator](#debugging-with-the-simulator)
+* [Part IV: Implementing the rest of the R-type instructions](#part-iv-implementing-the-rest-of-the-r-type-instructions)
+  * [Testing](#testing-1)
+  * [Debugging with the simulator](#debugging-with-the-simulator-1)
+* [Part V: Moving on to multiple cycles](#part-v-moving-on-to-multiple-cycles)
+  * [Testing](#testing-2)
+  * [Debugging](#debugging)
+* [Part VI: Feedback](#part-vi-feedback)
+* [Submission](#submission)
+* [Hints](#hints)
+  * [Common errors](#common-errors)
+  * [Printf debugging](#printf-debugging)
+
+
 # Introduction
 
 ![Cute Dino](../dino-resources/dino-128.png)
@@ -359,7 +387,7 @@ sbt> testOnly CODCPU.ALUControlTesterLab1
 
 Feel free to add your own tests in `src/tests/scala`, modify the current tests, and add `print` statements in the tests.
 
-## Part II: Draw a diagram for implementing R-type instructions
+# Part II: Draw a diagram for implementing R-type instructions
 
 For the rest of the assignments you will implement all of RISC-V's R-type instructions.
 Since you have implemented the ALU control, there isn't much more to do except to connect the correct wires together.
@@ -373,11 +401,11 @@ You will turn this in as part of your assignment.
 
 <TODO: Add more here>
 
-## Part III: Implement the add instruction
+# Part III: Implement the add instruction
 
 Now you're ready to implement your first instruction!
 
-### Testing
+## Testing
 
 Testing the CPU is very similar to testing your control unit [above](#Testing-your-ALU-control-unit).
 To run the tests, you execute the `SingleCycleCPUTesterLab1` suite as follows.
@@ -386,19 +414,19 @@ To run the tests, you execute the `SingleCycleCPUTesterLab1` suite as follows.
 sbt> testOnly CODCPU.SingleCycleAddTesterLab1
 ```
 
-### Debugging with the simulator
+## Debugging with the simulator
 
-#### Running the simulator
+### Running the simulator
 
-#### Building your own applications
+### Building your own applications
 
 
-## Part IV: Implementing the rest of the R-type instructions
+# Part IV: Implementing the rest of the R-type instructions
 
 If you have passed the `AddTest` test and you passed the `ALUControlTest`, then all of the other R-type instruction should "just work"!
 Now, test them to make sure that they do!
 
-### Testing
+## Testing
 
 Testing the CPU is very similar to testing your control unit [above](#Testing-your-ALU-control-unit).
 To run the tests, you execute the `SingleCycleCPUTesterLab1` suite as follows.
@@ -435,17 +463,17 @@ sbt> testOnly CODCPU.SingleCycleCPUTesterLab1 -- -z sub
 **IMPORTANT**: Passing all of the tests we have provided for you does not guarantee you have implemented the ALU control or the CPU correctly!
 You are **strongly encouraged** to make your own unit tests and make your own RISC-V applications to test out.
 
-### Debugging with the simulator
+## Debugging with the simulator
 
 You can use the same strategy as described above.
 This time you will change which binary your are executing.
 
-## Part V: Moving on to multiple cycles
+# Part V: Moving on to multiple cycles
 
 Now, let's try a more complicated program that executes more that one instruction.
 `addfwd` is one example of this.
 
-### Testing
+## Testing
 
 To run this test, you can use the `-z` trick from above.
 
@@ -453,11 +481,11 @@ To run this test, you can use the `-z` trick from above.
 sbt> testOnly CODCPU.SingleCycleCPUTesterLab1 -- -z addfwd
 ```
 
-### Debugging
+## Debugging
 
 <TODO>
 
-## Part VI: Feedback
+# Part VI: Feedback
 
 On the back of the core diagram is a short feedback form.
 This the first time we have used these assignments, so we are soliciting feedback to improve them for future quarters.
