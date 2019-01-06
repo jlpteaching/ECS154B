@@ -36,19 +36,78 @@ See [the extra credit page](../extra-credit.md) for an up to date list of ways t
 TO DO FILL THIS IN.
 Explain some about chisel and where to get resources for it
 
-### Using the CSIF machines
+There is a more detailed Chisel overview found under the [chisel notes directory](../chisel-notes/overview.md).
+Before diving into this assignment, you are encouraged to go through the [chisel notes](../chisel-notes/overview.md).
 
-- Using singularity.
-- Explain where to download
+### Using the Singularity image/container
 
-### Using your own machine
+We have created a singularity container image for you to use for the labs this quarter.
+[Singularity](https://www.sylabs.io/singularity/) is a [container](https://linuxcontainers.org/) format similar to [Docker](https://www.docker.com/) (we cannot use Docker on the CSIF machines for security reasons).
+We are using containers because the DINO CPU has a number of unique dependencies (e.g., [chisel](https://chisel.eecs.berkeley.edu/), [firrtl](https://bar.eecs.berkeley.edu/projects/firrtl.html), [sbt](https://www.scala-sbt.org/), [scala](https://www.scala-lang.org/), [java](https://www.java.com/en/), and many others).
+Of course, each of these dependencies requires a specific version to work correctly!
+Containers allow us to give you a known-good starting point with the correct versions of all of the dependencies installed.
 
-- Using singularity
-- Other options (note: these will not be supported!)
-- Installed on CSIF machines
-  - However, these files are large, so you may run out of disk space
-  - To get some disk space back you can clear the singularity cache by running `rm -rf ~/.singularity/cache`
-  - You can also download the images to `/tmp/<your username>` and point singularity to that location. <TODO: Expand this with an example>.
+We may make updates to the singularity image throughout the quarter.
+We have done our best to make sure all of the labs will work with the current image, but there may be unforeseen issues.
+Therefore, make sure to always use the "default" version of the image and always use the image from the library.
+Don't download the image locally, as the library version may change.
+**We will announce when we push any changes to the image.**
+
+To use the singularity image you can simply run the following command.
+
+```
+singularity run library://jlowepower/default/dinocpu
+```
+
+This will download the most up-to-date version of the image to your local machine (e.g., ~/.singularity/cache on Linux machines).
+
+The first time you run the container, it will take a while to start up.
+When you execute `singularity run` it automatically starts in `sbt`, the [scala build tool](https://www.scala-sbt.org/), which we will use for running chisel for all of the labs.
+The first time you run sbt, it downloads all of the dependencies to your local machine.
+After the first time, it should start up much faster!
+
+
+#### Using the CSIF machines
+
+Singularity is installed on the CSIF machines.
+So, if you are using one of the CSIF machines either locally or remotely, things should *just work*.
+However, if you run into any problems, post on piazza or come to office hours.
+
+The images are relatively large files (as of the beginning of the quarter the image is 380MB).
+We have tried to keep the size as small as possible.
+Thus, especially if we update the image throughout the quarter, you may find that the disk space on your CSIF account is full.
+If this happens, you can remove the singularity cache to free up space.
+
+To remove the singularity cache, you can run the following command.
+
+```
+rm -r ~/.singularity/cache
+```
+
+To find out how much space the singularity containers are using, you can use `du` (disk usage):
+
+```
+du -sh ~/.singularity/cache
+```
+
+You can also download the images to /tmp, if you do not have space in your user directory.
+Let us know if you would like more details on this method via piazza.
+
+#### Using your own machine
+
+Details on how to install singularity on your own machine can be found on the [singularity website](https://www.sylabs.io/guides/3.0/user-guide/installation.html).
+It's easiest to install it on Linux, but there are also directions for installing on Windows and MacOS.
+On Windows and MacOS, you will have to run a Linux virtual machine to work with the singularity containers.
+
+For Linux, I suggest using the provided packages, not building from source.
+Details available here: https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-the-debian-ubuntu-package-using-apt.
+
+**Be sure to use version 3 of Singularity as it's the only version that supports the singularity library**
+
+**We will only support using the provided singularity container!**
+At your own risk, you can try to install the required dependencies.
+However, we will not support this.
+We will give priority to all other questions on piazza and in office hours before we help you get set up without using the singularity container.
 
 ### Using scala, sbt, etc.
 
