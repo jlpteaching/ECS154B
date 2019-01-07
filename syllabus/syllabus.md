@@ -83,13 +83,13 @@ GitHub will contain this document and the assignments.
 
 ### Canvas
 
-We will be using [Canvas](https://canvas.ucdavis.edu/) for grade distribution.
+We will be using [Canvas](https://canvas.ucdavis.edu/courses/315466) for grade distribution.
 
 ### Gradescope
 
-We will use [Gradescope](https://gradescope.com/courses/) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
+We will use [Gradescope](https://www.gradescope.com/courses/35106) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
 Gradescope gives you a graded PDF version of your test, along with a rubric, immediately after we're done grading.
-You will receive an email from Gradescope to make your account.
+You will receive an email from Gradescope to make your account early in the quarter.
 
 All lab assignments will be autograded by Gradescope.
 When you upload your code to Gradescope, a set of tests will be run on it and your grade *will be immediately available*.
@@ -99,11 +99,12 @@ However, if you submit after the deadline, the [late policy](#Late-Assignments) 
 
 ### Piazza
 
-We will use [Piazza](https://piazza.com/class/) for class discussions outside of the classroom.
+We will use [Piazza](https://piazza.com/class/jqitg8o5zp125) for class discussions outside of the classroom.
 If you haven't used Piazza before, it's a cool tool that is essentially a message board for the class.
 Both the TAs and I will be on Piazza to answer questions.
 
-It's best to ask your questions on Piazza. That way, all of your classmates can see the answer instead of emailing the TAs or me.
+It's best to ask your questions on Piazza.
+That way, all of your classmates can see the answer instead of emailing the TAs or me.
 Additionally, you might get a much faster response from one of your classmates!
 Through asking and answering questions on Piazza, you improve your understanding of the material, and improve other students' understanding as well.
 
@@ -118,29 +119,34 @@ The benchmark for good Piazza participation is at least 10 questions asked, answ
 ### Regrade Requests
 
 Regrade requests must be made within one week of the return of the assignment or test.
-Regrade requests should be made in person in office hours or by appointment.
+Regrade requests should be made in person, in office hours or by appointment.
 
 ### Accommodations
 
-The exam schedule is available on the [schedule](). Per [official UC Davis policy](http://catalog.ucdavis.edu/academicinfo/exams.html), if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 14, 2018**.
+The exam schedule is available on the [schedule]().
+Per [official UC Davis policy](http://catalog.ucdavis.edu/academicinfo/exams.html), if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 14, 2018**.
 
 Academic Misconduct
 -------------------
 
-Academic misconduct is a serious issue. You can find the official UC Davis policy on the [Office of Student Support and Judicial Affairs](http://sja.ucdavis.edu/) website.
+Academic misconduct is a serious issue.
+You can find the official UC Davis policy on the [Office of Student Support and Judicial Affairs](http://sja.ucdavis.edu/) website.
 
-You are expected to *cite all of the work you reference*. Any ideas that are not specifically yours or generally known (e.g., caches hold data) should have a citation. When in doubt, cite.
+You are expected to *cite all of the work you reference*.
+Any ideas that are not specifically yours or generally known (e.g., caches hold data) should have a citation.
+When in doubt, cite.
 
 Any violations of this policy will result in reporting the violating student(s) to the Office of Student Support and Judicial Affairs.
 This can result in a 0 on the assignment or an F in the class.
 
-Student support
+Student Support
 ---------------
 
-As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of  motivation.
+As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation.
 These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities.
-The UC Davis is committed to advancing the mental health and well-being of its students.
-If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available. You can learn more about the broad range of confidential mental health services available on campus via https://shcs.ucdavis.edu/.
+UC Davis is committed to advancing the mental health and well-being of its students.
+If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available.
+You can learn more about the broad range of confidential mental health services available on campus via [Student Health and Counseling Services](https://shcs.ucdavis.edu/).
 
 You can also contact me during office hours, via email, or by making a separate office hour appointment: [jlowepower@ucdavis.edu](mailto:jlowepower@ucdavis.edu).
 
@@ -170,7 +176,7 @@ Assignments and Tests
 ### Participation
 
 10% of your grade comes from actively participating in class (defined broadly).
-You are expected to participate on [Piazza](https://piazza.com/class/) (e.g., at least 10 contributions), lecture discussions, discussion section discussions, **or** office hours.
+You are expected to participate on [Piazza](https://piazza.com/class/jqitg8o5zp125) (e.g., at least 10 contributions), lecture discussions, discussion section discussions, **or** office hours.
 
 ### Labs
 
@@ -181,11 +187,11 @@ Each lab is weighted based on the amount of time you are given to complete the l
 
 Labs are due at 12 AM (midnight) on Sunday night / Monday morning.
 
--   [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 week, 8%). Due January 21.
+-   [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 weeks, 8%). Due January 21.
 -   [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 8%). Due February 4.
 -   [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 8%). Due February 18.
 -   [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 8%). Due March 4.
--   [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (2 week, 8%). Due March 15. **Thursday night midnight / Friday morning**
+-   [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (2 weeks, 8%). Due March 15, which is a **Thursday night midnight / Friday morning**.
 
 #### Late Assignments
 
@@ -197,7 +203,7 @@ This will give you partial points up to 72 hours after the due date and penalize
 
 ![Late policy graph](late_policy.png)
 
-Note: When submitting late the reduction in points will not immediately appear in Gradescope.
+Note: When submitting late, the reduction in points will not immediately appear in Gradescope.
 Rest assured, we will go through and double check all of the submission times ;).
 
 ### Tests
@@ -211,19 +217,19 @@ The final will be cumulative during the final time and will use the full 2 hours
 
 #### Midterm 1: January 31
 
-You are allowed **one** 8.5x11 sheet of *handwritten* notes.
+You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
 
 The first midterm will cover technology, performance and CPU design basics.
 
 #### Midterm 2: February 28
 
-You are allowed **one** 8.5x11 sheet of *handwritten* notes.
+You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
 
-The second midterm will cover piplined CPU design, memory technology, and memory hierarchy.
+The second midterm will cover pipelined CPU design, memory technology, and memory hierarchy.
 
 #### Final: Tuesday, March 20, 2018 at 1 AM
 
-You are allowed **two** 8.5x11 sheets of *handwritten* notes.
+You are allowed **two** 8.5" x 11" sheets of *handwritten* notes.
 
 The final will be cumulative with a focus on coalescing the knowledge gained throughout the quarter.
 
@@ -247,5 +253,3 @@ You can find these books at the [university bookstore](http://ucdavisstores.com/
 ### Schedule
 
 <https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv>
-
-
