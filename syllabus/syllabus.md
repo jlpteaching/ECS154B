@@ -122,7 +122,7 @@ Regrade requests should be made in person, in office hours or by appointment.
 
 ### Accommodations
 
-The exam schedule is available on the [schedule]().
+The exam schedule is available on the [schedule](schedule.csv).
 Per [official UC Davis policy](http://catalog.ucdavis.edu/academicinfo/exams.html), if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 14, 2018**.
 
 Academic Misconduct
