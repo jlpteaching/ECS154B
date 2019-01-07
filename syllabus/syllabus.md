@@ -44,7 +44,7 @@ Important Information
 
 **Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>)
 
-*Office Hours*: 4:00 PM - 6:00PM Wednesday, or by appointment.
+*Office Hours*: 4:00 PM - 6:00 PM Wednesday, or by appointment.
 
 *Office Location*: 3049 Kemper Hall
 
@@ -56,11 +56,10 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 
 #### Justin Perona (<jlperona@ucdavis.edu>)
 
-I have a lot of experience teaching computer architecture.
-This is my 8th time TAing for ECS 154B.
-In addition, I taught (as instructor) ECS 154A in Summer Session II 2018.
+This is my 8th time TAing for ECS 154B, from 2015 until now.
+In addition, I taught (as the instructor) ECS 154A in Summer Session II 2018.
 
-*Office Hours*: TBA
+*Office Hours*: 2:10 - 3:00 PM Friday
 
 *Office Location*: 3039 Kemper
 
