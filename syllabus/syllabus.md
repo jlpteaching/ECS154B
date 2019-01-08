@@ -135,6 +135,10 @@ You are expected to *cite all of the work you reference*.
 Any ideas that are not specifically yours or generally known (e.g., caches hold data) should have a citation.
 When in doubt, cite.
 
+You may not, under any circumstances, post the code you write publicly.
+This means you *cannot create public forks* of the template code repository.
+If we find any of the class's code beyond the template files distributed, we will report this violation to SJA.
+
 Any violations of this policy will result in reporting the violating student(s) to the Office of Student Support and Judicial Affairs.
 This can result in a 0 on the assignment or an F in the class.
 
