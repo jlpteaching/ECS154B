@@ -458,7 +458,10 @@ Gradescope provides students with a [great overview of how to upload paper assig
 ## Academic misconduct reminder
 
 You are to work on this project **individually**.
-You may discuss *high level concepts* with one another (e.g., how to draw the diagram), but all work must be completed on your own.
+You may discuss *high level concepts* with one another (e.g., talking about the diagram), but all work must be completed on your own including drawing the diagram.
+
+**Remember, DO NOT POST YOUR CODE PUBLICLY ON GITHUB!**
+Any code found on github that is not the base template you are given will be reported to SJA.
 
 # Hints
 
