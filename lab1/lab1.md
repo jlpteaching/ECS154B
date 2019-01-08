@@ -469,6 +469,53 @@ You may discuss *high level concepts* with one another (e.g., how to draw the di
 
 Note: We will populate this with questions from piazza when it looks like many people are running into the same issue.
 
+### Cannot find cpu.registers.regs_5 in symbol table
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleAddTesterLab1
+[info] Compiling 1 Scala source to /home/jlp/Code/dinocpu/target/scala-2.12/classes ...
+[warn] there were 18 feature warnings; re-run with -feature for details
+[warn] one warning found
+[info] Done compiling.
+[info] [0.001] Elaborating design...
+[info] [0.148] Done elaborating.
+[info] SingleCycleAddTesterLab1:
+[info] Single Cycle CPU
+[info] - should run add test add1 *** FAILED ***
+[info]   firrtl.passes.CheckInitialization$RefNotInitializedException: @[cpu.scala 22:26] : [module SingleCycleCPU]  Reference registers is not fully initialized.
+[info]    : registers.io.wen <= VOID
+[info]   at firrtl.passes.CheckInitialization$.$anonfun$run$6(CheckInitialization.scala:79)
+[info]   at firrtl.passes.CheckInitialization$.$anonfun$run$6$adapted(CheckInitialization.scala:74)
+[info]   at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
+[info]   at scala.collection.mutable.HashMap.$anonfun$foreach$1(HashMap.scala:138)
+[info]   at scala.collection.mutable.HashTable.foreachEntry(HashTable.scala:236)
+[info]   at scala.collection.mutable.HashTable.foreachEntry$(HashTable.scala:229)
+[info]   at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
+[info]   at scala.collection.mutable.HashMap.foreach(HashMap.scala:138)
+[info]   at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
+[info]   at firrtl.passes.CheckInitialization$.checkInitM$1(CheckInitialization.scala:74)
+[info]   ...
+[info] ScalaTest
+[info] Run completed in 776 milliseconds.
+[info] Total number of tests run: 1
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[error] Failed: Total 1, Failed 1, Errors 0, Passed 0
+[error] Failed tests:
+[error]         dinocpu.SingleCycleAddTesterLab1
+[error] (test / testOnly) sbt.TestsFailedException: Tests unsuccessful
+[error] Total time: 2 s, completed Jan 8, 2019 6:49:17 PM
+```
+
+If you encounter an error saying that the simulator (treadle) can't find some register in the symbol table, this is likely because the register file is being optimized away.
+*You will see this error before you add any of your own code.*
+Chisel is an optimizing compiler that checks to see if the hardware will ever be used.
+If Chisel determines the hardware will never be used, it will remove the hardware.
+
+**To fix this error**: Make sure that you have connected up the register file correctly.
+More specifically, check the write enable input to the register file.
+
 ## Printf debugging
 
 <TODO: Expand this>
