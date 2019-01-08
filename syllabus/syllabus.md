@@ -63,13 +63,13 @@ In addition, I taught (as the instructor) ECS 154A in Summer Session II 2018.
 
 *Office Location*: 3039 Kemper
 
-#### Filipe Eduardo Borges (@ucdavis.edu)
+#### Filipe Eduardo Borges (<fborges@ucdavis.edu>)
 
 <Insert short bio here>
 
-*Office Hours*: TBA
+*Office Hours*: 7:00 - 8:00 PM Wednesday
 
-*Office Location*: TBA
+*Office Location*: 53 Kemper
 
 ### GitHub
 
