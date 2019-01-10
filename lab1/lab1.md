@@ -196,6 +196,12 @@ singularity run library://jlowepower/default/dinocpu
 
 ## Working with the DINO CPU code
 
+To get the code, you can clone the repository that is in jlpteaching: `jlpteaching/dinocpu`.
+
+```
+git clone https://github.com/jlpteaching/dinocpu.git
+```
+
 ### Overview of code
 
 The `src/` directory:
