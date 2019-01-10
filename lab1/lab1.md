@@ -131,10 +131,52 @@ Let us know if you would like more details on this method via Piazza.
 Details on how to install Singularity on your own machine can be found on the [Singularity website](https://www.sylabs.io/guides/3.0/user-guide/installation.html).
 It's easiest to install it on Linux, but there are also directions for installing on Windows and MacOS.
 On Windows and MacOS, you will have to run a Linux virtual machine to work with the Singularity containers.
+**IMPORTANT: If you are using the installation directions for Windows/Mac, make sure to use the version 3.0 vagrant box!**
 
 For Linux, I suggest using the provided packages, not building from source.
 Details are available [here](https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-the-debian-ubuntu-package-using-apt).
 **Be sure to use version 3 of Singularity as it's the only version that supports the Singularity library!**
+
+For Windows/Mac you can follow [these instructions from sylabs](https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-on-windows-or-mac).
+We've made a couple of changes to make things easier.
+There is a Vagrantfile included in the DINO CPU repository for you to use.
+Thus, the steps are as follows:
+
+On Widows:
+1) Install virtualbox: https://www.virtualbox.org/wiki/Downloads
+2) Install vagrant: https://www.vagrantup.com/downloads.html
+
+On Mac:
+1) Install homebrew
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+2) Install virtualbox and vagrant
+```
+brew cask install virtualbox && \
+    brew cask install vagrant && \
+    brew cask install vagrant-manager
+```
+
+3) **Do not follow the directions to create the Singularity Vagrant Box on sylabs.io.** Instead simply run the following *in the `dinocpu` directory*.
+```
+vagrant up
+vagrant ssh
+```
+
+The first line, `vagrant up`, starts the virtual machine.
+You may have to run this whenever you restart your computer or you kill your running virtual machine. (See the [Vagrant documentation](https://www.vagrantup.com/docs/) for more information.)
+The second line, `vagrant ssh`, starts an ssh session from your host to the running virtual machine.
+In this ssh session, when you're running on the virtual machine, you will be able to use the `singularity` command.
+
+Thus, after running `vagrant ssh`, you can then follow the directions below in [Using scala, sbt, etc](#Using-scala,-sbt,-etc.).
+Note: If you use your own `Vagrantfile`, you will find the contents of the current working directory on the host in `/vagrant` on the guest.
+In the `Vagrantfile` in the DINO CPU repository, we have mapped the the dinocpu directory to `/home/vagrant/dinocpu` to make things easier.
+
+When using vagrant, singularity, and sbt, the first time you run everything, it will take some time.
+All of these tools automatically download things from the internet and the total downloaded is on the order of a gigabyte.
+Be patient while everything is getting set up.
+After the first time you run everything, it should be *much quicker* since the downloaded files should be cached.
 
 **We will only support using the provided Singularity container!**
 At your own risk, you can try to install the required dependencies.
@@ -164,8 +206,8 @@ The `src/` directory:
   - `pipelined/`: This is the code for the pipelined CPU. Right now, this is just an empty template. You will implement this in Lab 4.
   - `single-cycle/`: This is the code for the single cycle CPU. Right now, this is just an empty template. You will implement this in Lab 2.
   - `configuration.scala`: Contains a simple class to configure the CPU. **Do not modify.**
-  - `elaborate.scala`: Contains a main function to output FIRRTL- and Verilog-based versions of the CPU design. You can use this file by executing `runMain CODCPU.elaborate` in `sbt`. More details below. **Do not modify.**
-  - `simulate.scala`: Contains a main function to simulate your CPU design. This simulator is written in Scala using the [Treadle executing engine](https://github.com/freechipsproject/treadle). You can execute the simulator by using `runMain CODCPU.simulate` from sbt. This will allow you to run *real RISC-V binaries* on your CPU design. More detail about this will be given in Lab 2. **Do not modify.**
+  - `elaborate.scala`: Contains a main function to output FIRRTL- and Verilog-based versions of the CPU design. You can use this file by executing `runMain dinocpu.elaborate` in `sbt`. More details below. **Do not modify.**
+  - `simulate.scala`: Contains a main function to simulate your CPU design. This simulator is written in Scala using the [Treadle executing engine](https://github.com/freechipsproject/treadle). You can execute the simulator by using `runMain dinocpu.simulate` from sbt. This will allow you to run *real RISC-V binaries* on your CPU design. More detail about this will be given in Lab 2. **Do not modify.**
   - `top.scala`: A simple Chisel file that hooks up the memory to the CPU. **Do not modify.**
 - `test/`
   - `java/`: This contains some Gradescope libraries for automated grading. **Feel free to ignore.**
@@ -194,6 +236,8 @@ See [Submission](#Submission) for more information on how to submit to Gradescop
 | Feedback           | 10% |
 
 # Part I: Implement the ALU Control
+
+**The test for this part is `dinocpu.ALUControlTesterLab1`**
 
 In this part you will be implementing a component in the CPU design.
 
@@ -287,7 +331,7 @@ If you try this before you implement your ALU control unit, you'll see something
 
 ```
 sbt:dinocpu> test
-[info] Compiling 8 Scala sources to /home/jlp/Code/chisel/darchr-codcpu/target/scala-2.11/classes ...
+[info] Compiling 8 Scala sources to /home/jlp/Code/chisel/darchr-dinocpu/target/scala-2.11/classes ...
 [warn] there were 52 feature warnings; re-run with -feature for details
 [warn] one warning found
 [info] Done compiling.
@@ -317,8 +361,8 @@ This output continues for a while and somewhere in it you'll see that all of the
 [info] *** 8 TESTS FAILED ***
 [error] Failed: Total 8, Failed 8, Errors 0, Passed 0
 [error] Failed tests:
-[error]         CODCPU.ALUControlTesterLab1
-[error]         CODCPU.SingleCycleCPUTesterLab1
+[error]         dinocpu.ALUControlTesterLab1
+[error]         dinocpu.SingleCycleCPUTesterLab1
 [error] (Test / test) sbt.TestsFailedException: Tests unsuccessful
 ```
 
@@ -329,16 +373,11 @@ This is because no registers are connected to input or output, so the compiler o
 This confuses the simulator since it is trying to compare register values.
 Once you have implemented your ALU control unit, these errors will go away.
 
-There are two main tests given for Lab 1.
-(There will be many more in future labs!)
-- `ALUControlUnitRTypeTester`: Directed tests which poke the input of the control unit and expect a specific output.
-- and `SingleCycleCPUTester`: This runs *actual RISC-V applications* on your CPU model. This will be used below.
-
 In this part of the assignment, you only need to run the ALU control unit tests.
 To run just these tests, you can use the `sbt` command `testOnly`, as demonstrated below.
 
 ```
-sbt> testOnly CODCPU.ALUControlTesterLab1
+sbt> testOnly dinocpu.ALUControlTesterLab1
 ```
 
 Feel free to add your own tests in `src/tests/scala`, modify the current tests, and add `print` statements in the tests.
@@ -361,6 +400,8 @@ An explanation about that is in the [Feedback section](#part-vi-feedback).
 
 # Part III: Implement the ADD instruction
 
+**The test for this part is `dinocpu.SingleCycleAddTesterLab1`**
+
 Now you're ready to implement your first instruction!
 
 ## Testing
@@ -369,7 +410,7 @@ Testing the CPU is very similar to testing your control unit [above](#Testing-yo
 To run the tests, you execute the `SingleCycleCPUTesterLab1` suite as follows.
 
 ```
-sbt> testOnly CODCPU.SingleCycleAddTesterLab1
+sbt> testOnly dinocpu.SingleCycleAddTesterLab1
 ```
 
 ## Debugging with the simulator
@@ -386,16 +427,18 @@ sbt> testOnly CODCPU.SingleCycleAddTesterLab1
 
 # Part IV: Implementing the rest of the R-type instructions
 
+**The test for this part is `dinocpu.SingleCycleRTypeTesterLab1`**
+
 If you have passed the `AddTest` test and you passed the `ALUControlTest`, then all of the other R-type instruction should "just work"!
 Now, test them to make sure that they do!
 
 ## Testing
 
 Testing the CPU is very similar to testing your control unit [above](#Testing-your-ALU-control-unit).
-To run the tests, you execute the `SingleCycleCPUTesterLab1` suite as follows.
+To run the tests, you execute the `SingleCycleRTypeTesterLab1` suite as follows.
 
 ```
-sbt> testOnly CODCPU.SingleCycleCPUTesterLab1
+sbt> testOnly dinocpu.SingleCycleRTypeTesterLab1
 ```
 
 This will load some binary applications from `src/test/resources/risc-v`.
@@ -420,7 +463,7 @@ You must use `--` between the parameters to the `sbt` task (e.g., the suite to r
 For instance, to only run the subtract test, you would use the following:
 
 ```
-sbt> testOnly CODCPU.SingleCycleCPUTesterLab1 -- -z sub
+sbt> testOnly dinocpu.SingleCycleRTypeTesterLab1 -- -z sub
 ```
 
 **IMPORTANT**: Passing all of the tests we have provided for you does not guarantee you have implemented the ALU control or the CPU correctly!
@@ -433,6 +476,8 @@ This time, you will change which binary your are executing.
 
 # Part V: Moving on to multiple cycles
 
+**The test for this part is `dinocpu.SingleCycleMultiCycleTesterLab1`**
+
 Now, let's try a more complicated program that executes more that one instruction.
 `addfwd` is one example of this.
 
@@ -441,7 +486,7 @@ Now, let's try a more complicated program that executes more that one instructio
 To run this test, you can use the `-z` trick from above.
 
 ```
-sbt> testOnly CODCPU.SingleCycleCPUTesterLab1 -- -z addfwd
+sbt> testOnly dinocpu.SingleCycleCPUTesterLab1 -- -z addfwd
 ```
 
 ## Debugging
