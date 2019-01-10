@@ -19,7 +19,27 @@ Title: Getting Started with Chisel
 - How to run debug test
   - Getting the verilog, etc.
 
-<TODO: Move this to our "chisel overview", make it switch with 2 bits (so elsewhen works better) and link to that from here!>
+Let's start by creating some *very* simple hardware!
+
+For this, we will create a new file in the Chisel project.
+We will create our file at `src/main/scala/` and call it `simple.scala`
+If you are using the DINO CPU repository, you can create the file as follows:
+
+```
+touch src/main/scala/simple.scala
+```
+
+All Chisel files are actually just scala files.
+What makes it Chisel and not scala is when you use the Chisel libraries.
+
+Therefore, we will first import the Chisel libraries.
+Add the following line to the `simple.scala` file.
+
+```
+import chisel3._
+import chisel3.util._
+```
+
 
 The following will set the wire `out` to "high" when the `input` is greater than zero and "low" when it is less than zero in twos complement.
 The input is 5 bits wide.

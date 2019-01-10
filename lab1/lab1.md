@@ -183,6 +183,10 @@ At your own risk, you can try to install the required dependencies.
 However, we will not support this.
 We will give priority to all other questions on Piazza and in office hours before we help you get set up without using the Singularity container.
 
+#### Common vagrant problems
+
+- On Windows, if you receive an error saying that ssh cannot establish a connection, you may need to enable virtualization in your BIOS.
+
 ### Using scala, sbt, etc.
 
 - How to use the sbt repl interface
@@ -196,36 +200,7 @@ singularity run library://jlowepower/default/dinocpu
 
 ## Working with the DINO CPU code
 
-To get the code, you can clone the repository that is in jlpteaching: `jlpteaching/dinocpu`.
-
-```
-git clone https://github.com/jlpteaching/dinocpu.git
-```
-
-### Overview of code
-
-The `src/` directory:
-
-- `main/scala/`
-  - `components/`: This contains a number of components that are needed to implement a CPU. You will be filling in some missing pieces to these components in this lab. You can also find all of the interfaces between components defined in this file.
-  - `five-cycle/`: This is the code for the five cycle CPU. Right now, this is just an empty template. You will implement this in Lab 3.
-  - `pipelined/`: This is the code for the pipelined CPU. Right now, this is just an empty template. You will implement this in Lab 4.
-  - `single-cycle/`: This is the code for the single cycle CPU. Right now, this is just an empty template. You will implement this in Lab 2.
-  - `configuration.scala`: Contains a simple class to configure the CPU. **Do not modify.**
-  - `elaborate.scala`: Contains a main function to output FIRRTL- and Verilog-based versions of the CPU design. You can use this file by executing `runMain dinocpu.elaborate` in `sbt`. More details below. **Do not modify.**
-  - `simulate.scala`: Contains a main function to simulate your CPU design. This simulator is written in Scala using the [Treadle executing engine](https://github.com/freechipsproject/treadle). You can execute the simulator by using `runMain dinocpu.simulate` from sbt. This will allow you to run *real RISC-V binaries* on your CPU design. More detail about this will be given in Lab 2. **Do not modify.**
-  - `top.scala`: A simple Chisel file that hooks up the memory to the CPU. **Do not modify.**
-- `test/`
-  - `java/`: This contains some Gradescope libraries for automated grading. **Feel free to ignore.**
-  - `resources/riscv`: Test RISC-V applications that we will use to test your CPU design and that you can use to test your CPU design.
-  - `scala/`
-    - `components/`: Tests for the CPU components/modules. **You may want to add additional tests here. Feel free to modify, but do not submit!**
-    - `cpu-tests/`: Tests the full CPU design. **You may want to add additional tests here in future labs. Feel free to modify, but do not submit!**
-    - `grading/`: The tests that will be run on Gradescope. Note: these won't work unless you are running inside the Gradescope docker container. They should match the tests in `components` and `cpu-tests`. **Do not modify.** (You *can* modify, but it will be ignored when uploading to Gradescope.)
-
-### More information
-
-For more details on how each component works (the I/O, etc.), see the given code.
+You can find all of the details on how to work with the DINO CPU in the [README file](https://github.com/jlpteaching/dinocpu/README.md) and the [documentation](https://github.com/jlpteaching/dinocpu/tree/master/documentation) in the [DINO CPU repository](https://github.com/jlpteaching/dinocpu/).
 
 # Grading
 
