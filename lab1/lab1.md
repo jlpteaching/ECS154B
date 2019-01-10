@@ -250,9 +250,17 @@ The following table details the `operation` input and which values produce which
 |      |     |
 |------|-----|
 | 0000 | and |
-| 0001 | ... |
-... and so on
-<TODO: FILL THIS IN>
+| 0001 | or  |
+| 0010 | add |
+| 0011 | sub |
+| 0100 | slt |
+| 0101 | sltu |
+| 0110 | sll |
+| 0111 | srl |
+| 1000 | sra |
+| 1001 | xor |
+
+
 
 You must take the RISC-V ISA specification, which you can find on the first page of the Computer Organization and Design book, on page 16 in the RISC-V reader, or [on the web](https://riscv.org/specifications/), and implement the proper control to choose the right ALU operation.
 
