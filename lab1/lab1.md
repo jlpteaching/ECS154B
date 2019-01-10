@@ -302,6 +302,7 @@ class ALUControl extends Module {
 
 **HINT:** Use Chisel's `switch` / `is`,  `when` / `elsewhen` / `otherwise`, or `MuxCase` syntax.
 See [the Chisel getting started guide](../chisel-notes/getting-started.md) for examples.
+You may also find the [Chisel Cheat sheet](https://chisel.eecs.berkeley.edu/2.2.0/chisel-cheatsheet.pdf) helpful.
 
 ### Testing your ALU control unit
 
