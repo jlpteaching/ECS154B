@@ -631,13 +631,19 @@ One of them is for the code you've written for this lab, and the other is for th
 
 ## Code portion
 
-Describe how to submit the code portion to Gradescope here.
-<I think we want them to upload just the files they touched (`components/alu-control.scala`, and `single-cycle/cpu.scala`). We need to figure out how to get these files in the right places.>
+You will upload the two files that you changed to gradescope.
 
-### Checklist
+- `src/main/scala/components/alucontrol.scala`
+- `src/main/scala/single-cycle/cpu.scala`
 
-- You have commented out or removed any extra debug statements
-- You have uploaded ...
+Once uploaded, Gradescope will automatically download and run your code.
+This should take less than 5 minutes.
+For each part of the assignment, you will receive a grade.
+If all of your tests are passing locally, they should also pass on Gradescope.
+
+Note: There is no partial credit on gradescope.
+Each part is all or nothing.
+Either the test passes or it fails.
 
 ## Written portion
 
@@ -645,7 +651,7 @@ Submit your filled circuit diagram and feedback form on the (Lab 1 - Written)[ht
 Make sure to upload the files the same way they were given to you: circuit diagram first, feedback form second, both in landscape orientation with the correct side up (so not upside down).
 (Gradescope *should* let you know what we're expecting, but we're not entirely sure.)
 
-Gradescope provides a great overview of how to upload paper assignments [in their help section](http://gradescope-static-assets.s3-us-west-2.amazonaws.com/help/submitting_hw_guide.pdf).
+Gradescope provides a great overview of how to upload paper assignments [in their help section](https://www.gradescope.com/help#help-center-item-student-scanning).
 Using an actual scanner (either on campus through the computer labs or your own) will give the best quality, but your phone will also work as long as you're careful in taking the pictures.
 
 ## Academic misconduct reminder
@@ -657,6 +663,13 @@ You may discuss *high level concepts* with one another (e.g., talking about the 
 Any code found on GitHub that is not the base template you are given will be reported to SJA.
 If you want to sidestep this problem entirely, don't create a public fork and instead create a private repository to store your work.
 GitHub now allows everybody to create unlimited private repositories for up to three collaborators, and you shouldn't have *any* collaborators for your code in this class.
+
+## Checklist
+
+- [ ] You have commented out or removed any extra debug statements.
+- [ ] You have uploaded two files: cpu.scala and alucontrol.scala.
+- [ ] You have filled in and uploaded the blank circuit diagram.
+- [ ] You have filled in and uploaded the feedback form.
 
 # Hints
 
