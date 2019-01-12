@@ -669,7 +669,6 @@ Note: We will populate this with questions from Piazza when it looks like many p
 
 ## Printf debugging
 
-<TODO: Expand this>
 This is the best style of debugging for this assignment.
 
 - Use printf when you want to print *during the simulation*.
