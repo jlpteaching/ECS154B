@@ -130,3 +130,15 @@ This will set the register to the value on wire `y` at the end of the clock cycl
 ## Using modules
 
 # Bundles
+
+# Frequently asked questions
+
+You may also find your answer in [Chisel's FAQs](https://github.com/freechipsproject/chisel3/wiki/frequently-asked-questions).
+
+## When to use `=` vs `:=`
+
+You should use `=` when *creating a new variable*.
+The `=` should always be on the same line as a `var`.
+
+`:=` is the operator to *create a new wire* connecting the output wire on the right to the input wire on the left.
+Note: This is backwards from the way you would draw it, but it's forwards for the way you would say it.

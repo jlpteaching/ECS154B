@@ -21,7 +21,7 @@ However, this has a number of esoteric software package requirements that are no
 
 # Table of contents
 
--[Getting started with Chisel](getting-started.md)
+- [Getting started with Chisel](getting-started.md)
 
 - Include in this table of contents pointers to all of the other files!
 
