@@ -14,10 +14,10 @@ The Chisel project provides [a more complete cheat sheet](https://chisel.eecs.be
 ## Create a new wire.
 
 ```
-val x = UInt()
+val x = Wire(UInt())
 ```
 
-<TODO ADD A PICTURE>
+![wire](./wire.svg)
 
 Create a wire (named `x`) that is of type `UInt`.
 The width of the wire will be inferred.
@@ -26,13 +26,14 @@ The width of the wire will be inferred.
 ## Connect two wires.
 
 ```
-x := y
+y := x
 ```
 
-<TODO ADD A PICTURE>
+![connecting wires](./connecting.svg)
 
-Connect wire y to wire x.
-This is "backwards" in some sense.
+Connect wire `x` to wire `y`.
+This is "backwards" in that the input is on the right and the output is on the left.
+However, it's forwards in the way you say it out loud.
 
 ## Another wire example
 
@@ -43,7 +44,7 @@ val adder2 = Adder()
 adder2.io.inputx := adder1.io.result
 ```
 
-<TODO ADD A PICTURE>
+![adder connection](./simplesystem-1.svg)
 
 `adder2.io.inputx := adder1.io.result` connects the output of adder 1 to the input of adder 2.
 
@@ -52,14 +53,51 @@ adder2.io.inputx := adder1.io.result
 ## Mux
 
 ```
-val x = UInt()
+val x = Wire(UInt())
 
 x := Mux(selector, true_value, false_value)
 ```
 
+This creates a wire x which will have the `true_value` on it if `selector` is true and the `false_value` otherwise.
+
 ## When-elsewhen-otherwise
 
+```
+val x = Wire(UInt(3.U))
+
+when(value === 0.U) {
+  x := "b001".U
+} .elsewhen (value > 0.S) {
+  x := "b010".U
+} .otherwise { // value must be < 0
+  x := "b100".U
+}
+```
+
+The above creates a 1-hot value on the wire `x` depending on whether the wire `value` is 0, greater than 0, or less than 0.
+
 ## switch-is
+
+The `switch-is` statement is useful for implementing logic tables.
+For instance, below.
+
+| input | output |
+|-------|--------|
+| 0001  | true   |
+| 0100  | false  |
+| 0101  | true   |
+| 1101  | true   |
+
+```
+output := DontCare // since we aren't fully specifying the output this is required.
+
+switch (input) {
+  is ("b0001".U) { output := true }
+  is ("b0100".U) { output := false }
+  is ("b0101".U) { output := true }
+  is ("b1101".U) { output := true }
+}
+```
 
 # Types
 
@@ -76,6 +114,23 @@ x := Mux(selector, true_value, false_value)
 - `UInt()`: an unsigned integer width inferred (you may get an error saying it can't infer the width)
 - `77.U`: To convert from scala integer to chisel unsigned int use `.U` (you may get type incompatible errors if you don't do this correctly).
 - `3.S(2.W)`: Signed integer that is 2 bits wide (e.g., -1)
+- `"b001010".U`: To create a binary literal, use a string of 1's and 0's starting with "b". Then, you can convert this string to an unsigned int with `.U` or a signed int with `.S`
+
+# Getting parts of a wire
+
+If you want a subset of a wire, you can use `()`.
+
+Some examples below.
+
+```
+val x = Wire(UInt(32.W))
+val lower_5 = x(4,0)
+val top_3 = x(31,29)
+val rd_in_riscv_instruction = x(11,7)
+```
+
+Note: these numbers are *exactly* how you will write them on all of your diagrams.
+The indices are inclusive with the high-order bits on the left.
 
 # Circuits provided as operators:
 
@@ -107,7 +162,7 @@ val register = Reg(UInt(32.W))
 x := register
 ```
 
-<TODO ADD A PICTURE>
+![Register connect to wire](register-x.svg)
 
 This takes the value coming out of the register and connects it to the wire `x`
 
@@ -119,7 +174,7 @@ val register = Reg(UInt(32.W))
 register := y
 ```
 
-<TODO ADD A PICTURE>
+![wire connect to register](y-register.svg)
 
 This will set the register to the value on wire `y` at the end of the clock cycle.
 
@@ -128,6 +183,8 @@ This will set the register to the value on wire `y` at the end of the clock cycl
 ## IO
 
 ## Using modules
+
+See [creating your first chisel hardware](./first-hardware.md)
 
 # Bundles
 
