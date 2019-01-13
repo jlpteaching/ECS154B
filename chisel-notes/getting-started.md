@@ -1,276 +1,132 @@
----
-Author: Jason Lowe-Power
-Title: Getting Started with Chisel
----
+# Using the Singularity image/container
 
-# Getting Started with Chisel
+We have created a Singularity container image for you to use for the labs this quarter.
+[Singularity](https://www.sylabs.io/singularity/) is a [container](https://linuxcontainers.org/) format similar to [Docker](https://www.docker.com/).
+We cannot use Docker on the CSIF machines for security reasons.
+We are using containers because the DINO CPU has a number of unique dependencies (e.g., [`chisel`](https://chisel.eecs.berkeley.edu/), [`firrtl`](https://bar.eecs.berkeley.edu/projects/firrtl.html), [`sbt`](https://www.scala-sbt.org/), [`scala]`(https://www.scala-lang.org/), [`java`](https://www.java.com/en/), and many others).
+Of course, each of these dependencies requires a specific version to work correctly!
+Containers allow us to give you a known-good starting point with the correct versions of all of the dependencies installed.
+This also means less hassle on your end attempting to install the correct dependencies!
 
-## Outline
+We may make updates to the Singularity image throughout the quarter.
+We have done our best to make sure all of the labs will work with the current image, but there may be unforeseen issues.
+Therefore, make sure to always use the "default" version of the image, and always use the image from the library.
+Don't download the image locally, as the library version may change.
+**We will announce when we push any changes to the image.**
 
-- Converting between scala and chisel types
-- Wires
-- Vals vs vars and `=` vs `:=`
-- Muxes
-  - Muxes
-  - switch is
-  - when elsewhen otherwise
-  - mux case
-- How to use IO
-- How to run debug test
-  - Getting the verilog, etc.
-
-# Example 1: `SimpleSystem`
-
-Let's start by creating some *very* simple hardware!
-
-For this, we will create a new file in the Chisel project.
-We will create our file at `src/main/scala/` and call it `simple.scala`
-If you are using the DINO CPU repository, you can create the file as follows:
+To use the Singularity image, you can simply run the following command:
 
 ```
-touch src/main/scala/simple.scala
+singularity run library://jlowepower/default/dinocpu
 ```
 
-All Chisel files are actually just scala files.
-What makes it Chisel and not scala is when you use the Chisel libraries.
+This will download the most up-to-date version of the image to your local machine (e.g., `~/.singularity/cache` on Linux machines).
 
-Therefore, we will first import the Chisel libraries.
-Add the following line to the `simple.scala` file.
+The first time you run the container, it will take a while to start up.
+When you execute `singularity run`, it automatically starts in `sbt`, the [scala build tool](https://www.scala-sbt.org/), which we will use for running Chisel for all of the labs.
+The first time you run `sbt`, it downloads all of the dependencies to your local machine.
+After the first time, it should start up much faster!
 
-```
-package dinocpu
+##Using the CSIF machines
 
-import chisel3._
-import chisel3.util._
-```
+Singularity is installed on the CSIF machines.
+So, if you are using one of the CSIF machines either locally or remotely, things should *just work*.
+However, if you run into any problems, post on Piazza or come to office hours.
 
-These lines first say that the code you're writing are part of the `dinocpu` package (`package dinocpu`).
-By declaring the package, all other objects in the namespace become visible, and this makes it possible to run the main function we will create later.
-Next, we are going to import all of the objects from the Chisel library (`import chisel3._`) and the Chisel utilities (`import chisel3.util._`).
+The images are relatively large files.
+As of the beginning of the quarter, the image is 380 MB.
+We have tried to keep the size as small as possible.
+Thus, especially if we update the image throughout the quarter, you may find that the disk space on your CSIF account is full.
+If this happens, you can remove the singularity cache to free up space.
 
-## Creating an adder
-
-Now, we will create a simple adder.
-For this, we will define a `Module`, which is simply inheriting from the `Module` class in Chisel.
-
-```
-class SimpleAdder extends Module {
-
-}
-```
-
-A hardware module isn't very useful unless there is some wires going into and out of the module (I/O).
-So, let's add some I/O to our adder.
-In this case, let's add two inputs (`inputx` and `inputy`) and one output (`result`).
-Chisel has a notion of `Bundle`s that group named hardware components together, and to create an I/O interface we must create a `Bundle` of `Input` and `Output` objects as follows.
+To remove the singularity cache, you can run the following command.
 
 ```
-val io = IO(new Bundle{
-  val inputx = Input(UInt(32.W))
-  val inputy = Input(UInt(32.W))
-
-  val result = Output(UInt(32.W))
-})
+rm -r ~/.singularity/cache
 ```
 
-Here, we are using another Scala keyword, `val`.
-You must use the keyword `val` before each variable you declare.
-(Scala also has a `var` keyword, but I do no believe you'll ever need to use it when working with the DINO CPU).
-`var` is somewhat like `auto` in C++.
-The type of the variable will be inferred by Scala's type system.
-**IMPORTANT**: Whenever you instantiate a module or other Chisel type and create a new variable for it you will use the `=` operator.
-
-Note that these inputs and the output are unsigned integers that are 32 bits wide.
-You always should declare the size of the input and output wires.
-
-Finally, all we have to do it implement the hardware for the adder.
-Our final adder looks like the following.
+To find out how much space the singularity containers are using, you can use `du` (disk usage):
 
 ```
-class SimpleAdder extends Module {
-  val io = IO(new Bundle{
-    val inputx = Input(UInt(32.W))
-    val inputy = Input(UInt(32.W))
-
-    val result = Output(UInt(32.W))
-  })
-
-  io.result := io.inputx + io.inputy
-}
+du -sh ~/.singularity/cache
 ```
 
-An important distinction is that the `+` operator above does not add `inputx` and `inputy`.
-Instead it represents creating the transistors *in hardware* to calculate the addition and wiring those transistors to the `result` wire.
+You can also download the images to `/tmp`, if you do not have space in your user directory.
+Let us know if you would like more details on this method via Piazza.
 
-## Creating a system of components
+## Using your own machine
 
-Now, let's create a larger system that connects multiple components together.
-In this section, we will learn about wiring modules together, stateful components, and multiplexers.
+Details on how to install Singularity on your own machine can be found on the [Singularity website](https://www.sylabs.io/guides/3.0/user-guide/installation.html).
+It's easiest to install it on Linux, but there are also directions for installing on Windows and MacOS.
+On Windows and MacOS, you will have to run a Linux virtual machine to work with the Singularity containers.
+**IMPORTANT: If you are using the installation directions for Windows/Mac, make sure to use the version 3.0 vagrant box!**
 
-Let's start by declaring a new type of `Module`, the `SimpleSystem`.
+For Linux, I suggest using the provided packages, not building from source.
+Details are available [here](https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-the-debian-ubuntu-package-using-apt).
+**Be sure to use version 3 of Singularity as it's the only version that supports the Singularity library!**
 
+For Windows/Mac you can follow [these instructions from sylabs](https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-on-windows-or-mac).
+We've made a couple of changes to make things easier.
+There is a Vagrantfile included in the DINO CPU repository for you to use.
+Thus, the steps are as follows:
+
+On Widows:
+1) Install virtualbox: https://www.virtualbox.org/wiki/Downloads
+2) Install vagrant: https://www.vagrantup.com/downloads.html
+
+On Mac:
+1) Install homebrew
 ```
-class SimpleSystem extends Module {
-  val io = IO(new Bundle {
-    val success = Output(Bool())
-  })
-}
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-
-The `SimpleSystem` has one output which is whether the system succeeds.
-This is a made up output, but without it Chisel would optimize away our circuit.
-There's no reason to have a circuit if it doesn't have an I/O!
-
-Now, let's start by simply connecting two adders together like the image below.
-
-![Two adders](./simplesystem-1.svg)
-
-To create this circuit, we need to instantiate two `Adder`s and connect the result from the first to the input of the second.
-You can add the following in the `SimpleSystem` class from above.
-
+2) Install virtualbox and vagrant
 ```
-val adder1 = Module(new SimpleAdder())
-val adder2 = Module(new SimpleAdder())
-
-adder2.io.inputx := adder1.io.result
-```
-
-Now, let's arbitrarily define success as when the result of the second adder is 128.
-And, let's also make the second input to the second adder is 3.
-
-Our circuit now looks like the following.
-
-![Adding 3 and success](./simplesystem-2.svg)
-
-Now, our code to represent this circuit will look like the following:
-
-```
-val adder1 = Module(new SimpleAdder())
-val adder2 = Module(new SimpleAdder())
-
-adder2.io.inputx := adder1.io.result
-adder2.io.inputx := 3.U
-
-io.success := Mux(adder2.io.result === 128.U, true.B, false.B)
+brew cask install virtualbox && \
+    brew cask install vagrant && \
+    brew cask install vagrant-manager
 ```
 
-We must use `3.U` and `128.U`.
-The `.U` after 3 to convert the Scala integer type to the chisel type which is the hardware that represents the number 3 and 128.
-
-The `===` operator creates hardware that checks for equality.
-Therefore the multiplexer's selection input is 1 when the result is 128 and 0 otherwise.
-Thus, we want to route 1 (or `true.B`) to the output of the mux in this case and 0 (or `false.B`) otherwise.
-
-Finally, let's add some state to this.
-We are going to add two registers and use those registers as the input to the first adder.
-We will also feed the outputs of the adders back to the register.
-
-Every time we use a register, there is an implicit clock added in Chisel.
-You can think about this as at the "beginning" of the cycle, the registers are read and the output wires have the value in the register.
-Then, at the end of the clock cycle, the registers will be updated with new values from their inputs.
-
-So, let's create the full circuit shown below.
-
-
-![Whole simplesystem](./simplesystem-3.svg)
-
+3) **Do not follow the directions to create the Singularity Vagrant Box on sylabs.io.** Instead simply run the following *in the `dinocpu` directory*.
 ```
-class SimpleSystem extends Module {
-  val io = IO(new Bundle {
-    val success = Output(Bool())
-  })
-
-  val adder1 = Module(new SimpleAdder())
-  val adder2 = Module(new SimpleAdder())
-
-  val reg1 = RegInit(0.U)
-  val reg2 = RegInit(1.U)
-
-  adder1.io.inputx := reg1
-  adder1.io.inputy := reg2
-
-  adder2.io.inputx := adder1.io.result
-  adder2.io.inputy := 3.U
-
-  reg1 := adder1.io.result
-
-  reg2 := adder2.io.result
-
-  io.success := Mux(adder2.io.result === 128.U, true.B, false.B)
-}
+vagrant up
+vagrant ssh
 ```
 
-## Simulating and testing the circuit
+The first line, `vagrant up`, starts the virtual machine.
+You may have to run this whenever you restart your computer or you kill your running virtual machine. (See the [Vagrant documentation](https://www.vagrantup.com/docs/) for more information.)
+The second line, `vagrant ssh`, starts an ssh session from your host to the running virtual machine.
+In this ssh session, when you're running on the virtual machine, you will be able to use the `singularity` command.
 
-Now, we need some way to simulate and test the circuit.
-Luckily, Chisel has some built in testing capabilities.
+Thus, after running `vagrant ssh`, you can then follow the directions below in [Using scala, sbt, etc](#Using-scala,-sbt,-etc.).
+Note: If you use your own `Vagrantfile`, you will find the contents of the current working directory on the host in `/vagrant` on the guest.
+In the `Vagrantfile` in the DINO CPU repository, we have mapped the the dinocpu directory to `/home/vagrant/dinocpu` to make things easier.
 
-The following creates a simple tester that runs the circuit for 10 cycles.
-It also creates a `main` function that can be executed from the sbt prompt that creates the tester and drives it.
+When using vagrant, singularity, and sbt, the first time you run everything, it will take some time.
+All of these tools automatically download things from the internet and the total downloaded is on the order of a gigabyte.
+Be patient while everything is getting set up.
+After the first time you run everything, it should be *much quicker* since the downloaded files should be cached.
 
-```
-class SimpleSystemUnitTester(c: SimpleSystem) extends PeekPokeTester(c) {
-  step(10)
-}
+**We will only support using the provided Singularity container!**
+At your own risk, you can try to install the required dependencies.
+However, we will not support this.
+We will give priority to all other questions on Piazza and in office hours before we help you get set up without using the Singularity container.
 
-object simple {
-  def main(args: Array[String]): Unit = {
-    Driver( () => new SimpleSystem ) { c => new SimpleSystemUnitTester(c) }
-  }
-}
-```
-Here, we create a new `SimpleSystem`, and pass that as a parameter to the `SimpleSystemUnitTester`.
-The `SimpleSystemUnitTester` simply steps for 10 cycles.
+### Common vagrant problems
 
-You can run this by executing the following at the sbt command prompt:
+- On Windows, if you receive an error saying that ssh cannot establish a connection, you may need to enable virtualization in your BIOS.
 
-```
-sbt:dinocpu> runMain dinocpu.simple
-```
+### Using scala, sbt, etc.
 
-When you run it, you will see the following, which isn't very interesting.
+<NOTE: This section should be expanded!>
 
-```
-[info] Compiling 1 Scala source to /home/jlp/Code/chisel/darchr-codcpu/target/scala-2.12/classes ...
-[warn] there were 13 feature warnings; re-run with -feature for details
-[warn] one warning found
-[info] Done compiling.
-[warn] Multiple main classes detected.  Run 'show discoveredMainClasses' to see the list
-[info] Packaging /home/jlp/Code/chisel/darchr-codcpu/target/scala-2.12/dinocpu_2.12-0.5.jar ...
-[info] Done packaging.
-[info] Running dinocpu.simple
-[info] [0.001] Elaborating design...
-[info] [0.800] Done elaborating.
-Total FIRRTL Compile Time: 326.6 ms
-Total FIRRTL Compile Time: 28.4 ms
-End of dependency graph
-Circuit state created
-[info] [0.000] SEED 1547340019422
-test SimpleSystem Success: 0 tests passed in 15 cycles taking 0.018804 seconds
-[info] [0.008] RAN 10 CYCLES PASSED
-[success] Total time: 3 s, completed Jan 13, 2019 12:40:21 AM
-```
+- How to use the sbt repl interface
+- Run tests, main, etc.
 
-To make it more interesting, let's add a `printf` to the `SimpleSystem` that shows what's going on inside it.
-You can add the following line as the last line in the `SimpleSystem` class.
-It will print the values in the registers (at the beginning of the cycle) and the value of success.
+To start sbt in the REPL (Read-eval-print loop), run the following code in the base DINO directory.
 
 ```
-printf(p"reg1: $reg1, reg2: $reg2, success: ${io.success}\n")
+singularity run library://jlowepower/default/dinocpu
 ```
 
-Now, you should see the following when you run the `simple` main function.
 
-```
-reg1: 1, reg2: 4, success: 0
-reg1: 5, reg2: 8, success: 0
-reg1: 13, reg2: 16, success: 0
-reg1: 29, reg2: 32, success: 0
-reg1: 61, reg2: 64, success: 1
-reg1: 125, reg2: 128, success: 0
-reg1: 253, reg2: 256, success: 0
-reg1: 509, reg2: 512, success: 0
-reg1: 1021, reg2: 1024, success: 0
-reg1: 2045, reg2: 2048, success: 0
-test SimpleSystem Success: 0 tests passed in 15 cycles taking 0.032475 seconds
-```
+[Next: Making hardware with Chisel](first-hardware.md)

@@ -19,10 +19,12 @@ In this and other documents in the Chisel notes in the this repository we try to
 If you want to go deeper into Chisel, I suggest starting with the [Chisel bootcamp](https://github.com/freechipsproject/chisel-bootcamp).
 However, this has a number of esoteric software package requirements that are not available in the DINO CPU Singularity container, so you are on your own :).
 
+
+
 # Table of contents
 
 - [Getting started with Chisel](getting-started.md)
-
-- Include in this table of contents pointers to all of the other files!
+- [Creating your first Chisel hardware](first-hardware.md)
+- [Chisel cheat sheet](cheat-sheet.md)
 
 [Next: Getting started with Chisel](getting-started.md)
