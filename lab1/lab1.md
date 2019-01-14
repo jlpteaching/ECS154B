@@ -740,3 +740,62 @@ If Chisel determines the hardware will never be used, it will remove the hardwar
 
 **To fix this error**: Make sure that you have connected up the register file correctly.
 More specifically, check the write enable input to the register file.
+
+### possible cause: maybe a semicolon is missing before `value is'?
+
+If Chisel complains about a missing simicolon before an `is` statement it is likely that you have a nested `is`.
+
+For instance, this is an error you may see.
+
+```
+[error] /home/jlp/dinocpu/src/main/scala/components/alucontrol.scala:40:13: value is is not a member of Unit
+[error] possible cause: maybe a semicolon is missing before `value is'?
+[error]           } is ("b0100000".U) {
+```
+
+Below is an example **incorrect** nested `is` statement.
+
+```
+switch (io.funct3) {
+  is ("b000".U) {
+    switch (io.funct7) {
+      is (xxxxxxx) {
+        io.operation := wwwwwwww
+      } is (yyyyyyyy) {
+        io.operation := zzzzzzzz
+      }
+    }
+  }
+  ...
+```
+
+You can fix this by changing the inner `switch` to a `when`.
+
+```
+switch (io.funct3) {
+  is ("b000".U) {
+    when (io.funct7 === xxxxxxx) { io.operation := wwwwwwww }
+    otherwise { io.operation := zzzzzzzz }
+  }
+  ...
+```
+
+
+### FATAL: container creation failed: mount error...
+
+If you see the following error, it is likely because you ran out of disk space on the CSIF machine.
+
+```
+FATAL:   container creation failed: mount error: can't mount image /proc/self/fd/8: failed to mount squashfs filesystem: invalid argument
+```
+
+You can find out how much space you're using with the `fquota` command as shown below.
+This application wil also help you find the largest directories so you can clean up your files.
+
+```
+jlp@ad3.ucdavis.edu@pc12:~$ fquota
+QUOTA SUMMARY   -- Disk quotas for user jlp@ad3.ucdavis.edu (uid 832205):
+Currently using 1717 MB of 2048 MB in your quota.
+```
+
+If you clear your singularity cache (`.singularity/cache/`), you can free up some disk space, but the singularity image will be re-downloaded the next time you run `singularity`.
