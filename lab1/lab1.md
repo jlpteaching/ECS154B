@@ -419,6 +419,9 @@ Notice how the instruction wire is broken into is sub-components.
 We are creating a 32-bit RISC-V CPU (rv32i).
 The book will not contain the *exact* answers to the labs, though it will be very useful.
 
+**Hint**: You may not need to use all of the modules provided.
+You only need to implement the *R-type* instructions, not all RISC-V instructions on this lab assignment.
+
 # Part III: Implement the ADD instruction
 
 **The test for this part is `dinocpu.SingleCycleAddTesterLab1`**
