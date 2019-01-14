@@ -99,6 +99,9 @@ switch (input) {
 }
 ```
 
+**Important**: As far as I can tell, you cannot have a "nested" switch-is statement.
+If you want to have other muxes within your switch-is statement, you must either use `Mux` or a `when` statement.
+
 # Types
 
 ## Boolean
