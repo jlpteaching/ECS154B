@@ -410,6 +410,8 @@ Notice how the instruction wire is broken into is sub-components.
 **Important**: The book shows the answer for 64-bit RISC-V (rv64i) and a slightly different CPU design.
 We are creating a 32-bit RISC-V CPU (rv32i).
 The book will not contain the *exact* answers to the labs, though it will be very useful.
+The above diagram shows the required hardware to implement a very small subset of the RISC-V instructions (a few R-type, lw, sw, and beq).
+For this assignment, you only need to add the hardware to implement the R-type instructions.
 
 **Hint**: You may not need to use all of the modules provided.
 You only need to implement the *R-type* instructions, not all RISC-V instructions, on this lab assignment.
