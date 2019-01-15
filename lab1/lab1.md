@@ -248,7 +248,7 @@ The following table details the `operation` input and which values produce which
 
 |      |     |
 |------|-----|
-| 0000 | and |
+| 0010 | and |
 | 0001 | or  |
 | 0010 | add |
 | 0011 | sub |
