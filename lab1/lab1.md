@@ -22,18 +22,15 @@ title: ECS 154B Lab 1, Winter 2019
 * [Part II: Draw a diagram for implementing R-type instructions](#part-ii-draw-a-diagram-for-implementing-r-type-instructions)
 * [Part III: Implement the ADD instruction](#part-iii-implement-the-add-instruction)
   * [Testing your ADD instruction](#testing-your-add-instruction)
-  * [Debugging with the simulator](#debugging-with-the-simulator)
 * [Part IV: Implementing the rest of the R-type instructions](#part-iv-implementing-the-rest-of-the-r-type-instructions)
   * [Testing the rest of the instructions](#testing-the-rest-of-the-instructions)
-  * [Debugging with the simulator](#debugging-with-the-simulator-1)
 * [Part V: Moving on to multiple cycles](#part-v-moving-on-to-multiple-cycles)
   * [Testing](#testing)
-  * [Debugging](#debugging)
 * [Part VI: Feedback](#part-vi-feedback)
 * [Grading](#grading)
 * [Submission](#submission)
   * [Code portion](#code-portion)
-  * [Written portion and feedback](#written-portion-and-feedback)
+  * [Written portion](#written-portion)
   * [Academic misconduct reminder](#academic-misconduct-reminder)
   * [Checklist](#checklist)
 * [Hints](#hints)
@@ -321,7 +318,7 @@ You may also find the [Chisel cheat sheet](https://chisel.eecs.berkeley.edu/2.2.
 
 We have implemented some tests for your ALU control unit.
 The general ALU control unit tests are in `src/test/scala/components/ALUControlUnitTest.scala`.
-However, these tests require you to implement the required control for not only the R-Type instructions but also for I-Types and loads/stores.
+However, these tests require you to implement the required control for not only the R-type instructions but also for I-Types and loads/stores.
 Thus, there are Lab 1-specific tests in `src/test/scala/labs/Lab1Test.scala`.
 
 To run these tests, you simply need to execute the following at the sbt command prompt:
@@ -452,7 +449,7 @@ However, when you turn in your assignment, please comment out or remove your deb
 
 ## Testing your ADD instruction
 
-Testing the CPU is very similar to testing your control unit [above](#Testing-your-ALU-control-unit).
+Testing the CPU is very similar to testing your control unit [above](#testing-your-alu-control-unit).
 To run the tests, you execute the `SingleCycleCPUTesterLab1` suite as follows.
 
 ```
@@ -523,14 +520,14 @@ More information about `CPUTestCase` can be found in the code (`src/test/scala/c
 
 **The test for this part is `dinocpu.SingleCycleRTypeTesterLab1`.**
 
-In this part of the lab, you will be implementing all of the other R-Type RISC-V instructions.
+In this part of the lab, you will be implementing all of the other R-type RISC-V instructions.
 These are all of the ALU operations in the ISA.
 For each of the operations, we have included a test program that has only that one instruction.
 
-If you have passed the `AddTest` test and you passed the `ALUControlTest`, then all of the other R-type instruction should "just work"!
+If you have passed the `AddTest` test and you passed the `ALUControlTest`, then all of the other R-type instruction should *just work*!
 Now, test them to make sure that they do!
 
-You may need to update the wires in your CPU design to get all of the R-Type instructions to work.
+You may need to update the wires in your CPU design to get all of the R-type instructions to work.
 There are a couple of tricky ones that may cause you to re-think your design.
 
 - `add0` tests to make sure you don't overwrite register 0 (it should always be 0 in RISC-V).
@@ -578,7 +575,7 @@ sbt> testOnly dinocpu.SingleCycleRTypeTesterLab1 -- -z sub
 Now, let's try a more complicated program that executes more that one instruction.
 `addfwd` is one example of this which executes 10 add instructions in a row.
 
-There is only one minor change from [Part IV](part-iv-implementing-the-rest-of-the-r-type-instructions) to get these programs to execute correctly.
+There is only one minor change from [Part IV](#part-iv-implementing-the-rest-of-the-r-type-instructions) to get these programs to execute correctly.
 These programs are starting to be able to do some "real" things.
 For instance, `power2` computes whether the input register is a power of 2.
 
@@ -642,7 +639,7 @@ One of them is for the code you've written for this lab, and the other is for th
 
 ## Code portion
 
-You will upload the two files that you changed to Gradescope.
+You will upload the two files that you changed to Gradescope on the [Lab 1 - Code](https://www.gradescope.com/courses/35106/assignments/143133) assignment.
 
 - `src/main/scala/components/alucontrol.scala`
 - `src/main/scala/single-cycle/cpu.scala`
@@ -658,7 +655,7 @@ Either the test passes or it fails.
 
 ## Written portion
 
-Submit your filled circuit diagram and feedback form on the [Lab 1 - Written](https://www.gradescope.com/courses/35106/assignments/141816) assignment on Gradescope.
+Submit your filled circuit diagram and feedback form on the [Lab 1 - Written](https://www.gradescope.com/courses/35106/assignments/141816) assignment.
 Make sure to upload the files the same way they were given to you:
 - circuit diagram first
 - feedback form second
