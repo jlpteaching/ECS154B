@@ -15,25 +15,27 @@ title: ECS 154B Lab 1, Winter 2019
   * [Goals](#goals)
   * [Chisel](#chisel)
       * [Using the Singularity image/container](#using-the-singularity-imagecontainer)
-      * [Using scala, sbt, etc.](#using-scala-sbt-etc)
+      * [Using Scala, sbt, etc.](#using-scala-sbt-etc)
   * [Working with the DINO CPU code](#working-with-the-dino-cpu-code)
-* [Grading](#grading)
 * [Part I: Implement the ALU Control](#part-i-implement-the-alu-control)
   * [Testing your ALU control unit](#testing-your-alu-control-unit)
 * [Part II: Draw a diagram for implementing R-type instructions](#part-ii-draw-a-diagram-for-implementing-r-type-instructions)
 * [Part III: Implement the ADD instruction](#part-iii-implement-the-add-instruction)
-  * [Testing](#testing)
+  * [Testing your ADD instruction](#testing-your-add-instruction)
   * [Debugging with the simulator](#debugging-with-the-simulator)
 * [Part IV: Implementing the rest of the R-type instructions](#part-iv-implementing-the-rest-of-the-r-type-instructions)
-  * [Testing](#testing-1)
+  * [Testing the rest of the instructions](#testing-the-rest-of-the-instructions)
   * [Debugging with the simulator](#debugging-with-the-simulator-1)
 * [Part V: Moving on to multiple cycles](#part-v-moving-on-to-multiple-cycles)
-  * [Testing](#testing-2)
+  * [Testing](#testing)
   * [Debugging](#debugging)
 * [Part VI: Feedback](#part-vi-feedback)
+* [Grading](#grading)
 * [Submission](#submission)
   * [Code portion](#code-portion)
   * [Written portion and feedback](#written-portion-and-feedback)
+  * [Academic misconduct reminder](#academic-misconduct-reminder)
+  * [Checklist](#checklist)
 * [Hints](#hints)
   * [Printf debugging](#printf-debugging)
   * [Common errors](#common-errors)
@@ -66,16 +68,16 @@ See [the extra credit page](../extra-credit.md) for an up-to-date list of ways t
 You write Scala code, which is syntactically similar to Java.
 Chisel can then generate low-level Verilog code, which is a hardware description language used by a variety of tools to describe how an electronic circuit works.
 
-There is a more detailed Chisel overview found under the [chisel notes directory](../chisel-notes/overview.md).
-Before diving into this assignment, you are encouraged to go through the [chisel notes](../chisel-notes/overview.md).
-You can find additional help and documentation on [Chisel's](https://chisel.eecs.berkeley.edu/) website.
+There is a more detailed Chisel overview found under the [Chisel notes directory](../chisel-notes/overview.md).
+Before diving into this assignment, you are encouraged to go through the [Chisel notes](../chisel-notes/overview.md).
+You can find additional help and documentation on [Chisel's website](https://chisel.eecs.berkeley.edu/).
 
 ### Using the Singularity image/container
 
 We have created a Singularity container image for you to use for the labs this quarter.
 [Singularity](https://www.sylabs.io/singularity/) is a [container](https://linuxcontainers.org/) format similar to [Docker](https://www.docker.com/).
 We cannot use Docker on the CSIF machines for security reasons.
-We are using containers because the DINO CPU has a number of unique dependencies (e.g., [`chisel`](https://chisel.eecs.berkeley.edu/), [`firrtl`](https://bar.eecs.berkeley.edu/projects/firrtl.html), [`sbt`](https://www.scala-sbt.org/), [`scala]`(https://www.scala-lang.org/), [`java`](https://www.java.com/en/), and many others).
+We are using containers because the DINO CPU has a number of unique dependencies (e.g., [Chisel](https://chisel.eecs.berkeley.edu/), [FIRRTL](https://bar.eecs.berkeley.edu/projects/firrtl.html), [sbt](https://www.scala-sbt.org/), [Scala](https://www.scala-lang.org/), [Java](https://www.java.com/en/), and many others).
 Of course, each of these dependencies requires a specific version to work correctly!
 Containers allow us to give you a known-good starting point with the correct versions of all of the dependencies installed.
 This also means less hassle on your end attempting to install the correct dependencies!
@@ -109,15 +111,15 @@ The images are relatively large files.
 As of the beginning of the quarter, the image is 380 MB.
 We have tried to keep the size as small as possible.
 Thus, especially if we update the image throughout the quarter, you may find that the disk space on your CSIF account is full.
-If this happens, you can remove the singularity cache to free up space.
+If this happens, you can remove the Singularity cache to free up space.
 
-To remove the singularity cache, you can run the following command.
+To remove the Singularity cache, you can run the following command.
 
 ```
 rm -r ~/.singularity/cache
 ```
 
-To find out how much space the singularity containers are using, you can use `du` (disk usage):
+To find out how much space the Singularity containers are using, you can use `du` (disk usage):
 
 ```
 du -sh ~/.singularity/cache
@@ -131,50 +133,52 @@ Let us know if you would like more details on this method via Piazza.
 Details on how to install Singularity on your own machine can be found on the [Singularity website](https://www.sylabs.io/guides/3.0/user-guide/installation.html).
 It's easiest to install it on Linux, but there are also directions for installing on Windows and MacOS.
 On Windows and MacOS, you will have to run a Linux virtual machine to work with the Singularity containers.
-**IMPORTANT: If you are using the installation directions for Windows/Mac, make sure to use the version 3.0 vagrant box!**
+**IMPORTANT: If you are using the installation directions for Windows or Mac, make sure to use the version 3.0 Vagrant box!**
 
 For Linux, I suggest using the provided packages, not building from source.
 Details are available [here](https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-the-debian-ubuntu-package-using-apt).
-**Be sure to use version 3 of Singularity as it's the only version that supports the Singularity library!**
+**Be sure to use version 3 of Singularity, as it's the only version that supports the Singularity library!**
 
-For Windows/Mac you can follow [these instructions from sylabs](https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-on-windows-or-mac).
+For Windows and Mac, you can follow [these instructions from Sylabs](https://www.sylabs.io/guides/3.0/user-guide/installation.html#install-on-windows-or-mac), **but read below first**.
+
 We've made a couple of changes to make things easier.
 There is a Vagrantfile included in the DINO CPU repository for you to use.
 Thus, the steps are as follows:
 
-On Widows:
-1) Install virtualbox: https://www.virtualbox.org/wiki/Downloads
-2) Install vagrant: https://www.vagrantup.com/downloads.html
+On Windows:
+1) Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+2) Install [Vagrant](https://www.vagrantup.com/downloads.html).
 
 On Mac:
-1) Install homebrew
+1) Install Homebrew:
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-2) Install virtualbox and vagrant
+2) Install VirtualBox and Vagrant:
 ```
 brew cask install virtualbox && \
     brew cask install vagrant && \
     brew cask install vagrant-manager
 ```
-
-3) **Do not follow the directions to create the Singularity Vagrant Box on sylabs.io.** Instead simply run the following *in the `dinocpu` directory*.
+3) **Do not follow the directions to create the Singularity Vagrant Box on sylabs.io.** Instead, simply run the following *in the `dinocpu` directory*:
 ```
 vagrant up
 vagrant ssh
 ```
 
 The first line, `vagrant up`, starts the virtual machine.
-You may have to run this whenever you restart your computer or you kill your running virtual machine. (See the [Vagrant documentation](https://www.vagrantup.com/docs/) for more information.)
-The second line, `vagrant ssh`, starts an ssh session from your host to the running virtual machine.
-In this ssh session, when you're running on the virtual machine, you will be able to use the `singularity` command.
+You may have to run this whenever you restart your computer or you kill your running virtual machine.
+(See the [Vagrant documentation](https://www.vagrantup.com/docs/) for more information.)
+The second line, `vagrant ssh`, starts an SSH session from your host to the running virtual machine.
+In this SSH session, when you're running on the virtual machine, you will be able to use the `singularity` command.
 
-Thus, after running `vagrant ssh`, you can then follow the directions below in [Using scala, sbt, etc](#Using-scala,-sbt,-etc.).
+Thus, after running `vagrant ssh`, you can then follow the directions below in the [Using Scala, sbt, etc. section](#using-scala-sbt-etc).
 Note: If you use your own `Vagrantfile`, you will find the contents of the current working directory on the host in `/vagrant` on the guest.
-In the `Vagrantfile` in the DINO CPU repository, we have mapped the the dinocpu directory to `/home/vagrant/dinocpu` to make things easier.
+In the `Vagrantfile` in the DINO CPU repository, we have mapped the the `dinocpu` directory to `/home/vagrant/dinocpu` to make things easier.
 
-When using vagrant, singularity, and sbt, the first time you run everything, it will take some time.
-All of these tools automatically download things from the internet and the total downloaded is on the order of a gigabyte.
+When using Vagrant, Singularity, and sbt, the first time you run everything, it will take some time.
+All of these tools automatically download things from the Internet.
+The total download is on the order of a gigabyte.
 Be patient while everything is getting set up.
 After the first time you run everything, it should be *much quicker* since the downloaded files should be cached.
 
@@ -183,16 +187,16 @@ At your own risk, you can try to install the required dependencies.
 However, we will not support this.
 We will give priority to all other questions on Piazza and in office hours before we help you get set up without using the Singularity container.
 
-#### Common vagrant problems
+#### Common Vagrant problems
 
-- On Windows, if you receive an error saying that ssh cannot establish a connection, you may need to enable virtualization in your BIOS.
+- On Windows, if you receive an error saying that SSH cannot establish a connection, you may need to enable virtualization in your BIOS.
 
-### Using scala, sbt, etc.
+### Using Scala, sbt, etc.
 
-- How to use the sbt repl interface
+- How to use the sbt REPL interface
 - Run tests, main, etc.
 
-To start sbt in the REPL (Read-eval-print loop), run the following code in the base DINO directory.
+To start sbt in the REPL (Read-Eval-Print Loop), run the following code in the base DINO directory.
 
 ```
 singularity run library://jlowepower/default/dinocpu
@@ -203,13 +207,13 @@ singularity run library://jlowepower/default/dinocpu
 You can find all of the details on how to work with the DINO CPU in the [README file](https://github.com/jlpteaching/dinocpu/README.md) and the [documentation](https://github.com/jlpteaching/dinocpu/tree/master/documentation) in the [DINO CPU repository](https://github.com/jlpteaching/dinocpu/).
 
 You must first download the template code before you can start working on the DINO CPU.
-The template code is on github, so you can simply clone the repository:
+The template code is on GitHub, so you can simply clone the repository:
 
 ```
 git clone https://github.com/jlpteaching/dinocpu.git
 ```
 
-Then, if you change into the newly created `dinocpu` directory, you can run the singularity container with Chisel and start working on the assignment!
+Then, if you change into the newly created `dinocpu` directory, you can run the Singularity container with Chisel and start working on the assignment!
 
 ```
 cd dinocpu
@@ -220,23 +224,9 @@ This may also take 5-10 minutes to download all of the libraries, etc.]
 sbt:dinocpu>
 ```
 
-# Grading
-
-Grading will be done on Gradescope.
-See [Submission](#Submission) for more information on how to submit to Gradescope.
-
-|                    |     |
-|--------------------|-----|
-| ALU control        | 25% |
-| Diagram            | 25% |
-| Add                | 10% |
-| Other instructions | 20% |
-| Multiple cycles    | 10% |
-| Feedback           | 10% |
-
 # Part I: Implement the ALU Control
 
-**The test for this part is `dinocpu.ALUControlTesterLab1`**
+**The test for this part is `dinocpu.ALUControlTesterLab1`.**
 
 In this part you will be implementing a component in the CPU design.
 
@@ -259,10 +249,12 @@ The following table details the `operation` input and which values produce which
 | 1000 | sra |
 | 1001 | xor |
 
+You must take the RISC-V ISA specification and implement the proper control to choose the right ALU operation.
+You can find the specification in the following places:
 
-
-You must take the RISC-V ISA specification, which you can find on the first page of the Computer Organization and Design book, on page 16 in the RISC-V reader, or [on the web](https://riscv.org/specifications/), and implement the proper control to choose the right ALU operation.
-
+- the first page of the Computer Organization and Design book
+- on page 16 in the RISC-V reader
+- [on the RISC-V website](https://riscv.org/specifications/)
 
 |31--25 |24--20|19--15|14--12|11--7|6--0     |  |
 |-------|------|------|------|-----|---------|--|
@@ -282,8 +274,11 @@ You must take the RISC-V ISA specification, which you can find on the first page
 This table is from the RISC-V User-level ISA Specification v2.2, page 104.
 You can find the same information in Chapter 2 of the Specification, Chapter 2 of the RISC-V reader, or in the front of the Computer Organization and Design book.
 
-The ALU control takes four inputs: `add` and `immediate` which come from the control unit (you will implement this in the next lab), and `funct7` and `funct3` which come from the instruction.
-You can ignore the `add` and `immediate` for now, assume it is always `false`.
+The ALU control takes four inputs:
+- `add` and `immediate`, which come from the control unit (you will implement this in the next lab)
+- `funct7` and `funct3`, which come from the instruction
+
+You can ignore the `add` and `immediate` for now, assume both are always `false`.
 
 Given these inputs, you must generate the correct output on the operation wire.
 The template code from `src/main/scala/components/alucontrol.scala` is shown below.
@@ -320,14 +315,14 @@ class ALUControl extends Module {
 
 **HINT:** Use Chisel's `switch` / `is`,  `when` / `elsewhen` / `otherwise`, or `MuxCase` syntax.
 See [the Chisel getting started guide](../chisel-notes/getting-started.md) for examples.
-You may also find the [Chisel Cheat sheet](https://chisel.eecs.berkeley.edu/2.2.0/chisel-cheatsheet.pdf) helpful.
+You may also find the [Chisel cheat sheet](https://chisel.eecs.berkeley.edu/2.2.0/chisel-cheatsheet.pdf) helpful.
 
 ### Testing your ALU control unit
 
 We have implemented some tests for your ALU control unit.
 The general ALU control unit tests are in `src/test/scala/components/ALUControlUnitTest.scala`.
 However, these tests require you to implement the required control for not only the R-Type instructions but also for I-Types and loads/stores.
-Thus, there are Lab1-specific tests in `src/test/scala/labs/Lab1Test.scala`.
+Thus, there are Lab 1-specific tests in `src/test/scala/labs/Lab1Test.scala`.
 
 To run these tests, you simply need to execute the following at the sbt command prompt:
 
@@ -382,7 +377,7 @@ This confuses the simulator since it is trying to compare register values.
 Once you have implemented your ALU control unit, these errors will go away.
 
 In this part of the assignment, you only need to run the ALU control unit tests.
-To run just these tests, you can use the `sbt` command `testOnly`, as demonstrated below.
+To run just these tests, you can use the sbt command `testOnly`, as demonstrated below.
 
 ```
 dinocpu:sbt> testOnly dinocpu.ALUControlTesterLab1
@@ -410,7 +405,7 @@ We will be grading this diagram and looking for the following things:
 - Every wire should contain its width in bits.
 - For wires that are a subset of all of the bits, label which bits are on the wire.
 
-Figure 4.15 from Computer Organization and Design is an example of what we are looking for.
+Figure 4.15 from Computer Organization and Design below is an example of what we are looking for.
 Notice how the instruction wire is broken into is sub-components.
 
 ![Figure 4.15](./fig-4-15.svg)
@@ -420,14 +415,13 @@ We are creating a 32-bit RISC-V CPU (rv32i).
 The book will not contain the *exact* answers to the labs, though it will be very useful.
 
 **Hint**: You may not need to use all of the modules provided.
-You only need to implement the *R-type* instructions, not all RISC-V instructions on this lab assignment.
+You only need to implement the *R-type* instructions, not all RISC-V instructions, on this lab assignment.
 
 # Part III: Implement the ADD instruction
 
-**The test for this part is `dinocpu.SingleCycleAddTesterLab1`**
+**The test for this part is `dinocpu.SingleCycleAddTesterLab1`.**
 
 Now you're ready to implement your first instruction!
-
 For this part of the assignment, you will modify the `src/main/scala/single-cycle/cpu.scala` file.
 You are beginning to implement the DINO CPU!
 
@@ -449,14 +443,14 @@ This creates a wire from the PC to the instruction memory.
 ![PC to inst mem](pc-to-imem.svg)
 
 You should fill in the other wires (and instruction subsets) that are required to implement the `add` RISC-V instruction.
-We will be talking in detail about RISC-V instructions and how to design a RISC-V processor during the second week's lectures as shown on the [schedule](https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv).
+We will be talking in detail about RISC-V instructions and how to design a RISC-V processor during the second week's lectures, as shown on the [schedule](https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv).
 
 **Important**: You will not need to modify anything below the `// debug / pipeline viewer` line.
 This code should be kept the same for everyone.
 You may add more debug code, as you are working on the assignment.
 However, when you turn in your assignment, please comment out or remove your debug code before submitting.
 
-## Testing
+## Testing your ADD instruction
 
 Testing the CPU is very similar to testing your control unit [above](#Testing-your-ALU-control-unit).
 To run the tests, you execute the `SingleCycleCPUTesterLab1` suite as follows.
@@ -466,7 +460,7 @@ dinocpu:sbt> testOnly dinocpu.SingleCycleAddTesterLab1
 ```
 
 This runs a very simple RISC-V application that has a single instruction: `add`.
-You can find the code for this program in `src/test/resources/risc-v/add1.riscv` and it's shown below.
+You can find the code for this program in `src/test/resources/risc-v/add1.riscv` and below:
 
 ```
   .text
@@ -509,26 +503,25 @@ branchAdd: Bundle(inputx -> 0, inputy -> 0, result -> 0)
 ```
 
 The test only runs for a single cycle, since you're just executing one instruction.
-This shows that at the end of the cycle, the cycle count is 1 (`CYCLE=1`) and the PC is now 4 `pc: 4`.
+This shows that at the end of the cycle, the cycle count is 1 (`CYCLE=1`) and the PC is now 4 (`pc: 4`).
 This also shows the I/O for every module in the CPU.
 You are only concerned with a subset of the modules right now (i.e., `registers`, `aluControl`, and `alu`).
 
 Note that the test initializes `t0` to 1234.
 You can see this on line 70 in `src/test/scala/labs/Lab1Test.scala`.
-This creates a `CPUTestCase` that
+This creates a `CPUTestCase` that:
 - runs the `add1` program
 - uses the `single-cycle` CPU
 - initializes the `t0` register to 1234
 - checks that `zero` is 0, `t0` is 1234, and `t1` is 1234
-- Doesn't initialize any memory addresses
-- Doesn't check any memory addresses
+- doesn't initialize any memory addresses
+- doesn't check any memory addresses
 
-More information about `CPUTestCase` can be found in the code (`src/test/scala/cpu-tests/CPUTesterDriver.scala` line 94) and in the [DINO CPU documentation](https://github.com/jlpteaching/dinocpu/blob/master/documentation/testing.md)
-
+More information about `CPUTestCase` can be found in the code (`src/test/scala/cpu-tests/CPUTesterDriver.scala`, line 94), and in the [DINO CPU documentation](https://github.com/jlpteaching/dinocpu/blob/master/documentation/testing.md).
 
 # Part IV: Implementing the rest of the R-type instructions
 
-**The test for this part is `dinocpu.SingleCycleRTypeTesterLab1`**
+**The test for this part is `dinocpu.SingleCycleRTypeTesterLab1`.**
 
 In this part of the lab, you will be implementing all of the other R-Type RISC-V instructions.
 These are all of the ALU operations in the ISA.
@@ -539,14 +532,15 @@ Now, test them to make sure that they do!
 
 You may need to update the wires in your CPU design to get all of the R-Type instructions to work.
 There are a couple of tricky ones that may cause you to re-think your design.
+
 - `add0` tests to make sure you don't overwrite register 0 (it should always be 0 in RISC-V).
-- The `sub` and `sra` instructions will stress corner cases in your ALU control unit (but you already passed those tests so it should work!)
-- The signed an unsigned versions of instructions are also tricky
+- The `sub` and `sra` instructions will stress corner cases in your ALU control unit, but you already passed those tests so it should work!
+- The signed and unsigned versions of instructions are also tricky.
 
-## Testing
+## Testing the rest of the instructions
 
-Testing the CPU is very similar to testing your control unit [above](#Testing-your-ALU-control-unit).
-To run the tests, you execute the `SingleCycleRTypeTesterLab1` suite as follows.
+Testing the CPU is very similar to testing your control unit [above](#testing-your-alu-control-unit).
+To run the tests, you execute the `SingleCycleRTypeTesterLab1` suite as follows:
 
 ```
 dinocpu:sbt> testOnly dinocpu.SingleCycleRTypeTesterLab1
@@ -554,7 +548,7 @@ dinocpu:sbt> testOnly dinocpu.SingleCycleRTypeTesterLab1
 
 This will load some binary applications from `src/test/resources/risc-v`.
 The applications that it is running is specified in the output.
-Below is an example of a test that failed.
+Below is an example of a test that failed:
 
 ```
 [info] SingleCycleCPUTesterLab1:
@@ -564,13 +558,13 @@ Below is an example of a test that failed.
 ```
 
 This ran an **rtype** application which used the binary **add1**.
-You can view the RISC-V assembly for this application in `src/test/resources/risc-v/add1.riscv`
+You can view the RISC-V assembly for this application in `src/test/resources/risc-v/add1.riscv`.
 The list of applications that this suite will run can be found in the `InstTests.scala` file (`src/test/scala/cpu-tests/InstTests.scala`).
 If you want more details on the syntax and how to extend this to other RISC-V binaries, ask on Piazza and we will be happy to expand this section.
 
-If you want to run only a single application from this suite of tests, you can add a parameter to the `test` `sbt` task.
+If you want to run only a single application from this suite of tests, you can add a parameter to the `test` sbt task.
 You can pass the option `-z` which will execute any tests that match the text given to the parameter.
-You must use `--` between the parameters to the `sbt` task (e.g., the suite to run) and the parameters for testing.
+You must use `--` between the parameters to the sbt task (e.g., the suite to run) and the parameters for testing.
 For instance, to only run the subtract test, you would use the following:
 
 ```
@@ -579,7 +573,7 @@ sbt> testOnly dinocpu.SingleCycleRTypeTesterLab1 -- -z sub
 
 # Part V: Moving on to multiple cycles
 
-**The test for this part is `dinocpu.SingleCycleMultiCycleTesterLab1`**
+**The test for this part is `dinocpu.SingleCycleMultiCycleTesterLab1`.**
 
 Now, let's try a more complicated program that executes more that one instruction.
 `addfwd` is one example of this which executes 10 add instructions in a row.
@@ -622,7 +616,21 @@ You will submit this together with your completed circuit diagram.
 
 Filling out the feedback is worth 10% of your grade on the assignment.
 There are no wrong answers, so as long as you have completed the form, you will receive the points.
-(Note: The more detailed feedback you give the better we can improve the assignments.)
+(Note: The more detailed feedback you give, the better we can improve the assignments.)
+
+# Grading
+
+Grading will be done automatically on Gradescope.
+See [the Submission section](#Submission) for more information on how to submit to Gradescope.
+
+|                    |     |
+|--------------------|-----|
+| ALU control        | 25% |
+| Diagram            | 25% |
+| Add                | 10% |
+| Other instructions | 20% |
+| Multiple cycles    | 10% |
+| Feedback           | 10% |
 
 # Submission
 
@@ -634,7 +642,7 @@ One of them is for the code you've written for this lab, and the other is for th
 
 ## Code portion
 
-You will upload the two files that you changed to gradescope.
+You will upload the two files that you changed to Gradescope.
 
 - `src/main/scala/components/alucontrol.scala`
 - `src/main/scala/single-cycle/cpu.scala`
@@ -644,23 +652,26 @@ This should take less than 5 minutes.
 For each part of the assignment, you will receive a grade.
 If all of your tests are passing locally, they should also pass on Gradescope.
 
-Note: There is no partial credit on gradescope.
+Note: There is no partial credit on Gradescope.
 Each part is all or nothing.
 Either the test passes or it fails.
 
 ## Written portion
 
-Submit your filled circuit diagram and feedback form on the (Lab 1 - Written)[https://www.gradescope.com/courses/35106/assignments/141816] assignment on Gradescope.
-Make sure to upload the files the same way they were given to you: circuit diagram first, feedback form second, both in landscape orientation with the correct side up (so not upside down).
-(Gradescope *should* let you know what we're expecting, but we're not entirely sure.)
+Submit your filled circuit diagram and feedback form on the [Lab 1 - Written](https://www.gradescope.com/courses/35106/assignments/141816) assignment on Gradescope.
+Make sure to upload the files the same way they were given to you:
+- circuit diagram first
+- feedback form second
+- both in landscape orientation with the correct side up (so not upside down)
 
-Gradescope provides a great overview of how to upload paper assignments [in their help section](https://www.gradescope.com/help#help-center-item-student-scanning).
+Gradescope *should* let you know what we're expecting, but we're not entirely sure for now.
+Gradescope also provides a great overview of how to upload paper assignments [in their help section](https://www.gradescope.com/help#help-center-item-student-scanning).
 Using an actual scanner (either on campus through the computer labs or your own) will give the best quality, but your phone will also work as long as you're careful in taking the pictures.
 
 ## Academic misconduct reminder
 
 You are to work on this project **individually**.
-You may discuss *high level concepts* with one another (e.g., talking about the diagram), but all work must be completed on your own including drawing the diagram.
+You may discuss *high level concepts* with one another (e.g., talking about the diagram), but all work must be completed on your own, including drawing the diagram.
 
 **Remember, DO NOT POST YOUR CODE PUBLICLY ON GITHUB!**
 Any code found on GitHub that is not the base template you are given will be reported to SJA.
@@ -670,7 +681,7 @@ GitHub now allows everybody to create unlimited private repositories for up to t
 ## Checklist
 
 - [ ] You have commented out or removed any extra debug statements.
-- [ ] You have uploaded two files: cpu.scala and alucontrol.scala.
+- [ ] You have uploaded two files: `cpu.scala` and `alucontrol.scala`.
 - [ ] You have filled in and uploaded the blank circuit diagram.
 - [ ] You have filled in and uploaded the feedback form.
 
@@ -679,10 +690,6 @@ GitHub now allows everybody to create unlimited private repositories for up to t
 - Start early! There is a steep learning curve for Chisel, so start early and ask questions on Piazza and in discussion.
 - If you need help, come to office hours for the TAs, or post your questions on Piazza.
 
-## Common errors
-
-Note: We will populate this with questions from Piazza when it looks like many people are running into the same issue.
-
 ## Printf debugging
 
 This is the best style of debugging for this assignment.
@@ -690,9 +697,76 @@ This is the best style of debugging for this assignment.
 - Use printf when you want to print *during the simulation*.
   - Note: this will print *at the end of the cycle* so you'll see the values on the wires after the cycle has passed.
   - Use `printf(p"This is my text with a $var\n")` to print Chisel variables. Notice the "p" before the quote!
-  - You can also put any Scala statement in the print statement (e.g., `printf(p"Output: ${io.output})`)
+  - You can also put any Scala statement in the print statement (e.g., `printf(p"Output: ${io.output})`).
   - Use `println` to print during compilation in the Chisel code or during test execution in the test code. This is mostly like Java's `println`.
   - If you want to use Scala variables in the print statement, prepend the statement with an 's'. For example, `println(s"This is my cool variable: $variable")` or `println("Some math: 5 + 5 = ${5+5}")`.
+
+## Common errors
+
+Note: We will populate this with questions from Piazza when it looks like many people are running into the same issue.
+
+### VBoxManage: error: Details: code NS_ERROR_FAILURE...
+
+```
+There was an error while executing `VBoxManage`, a CLI used by Vagrant
+for controlling VirtualBox. The command and stderr is shown below.
+
+Command: ["startvm", "...", "--type", "headless"]
+
+Stderr: VBoxManage: error: The virtual machine 'vm-singularity_default_...' has terminated unexpectedly during startup with exit code 1 (0x1)
+
+VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
+```
+
+This is a Vagrant and/or VirtualBox issue, not with Singularity or Chisel.
+You'll most likely see this because you ran the following command in the Sylabs Singularity installation guide:
+
+```
+export VM=sylabs/singularity-ubuntu-bionic64 ...
+```
+
+This is the wrong image!
+To fix this, go back to the folder you created during the tutorial and run `vagrant destroy`.
+Then run the following:
+
+```
+cd dinocpu
+vagrant up
+vagrant ssh
+```
+
+The Vagrantfile in the `dinocpu` folder is correctly initialized, so doing this should just work.
+
+### FATAL: container creation failed: mount error...
+
+If you see the following error, it is likely because you ran out of disk space on the CSIF machine.
+
+```
+FATAL:   container creation failed: mount error: can't mount image /proc/self/fd/8: failed to mount squashfs filesystem: invalid argument
+```
+
+You can find out how much space you're using with the `fquota` command as shown below.
+`fquota` is a script only on the CSIF machines to help you find the largest directories, so you can clean up your files.
+
+```
+jlp@ad3.ucdavis.edu@pc12:~$ fquota
+QUOTA SUMMARY   -- Disk quotas for user jlp@ad3.ucdavis.edu (uid 832205):
+Currently using 1717 MB of 2048 MB in your quota.
+```
+
+If you clear your Singularity cache (`.singularity/cache/`), you can free up some disk space, but the Singularity image will be re-downloaded the next time you run `singularity`.
+
+### [warn] No sbt.version set in project/build.properties...
+
+```
+WARNING: Authentication token file not found : Only pulls of public images will succeed
+[warn] No sbt.version set in project/build.properties, base directory: ...
+[info] Set current project to ... (in build file: ...)
+>
+```
+
+This occurs when you try to run Singularity outside of the `dinocpu` directory.
+Run the `singularity run` command within the `dinocpu` directory.
 
 ### Cannot find cpu.registers.regs_5 in symbol table
 
@@ -741,9 +815,9 @@ If Chisel determines the hardware will never be used, it will remove the hardwar
 **To fix this error**: Make sure that you have connected up the register file correctly.
 More specifically, check the write enable input to the register file.
 
-### possible cause: maybe a semicolon is missing before `value is'?
+### possible cause: maybe a semicolon is missing before 'value is'?
 
-If Chisel complains about a missing simicolon before an `is` statement it is likely that you have a nested `is`.
+If Chisel complains about a missing semicolon before an `is` statement it is likely that you have a nested `is`.
 
 For instance, this is an error you may see.
 
@@ -779,23 +853,3 @@ switch (io.funct3) {
   }
   ...
 ```
-
-
-### FATAL: container creation failed: mount error...
-
-If you see the following error, it is likely because you ran out of disk space on the CSIF machine.
-
-```
-FATAL:   container creation failed: mount error: can't mount image /proc/self/fd/8: failed to mount squashfs filesystem: invalid argument
-```
-
-You can find out how much space you're using with the `fquota` command as shown below.
-This application wil also help you find the largest directories so you can clean up your files.
-
-```
-jlp@ad3.ucdavis.edu@pc12:~$ fquota
-QUOTA SUMMARY   -- Disk quotas for user jlp@ad3.ucdavis.edu (uid 832205):
-Currently using 1717 MB of 2048 MB in your quota.
-```
-
-If you clear your singularity cache (`.singularity/cache/`), you can free up some disk space, but the singularity image will be re-downloaded the next time you run `singularity`.
