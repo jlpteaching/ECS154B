@@ -3,15 +3,14 @@ Author: Jason Lowe-Power
 Title: Chisel cheat sheet
 ---
 
-# Chisel cheat sheet for 154B
+# Chisel cheat sheet for ECS 154B
 
 This document contains some of the Chisel patterns you will use while implementing the DINO CPU.
-
 The Chisel project provides [a more complete cheat sheet](https://chisel.eecs.berkeley.edu/2.2.0/chisel-cheatsheet.pdf).
 
 # Wires
 
-## Create a new wire.
+## Create a new wire
 
 ```
 val x = Wire(UInt())
@@ -21,9 +20,9 @@ val x = Wire(UInt())
 
 Create a wire (named `x`) that is of type `UInt`.
 The width of the wire will be inferred.
-**Important**, this is one of the few times you will use `=` and not `:=`.
+**Important:** this is one of the few times you will use `=`, and not `:=`.
 
-## Connect two wires.
+## Connect two wires
 
 ```
 y := x
@@ -34,6 +33,7 @@ y := x
 Connect wire `x` to wire `y`.
 This is "backwards" in that the input is on the right and the output is on the left.
 However, it's forwards in the way you say it out loud.
+(For the example above, think "`y` is connected to `x`.")
 
 ## Another wire example
 
@@ -58,7 +58,7 @@ val x = Wire(UInt())
 x := Mux(selector, true_value, false_value)
 ```
 
-This creates a wire x which will have the `true_value` on it if `selector` is true and the `false_value` otherwise.
+This creates a wire `x` which will have the `true_value` on it if `selector` is true and the `false_value` otherwise.
 
 ## When-elsewhen-otherwise
 
@@ -74,7 +74,7 @@ when(value === 0.U) {
 }
 ```
 
-The above creates a 1-hot value on the wire `x` depending on whether the wire `value` is 0, greater than 0, or less than 0.
+The above creates a one-hot value on the wire `x` depending on whether the wire `value` is 0, greater than 0, or less than 0.
 
 ## switch-is
 
@@ -89,7 +89,7 @@ For instance, below.
 | 1101  | true   |
 
 ```
-output := DontCare // since we aren't fully specifying the output this is required.
+output := DontCare // since we aren't fully specifying the output, this is required.
 
 switch (input) {
   is ("b0001".U) { output := true }
@@ -100,29 +100,27 @@ switch (input) {
 ```
 
 **Important**: As far as I can tell, you cannot have a "nested" switch-is statement.
-If you want to have other muxes within your switch-is statement, you must either use `Mux` or a `when` statement.
+If you want to have other muxes within your switch-is statement, you must either use a `Mux` or a `when` statement.
 
 # Types
 
 ## Boolean
 
-- `Bool()`: a 1-bit value
-- `true.B`: To convert from Scala boolean to chisel use `.B`
-- `false.B`: To convert from Scala boolean to chisel use `.B`
+- `Bool()`: a 1-bit value.
+- `true.B`: to convert from a Scala boolean to Chisel, use `.B`.
+- `false.B`: to convert from a Scala boolean to Chisel, use `.B`.
 
 ## Integers
 
-
 - `UInt(32.W)`: an unsigned integer that is 32 bits wide.
-- `UInt()`: an unsigned integer width inferred (you may get an error saying it can't infer the width)
-- `77.U`: To convert from scala integer to chisel unsigned int use `.U` (you may get type incompatible errors if you don't do this correctly).
-- `3.S(2.W)`: Signed integer that is 2 bits wide (e.g., -1)
-- `"b001010".U`: To create a binary literal, use a string of 1's and 0's starting with "b". Then, you can convert this string to an unsigned int with `.U` or a signed int with `.S`
+- `UInt()`: an unsigned integer with the width inferred. (You may get an error saying it can't infer the width.)
+- `77.U`: to convert from a Scala integer to a Chisel unsigned int, use `.U`. (You may get type incompatible errors if you don't do this correctly.)
+- `3.S(2.W)`: signed integer that is 2 bits wide (e.g., -1).
+- `"b001010".U`: to create a binary literal, use a string of 1's and 0's starting with "b". Then, you can convert this string to an unsigned int with `.U` or a signed int with `.S`.
 
 # Getting parts of a wire
 
 If you want a subset of a wire, you can use `()`.
-
 Some examples below.
 
 ```
@@ -135,7 +133,7 @@ val rd_in_riscv_instruction = x(11,7)
 Note: these numbers are *exactly* how you will write them on all of your diagrams.
 The indices are inclusive with the high-order bits on the left.
 
-# Circuits provided as operators:
+# Circuits provided as operators
 
 ## Math
 
@@ -144,7 +142,7 @@ See [the more complete cheat sheet](https://chisel.eecs.berkeley.edu/2.2.0/chise
 
 ## Comparisons
 
-The way to compare two chisel values is a little different than scala since it's creating a circuit and not doing a comparison.
+The way to compare two chisel values is a little different than Scala, since it's creating a circuit and not doing a comparison.
 
 - Equality: `===`
 - Inequality: `=/=`
@@ -154,8 +152,8 @@ However, make sure you are using the correct type (signed or unsigned).
 
 # State elements (registers)
 
-- `Reg(UInt(64.W))`: A 64 bit register
-- `RegInit(1.U(32.W))`: A 32 bit register that has the value 1 when the system starts.
+- `Reg(UInt(64.W))`: A 64-bit register
+- `RegInit(1.U(32.W))`: A 32-bit register that has the value 1 when the system starts.
 
 Registers can be connected to other wires.
 
@@ -167,7 +165,7 @@ x := register
 
 ![Register connect to wire](register-x.svg)
 
-This takes the value coming out of the register and connects it to the wire `x`
+This takes the value coming out of the register and connects it to the wire `x`.
 
 Similarly, you can set a register to a value (at the end of a clock cycle).
 
@@ -185,11 +183,15 @@ This will set the register to the value on wire `y` at the end of the clock cycl
 
 ## IO
 
+Under construction.
+
 ## Using modules
 
-See [creating your first chisel hardware](./first-hardware.md)
+See [creating your first Chisel hardware](./first-hardware.md).
 
 # Bundles
+
+Under construction.
 
 # Frequently asked questions
 
@@ -202,3 +204,4 @@ The `=` should always be on the same line as a `var`.
 
 `:=` is the operator to *create a new wire* connecting the output wire on the right to the input wire on the left.
 Note: This is backwards from the way you would draw it, but it's forwards for the way you would say it.
+Think of the `:=` as "is connected to" in English.

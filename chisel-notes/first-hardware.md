@@ -1,6 +1,6 @@
 ---
 Author: Jason Lowe-Power
-Title: Your first chisel hardware
+Title: Creating your first Chisel hardware
 ---
 
 # First chisel hardware
@@ -17,8 +17,8 @@ If you are using the DINO CPU repository, you can create the file as follows:
 touch src/main/scala/simple.scala
 ```
 
-All Chisel files are actually just scala files.
-What makes it Chisel and not scala is when you use the Chisel libraries.
+All Chisel files are actually just Scala files.
+What makes it Chisel and not Scala is when you use the Chisel libraries.
 
 Therefore, we will first import the Chisel libraries.
 Add the following line to the `simple.scala` file.
@@ -61,16 +61,16 @@ val io = IO(new Bundle{
 
 Here, we are using another Scala keyword, `val`.
 You must use the keyword `val` before each variable you declare.
-(Scala also has a `var` keyword, but I do no believe you'll ever need to use it when working with the DINO CPU).
-`var` is somewhat like `auto` in C++.
+(Scala also has a `var` keyword, but I do no believe you'll ever need to use it when working with the DINO CPU.
+`var` is somewhat like `auto` in C++.)
 The type of the variable will be inferred by Scala's type system.
-**IMPORTANT**: Whenever you instantiate a module or other Chisel type and create a new variable for it you will use the `=` operator.
+**IMPORTANT**: Whenever you instantiate a module or other Chisel type and create a new variable for it, use the `=` operator.
 
 Note that these inputs and the output are unsigned integers that are 32 bits wide.
 You always should declare the size of the input and output wires.
 
 Finally, all we have to do it implement the hardware for the adder.
-Our final adder looks like the following.
+Our final adder looks like the following:
 
 ```
 class SimpleAdder extends Module {
@@ -141,7 +141,7 @@ io.success := Mux(adder2.io.result === 128.U, true.B, false.B)
 ```
 
 We must use `3.U` and `128.U`.
-The `.U` after 3 to convert the Scala integer type to the chisel type which is the hardware that represents the number 3 and 128.
+The `.U` after 3 and 128 converts the Scala integer type to the Chisel type, which is the hardware that represents the number 3 and 128.
 
 The `===` operator creates hardware that checks for equality.
 Therefore the multiplexer's selection input is 1 when the result is 128 and 0 otherwise.
@@ -156,7 +156,6 @@ You can think about this as at the "beginning" of the cycle, the registers are r
 Then, at the end of the clock cycle, the registers will be updated with new values from their inputs.
 
 So, let's create the full circuit shown below.
-
 
 ![Whole simplesystem](./simplesystem-3.svg)
 
@@ -260,3 +259,7 @@ reg1: 1021, reg2: 1024, success: 0
 reg1: 2045, reg2: 2048, success: 0
 test SimpleSystem Success: 0 tests passed in 15 cycles taking 0.032475 seconds
 ```
+
+Question: why did it print `success: 1` when `reg2 = 64`?
+
+[Next: Testing with Chisel](testing.md)
