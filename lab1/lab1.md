@@ -415,11 +415,14 @@ The book will not contain the *exact* answers to the labs, though it will be ver
 The above diagram shows the required hardware to implement a very small subset of the RISC-V instructions (a few R-type, lw, sw, and beq).
 For this assignment, you only need to add the hardware to implement the R-type instructions.
 
-**Hint**: You may not need to use all of the modules provided.
-You only need to implement the *R-type* instructions, not all RISC-V instructions, on this lab assignment.
 
-**Hint 2**: The control unit as provided is *completely empty* and has `false` or 0 on every output.
-*You do not need to use the control unit for this assignment!*
+**IMPORTANT**: You will lose points for every *extra* wire you draw!
+Do not include *any* wires that are not strictly necessary to implement the R-type instructions.
+
+**Hint**: You will not need to use all of the modules provided.
+You only need to implement the *R-type* instructions, not all RISC-V instructions, on this lab assignment.
+The figure above from the book implements the R-type, `lw`/`sw`, and `beq` instructions.
+*You must not have these extra wires on your diagram!*
 
 # Part III: Implement the ADD instruction
 
@@ -668,6 +671,9 @@ Make sure to upload the files the same way they were given to you:
 - feedback form second
 - both in landscape orientation with the correct side up (so not upside down)
 
+**Important**: You will lose points if you include extra wires on your diagram!
+Be sure to *only* implement the R-type instructions *and nothing extra*.
+
 Gradescope *should* let you know what we're expecting, but we're not entirely sure for now.
 Gradescope also provides a great overview of how to upload paper assignments [in their help section](https://www.gradescope.com/help#help-center-item-student-scanning).
 Using an actual scanner (either on campus through the computer labs or your own) will give the best quality, but your phone will also work as long as you're careful in taking the pictures.
@@ -686,7 +692,7 @@ GitHub now allows everybody to create unlimited private repositories for up to t
 
 - [ ] You have commented out or removed any extra debug statements.
 - [ ] You have uploaded two files: `cpu.scala` and `alucontrol.scala`.
-- [ ] You have filled in and uploaded the blank circuit diagram.
+- [ ] You have filled in and uploaded the blank circuit diagram *with only the wires/components necessary to implement the R-type instructions*.
 - [ ] You have filled in and uploaded the feedback form.
 
 # Hints
