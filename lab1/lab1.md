@@ -852,3 +852,69 @@ switch (io.funct3) {
   }
   ...
 ```
+
+### java.lang.Exception: Problem with compilation
+
+If you see this error, then your mistake is likely in your Chisel syntax or a type error in Chisel.
+
+For instance, if I try to connect a signed number to an unsigned input I get the following output from Chisel.
+
+```
+class Adder extends Module {
+  val io = IO(new Bundle{
+    val inputx    = Input(UInt(32.W))
+    val inputy    = Input(UInt(32.W))
+
+    val result    = Output(UInt(32.W))
+  })
+
+  io.result := io.inputx + io.inputy
+}
+```
+
+```
+val pcPlusFour = Module(new Adder())
+pcPlusFour.io.inputy := 4.S
+```
+
+The output when I try to run Chisel is:
+
+```
+[info] [0.001] Elaborating design...
+[error] chisel3.internal.ChiselException: Connection between sink (chisel3.core.UInt@1b206824) and source (chisel3.core.SInt@511647f3)
+failed @: Sink (chisel3.core.UInt@1b206824) and Source (chisel3.core.SInt@511647f3) have different types.
+[error]         ...
+[error]         at dinocpu.SingleCycleCPU.<init>(cpu.scala:33)
+[error]         at dinocpu.CPUConfig.getCPU(configuration.scala:30)
+[error]         at dinocpu.Top.$anonfun$cpu$1(top.scala:14)
+[error]         at chisel3.core.Module$.do_apply(Module.scala:51)
+[error]         at dinocpu.Top.<init>(top.scala:14)
+[error]         at dinocpu.simulate$.$anonfun$build$1(simulate.scala:80)
+[error]         ... (Stack trace trimmed to user code only, rerun with --full-stacktrace if you wish to see the full stack trace)
+[info] SingleCycleAddTesterLab1:
+[info] Single Cycle CPU
+[info] - should run add test add1 *** FAILED ***
+[info]   java.lang.Exception: Problem with compilation
+[info]   at dinocpu.simulate$.build(simulate.scala:89)
+[info]   at dinocpu.CPUTesterDriver.<init>(CPUTesterDriver.scala:24)
+[info]   at dinocpu.CPUTesterDriver$.apply(CPUTesterDriver.scala:108)
+[info]   at dinocpu.SingleCycleAddTesterLab1.$anonfun$new$6(Lab1Test.scala:77)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[info]   at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:22)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:20)
+[info]   at org.scalatest.FlatSpecLike$$anon$1.apply(FlatSpecLike.scala:1682)
+```
+
+The important part to notice is the following:
+
+```
+[error] chisel3.internal.ChiselException: Connection between sink (chisel3.core.UInt@1b206824) and source (chisel3.core.SInt@511647f3)
+failed @: Sink (chisel3.core.UInt@1b206824) and Source (chisel3.core.SInt@511647f3) have different types.
+```
+
+This says the source and sink (input and output) types don't match.
+In other words, one is signed and one is unsigned.
+
+As a general hint, look at the *highest* error in the output, or the error that's generated *first*, not the error at the bottom.
