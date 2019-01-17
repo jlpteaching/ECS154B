@@ -416,6 +416,9 @@ For this assignment, you only need to add the hardware to implement the R-type i
 **Hint**: You may not need to use all of the modules provided.
 You only need to implement the *R-type* instructions, not all RISC-V instructions, on this lab assignment.
 
+**Hint 2**: The control unit as provided is *completely empty* and has `false` or 0 on every output.
+*You do not need to use the control unit for this assignment!*
+
 # Part III: Implement the ADD instruction
 
 **The test for this part is `dinocpu.SingleCycleAddTesterLab1`.**
