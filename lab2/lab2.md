@@ -49,6 +49,21 @@ Be sure to create your muxes in the same way so we can test your control unit!
 - Learn how to implement a control and data path in a single cycle CPU.
 - Learn how different RISC-V instructions interact in the control and data path of a single cycle CPU.
 
+# Single cycle CPU design
+
+Below is a diagram of the single cycle DINO CPU.
+This diagram includes all of the necessary data path wires and muxes.
+However, it is missing the control path wires.
+This figure has all of the muxes necessary, but does not show which control lines go to which mux.
+**Hint**: the comments in the code for the control unit give some hints on how to wire the design.
+
+In this assignment, you will be implementing the data path shown in the figure below, implementing the control path for the DINO CPU, and wiring up the control path.
+You can extend your work from [Lab 1](../lab1.md), or you can take the updated code from [GitHub](https://github.com/jlpteaching/dinocpu/).
+You will be implementing everything in the diagram in Chisel (the `cpu.scala` file only implements the R-type instructions), which includes the code for the muxes and wiring all of the components together.
+You will also implement the [control unit](#control-unit-overview)) and the [branch control unit](#branch-control-unit).
+
+![Single cycle DINO CPU without control wires](../dino-resources/single-cycle.svg)
+
 
 # Control unit overview
 
@@ -151,7 +166,7 @@ class Control extends Module {
 ```
 
 In this code, you can see that the `ListLookup` looks very similar to the table above.
-You will be filling in the rest of the lines of this table. 
+You will be filling in the rest of the lines of this table.
 As you work through each of the parts below, you will be adding a line to the table.
 You will have one line for each type of instruction (i.e., each unique opcode that for the instructions you are implementing).
 
@@ -162,11 +177,11 @@ You do not need to modify any other code in this file other than the `signals` t
 # Part I: R-type
 
 In the last assignment you implemented a subset of the RISC-V data path for just R-type instructions.
-This did not require a control unit since there were no need for extra muxes. 
+This did not require a control unit since there were no need for extra muxes.
 In this assignment, you will be implementing the rest of the RISC-V instructions so you will need to use the control unit.
 
 The first step is to hook up the control unit and get the R-type instructions working again.
-You shouldn't have to change much code in `cpu.scala` from the first assignment. 
+You shouldn't have to change much code in `cpu.scala` from the first assignment.
 All you have to do is to hook up the `opcode` to the input of the control unit.
 We have already implemented the R-type control logic for you.
 You can also use the appropriate signals generated from the control unit (e.g., `regwrite`) to drive your data path.
@@ -361,7 +376,7 @@ The branch-control controls whether or not branches are taken.
 
 It takes four inputs: `branch`, `funct3`, `inputx`, `inputy` and generates one output `taken`.
 
-``` 
+```
 branch: true if we are looking at a branch
 funct3: the middle three bits of the instruction (12-14). Specifies the type of branch. See RISC-V spec for details.
 inputx: first value  (e.g., reg1)
@@ -372,7 +387,7 @@ taken: true if the branch is taken.
 Note that this is one of the main places the DINO CPU differs from the CPU implemented in the book.
 Instead of using the ALU to compute whether the branch is taken or not (the zero output), we are using a dedicated branch control unit.
 
-You must take the RISC-V ISA specification and implement the proper control to choose the right type of branch test and correctly set or reset the `taken` output if the branch test passes or fails respectively. 
+You must take the RISC-V ISA specification and implement the proper control to choose the right type of branch test and correctly set or reset the `taken` output if the branch test passes or fails respectively.
 You can find the specification in the following places:
 
 
@@ -510,8 +525,8 @@ Feel free to add your own tests in `src/tests/scala`, modify the current tests, 
 
 ## Draw a diagram for implementing all the instructions
 
-You are now ready to  complete all the connections for the single-cycle DINO CPU! If you have passed all the tests so far, you can now begin connecting the control unit to the all the other components. 
-Note: You will have to build on the connections you made in the earlier section and so you will need to show those connections as well, making changes if required. 
+You are now ready to  complete all the connections for the single-cycle DINO CPU! If you have passed all the tests so far, you can now begin connecting the control unit to the all the other components.
+Note: You will have to build on the connections you made in the earlier section and so you will need to show those connections as well, making changes if required.
 
 Use the same sheet you used for Part I.
 Draw all of the wires and label which bits are on each wire.
