@@ -86,7 +86,7 @@ It takes a single input which is the 7-bit `opcode` and generates 9 control sign
 
 The following table specifies the `opcode` format and the control signals to be generated for a couple of example instruction types.
 
-|---------|-------------|--------|---------|-------|--------|----------|-----------|----------|---------|------|
+
 | opcode  |opcode format| branch | memread | toreg |   add  | memwrite | immediate | regwrite | alusrc1 | jump |
 |---------|-------------|--------|---------|-------|--------|----------|-----------|----------|---------|------|
 |    -    |   default   | false  |  false  |   3   |  false |  false   |   false   |   false  |    0    |   0  |
@@ -203,7 +203,9 @@ R[rd] = R[rs1] <op> R[rs2]
 
 ## Testing
 
-**FILL THIS IN**
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleRTypeTesterLab2
+```
 
 # Part II: I-type
 
@@ -230,7 +232,10 @@ R[rd] = R[rs1] <op> immediate
 
 ## Testing
 
-**FILL THIS IN**
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleITypeTesterLab2
+```
 
 # Part III: load word
 
@@ -255,7 +260,10 @@ R[rd] = M[R[rs1] + immediate]
 
 ## Testing
 
-**FILL THIS IN**
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleLoadTesterLab2
+```
 
 # Part IV: U-type instructions
 
@@ -287,7 +295,9 @@ R[rd] = M[R[rs1] + immediate]
 
 ## Testing
 
-**FILL THIS IN**
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleUTypeTesterLab2
+```
 
 # Part V: Store word
 
@@ -306,7 +316,10 @@ sw:  M[R[rs1] + immediate] = R[rs2]
 
 ## Testing
 
-**FILL THIS IN**
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleStoreTesterLab2
+```
 
 # Part VI: Other memory instructions
 
@@ -339,7 +352,10 @@ sh:  M[R[rs1] + immediate] = R[rs2] & 0xffff
 
 ## Testing
 
-**FILL THIS IN**
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleLoadStoreTesterLab2
+```
 
 # Part VII: Branch instructions
 
@@ -350,16 +366,16 @@ Then, you will wire up the branch control unit and the other necessary muxes.
 
 ## Branch instruction details
 
-|31                 25|24  20|19 15|14     12|11                 7|6       0|
-|--------|------------|------|-----|---------|-----------|--------|---------|--------|
-|imm[12] | imm[10:5]  | rs2  | rs1 | funct3  | imm[4:1]  | imm[11]|  opcode | B-type |
-|--------|------------|------|-----|---------|-----------|--------|---------|--------|
-|     imm[12|10:5]]   | rs2  | rs1 |   000   |     imm[4:1|11]    | 1100011 |  BEQ   |
-|     imm[12|10:5]]   | rs2  | rs1 |   001   |     imm[4:1|11]    | 1100011 |  BNE   |
-|     imm[12|10:5]]   | rs2  | rs1 |   100   |     imm[4:1|11]    | 1100011 |  BLT   |
-|     imm[12|10:5]]   | rs2  | rs1 |   101   |     imm[4:1|11]    | 1100011 |  BGE   |
-|     imm[12|10:5]]   | rs2  | rs1 |   110   |     imm[4:1|11]    | 1100011 |  BLTU  |
-|     imm[12|10:5]]   | rs2  | rs1 |   111   |     imm[4:1|11]    | 1100011 |  BGEU  |
+
+|imm[12] | imm[10:5]  | rs2  | rs1 | funct3  | imm[4:1]    imm[11]|  opcode | B-type |
+|--------|------------|------|-----|---------|--------------------|---------|--------|
+|31                 25|24  20|19 15|14     12|11                 7|6       0|        |
+|     imm[12,10:5]]   | rs2  | rs1 |   000   |     imm[4:1,11]    | 1100011 |  BEQ   |
+|     imm[12,10:5]]   | rs2  | rs1 |   001   |     imm[4:1,11]    | 1100011 |  BNE   |
+|     imm[12,10:5]]   | rs2  | rs1 |   100   |     imm[4:1,11]    | 1100011 |  BLT   |
+|     imm[12,10:5]]   | rs2  | rs1 |   101   |     imm[4:1,11]    | 1100011 |  BGE   |
+|     imm[12,10:5]]   | rs2  | rs1 |   110   |     imm[4:1,11]    | 1100011 |  BLTU  |
+|     imm[12,10:5]]   | rs2  | rs1 |   111   |     imm[4:1,11]    | 1100011 |  BGEU  |
 
 The instructions have the following effects.
 The operation is given by funct3 (see above).
@@ -452,7 +468,9 @@ dinocpu:sbt> testOnly dinocpu.BranchControlTesterLab2
 
 ## Testing branches
 
-**FILL THIS IN**
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleBranchTesterLab2
+```
 
 # Part VIII: jump and link
 
@@ -472,7 +490,10 @@ R[rd] = pc + 4
 
 ## Testing
 
-**FILL THIS IN**
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleJALTesterLab2
+```
 
 # Part IX: jump and link register
 
@@ -492,7 +513,10 @@ R[rd] = pc + 4
 
 ## Testing
 
-**FILL THIS IN**
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleJALRTesterLab2
+```
 
 # Part X: Full applications
 
@@ -501,7 +525,10 @@ In this final part of the assignment, you will run some full RISC-V applications
 
 ## Testing
 
-**FILL THIS IN**
+
+```
+sbt:dinocpu> testOnly dinocpu.SingleCycleApplicationsTesterLab2
+```
 
 
 # Part II: Implement the Control Unit
@@ -518,7 +545,7 @@ In this part of the assignment, you only need to run the control unit tests.
 To run just these tests, you can use the sbt command `testOnly`, as demonstrated below.
 
 ```
-dinocpu:sbt> testOnly Lab2 / dinocpu.ControlTesterLab2
+dinocpu:sbt> testOnly dinocpu.ControlTesterLab2
 ```
 
 Feel free to add your own tests in `src/tests/scala`, modify the current tests, and add `print` statements in the tests.
