@@ -277,7 +277,7 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleLoadTesterLab2
 The instruction has the following effect.
 
 ```
-R[rd] = M[R[rs1] + immediate]
+R[rd] = pc + imm << 12
 ```
 
 ## `lui` instruction details
@@ -290,7 +290,7 @@ R[rd] = M[R[rs1] + immediate]
 The instruction has the following effect.
 
 ```
-R[rd] = M[R[rs1] + immediate]
+R[rd] = imm << 12
 ```
 
 ## Testing
@@ -466,6 +466,13 @@ To run just these tests, you can use the sbt command `testOnly`, as demonstrated
 dinocpu:sbt> testOnly dinocpu.BranchControlTesterLab2
 ```
 
+## Implementing branch instructions
+
+Next, you need to wire the branch control unit into the data path.
+You can follow the diagram given in [Single cycle CPU design](#Single-cycle-CPU-design).
+Note that the diagram does not specify what to do with the `taken` result from the branch control unit.
+You must add the required logic to drive the correct mux output based on this `taken` output.
+
 ## Testing branches
 
 ```
@@ -523,91 +530,37 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleJALRTesterLab2
 At this point, you should have a fully implemented RISC-V CPU!
 In this final part of the assignment, you will run some full RISC-V applications.
 
+We have provided four applications for you.
+
+- `fibonacci` which computes the nth Fibonacci number. The initial value of t1 contains the Fibonacci number to compute and after computing the value is found in t0.
+- `naturalsum`
+- `multiplier`
+- `divider`
+
+If you have passed all of the above tests, your CPU should execute these applications with no issues!
+If you do not pass the test, you may need to dig into the debug output of the test.
+
 ## Testing
 
+You can run all of the applications at once with the following test.
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleApplicationsTesterLab2
 ```
 
+To run a single application, you can use the following command:
 
-# Part II: Implement the Control Unit
-
-**The test for this part is `dinocpu.ControlTesterLab2`.**
-
-
-
-## Testing your control unit
-
-We have implemented some tests for your control unit. The tests along with the other lab 2 tests are in `src/test/scala/labs/Lab2Test.scala`.
-
-In this part of the assignment, you only need to run the control unit tests.
-To run just these tests, you can use the sbt command `testOnly`, as demonstrated below.
 
 ```
-dinocpu:sbt> testOnly dinocpu.ControlTesterLab2
+sbt:dinocpu> testOnly dinocpu.SingleCycleApplicationsTesterLab2 -- -z <binary name>
 ```
 
-Feel free to add your own tests in `src/tests/scala`, modify the current tests, and add `print` statements in the tests.
+# Feedback
 
-## Draw a diagram for implementing all the instructions
+This time, instead of uploading a paper version to Gradescope, you will give feedback via a Google form.
+Note that the assignment will be out of 90 points and the last 10 points from the feedback will appear in Canvas sometime later.
 
-You are now ready to  complete all the connections for the single-cycle DINO CPU! If you have passed all the tests so far, you can now begin connecting the control unit to the all the other components.
-Note: You will have to build on the connections you made in the earlier section and so you will need to show those connections as well, making changes if required.
-
-Use the same sheet you used for Part I.
-Draw all of the wires and label which bits are on each wire.
-
-We will be grading this diagram and looking for the following things:
-- The correct wires.
-- Every wire should contain its width in bits.
-- For wires that are a subset of all of the bits, label which bits are on the wire.
-
-Figure 4.15 from Computer Organization and Design below is an example of what we are looking for.
-Notice how the instruction wire is broken into is sub-components.
-
-![Figure 4.15](./fig-4-15.svg)
-
-**Important**: The book shows the answer for 64-bit RISC-V (rv64i) and a slightly different CPU design.
-We are creating a 32-bit RISC-V CPU (rv32i).
-The book will not contain the *exact* answers to the labs, though it will be very useful.
-
-**Hint**: You may not need to use all of the modules provided.
-The only instructions left to implement are the jump and load/store instructions.
-
-
-## Testing all the instuctions
-To run the tests, you execute the `SingleCycleTesterLab2` suite as follows:
-
-```
-dinocpu:sbt> testOnly Lab2 / dinocpu.SingleCycleTesterLab2
-```
-
-This will load some binary applications from `src/test/resources/risc-v`.
-The applications that it is running is specified in the output.
-
-The list of applications that this suite will run can be found in the `InstTests.scala` file (`src/test/scala/cpu-tests/InstTests.scala`).
-If you want more details on the syntax and how to extend this to other RISC-V binaries, ask on Piazza and we will be happy to expand this section.
-
-If you want to run only a single application from this suite of tests, you can add a parameter to the `test` sbt task.
-You can pass the option `-z` which will execute any tests that match the text given to the parameter.
-You must use `--` between the parameters to the sbt task (e.g., the suite to run) and the parameters for testing.
-For instance, to only run the jump and link register instruction, you would use the following:
-
-```
-sbt> testOnly Lab2 / dinocpu.SingleCycleTesterLab2 -- -z jlr
-```
-
-
-# Part XI: Feedback
-
-The second page of the [blank circuit diagram](./lab1-written.pdf) discussed [above](#part-ii-draw-a-diagram-for-implementing-r-type-instructions) contains a short feedback form.
-This the first time we have used these assignments, so we are soliciting feedback to improve them for future quarters.
-You will submit this together with your completed circuit diagram.
-
-Filling out the feedback is worth 10% of your grade on the assignment.
-There are no wrong answers, so as long as you have completed the form, you will receive the points.
-(Note: The more detailed feedback you give, the better we can improve the assignments.)
+<Link to google form here>
 
 # Grading
 
@@ -624,9 +577,6 @@ See [the Submission section](#Submission) for more information on how to submit 
 
 **Warning**: read the submission instructions carefully.
 Failure to adhere to the instructions will result in a loss of points.
-
-There are two different assignments on Gradescope that will be open for the duration of the assignment.
-One of them is for the code you've written for this lab, and the other is for the [circuit diagram and feedback form](./lab1-written.pdf).
 
 ## Code portion
 
@@ -645,19 +595,14 @@ Note: There is no partial credit on Gradescope.
 Each part is all or nothing.
 Either the test passes or it fails.
 
-## Written portion
+## Feedback form
 
-Submit your filled circuit diagram and feedback form on the [Lab 2 - Written](https://www.gradescope.com/courses/35106/assignments/) assignment.
-**If your written portion is not legible because of uploading problems, you will not receive any points.**
-Check your feedback from lab 1 to make sure you uploaded your written portion correctly.
-
-Gradescope also provides a great overview of how to upload paper assignments [in their help section](https://www.gradescope.com/help#help-center-item-student-scanning).
-Using an actual scanner (either on campus through the computer labs or your own) will give the best quality, but your phone will also work as long as you're careful in taking the pictures.
+<put link here>
 
 ## Academic misconduct reminder
 
 You are to work on this project **individually**.
-You may discuss *high level concepts* with one another (e.g., talking about the diagram), but all work must be completed on your own, including drawing the diagram.
+You may discuss *high level concepts* with one another (e.g., talking about the diagram), but all work must be completed on your own.
 
 **Remember, DO NOT POST YOUR CODE PUBLICLY ON GITHUB!**
 Any code found on GitHub that is not the base template you are given will be reported to SJA.
@@ -668,12 +613,16 @@ GitHub now allows everybody to create unlimited private repositories for up to t
 
 - [ ] You have commented out or removed any extra debug statements.
 - [ ] You have uploaded three files: `cpu.scala`, `control.scala`, and `branchcontrol.scala`.
-- [ ] You have filled in and uploaded the feedback form.
+- [ ] You have filled out the [feedback form]().
 
 # Hints
 
 - Start early! There is a steep learning curve for Chisel, so start early and ask questions on Piazza and in discussion.
 - If you need help, come to office hours for the TAs, or post your questions on Piazza.
+
+## Common errors
+
+See the [first lab](../lab1/lab1.md#common-errors) for more common errors.
 
 ## Printf debugging
 
@@ -686,155 +635,3 @@ This is the best style of debugging for this assignment.
   - Use `println` to print during compilation in the Chisel code or during test execution in the test code. This is mostly like Java's `println`.
   - If you want to use Scala variables in the print statement, prepend the statement with an 's'. For example, `println(s"This is my cool variable: $variable")` or `println("Some math: 5 + 5 = ${5+5}")`.
 
-## Common errors
-
-Note: We will populate this with questions from Piazza when it looks like many people are running into the same issue.
-
-### VBoxManage: error: Details: code NS_ERROR_FAILURE...
-
-```
-There was an error while executing `VBoxManage`, a CLI used by Vagrant
-for controlling VirtualBox. The command and stderr is shown below.
-
-Command: ["startvm", "...", "--type", "headless"]
-
-Stderr: VBoxManage: error: The virtual machine 'vm-singularity_default_...' has terminated unexpectedly during startup with exit code 1 (0x1)
-
-VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component MachineWrap, interface IMachine
-```
-
-This is a Vagrant and/or VirtualBox issue, not with Singularity or Chisel.
-You'll most likely see this because you ran the following command in the Sylabs Singularity installation guide:
-
-```
-export VM=sylabs/singularity-ubuntu-bionic64 ...
-```
-
-This is the wrong image!
-To fix this, go back to the folder you created during the tutorial and run `vagrant destroy`.
-Then run the following:
-
-```
-cd dinocpu
-vagrant up
-vagrant ssh
-```
-
-The Vagrantfile in the `dinocpu` folder is correctly initialized, so doing this should just work.
-
-### FATAL: container creation failed: mount error...
-
-If you see the following error, it is likely because you ran out of disk space on the CSIF machine.
-
-```
-FATAL:   container creation failed: mount error: can't mount image /proc/self/fd/8: failed to mount squashfs filesystem: invalid argument
-```
-
-You can find out how much space you're using with the `fquota` command as shown below.
-`fquota` is a script only on the CSIF machines to help you find the largest directories, so you can clean up your files.
-
-```
-jlp@ad3.ucdavis.edu@pc12:~$ fquota
-QUOTA SUMMARY   -- Disk quotas for user jlp@ad3.ucdavis.edu (uid 832205):
-Currently using 1717 MB of 2048 MB in your quota.
-```
-
-If you clear your Singularity cache (`.singularity/cache/`), you can free up some disk space, but the Singularity image will be re-downloaded the next time you run `singularity`.
-
-### [warn] No sbt.version set in project/build.properties...
-
-```
-WARNING: Authentication token file not found : Only pulls of public images will succeed
-[warn] No sbt.version set in project/build.properties, base directory: ...
-[info] Set current project to ... (in build file: ...)
->
-```
-
-This occurs when you try to run Singularity outside of the `dinocpu` directory.
-Run the `singularity run` command within the `dinocpu` directory.
-
-### Cannot find cpu.registers.regs_5 in symbol table
-
-```
-sbt:dinocpu> testOnly dinocpu.SingleCycleAddTesterLab1
-[info] Compiling 1 Scala source to /home/jlp/Code/dinocpu/target/scala-2.12/classes ...
-[warn] there were 18 feature warnings; re-run with -feature for details
-[warn] one warning found
-[info] Done compiling.
-[info] [0.001] Elaborating design...
-[info] [0.148] Done elaborating.
-[info] SingleCycleAddTesterLab1:
-[info] Single Cycle CPU
-[info] - should run add test add1 *** FAILED ***
-[info]   firrtl.passes.CheckInitialization$RefNotInitializedException: @[cpu.scala 22:26] : [module SingleCycleCPU]  Reference registers is not fully initialized.
-[info]    : registers.io.wen <= VOID
-[info]   at firrtl.passes.CheckInitialization$.$anonfun$run$6(CheckInitialization.scala:79)
-[info]   at firrtl.passes.CheckInitialization$.$anonfun$run$6$adapted(CheckInitialization.scala:74)
-[info]   at scala.collection.TraversableLike$WithFilter.$anonfun$foreach$1(TraversableLike.scala:789)
-[info]   at scala.collection.mutable.HashMap.$anonfun$foreach$1(HashMap.scala:138)
-[info]   at scala.collection.mutable.HashTable.foreachEntry(HashTable.scala:236)
-[info]   at scala.collection.mutable.HashTable.foreachEntry$(HashTable.scala:229)
-[info]   at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:40)
-[info]   at scala.collection.mutable.HashMap.foreach(HashMap.scala:138)
-[info]   at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:788)
-[info]   at firrtl.passes.CheckInitialization$.checkInitM$1(CheckInitialization.scala:74)
-[info]   ...
-[info] ScalaTest
-[info] Run completed in 776 milliseconds.
-[info] Total number of tests run: 1
-[info] Suites: completed 1, aborted 0
-[info] Tests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0
-[info] *** 1 TEST FAILED ***
-[error] Failed: Total 1, Failed 1, Errors 0, Passed 0
-[error] Failed tests:
-[error]         dinocpu.SingleCycleAddTesterLab1
-[error] (test / testOnly) sbt.TestsFailedException: Tests unsuccessful
-[error] Total time: 2 s, completed Jan 8, 2019 6:49:17 PM
-```
-
-If you encounter an error saying that the simulator (Treadle) can't find some register in the symbol table, this is likely because the register file is being optimized away.
-*You will see this error before you add any of your own code.*
-Chisel is an optimizing compiler that checks to see if the hardware will ever be used.
-If Chisel determines the hardware will never be used, it will remove the hardware.
-
-**To fix this error**: Make sure that you have connected up the register file correctly.
-More specifically, check the write enable input to the register file.
-
-### possible cause: maybe a semicolon is missing before 'value is'?
-
-If Chisel complains about a missing semicolon before an `is` statement it is likely that you have a nested `is`.
-
-For instance, this is an error you may see.
-
-```
-[error] /home/jlp/dinocpu/src/main/scala/components/alucontrol.scala:40:13: value is is not a member of Unit
-[error] possible cause: maybe a semicolon is missing before `value is'?
-[error]           } is ("b0100000".U) {
-```
-
-Below is an example **incorrect** nested `is` statement.
-
-```
-switch (io.funct3) {
-  is ("b000".U) {
-    switch (io.funct7) {
-      is (xxxxxxx) {
-        io.operation := wwwwwwww
-      } is (yyyyyyyy) {
-        io.operation := zzzzzzzz
-      }
-    }
-  }
-  ...
-```
-
-You can fix this by changing the inner `switch` to a `when`.
-
-```
-switch (io.funct3) {
-  is ("b000".U) {
-    when (io.funct7 === xxxxxxx) { io.operation := wwwwwwww }
-    otherwise { io.operation := zzzzzzzz }
-  }
-  ...
-```
