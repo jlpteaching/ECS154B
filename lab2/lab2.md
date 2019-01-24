@@ -679,10 +679,10 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleApplicationsTesterLab2 -- -z <binary na
 
 # Feedback
 
-This time, instead of uploading a paper version to Gradescope, you will give feedback via a Google form.
+This time, instead of uploading a paper version to Gradescope, you will give feedback via a [Google form](https://goo.gl/forms/gNtK47jGKpzNyG252).
 Note that the assignment will be out of 90 points and the last 10 points from the feedback will appear in Canvas sometime later.
 
-<link to google form here>
+[Feedback form link](https://goo.gl/forms/gNtK47jGKpzNyG252).
 
 # Grading
 
@@ -719,9 +719,10 @@ Either the test passes or it fails.
 
 ## Feedback form
 
-Give your feedback by filling out the Google form below.
+[Give your feedback by filling out the Google form.](https://goo.gl/forms/gNtK47jGKpzNyG252)
 
-<link to google form here>
+Note: You must be logged into Google with your UC Davis email for the link to work.
+We will use your email to track whether you have completed the feedback for you to receive your 10 points.
 
 ## Academic misconduct reminder
 
@@ -737,7 +738,7 @@ GitHub now allows everybody to create unlimited private repositories for up to t
 
 - [ ] You have commented out or removed any extra debug statements.
 - [ ] You have uploaded three files: `cpu.scala`, `control.scala`, and `branchcontrol.scala`.
-- [ ] You have filled out the [feedback form]().
+- [ ] You have filled out the [feedback form](https://goo.gl/forms/gNtK47jGKpzNyG252).
 
 # Hints
 
