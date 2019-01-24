@@ -1,5 +1,6 @@
 ---
 authors: Jason Lowe-Power, Filipe Eduardo Borges
+editor: Justin Perona
 title: ECS 154B Lab 2, Winter 2019
 ---
 
@@ -7,7 +8,8 @@ title: ECS 154B Lab 2, Winter 2019
 
 **Due by 12:00 AM on February 4, 2019**
 
-*Turn in via Gradescope*. [See below for details.](#Submission)
+*Turn in via Gradescope*.
+[See below for details.](#Submission)
 
 # Table of Contents
 
@@ -29,6 +31,34 @@ title: ECS 154B Lab 2, Winter 2019
   * [`lui` instruction details](#lui-instruction-details)
   * [`auipc` instruction details](#auipc-instruction-details)
   * [Testing the U-types](#testing-the-u-types)
+* [Part V: `sw`](#part-v-sw)
+  * [`sw` instruction details](#sw-instruction-details)
+  * [Testing `sw`](#testing-sw)
+* [Part VI: Other memory instructions](#part-vi-other-memory-instructions)
+  * [Other memory instruction details](#other-memory-instruction-details)
+  * [Testing the other memory instructions](#testing-the-other-memory-instructions)
+* [Part VII: Branch instructions](#part-vii-branch-instructions)
+  * [Branch instruction details](#branch-instruction-details)
+  * [Branch control unit](#branch-control-unit)
+    * [Testing your branch control unit](#testing-your-branch-control-unit)
+* [Part VIII: `jal`](#part-viii-jal)
+  * [`jal` instruction details](#jal-instruction-details)
+  * [Testing `jal`](#testing-jal)
+* [Part IX: `jalr`](#part-ix-jalr)
+  * [`jalr` instruction details](#jalr-instruction-details)
+  * [Testing `jalr`](#testing-jalr)
+* [Part X: Full applications](#part-x-full-applications)
+  * [Testing full applications](#testing-full-applications)
+* [Feedback](#feedback)
+* [Grading](#grading)
+* [Submission](#submission)
+  * [Code portion](#code-portion)
+  * [Feedback form](#feedback-form)
+  * [Academic misconduct reminder](#academic-misconduct-reminder)
+  * [Checklist](#checklist)
+* [Hints](#hints)
+  * [`printf` debugging](#printf-debugging)
+  * [Common errors](#common-errors)
 
 # Introduction
 
@@ -211,7 +241,7 @@ The following table shows how an R-type instruction is laid out:
 |funct7  | rs2  | rs1 | funct3  | rd  | 0110011 | R-type |
 
 Each instruction has the following effect.
-`<op>` is specified by the funct3 and funct7 fields.
+`<op>` is specified by the `funct3` and `funct7` fields.
 `R[x]` means the value stored in register x.
 
 ```
@@ -241,10 +271,10 @@ The following table shows how an I-type instruction is laid out:
 
 |31           20|19 15|14     12|11  7|6       0|        |
 |---------------|-----|---------|-----|---------|--------|
-|imm            | rs1 | funct3  | rd  | 0010011 | I-type |
+|imm[11:0]      | rs1 | funct3  | rd  | 0010011 | I-type |
 
 Each instruction has the following effect.
-`<op>` is specified by the funct3 field.
+`<op>` is specified by the `funct3` field.
 
 ```
 R[rd] = R[rs1] <op> immediate
@@ -273,7 +303,7 @@ The following table shows how the `lw` instruction is laid out:
 
 |31           20|19 15|14     12|11  7|6       0|        |
 |---------------|-----|---------|-----|---------|--------|
-|imm            | rs1 | 010     | rd  | 0000011 | lw     |
+|imm[11:0]      | rs1 | 010     | rd  | 0000011 | lw     |
 
 `lw` stands for "load word".
 The instruction has the following effect.
@@ -303,7 +333,7 @@ The following table shows how the `lui` instruction is laid out.
 
 |31                           12|11  7|6       0|        |
 |-------------------------------|-----|---------|--------|
-|u-imm                          | rd  | 0110111 | lui    |
+|imm[31:12]                     | rd  | 0110111 | lui    |
 
 `lui` stands for "load upper immediate."
 The instruction has the following effect.
@@ -319,7 +349,7 @@ The following table shows how the `auipc` instruction is laid out.
 
 |31                           12|11  7|6       0|        |
 |-------------------------------|-----|---------|--------|
-|u-imm                          | rd  | 0010111 | auipc  |
+|imm[31:12]                     | rd  | 0010111 | auipc  |
 
 `auipc` stands for "add upper immediate to pc."
 The instruction has the following effect.
@@ -336,23 +366,30 @@ You can run the tests for this part with the following command:
 sbt:dinocpu> testOnly dinocpu.SingleCycleUTypeTesterLab2
 ```
 
-# Part V: Store word
+# Part V: `sw`
+
+`sw` is similar to `lw` in function, but looks closer to an I-type.
+You'll need to think about how to implement the changes needed for the data memory.
 
 ## `sw` instruction details
 
+The following table shows how the `sw` instruction is laid out.
 
-|31    25|24  20|19 15|14     12|11  7|6       0|        |
-|--------|------|-----|---------|-----|---------|--------|
-|imm     | rs2  | rs1 | 010     | imm | 0100011 | sw     |
+|31     25|24  20|19 15|14     12|11     7|6       0|        |
+|---------|------|-----|---------|--------|---------|--------|
+|imm[11:5]| rs2  | rs1 | 010     |imm[4:0]| 0100011 | sw     |
 
+`sw` stands for "store word."
 The instruction has the following effect.
+(Careful, while this looks similar to `lw`, it has a very different effect!)
 
 ```
-sw:  M[R[rs1] + immediate] = R[rs2]
+M[R[rs1] + immediate] = R[rs2]
 ```
 
-## Testing
+## Testing `sw`
 
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleStoreTesterLab2
@@ -360,21 +397,32 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleStoreTesterLab2
 
 # Part VI: Other memory instructions
 
-## Memory instruction details
+We now move on to the other memory instructions.
+Make sure your `lw` and `sw` instructions work before moving on to this part.
 
+## Other memory instruction details
 
-|31    25|24  20|19 15|14     12|11  7|6       0|        |
-|--------|------|-----|---------|-----|---------|--------|
-|imm     |      | rs1 | 000     | rd  | 0000011 | lb     |
-|imm     |      | rs1 | 001     | rd  | 0000011 | lh     |
-|imm     |      | rs1 | 010     | rd  | 0000011 | lw     |
-|imm     |      | rs1 | 100     | rd  | 0000011 | lbu    |
-|imm     |      | rs1 | 101     | rd  | 0000011 | lhu    |
-|imm     | rs2  | rs1 | 000     | imm | 0100011 | sb     |
-|imm     | rs2  | rs1 | 001     | imm | 0100011 | sh     |
-|imm     | rs2  | rs1 | 010     | imm | 0100011 | sw     |
+The following table show how the other memory instructions are laid out.
+`lw` and `sw` are included again as a reference.
+
+|31     25|24    20|19 15|14     12|11     7|6       0|        |
+|---------|--------|-----|---------|--------|---------|--------|
+|imm[11:5]|imm[4:0]| rs1 | 000     | rd     | 0000011 | lb     |
+|imm[11:5]|imm[4:0]| rs1 | 001     | rd     | 0000011 | lh     |
+|imm[11:5]|imm[4:0]| rs1 | 010     | rd     | 0000011 | lw     |
+|imm[11:5]|imm[4:0]| rs1 | 100     | rd     | 0000011 | lbu    |
+|imm[11:5]|imm[4:0]| rs1 | 101     | rd     | 0000011 | lhu    |
+|imm[11:5]| rs2    | rs1 | 000     |imm[4:0]| 0100011 | sb     |
+|imm[11:5]| rs2    | rs1 | 001     |imm[4:0]| 0100011 | sh     |
+|imm[11:5]| rs2    | rs1 | 010     |imm[4:0]| 0100011 | sw     |
+
+`l` and `s` mean "load" and "store," as mentioned previously.
+`b` means a "byte" (8 bits), while `h` means "half" of a word (16 bits).
+`u` means "unsigned."
 
 The instructions have the following effects.
+`sext(x)` stands for "sign-extend x."
+As in C and C++, `&` stands for bit-wise AND.
 
 ```
 lb:  R[rd] = sext(M[R[rs1] + immediate] & 0xff)
@@ -387,8 +435,9 @@ sb:  M[R[rs1] + immediate] = R[rs2] & 0xff
 sh:  M[R[rs1] + immediate] = R[rs2] & 0xffff
 ```
 
-## Testing
+## Testing the memory instructions
 
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleLoadStoreTesterLab2
@@ -398,56 +447,70 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleLoadStoreTesterLab2
 
 This part is a little more involved than the previous instructions.
 First, you will implement the branch control unit.
-Then, you will wire up the branch control unit and the other necessary muxes.
-
+Then, you will wire up the branch control unit and the other necessary MUXes.
 
 ## Branch instruction details
 
+The following table show how the branch instructions are laid out.
 
 |imm[12] | imm[10:5]  | rs2  | rs1 | funct3  | imm[4:1]    imm[11]|  opcode | B-type |
 |--------|------------|------|-----|---------|--------------------|---------|--------|
 |31                 25|24  20|19 15|14     12|11                 7|6       0|        |
-|     imm[12,10:5]]   | rs2  | rs1 |   000   |     imm[4:1,11]    | 1100011 |  BEQ   |
-|     imm[12,10:5]]   | rs2  | rs1 |   001   |     imm[4:1,11]    | 1100011 |  BNE   |
-|     imm[12,10:5]]   | rs2  | rs1 |   100   |     imm[4:1,11]    | 1100011 |  BLT   |
-|     imm[12,10:5]]   | rs2  | rs1 |   101   |     imm[4:1,11]    | 1100011 |  BGE   |
-|     imm[12,10:5]]   | rs2  | rs1 |   110   |     imm[4:1,11]    | 1100011 |  BLTU  |
-|     imm[12,10:5]]   | rs2  | rs1 |   111   |     imm[4:1,11]    | 1100011 |  BGEU  |
+|     imm[12,10:5]]   | rs2  | rs1 |   000   |     imm[4:1,11]    | 1100011 |  beq   |
+|     imm[12,10:5]]   | rs2  | rs1 |   001   |     imm[4:1,11]    | 1100011 |  bne   |
+|     imm[12,10:5]]   | rs2  | rs1 |   100   |     imm[4:1,11]    | 1100011 |  blt   |
+|     imm[12,10:5]]   | rs2  | rs1 |   101   |     imm[4:1,11]    | 1100011 |  bge   |
+|     imm[12,10:5]]   | rs2  | rs1 |   110   |     imm[4:1,11]    | 1100011 |  bltu  |
+|     imm[12,10:5]]   | rs2  | rs1 |   111   |     imm[4:1,11]    | 1100011 |  bgeu  |
+
+`b` here stands for branch.
+`u` again means "unsigned."
+The other portion of the mnemonics stand for the operation, either:
+
+* `eq` for equals
+* `ne` for not equals
+* `lt` for less than
+* `ge` for greater than or equal to
 
 The instructions have the following effects.
-The operation is given by funct3 (see above).
+The operation is given by `funct3` (see above).
 
 ```
-if (R[rs1] <op> R[rs2]) pc = pc + immediate
-else pc = pc + 4
+if (R[rs1] <op> R[rs2])
+  pc = pc + immediate
+else
+  pc = pc + 4
 ```
 
 ## Branch control unit
 
-In this part you will be implementing the branch-control component in the CPU design.
-The branch-control controls whether or not branches are taken.
+In this part you will be implementing the branch control component in the CPU design.
+The branch control controls whether or not branches are taken.
 
-It takes four inputs: `branch`, `funct3`, `inputx`, `inputy` and generates one output `taken`.
+It takes four inputs: `branch`, `funct3`, `inputx`, and `inputy`.
+It will then generate one output, `taken`.
 
 ```
 branch: true if we are looking at a branch
 funct3: the middle three bits of the instruction (12-14). Specifies the type of branch. See RISC-V spec for details.
-inputx: first value  (e.g., reg1)
-inputy: second value  (e.g., reg2)
-taken: true if the branch is taken.
+inputx: first value (e.g., reg1)
+inputy: second value (e.g., reg2)
+taken:  true if the branch is taken.
 ```
 
 Note that this is one of the main places the DINO CPU differs from the CPU implemented in the book.
 Instead of using the ALU to compute whether the branch is taken or not (the zero output), we are using a dedicated branch control unit.
 
-You must take the RISC-V ISA specification and implement the proper control to choose the right type of branch test and correctly set or reset the `taken` output if the branch test passes or fails respectively.
+You must take the RISC-V ISA specification and implement the proper control to choose the right type of branch test.
+You must also correctly set or reset the `taken` output if the branch test passes or fails, respectively.
 You can find the specification in the following places:
 
+* [the table above](#branch-instruction-details), copied from the RISC-V User-level ISA Specification v2.2, page 104
+* Chapter 2 of the Specification
+* Chapter 2 of the RISC-V reader
+* in the front of the Computer Organization and Design book
 
-This table is from the RISC-V User-level ISA Specification v2.2, page 104.
-You can find the same information in Chapter 2 of the Specification, Chapter 2 of the RISC-V reader, or in the front of the Computer Organization and Design book.
-
-Given these inputs, you must generate the correct output on the taken wire.
+Given these inputs, you must generate the correct output on the `taken` wire.
 The template code from `src/main/scala/components/branch-control.scala` is shown below.
 You will fill in where it says *Your code goes here*.
 
@@ -479,7 +542,7 @@ class BranchControl extends Module {
     val taken  = Output(Bool())
   })
 
-// Your code goes here
+  // Your code goes here
 
   io.taken := false.B
 }
@@ -489,15 +552,14 @@ class BranchControl extends Module {
 See [the Chisel getting started guide](../chisel-notes/getting-started.md) for examples.
 You may also find the [Chisel cheat sheet](https://chisel.eecs.berkeley.edu/2.2.0/chisel-cheatsheet.pdf) helpful.
 
-You can also use normal operators (e.g., `<`, `>`, `===`, `=/=`, etc.)
+You can also use normal operators, like `<`, `>`, `===`, `=/=`, etc.
 
-### Testing your branch-control unit
+### Testing your branch control unit
 
-We have implemented some tests for your branch-control unit. The tests along with the other lab-2 tests are in `src/test/scala/labs/Lab2Test.scala`.
+We have implemented some tests for your branch control unit. The tests, along with the other lab 2 tests, are in `src/test/scala/labs/Lab2Test.scala`.
 
-In this part of the assignment, you only need to run the branch-control unit tests.
+In this part of the assignment, you only need to run the branch control unit tests.
 To run just these tests, you can use the sbt command `testOnly`, as demonstrated below.
-
 
 ```
 dinocpu:sbt> testOnly dinocpu.BranchControlTesterLab2
@@ -506,25 +568,33 @@ dinocpu:sbt> testOnly dinocpu.BranchControlTesterLab2
 ## Implementing branch instructions
 
 Next, you need to wire the branch control unit into the data path.
-You can follow the diagram given in [Single cycle CPU design](#Single-cycle-CPU-design).
+You can follow the diagram given in [Single cycle CPU design](#single-cycle-cpu-design).
 Note that the diagram does not specify what to do with the `taken` result from the branch control unit.
-You must add the required logic to drive the correct mux output based on this `taken` output.
+You must add the required logic to drive the correct MUX output based on this `taken` output.
 
-## Testing branches
+## Testing the branch instructions
+
+You can run the tests for the branch instructions with the following command.
+Use the command [above](#testing-your-branch-control-unit) to test the control unit.
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleBranchTesterLab2
 ```
 
-# Part VIII: jump and link
+# Part VIII: `jal`
+
+Now we move on to the J-type instructions.
+One way to think of them is "unconditional branches."
 
 ## `jal` instruction details
 
+The following table shows how the `jal` instruction is laid out.
 
-|31        12|11  7|6       0|        |
-|------------|-----|---------|--------|
-|imm         | rd  | 1101111 | jal    |
+|31                    12|11  7|6       0|        |
+|------------------------|-----|---------|--------|
+|imm[20, 10:1, 11, 19:12]| rd  | 1101111 | jal    |
 
+`jal` stands for "jump and link."
 The instruction has the following effect.
 
 ```
@@ -532,31 +602,39 @@ pc = pc + imm
 R[rd] = pc + 4
 ```
 
-## Testing
+## Testing `jal`
 
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleJALTesterLab2
 ```
 
-# Part IX: jump and link register
+# Part IX: `jalr`
+
+`jalr` is very similar to `jal`, with one difference.
+However, unlike `jal`, `jalr` has the format of an I-type instruction.
 
 ## `jalr` instruction details
 
+The following table shows how the `jalr` instruction is laid out.
 
 |31           20|19 15|14     12|11  7|6       0|        |
 |---------------|-----|---------|-----|---------|--------|
-|imm            | rs1 | 000     | rd  | 1100111 | jalr   |
+|imm[11:0]      | rs1 | 000     | rd  | 1100111 | jalr   |
 
+`jalr` stands for "jump and link register.""
 The instruction has the following effect.
+(Careful, there's one major difference between this and `jal`!)
 
 ```
 pc = R[rs1] + imm
 R[rd] = pc + 4
 ```
 
-## Testing
+## Testing `jalr`
 
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleJALRTesterLab2
@@ -569,15 +647,15 @@ In this final part of the assignment, you will run some full RISC-V applications
 
 We have provided four applications for you.
 
-- `fibonacci` which computes the nth Fibonacci number. The initial value of t1 contains the Fibonacci number to compute and after computing the value is found in t0.
-- `naturalsum`
-- `multiplier`
-- `divider`
+* `fibonacci`, which computes the nth Fibonacci number. The initial value of `t1` contains the Fibonacci number to compute, and after computing, the value is found in `t0`.
+* `naturalsum`
+* `multiplier`
+* `divider`
 
 If you have passed all of the above tests, your CPU should execute these applications with no issues!
-If you do not pass the test, you may need to dig into the debug output of the test.
+If you do not pass a test, you may need to dig into the debug output of the test.
 
-## Testing
+## Testing full applications
 
 You can run all of the applications at once with the following test.
 
@@ -586,7 +664,6 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleApplicationsTesterLab2
 ```
 
 To run a single application, you can use the following command:
-
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleApplicationsTesterLab2 -- -z <binary name>
@@ -597,18 +674,18 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleApplicationsTesterLab2 -- -z <binary na
 This time, instead of uploading a paper version to Gradescope, you will give feedback via a Google form.
 Note that the assignment will be out of 90 points and the last 10 points from the feedback will appear in Canvas sometime later.
 
-<Link to google form here>
+<link to google form here>
 
 # Grading
 
 Grading will be done automatically on Gradescope.
 See [the Submission section](#Submission) for more information on how to submit to Gradescope.
 
-|                    |     |
-|--------------------|-----|
-| Each instruction type  | 8% each (×10 parts=80%) |
-| Full programs      | 10% |
-| Feedback           | 10% |
+|                       |                           |
+|-----------------------|---------------------------|
+| Each instruction type | 8% each (×10 parts = 80%) |
+| Full programs         | 10%                       |
+| Feedback              | 10%                       |
 
 # Submission
 
@@ -617,7 +694,7 @@ Failure to adhere to the instructions will result in a loss of points.
 
 ## Code portion
 
-You will upload the two files that you changed to Gradescope on the [Lab 2 - Code](https://www.gradescope.com/courses/35106/assignments/) assignment.
+You will upload the three files that you changed to Gradescope on the [Lab 2](https://www.gradescope.com/courses/35106/assignments/) assignment.
 
 - `src/main/scala/components/branchcontrol.scala`
 - `src/main/scala/components/control.scala`
@@ -634,7 +711,9 @@ Either the test passes or it fails.
 
 ## Feedback form
 
-<put link here>
+Give your feedback by filling out the Google form below.
+
+<link to google form here>
 
 ## Academic misconduct reminder
 
@@ -657,18 +736,18 @@ GitHub now allows everybody to create unlimited private repositories for up to t
 - Start early! There is a steep learning curve for Chisel, so start early and ask questions on Piazza and in discussion.
 - If you need help, come to office hours for the TAs, or post your questions on Piazza.
 
-## Common errors
-
-See the [first lab](../lab1/lab1.md#common-errors) for more common errors.
-
-## Printf debugging
+## `printf` debugging
 
 This is the best style of debugging for this assignment.
 
-- Use printf when you want to print *during the simulation*.
+- Use `printf` when you want to print *during the simulation*.
   - Note: this will print *at the end of the cycle* so you'll see the values on the wires after the cycle has passed.
   - Use `printf(p"This is my text with a $var\n")` to print Chisel variables. Notice the "p" before the quote!
   - You can also put any Scala statement in the print statement (e.g., `printf(p"Output: ${io.output})`).
   - Use `println` to print during compilation in the Chisel code or during test execution in the test code. This is mostly like Java's `println`.
   - If you want to use Scala variables in the print statement, prepend the statement with an 's'. For example, `println(s"This is my cool variable: $variable")` or `println("Some math: 5 + 5 = ${5+5}")`.
 
+## Common errors
+
+See the [first lab](../lab1/lab1.md#common-errors) for more common errors.
+We'll add common errors specific to this lab as we see them on Piazza.
