@@ -340,6 +340,9 @@ The following table shows how the `lui` instruction is laid out.
 The instruction has the following effect.
 As in C and C++, the `<<` operator means bit shift left by the number specified.
 
+**Important**: The immediate generator will produce the shifted and sign extended value!
+You do not need to shift the immediate value outside of the immediate generator.
+
 ```
 R[rd] = imm << 12
 ```
@@ -424,6 +427,9 @@ The following table show how the other memory instructions are laid out.
 The instructions have the following effects.
 `sext(x)` stands for "sign-extend x."
 As in C and C++, `&` stands for bit-wise AND.
+
+**Hint**: The data memory port has `mask` and `sext` (sign extend) inputs.
+You do not need to mask or sign extend the result outside of the data memory port.
 
 ```
 lb:  R[rd] = sext(M[R[rs1] + immediate] & 0xff)
@@ -625,7 +631,7 @@ The following table shows how the `jalr` instruction is laid out.
 |-----------|-------|-------|------|---------|--------|
 | imm[11:0] | rs1   | 000   | rd   | 1100111 | jalr   |
 
-`jalr` stands for "jump and link register.""
+`jalr` stands for "jump and link register."
 The instruction has the following effect.
 (Careful, there's one major difference between this and `jal`!)
 
@@ -685,8 +691,8 @@ See [the Submission section](#Submission) for more information on how to submit 
 
 | Name                  | Percentage                 |
 |-----------------------|----------------------------|
-| Each instruction type | 8% each (× 10 parts = 80%) |
-| Full programs         | 10%                        |
+| Each instruction type | 9% each (× 9 parts = 81%)  |
+| Full programs         | 9%                         |
 | Feedback              | 10%                        |
 
 # Submission
