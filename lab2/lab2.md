@@ -5,22 +5,38 @@ title: ECS 154B Lab 2, Winter 2019
 
 # ECS 154B Lab 2, Winter 2019
 
-**Due by 12:00 AM on January 21, 2019**
+**Due by 12:00 AM on February 4, 2019**
 
 *Turn in via Gradescope*. [See below for details.](#Submission)
 
 # Table of Contents
 
 * [Introduction](#introduction)
+  * [How this assignment is written](#how-this-assignment-is-written)
+  * [Goals](#goals)
+* [Single cycle CPU design](#single-cycle-cpu-design)
+* [Control unit overview](#control-unit-overview)
+* [Part I: R-types](#part-i-r-types)
+  * [R-type instruction details](#r-type-instruction-details)
+  * [Testing the R-types](#testing-the-r-types)
+* [Part II: I-types](#part-ii-i-types)
+  * [I-type instruction details](#i-type-instruction-details)
+  * [Testing the I-types](#testing-the-i-types)
+* [Part III: `lw`](#part-iii-lw)
+  * [`lw` instruction details](#lw-instruction-details)
+  * [Testing `lw`](#testing-lw)
+* [Part IV: U-types](#part-iv-u-types)
+  * [`lui` instruction details](#lui-instruction-details)
+  * [`auipc` instruction details](#auipc-instruction-details)
+  * [Testing the U-types](#testing-the-u-types)
 
 # Introduction
 
 ![Cute Dino](../dino-resources/dino-128.png)
 
-In the last assignemnt you implemented the ALU control and incorporated the ALU Control into the DINO CPU to test some baremetal R-type RISC-V instructions.
-In this assignement you will implement the branch-control and the main control unit.
+In the last assignment, you implemented the ALU control and incorporated it into the DINO CPU to test some bare-metal R-type RISC-V instructions.
+In this assignment, you will implement the branch-control and the main control unit.
 After implementing the individual components and successfully passing all individual component tests, you will combine these along with the other CPU components to complete the single-cycle DINO CPU.
-
 The simple in-order CPU design is based closely on the CPU model in Patterson and Hennessey's Computer Organization and Design.
 
 This is the first time we have used this set of assignments, so there may be mistakes.
@@ -30,19 +46,19 @@ See [the extra credit page](../extra-credit.md) for an up-to-date list of ways t
 ## How this assignment is written
 
 The goal of this assignment is to implement a single-cycle RISC-V CPU which can execute all of the RISC-V integer instructions.
-The rest of this assignment, [Part I](#part-i-r-type) through [Part X](#part-x-full-applications), you will implement all of the RISC-V instructions step by step.
-If you prefer, you can simply skip to the end and implement all of the instructions at once and then run all of the tests for this assignment (`sbt:dinocpu> test`).
+Through the rest of this assignment, [Part I](#part-i-r-type) through [Part X](#part-x-full-applications), you will implement all of the RISC-V instructions, step by step.
+
+If you prefer, you can simply skip to the end and implement all of the instructions at once, then run all of the tests for this assignment via the following command.
+You will also use this command to test everything once you believe you're done.
+
+```
+sbt:dinocpu> test
+```
 
 We are making one major constraint on how you are implementing your CPU.
 **You cannot modify the I/O for any module**.
-We will be testing your control unit with our data path and our data path with your control unit.
+We will be testing your control unit with our data path, and our data path with your control unit.
 Therefore, you **must keep the exact same I/O**.
-
-Below, is a diagram of the DINO CPU.
-This diagram shows all of the data path, but does not have the control path wired, yet.
-The control path isn't wired mostly to make the diagram easier to read and partly for you to have to think about where the wires go.
-Each mux specifies the the selection value for which wire is selected to go on the output.
-Be sure to create your muxes in the same way so we can test your control unit!
 
 ## Goals
 
@@ -52,40 +68,40 @@ Be sure to create your muxes in the same way so we can test your control unit!
 # Single cycle CPU design
 
 Below is a diagram of the single cycle DINO CPU.
-This diagram includes all of the necessary data path wires and muxes.
+This diagram includes all of the necessary data path wires and MUXes.
 However, it is missing the control path wires.
-This figure has all of the muxes necessary, but does not show which control lines go to which mux.
+This figure has all of the MUXes necessary, but does not show which control lines go to which MUX.
 **Hint**: the comments in the code for the control unit give some hints on how to wire the design.
 
 In this assignment, you will be implementing the data path shown in the figure below, implementing the control path for the DINO CPU, and wiring up the control path.
 You can extend your work from [Lab 1](../lab1.md), or you can take the updated code from [GitHub](https://github.com/jlpteaching/dinocpu/).
-You will be implementing everything in the diagram in Chisel (the `cpu.scala` file only implements the R-type instructions), which includes the code for the muxes and wiring all of the components together.
+You will be implementing everything in the diagram in Chisel (the `cpu.scala` file only implements the R-type instructions), which includes the code for the MUXes.
+Then, you will wire all of the components together.
 You will also implement the [control unit](#control-unit-overview)) and the [branch control unit](#branch-control-unit).
 
 ![Single cycle DINO CPU without control wires](../dino-resources/single-cycle.svg)
 
-
 # Control unit overview
 
-In this part you will be implementing the main control unit in the CPU design.
-The control unit which has the instruction as an input, is ued to determine how to set the control lines for the functional units and the the multiplexers.
+In this part, you will be implementing the main control unit in the CPU design.
+The control unit is used to determine how to set the control lines for the functional units and the the multiplexers.
 
-It takes a single input which is the 7-bit `opcode` and generates 9 control signals as output.
+The control unit takes a single input, which is the 7-bit `opcode`.
+From that input, it generates the 9 control signals listed below as output.
 
 ```
- branch	:  true if branch or jal and update PC with immediate
- memread: true if we should read memory
- toreg	: if writing ALU result, 1 if writing memory data, 2 if writing pc+4
- add	: true if the ALU should add the results
- memwrite: write the memory
- regwrite: write the register file
- immediate: true if use the immediate value
- alusrc1: 0 is Read data 1, 1 is zero, 2 is PC
- jump	: 0 no jump, 2 jump, 3 jump and link register
+branch:    true if branch or jump and link register (jal). update PC with immediate
+memread:   true if we should read from memory
+toreg:     0 for writing ALU result, 1 for writing memory data, 2 for writing pc + 4
+add:       true if the ALU should add the results
+memwrite:  true if writing to the data memory
+regwrite:  true if writing to the register file
+immediate: true if using the immediate value
+alusrc1:   0 for read data 1, 1 for the constant zero, 2 for the PC
+jump:      0 for no jump, 2 for jump, 3 for jal (jump and link register)
 ```
 
-The following table specifies the `opcode` format and the control signals to be generated for a couple of example instruction types.
-
+The following table specifies the `opcode` format and the control signals to be generated for some of the instruction types.
 
 | opcode  |opcode format| branch | memread | toreg |   add  | memwrite | immediate | regwrite | alusrc1 | jump |
 |---------|-------------|--------|---------|-------|--------|----------|-----------|----------|---------|------|
@@ -100,6 +116,7 @@ Notice how the third line of the table (under the `// R-type`) is an exact copy 
 Given the input opcode, you must generate the correct control signals.
 The template code from `src/main/scala/components/control.scala` is shown below.
 You will fill in where it says *Your code goes here*.
+
 ```
 // Control logic for the processor
 
@@ -111,19 +128,20 @@ import chisel3.util.{BitPat, ListLookup}
 /**
  * Main control logic for our simple processor
  *
- * Output: branch,  true if branch or jal and update PC with immediate
- * Output: memread, true if we should read memory
- * Output: toreg, 0 if writing ALU result, 1 if writing memory data, 2 if writing pc+4
+ * Output: branch, true if branch or jump and link register (jal). update PC with immediate
+ * Output: memread, true if we should read from memory
+ * Output: toreg, 0 for writing ALU result, 1 for writing memory data, 2 for writing pc + 4
  * Output: add, true if the ALU should add the results
- * Output: memwrite, write the memory
- * Output: regwrite, write the register file
- * Output: immediate, true if use the immediate value
- * Output: alusrc1, 0 is Read data 1, 1 is zero, 2 is PC
- * Output: jump, 0 no jump, 2 jump, 3 jump and link register
+ * Output: memwrite, true if writing to the data memory
+ * Output: regwrite, true if writing to the register file
+ * Output: immediate, true if using the immediate value
+ * Output: alusrc1, 0 for read data 1, 1 for the constant zero, 2 for the PC
+ * Output: jump, 0 for no jump, 2 for jump, 3 for jal (jump and link register)
  *
- * For more information, see section 4.4 of Patterson and Hennessy
- * This follows figure 4.22
+ * For more information, see section 4.4 of Patterson and Hennessy.
+ * This follows figure 4.22.
  */
+
 class Control extends Module {
   val io = IO(new Bundle {
     val opcode = Input(UInt(7.W))
@@ -143,12 +161,11 @@ class Control extends Module {
     ListLookup(io.opcode,
       /*default*/           List(false.B, false.B, 3.U,   false.B, false.B,  false.B, false.B,    0.U,    0.U),
       Array(                 /*  branch,  memread, toreg, add,     memwrite, immediate, regwrite, alusrc1,  jump */
-      // Invalid
-      BitPat("b0000000") -> List(false.B, false.B, 0.U,   false.B, false.B,  false.B, false.B,     0.U,    0.U),
       // R-format
-      BitPat("b0110011") -> List(false.B, false.B, 0.U,   false.B, false.B,  false.B, true.B,      0.U,    0.U)
+      BitPat("b0110011") -> List(false.B, false.B, 0.U,   false.B, false.B,  false.B, true.B,     0.U,    0.U),
 
-      // Your code goes here (remember to make sure to have commas at the end of each line but the last)
+      // Your code goes here.
+      // Remember to make sure to have commas at the end of each line, except for the last one.
 
       ) // Array
     ) // ListLookup
@@ -173,12 +190,11 @@ You will have one line for each type of instruction (i.e., each unique opcode th
 **Important: DO NOT MODIFY THE I/O.**
 You do not need to modify any other code in this file other than the `signals` table!
 
+# Part I: R-types
 
-# Part I: R-type
-
-In the last assignment you implemented a subset of the RISC-V data path for just R-type instructions.
-This did not require a control unit since there were no need for extra muxes.
-In this assignment, you will be implementing the rest of the RISC-V instructions so you will need to use the control unit.
+In the last assignment, you implemented a subset of the RISC-V data path for just R-type instructions.
+This did not require a control unit since there were no need for extra MUXes.
+In this assignment, you will be implementing the rest of the RISC-V instructions, so you will need to use the control unit.
 
 The first step is to hook up the control unit and get the R-type instructions working again.
 You shouldn't have to change much code in `cpu.scala` from the first assignment.
@@ -188,36 +204,40 @@ You can also use the appropriate signals generated from the control unit (e.g., 
 
 ## R-type instruction details
 
+The following table shows how an R-type instruction is laid out:
+
 |31    25|24  20|19 15|14     12|11  7|6       0|        |
 |--------|------|-----|---------|-----|---------|--------|
 |funct7  | rs2  | rs1 | funct3  | rd  | 0110011 | R-type |
 
 Each instruction has the following effect.
 `<op>` is specified by the funct3 and funct7 fields.
+`R[x]` means the value stored in register x.
 
 ```
 R[rd] = R[rs1] <op> R[rs2]
 ```
 
+## Testing the R-types
 
-
-## Testing
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleRTypeTesterLab2
 ```
 
-# Part II: I-type
+# Part II: I-types
 
 Next, you will implement the I-type instructions.
-These are mostly the same as the the R-type, except that the second data comes from the immediate value instead of the second register.
+These are mostly the same as the the R-types, except that the second operand comes from the immediate value contained within the instruction, rather than another register.
 
 To implement the I-types, you should first extend the table in `control.scala`.
-Then, you can add the appropriate muxes to the CPU (in `cpu.scala`) and wire the control signals to those muxes.
-**HINT**: You only need one extra mux compared to your R-type-only design.
+Then you can add the appropriate MUXes to the CPU (in `cpu.scala`) and wire the control signals to those MUXes.
+**HINT**: You only need one extra MUX, compared to your R-type-only design.
 
 ## I-type instruction details
 
+The following table shows how an I-type instruction is laid out:
 
 |31           20|19 15|14     12|11  7|6       0|        |
 |---------------|-----|---------|-----|---------|--------|
@@ -230,70 +250,87 @@ Each instruction has the following effect.
 R[rd] = R[rs1] <op> immediate
 ```
 
-## Testing
+## Testing the I-types
 
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleITypeTesterLab2
 ```
 
-# Part III: load word
+# Part III: `lw`
 
 Now, we will implement the `lw` instruction.
 Officially, this is a I-type instruction, so you shouldn't have to make too many modifications to your data path.
 
-As with the previous parts, first, update your control unit to assert the necessary control signals for the `lw` instruction, then modify your CPU data path to add the necessary muxes and wire up your control.
+As with the previous parts, first update your control unit to assert the necessary control signals for the `lw` instruction, then modify your CPU data path to add the necessary MUXes and wire up your control.
 For this part, you will have to think about how this instruction uses the ALU.
+You will also need to incorporate the data memory into your data path, starting with this instruction.
 
 ## `lw` instruction details
 
+The following table shows how the `lw` instruction is laid out:
 
 |31           20|19 15|14     12|11  7|6       0|        |
 |---------------|-----|---------|-----|---------|--------|
 |imm            | rs1 | 010     | rd  | 0000011 | lw     |
 
+`lw` stands for "load word".
 The instruction has the following effect.
+`M[x]` means the value of memory at location x.
 
 ```
 R[rd] = M[R[rs1] + immediate]
 ```
 
-## Testing
+## Testing `lw`
 
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleLoadTesterLab2
 ```
 
-# Part IV: U-type instructions
+# Part IV: U-types
+
+U-types are another type of instruction that look similar to the I-types.
+There are two of them you need to implement, described below.
+
+## `lui` instruction details
+
+The following table shows how the `lui` instruction is laid out.
+
+
+|31                           12|11  7|6       0|        |
+|-------------------------------|-----|---------|--------|
+|u-imm                          | rd  | 0110111 | lui    |
+
+`lui` stands for "load upper immediate."
+The instruction has the following effect.
+As in C and C++, the `<<` operator means bit shift left by the number specified.
+
+```
+R[rd] = imm << 12
+```
 
 ## `auipc` instruction details
 
+The following table shows how the `auipc` instruction is laid out.
 
-|31           20|19 15|14     12|11  7|6       0|        |
-|---------------|-----|---------|-----|---------|--------|
-|imm            | rs1 | 010     | rd  | 0000011 | lw     |
+|31                           12|11  7|6       0|        |
+|-------------------------------|-----|---------|--------|
+|u-imm                          | rd  | 0010111 | auipc  |
 
+`auipc` stands for "add upper immediate to pc."
 The instruction has the following effect.
 
 ```
 R[rd] = pc + imm << 12
 ```
 
-## `lui` instruction details
+## Testing the U-types
 
-
-|31           20|19 15|14     12|11  7|6       0|        |
-|---------------|-----|---------|-----|---------|--------|
-|imm            | rs1 | 010     | rd  | 0000011 | lw     |
-
-The instruction has the following effect.
-
-```
-R[rd] = imm << 12
-```
-
-## Testing
+You can run the tests for this part with the following command:
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleUTypeTesterLab2
