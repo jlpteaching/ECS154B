@@ -89,6 +89,7 @@ We are making one major constraint on how you are implementing your CPU.
 **You cannot modify the I/O for any module**.
 We will be testing your control unit with our data path, and our data path with your control unit.
 Therefore, you **must keep the exact same I/O**.
+You will get errors on Gradescope (and thus no credit) if you modify the I/O.
 
 ## Goals
 
@@ -107,7 +108,7 @@ In this assignment, you will be implementing the data path shown in the figure b
 You can extend your work from [Lab 1](../lab1.md), or you can take the updated code from [GitHub](https://github.com/jlpteaching/dinocpu/).
 You will be implementing everything in the diagram in Chisel (the `cpu.scala` file only implements the R-type instructions), which includes the code for the MUXes.
 Then, you will wire all of the components together.
-You will also implement the [control unit](#control-unit-overview)) and the [branch control unit](#branch-control-unit).
+You will also implement the [control unit](#control-unit-overview) and the [branch control unit](#branch-control-unit).
 
 ![Single cycle DINO CPU without control wires](../dino-resources/single-cycle.svg)
 
@@ -227,7 +228,7 @@ This did not require a control unit since there were no need for extra MUXes.
 In this assignment, you will be implementing the rest of the RISC-V instructions, so you will need to use the control unit.
 
 The first step is to hook up the control unit and get the R-type instructions working again.
-You shouldn't have to change much code in `cpu.scala` from the first assignment.
+You shouldn't have to change all that much code in `cpu.scala` from the first assignment.
 All you have to do is to hook up the `opcode` to the input of the control unit.
 We have already implemented the R-type control logic for you.
 You can also use the appropriate signals generated from the control unit (e.g., `regwrite`) to drive your data path.
@@ -236,9 +237,9 @@ You can also use the appropriate signals generated from the control unit (e.g., 
 
 The following table shows how an R-type instruction is laid out:
 
-|31    25|24  20|19 15|14     12|11  7|6       0|        |
-|--------|------|-----|---------|-----|---------|--------|
-|funct7  | rs2  | rs1 | funct3  | rd  | 0110011 | R-type |
+| 31-25  | 24-20 | 19-15 | 14-12   | 11-7 | 6-0     | Name   |
+|--------|-------|-------|---------|------|---------|--------|
+| funct7 | rs2   | rs1   | funct3  | rd   | 0110011 | R-type |
 
 Each instruction has the following effect.
 `<op>` is specified by the `funct3` and `funct7` fields.
@@ -269,9 +270,9 @@ Then you can add the appropriate MUXes to the CPU (in `cpu.scala`) and wire the 
 
 The following table shows how an I-type instruction is laid out:
 
-|31           20|19 15|14     12|11  7|6       0|        |
-|---------------|-----|---------|-----|---------|--------|
-|imm[11:0]      | rs1 | funct3  | rd  | 0010011 | I-type |
+|31-20      | 19-15 | 14-12  | 11-7 | 6-0     | Name   |
+|-----------|-------|--------|------|---------|--------|
+| imm[11:0] | rs1   | funct3 | rd   | 0010011 | I-type |
 
 Each instruction has the following effect.
 `<op>` is specified by the `funct3` field.
@@ -290,7 +291,7 @@ sbt:dinocpu> testOnly dinocpu.SingleCycleITypeTesterLab2
 
 # Part III: `lw`
 
-Now, we will implement the `lw` instruction.
+Next, we will implement the `lw` instruction.
 Officially, this is a I-type instruction, so you shouldn't have to make too many modifications to your data path.
 
 As with the previous parts, first update your control unit to assert the necessary control signals for the `lw` instruction, then modify your CPU data path to add the necessary MUXes and wire up your control.
@@ -301,9 +302,9 @@ You will also need to incorporate the data memory into your data path, starting 
 
 The following table shows how the `lw` instruction is laid out:
 
-|31           20|19 15|14     12|11  7|6       0|        |
-|---------------|-----|---------|-----|---------|--------|
-|imm[11:0]      | rs1 | 010     | rd  | 0000011 | lw     |
+| 31-20     | 19-15 | 14-12 | 11-7 | 6-0     | Name   |
+|-----------|-------|-------|------|---------|--------|
+| imm[11:0] | rs1   | 010   | rd   | 0000011 | lw     |
 
 `lw` stands for "load word".
 The instruction has the following effect.
@@ -331,9 +332,9 @@ There are two of them you need to implement, described below.
 The following table shows how the `lui` instruction is laid out.
 
 
-|31                           12|11  7|6       0|        |
-|-------------------------------|-----|---------|--------|
-|imm[31:12]                     | rd  | 0110111 | lui    |
+| 31-12      | 11-7 | 6-0     | Name   |
+|------------|------|---------|--------|
+| imm[31:12] | rd   | 0110111 | lui    |
 
 `lui` stands for "load upper immediate."
 The instruction has the following effect.
@@ -347,9 +348,9 @@ R[rd] = imm << 12
 
 The following table shows how the `auipc` instruction is laid out.
 
-|31                           12|11  7|6       0|        |
-|-------------------------------|-----|---------|--------|
-|imm[31:12]                     | rd  | 0010111 | auipc  |
+| 31-12      | 11-7 | 6-0     | Name   |
+|------------|------|---------|--------|
+| imm[31:12] | rd   | 0010111 | auipc  |
 
 `auipc` stands for "add upper immediate to pc."
 The instruction has the following effect.
@@ -375,9 +376,9 @@ You'll need to think about how to implement the changes needed for the data memo
 
 The following table shows how the `sw` instruction is laid out.
 
-|31     25|24  20|19 15|14     12|11     7|6       0|        |
-|---------|------|-----|---------|--------|---------|--------|
-|imm[11:5]| rs2  | rs1 | 010     |imm[4:0]| 0100011 | sw     |
+| 31-25     | 24-20 | 19-15 | 14-12 | 11-7     | 6-0     | Name   |
+|-----------|-------|-------|-------|----------|---------|--------|
+| imm[11:5] | rs2   | rs1   | 010   | imm[4:0] | 0100011 | sw     |
 
 `sw` stands for "store word."
 The instruction has the following effect.
@@ -405,16 +406,16 @@ Make sure your `lw` and `sw` instructions work before moving on to this part.
 The following table show how the other memory instructions are laid out.
 `lw` and `sw` are included again as a reference.
 
-|31     25|24    20|19 15|14     12|11     7|6       0|        |
-|---------|--------|-----|---------|--------|---------|--------|
-|imm[11:5]|imm[4:0]| rs1 | 000     | rd     | 0000011 | lb     |
-|imm[11:5]|imm[4:0]| rs1 | 001     | rd     | 0000011 | lh     |
-|imm[11:5]|imm[4:0]| rs1 | 010     | rd     | 0000011 | lw     |
-|imm[11:5]|imm[4:0]| rs1 | 100     | rd     | 0000011 | lbu    |
-|imm[11:5]|imm[4:0]| rs1 | 101     | rd     | 0000011 | lhu    |
-|imm[11:5]| rs2    | rs1 | 000     |imm[4:0]| 0100011 | sb     |
-|imm[11:5]| rs2    | rs1 | 001     |imm[4:0]| 0100011 | sh     |
-|imm[11:5]| rs2    | rs1 | 010     |imm[4:0]| 0100011 | sw     |
+| 31-25     | 24-20    | 19-15 | 14-12 | 11-7     | 6-0     | Name   |
+|-----------|----------|-------|-------|----------|---------|--------|
+| imm[11:5] | imm[4:0] | rs1   | 000   | rd       | 0000011 | lb     |
+| imm[11:5] | imm[4:0] | rs1   | 001   | rd       | 0000011 | lh     |
+| imm[11:5] | imm[4:0] | rs1   | 010   | rd       | 0000011 | lw     |
+| imm[11:5] | imm[4:0] | rs1   | 100   | rd       | 0000011 | lbu    |
+| imm[11:5] | imm[4:0] | rs1   | 101   | rd       | 0000011 | lhu    |
+| imm[11:5] | rs2      | rs1   | 000   | imm[4:0] | 0100011 | sb     |
+| imm[11:5] | rs2      | rs1   | 001   | imm[4:0] | 0100011 | sh     |
+| imm[11:5] | rs2      | rs1   | 010   | imm[4:0] | 0100011 | sw     |
 
 `l` and `s` mean "load" and "store," as mentioned previously.
 `b` means a "byte" (8 bits), while `h` means "half" of a word (16 bits).
@@ -435,7 +436,7 @@ sb:  M[R[rs1] + immediate] = R[rs2] & 0xff
 sh:  M[R[rs1] + immediate] = R[rs2] & 0xffff
 ```
 
-## Testing the memory instructions
+## Testing the other memory instructions
 
 You can run the tests for this part with the following command:
 
@@ -453,15 +454,15 @@ Then, you will wire up the branch control unit and the other necessary MUXes.
 
 The following table show how the branch instructions are laid out.
 
-|imm[12] | imm[10:5]  | rs2  | rs1 | funct3  | imm[4:1]    imm[11]|  opcode | B-type |
-|--------|------------|------|-----|---------|--------------------|---------|--------|
-|31                 25|24  20|19 15|14     12|11                 7|6       0|        |
-|     imm[12,10:5]]   | rs2  | rs1 |   000   |     imm[4:1,11]    | 1100011 |  beq   |
-|     imm[12,10:5]]   | rs2  | rs1 |   001   |     imm[4:1,11]    | 1100011 |  bne   |
-|     imm[12,10:5]]   | rs2  | rs1 |   100   |     imm[4:1,11]    | 1100011 |  blt   |
-|     imm[12,10:5]]   | rs2  | rs1 |   101   |     imm[4:1,11]    | 1100011 |  bge   |
-|     imm[12,10:5]]   | rs2  | rs1 |   110   |     imm[4:1,11]    | 1100011 |  bltu  |
-|     imm[12,10:5]]   | rs2  | rs1 |   111   |     imm[4:1,11]    | 1100011 |  bgeu  |
+| imm[12, 10:5] | rs2   | rs1   | funct3 | imm[4:1, 11] | opcode  | Name   |
+|---------------|-------|-------|--------|--------------|---------|--------|
+| 31-25         | 24-20 | 19-15 | 14-12  | 11-7         | 6-0     |        |
+| imm[12, 10:5] | rs2   | rs1   | 000    | imm[4:1, 11] | 1100011 |  beq   |
+| imm[12, 10:5] | rs2   | rs1   | 001    | imm[4:1, 11] | 1100011 |  bne   |
+| imm[12, 10:5] | rs2   | rs1   | 100    | imm[4:1, 11] | 1100011 |  blt   |
+| imm[12, 10:5] | rs2   | rs1   | 101    | imm[4:1, 11] | 1100011 |  bge   |
+| imm[12, 10:5] | rs2   | rs1   | 110    | imm[4:1, 11] | 1100011 |  bltu  |
+| imm[12, 10:5] | rs2   | rs1   | 111    | imm[4:1, 11] | 1100011 |  bgeu  |
 
 `b` here stands for branch.
 `u` again means "unsigned."
@@ -542,17 +543,17 @@ class BranchControl extends Module {
     val taken  = Output(Bool())
   })
 
-  // Your code goes here
+  // Your code goes here.
 
   io.taken := false.B
 }
 ```
 
-**HINT:** Use Chisel's `switch` / `is`,  `when` / `elsewhen` / `otherwise`, or `MuxCase` syntax.
 See [the Chisel getting started guide](../chisel-notes/getting-started.md) for examples.
 You may also find the [Chisel cheat sheet](https://chisel.eecs.berkeley.edu/2.2.0/chisel-cheatsheet.pdf) helpful.
 
-You can also use normal operators, like `<`, `>`, `===`, `=/=`, etc.
+**HINT:** Use Chisel's `switch` / `is`,  `when` / `elsewhen` / `otherwise`, or `MuxCase` syntax.
+You can also use normal operators, such as `<`, `>`, `===`, `=/=`, etc.
 
 ### Testing your branch control unit
 
@@ -568,31 +569,32 @@ dinocpu:sbt> testOnly dinocpu.BranchControlTesterLab2
 ## Implementing branch instructions
 
 Next, you need to wire the branch control unit into the data path.
-You can follow the diagram given in [Single cycle CPU design](#single-cycle-cpu-design).
+You can follow the diagram given in [the single cycle CPU design section](#single-cycle-cpu-design).
 Note that the diagram does not specify what to do with the `taken` result from the branch control unit.
 You must add the required logic to drive the correct MUX output based on this `taken` output.
 
 ## Testing the branch instructions
 
 You can run the tests for the branch instructions with the following command.
-Use the command [above](#testing-your-branch-control-unit) to test the control unit.
 
 ```
 sbt:dinocpu> testOnly dinocpu.SingleCycleBranchTesterLab2
 ```
 
+If you want to test the control unit, use the command [above](#testing-your-branch-control-unit).
+
 # Part VIII: `jal`
 
-Now we move on to the J-type instructions.
-One way to think of them is "unconditional branches."
+Next, we look at the J-type instructions.
+You can think of them as "unconditional branches."
 
 ## `jal` instruction details
 
 The following table shows how the `jal` instruction is laid out.
 
-|31                    12|11  7|6       0|        |
-|------------------------|-----|---------|--------|
-|imm[20, 10:1, 11, 19:12]| rd  | 1101111 | jal    |
+| 31-12                    | 11-7 | 6-0     | Name   |
+|--------------------------|------|---------|--------|
+| imm[20, 10:1, 11, 19:12] | rd   | 1101111 | jal    |
 
 `jal` stands for "jump and link."
 The instruction has the following effect.
@@ -619,9 +621,9 @@ However, unlike `jal`, `jalr` has the format of an I-type instruction.
 
 The following table shows how the `jalr` instruction is laid out.
 
-|31           20|19 15|14     12|11  7|6       0|        |
-|---------------|-----|---------|-----|---------|--------|
-|imm[11:0]      | rs1 | 000     | rd  | 1100111 | jalr   |
+| 31-20     | 19-15 | 14-12 | 11-7 | 6-0     | Name   |
+|-----------|-------|-------|------|---------|--------|
+| imm[11:0] | rs1   | 000   | rd   | 1100111 | jalr   |
 
 `jalr` stands for "jump and link register.""
 The instruction has the following effect.
@@ -681,11 +683,11 @@ Note that the assignment will be out of 90 points and the last 10 points from th
 Grading will be done automatically on Gradescope.
 See [the Submission section](#Submission) for more information on how to submit to Gradescope.
 
-|                       |                           |
-|-----------------------|---------------------------|
-| Each instruction type | 8% each (×10 parts = 80%) |
-| Full programs         | 10%                       |
-| Feedback              | 10%                       |
+| Name                  | Percentage                 |
+|-----------------------|----------------------------|
+| Each instruction type | 8% each (× 10 parts = 80%) |
+| Full programs         | 10%                        |
+| Feedback              | 10%                        |
 
 # Submission
 
