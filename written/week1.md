@@ -1,6 +1,14 @@
-# Written problems - week 1
+---
+author: Justin Perona
+title: ECS 154B Written Problems for Week 1, Winter 2019
+---
+
+# Written problems for week 1
 
 This problem set covers lectures 1 through 3.
+
+Solutions won't be posted on GitHub.
+If you'd like answers to the problems, either post on Piazza or go to Jason's or Justin's office hours.
 
 ## Lectures
 
