@@ -53,7 +53,7 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 10. Using the following RISC-V assembly, translate the following instructions to machine code. The register numbers have been provided in a comment.
   * `auipc a0, 0 # (reg[10] = 0 + pc (4))`
   * `add t0, t0, t1 # reg[5] = reg[5] + reg[6]`
-11. Using the following machine code provided in hex, translate the machine code to RISC-V assembly. You can specify just the register numbers instead of using the standardized names.
+11. Using the following machine code provided in hex, translate the following machine code to RISC-V assembly mnemonics. You can specify just the register numbers instead of using the standardized names.
   * `0x00858593`
   * `0x00e51513`
 12. List the five steps to execute an instruction, and what each step does. At what point is the current PC value updated with the address of the next instruction?
@@ -62,5 +62,5 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 
 13. In lecture, when we made the change to implement the memory instructions `lw` and `sw`, why did we add a MUX right in front of the register file's `writedata` input? Why is this MUX necessary?
 14. The MUX in the previous problem was controlled by a control signal from the control unit. In English, explain what the control signal that controls this MUX means, and why it would be 0 or 1 for a specific instruction.
-15. Is it possible that the value of the control signal (say, the one from the previous problem) doesn't matter at all for a given instruction? Why or why not?
+15. Is it possible that the value of a control signal (say, the one from the previous problem) doesn't matter at all for a given instruction? Why or why not?
 16. In lecture, when we made the change to implement branch-type instructions in the datapath, why did we need to use an additional adder? Why couldn't we use the adder we had previously, or even the ALU?
