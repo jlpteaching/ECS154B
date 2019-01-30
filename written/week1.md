@@ -14,7 +14,7 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 
 1. [Introduction](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-07-Lecture-1.pdf)
 2. [Technology](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-09-Lecture-2.pdf)
-3. [More technology](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-09-Lecture-3.pdf)
+3. [More technology](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-11-Lecture-3.pdf)
 
 ## Topics covered
 
