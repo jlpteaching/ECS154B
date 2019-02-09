@@ -23,19 +23,19 @@ Date,Class Type,Topic Covered,Reading,Milestones
 02/13/19,Lecture,Speculation and out of order,P&H 4.10-4.12,
 02/14/19,Discussion,More pipeline design details,,
 02/15/19,Lecture,Core design review / slack,P&H Chapter 4,
-02/18/19,Lecture,President’s Day Holiday,,Lab 3 Due
+02/18/19,Lecture,President’s Day Holiday,,
 02/20/19,Lecture,Introduction to memory technologies,P&H 5.1-5.2,
 02/21/19,Discussion,<Depends on Lab 4>,,
 02/22/19,Lecture,Memory hierarchy,P&H 5.3,
-02/25/19,Lecture,Multi-level cache hierarchies,P&H 5.8,
+02/25/19,Lecture,Multi-level cache hierarchies,P&H 5.8,Lab 3 Due
 02/27/19,Lecture,Review,,
 02/28/19,Discussion,Midterm,"Pipelining (4.5-4.15) Memory (Chapter 5.1-5.6, 5.8)",
 03/01/19,Lecture,Virtual memory 1,P&H  5.6-5.7,
-03/04/19,Lecture,Virtual memory 2,P&H  5.6-5.7,Lab 4 Due
+03/04/19,Lecture,Virtual memory 2,P&H  5.6-5.7,
 03/06/19,Lecture,Implementing cache controllers,P&H 5.9,
 03/07/19,Discussion,<Depends on Lab 5>,,
 03/08/19,Lecture,Parallel architectures 1,P&H 6.1-6.3,
-03/11/19,Lecture,Parallel architectures 2,P&H 6.4-6.7,
+03/11/19,Lecture,Parallel architectures 2,P&H 6.4-6.7,Lab 4 Due
 03/13/19,Lecture,Parallel architectures 3,P&H 5.10,
 03/14/19,Discussion,<Depends on Lab 5>,,
 03/15/19,Lecture,Review/slack,,Lab 5 Due
