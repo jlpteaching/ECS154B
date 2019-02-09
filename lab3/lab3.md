@@ -251,9 +251,10 @@ See [the Submission section](#Submission) for more information on how to submit 
 
 | Name     | Percentage |
 |----------|------------|
-| Part I   | 40%        |
-| Part II  | 30%        |
-| Part III | 20%        |
+| Part I   | 50%        |
+| Part II  | 10%        |
+| Part III | 10%        |
+| Part IV  | 20%        |
 | Feedback | 10%        |
 
 # Submission
