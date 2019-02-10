@@ -283,10 +283,10 @@ Don't forget about [how to single-step through the pipelined CPU](https://github
 
 # Feedback
 
-Again, instead of uploading a paper version to Gradescope, you will give feedback via a [Google form](https://goo.gl/forms/).
+Again, instead of uploading a paper version to Gradescope, you will give feedback via a [Google form](https://goo.gl/forms/Nf24HWcWSz19IPgE3).
 Note that the assignment will be out of 90 points, and the last 10 points from the feedback will appear in Canvas sometime later.
 
-[Here is a link to the feedback form](https://goo.gl/forms/).
+[Here is a link to the feedback form](https://goo.gl/forms/Nf24HWcWSz19IPgE3).
 
 # Grading
 
@@ -325,7 +325,7 @@ Either the test passes or it fails.
 
 ## Feedback form
 
-[Give your feedback by filling out the Google form.](https://goo.gl/forms/)
+[Give your feedback by filling out the Google form.](https://goo.gl/forms/Nf24HWcWSz19IPgE3)
 
 Note: You must be logged into Google with your UC Davis email for the link to work.
 We will use your email to track whether you have completed the feedback for you to receive your 10 points.
@@ -344,7 +344,7 @@ GitHub now allows everybody to create unlimited private repositories for up to t
 
 - [ ] You have commented out or removed any extra debug statements.
 - [ ] You have uploaded three files: `cpu.scala`, `hazard.scala`, and `forwarding.scala`.
-- [ ] You have filled out the [feedback form](https://goo.gl/forms/).
+- [ ] You have filled out the [feedback form](https://goo.gl/forms/Nf24HWcWSz19IPgE3).
 
 # Hints
 
