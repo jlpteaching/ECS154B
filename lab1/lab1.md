@@ -1,13 +1,15 @@
 ---
-authors: Jason Lowe-Power
-title: ECS 154B Lab 1, Winter 2019
+Authors: Jason Lowe-Power, Filipe Eduardo Borges
+Editor: Justin Perona
+Title: ECS 154B Lab 1, Winter 2019
 ---
 
 # ECS 154B Lab 1, Winter 2019
 
-**Due by 12:00 AM on January 21, 2019**
+**Due by 12:00 AM on January 21, 2019.**
 
-*Turn in via Gradescope*. [See below for details.](#Submission)
+*Turn in via Gradescope*.
+[See below for details.](#Submission)
 
 # Table of Contents
 

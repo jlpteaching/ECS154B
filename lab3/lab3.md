@@ -1,17 +1,42 @@
 ---
-authors: Jason Lowe-Power, Filipe Eduardo Borges
-editor: Justin Perona
-title: ECS 154B Lab 2, Winter 2019
+Author: Jason Lowe-Power
+Editor: Justin Perona
+Title: ECS 154B Lab 3, Winter 2019
 ---
 
-# ECS 154B Lab 2, Winter 2019
+# ECS 154B Lab 3, Winter 2019
 
-**Due by 12:00 AM on February 4, 2019**
+**Due by 12:00 AM on February 25, 2019.**
 
 *Turn in via Gradescope*.
 [See below for details.](#Submission)
 
 # Table of Contents
+
+* [Introduction](#introduction)
+    * [Updating the DINO CPU code](#updating-the-dino-cpu-code)
+    * [How this assignment is written](#how-this-assignment-is-written)
+    * [I/O constraint](#io-constraint)
+    * [Goals](#goals)
+* [Pipelined CPU design](#pipelined-cpu-design)
+    * [Testing your pipelined CPU](#testing-your-pipelined-cpu)
+    * [Debugging your pipelined CPU](#debugging-your-pipelined-cpu)
+* [Part I: Re-implement the CPU logic and add pipeline registers](#part-i-re-implement-the-cpu-logic-and-add-pipeline-registers)
+    * [Testing your basic pipeline](#testing-your-basic-pipeline)
+* [Part II: Implementing forwarding](#part-ii-implementing-forwarding)
+    * [Testing your forwarding unit](#testing-your-forwarding-unit)
+* [Part III: Implementing branching and flushing](#part-iii-implementing-branching-and-flushing)
+    * [Testing branching and flushing](#testing-branching-and-flushing)
+* [Part IV: Hazard detection](#part-iv-hazard-detection)
+    * [Testing your hazard detection unit](#testing-your-hazard-detection-unit)
+* [Feedback](#feedback)
+* [Grading](#grading)
+* [Submission](#submission)
+    * [Code portion](#code-portion)
+    * [Feedback form](#feedback-form)
+    * [Academic misconduct reminder](#academic-misconduct-reminder)
+    * [Checklist](#checklist)
+* [Hints](#hints)
 
 # Introduction
 
@@ -19,7 +44,7 @@ title: ECS 154B Lab 2, Winter 2019
 
 In the last assignment, you implemented a full single cycle RISC-V CPU.
 In this assignment, you will be extending this design to be a 5 stage pipeline instead of a single cycle.
-You will also be implementing full forwarding for ALU instructions, hazard detection, and an always not taken branch predictor.
+You will also be implementing full forwarding for ALU instructions, hazard detection, and an *always not taken* branch predictor.
 The simple in-order CPU design is based closely on the CPU model in Patterson and Hennessey's Computer Organization and Design.
 
 This is the first time we have used this set of assignments, so there may be mistakes.
@@ -30,23 +55,20 @@ Who knows better than you how to improve these assignments!
 
 ## Updating the DINO CPU code
 
-Follow the same steps as in [lab 2](../lab2/lab2.md#updating-the-dino-cpu-code).
+Follow the same steps as in [Lab 2](../lab2/lab2.md#updating-the-dino-cpu-code).
 
 ## How this assignment is written
 
 The goal of this assignment is to implement a pipelined RISC-V CPU which can execute all of the RISC-V integer instructions.
-Like the previous assignment, you will be implementing this step by step starting with a simple pipeline in [Part 1](#Part-I-Re-implement-the-CPU-logic-and-add-pipeline-registers) and building to adding forwarding, branch prediction, and hazard detection.
+Like the previous assignment, you will be implementing this step by step starting with a simple pipeline in [Part 1](#part-i-re-implement-the-cpu-logic-and-add-pipeline-registers).
+After that, you will add to your design to implement forwarding, branch prediction, and hazard detection.
 
-If you prefer, you can simply skip to the end and implement all of the instructions at once, then run all of the tests for this assignment via the following command.
-You will also use this command to test everything once you believe you're done.
-
-```
-sbt:dinocpu> test
-```
+## I/O constraint
 
 We are making one major constraint on how you are implementing your CPU.
-**You cannot modify the I/O for any module**.
-We will be testing your control unit with our data path, and our data path with your control unit.
+**You may not modify the I/O for any module.**
+This is the same constraint that you had in Lab 2.
+We will be testing your control unit with our datapath, and our datapath with your control unit.
 Therefore, you **must keep the exact same I/O**.
 You will get errors on Gradescope (and thus no credit) if you modify the I/O.
 
@@ -54,7 +76,7 @@ You will get errors on Gradescope (and thus no credit) if you modify the I/O.
 
 - Learn how to implement a pipelined CPU.
 - Learn what information must be stored in pipeline registers.
-- Learn which combinations of instructions cause hazards and which can be overcome with forwarding.
+- Learn which combinations of instructions cause hazards, and which can be overcome with forwarding.
 
 # Pipelined CPU design
 
@@ -67,9 +89,20 @@ You can take your code from the [Lab 2](../lab2/lab2.md) as a starting point, or
 
 ![Pipelined CPU](../dino-resources/pipelined.svg)
 
-# Debugging the Pipelined CPU
+## Testing your pipelined CPU
 
-When you see something like the following:
+Just like with the last lab, run the following command to go through all tests once you believe you're done.
+
+```
+sbt:dinocpu> test
+```
+
+You can also run the individual tests for each part with `testOnly`.
+The command to run the tests for each part are included in each part below.
+
+## Debugging your pipelined CPU
+
+When you see something like the following output when running a test:
 
 ```
 - should run branch bne-False *** FAILED ***
@@ -78,24 +111,23 @@ When you see something like the following:
 This means that the test `bne-False` failed.
 
 For this assignment, we have included a way to single step through each one of the tests.
-You can find out more information on this in the [DINO CPU documentation](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md)
+You can find out more information on this in the [DINO CPU documentation](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md).
 
-You may want to add your own `printf` statements.
-There was details on this in the [first lab](../lab1/lab1.md#printf-debugging).
+You may also want to add your own `printf` statements to help you debug.
+Details on how to do this were included in the [first lab](../lab1/lab1.md#printf-debugging).
 
 # Part I: Re-implement the CPU logic and add pipeline registers
 
-The first part will be the biggest part of this assignment.
-Unfortunately, there isn't an easy way to break this part down into smaller components.
 In this part, you will be implementing a full pipelined processor with the exception of forwarding, branch prediction, and hazards.
-
 After you finish this part, you should be able to correctly execute any *single instruction* application.
 
+**This is the biggest part of this assignment, and is worth the most points.**
+Unfortunately, there isn't an easy way to break this part down into smaller components.
 I suggest working from left to right through the pipeline as shown in the diagram above.
 We have already implemented the instruction fetch (IF) stage for you.
 
 Each of the pipeline registers is defined as a `Bundle` at the top of the CPU definition.
-For instance, if IF/ID register contains the `PC`, `PC+4`, and `instruction` as shown below.
+For instance, the IF/ID register contains the `PC`, `PC+4`, and `instruction` as shown below.
 
 ```
   // Everything in the register between IF and ID stages
@@ -122,8 +154,8 @@ We have given you the signals that are needed in the EX stage as an example of h
 ```
 
 You can include `Bundles` in other bundles.
-For instance, in the ID/EX register you need to pass on the control signals for execute, memory, and writeback.
-So, you can simply instantiate the control bundles as described above.
+For instance, in the ID/EX register, you need to pass on the control signals for execute, memory, and writeback.
+You can simply instantiate the control bundles like so:
 
 ```
   // Everything in the register between ID and EX stages
@@ -135,21 +167,21 @@ So, you can simply instantiate the control bundles as described above.
   }
 ```
 
-Note that this pipeline register/bundle is missing *a lot* of important signals.
+This pipeline register/bundle isn't complete.
+It's missing *a lot* of important signals, which you'll need to add.
 
 Again, I suggest working your way left to right through the pipeline.
-For each stage, you can copy the data path for that stage from the previous lab in `src/main/scala/single-cycle/cpu.scala`.
-Then, you can add the required signals to drive the data path to the register that feeds that stage.
-
-Throughout the given template code in `src/main/scala/pipelined/cpu.scala`, we have given hints on where to find the data path components from Lab 2.
+For each stage, you can copy the datapath for that stage from the previous lab in `src/main/scala/single-cycle/cpu.scala`.
+Then, you can add the required signals to drive the datapath to the register that feeds that stage.
+Throughout the given template code in `src/main/scala/pipelined/cpu.scala`, we have given hints on where to find the datapath components from Lab 2.
 
 For Part I, you **do not** need to use the hazard detection unit or the forwarding unit.
 These will be used in later parts of the assignment.
-You also do not need to add the forwarding MUXes or worry about the PC containing any value except `PC + 4`.
+You also do not need to add the forwarding MUXes or worry about the PC containing any value except `PC + 4`, for the same reason.
 
 **Important**: Remember to remove the `*.io := DontCare` at the top of the `cpu.scala` file as you flesh out the I/O for each module.
 
-## Testing Part I
+## Testing your basic pipeline
 
 You can run the tests for this part with the following commands:
 
@@ -160,26 +192,26 @@ sbt:dinocpu> testOnly dinocpu.UTypeTesterLab3
 sbt:dinocpu> testOnly dinocpu.MemoryTesterLab3
 ```
 
-Don't forget about [Debugging the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md)
+Don't forget about [how to single-step through the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md).
 
-# Part II: Forwarding
+# Part II: Implementing forwarding
 
 There are three steps to implementing forwarding.
 
-1. Add the forwarding MUXes to the execute stage. (As seen below)
+1. Add the forwarding MUXes to the execute stage, as seen below.
 2. Wire the forwarding unit into the processor.
 3. Implement the forwarding logic in the forwarding unit.
 
-For 3, you may want to consult Section 4.7 of Patterson and Hennessy.
+For #3, you may want to consult Section 4.7 of Patterson and Hennessy.
 Specifically, Figure 4.53 will be helpful.
 Think about the conditions you want to forward and what you want to forward under each condition.
 `when/elsewhen/otherwise` statements will be useful here.
 
 After this, you can remove the `forwarding.io := DontCare` from the top of the file.
 
-## Testing Part II
+## Testing your forwarding unit
 
-With forwarding you can now execute applications with multiple R-type and/or I-type instructions!
+With forwarding, you can now execute applications with multiple R-type and/or I-type instructions!
 The following tests should now pass.
 
 ```
@@ -187,19 +219,22 @@ sbt:dinocpu> testOnly dinocpu.ITypeMultiCycleTesterLab3
 sbt:dinocpu> testOnly dinocpu.RTypeMultiCycleTesterLab3
 ```
 
-# Part III: Branches and flushing
+Don't forget about [how to single-step through the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md).
+
+# Part III: Implementing branching and flushing
 
 There are five steps to implementing branches and flushing.
 
-1. Add a mux for PC write
+1. Add a MUX for PC write
 2. Add code to bubble for ID/EX and EX/MEM
 3. Add code to flush IF/ID
 4. Connect the taken signal to the hazard detection unit
 5. Add the logic to the hazard detection unit for when branches are taken.
 
 Before you dive into this part, give some thought to what it means to bubble ID/EX and EX/MEM, how you will implement bubbles, and what it means to flush IF/ID.
+Section 4.8 of Patterson and Hennessy will be helpful for understanding this part.
 
-## Testing Part III
+## Testing branching and flushing
 
 With the branch part of the hazard detection unit implemented, you should now be able to execute branch and jump instructions!
 The following tests should now pass.
@@ -209,23 +244,22 @@ sbt:dinocpu> testOnly dinocpu.BranchTesterLab3
 sbt:dinocpu> testOnly dinocpu.JumpTesterLab3
 ```
 
-Don't forget about [Debugging the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md)
+Don't forget about [how to single-step through the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md).
 
 # Part IV: Hazard detection
 
 For the final part of the pipelined CPU, you need to detect hazards for certain combinations of instructions.
-
 There are only three remaining steps!
 
 1. Wire the rest of the hazard detection unit.
 2. Modify the PC MUX.
 3. Add code to *bubble* in IF/ID.
 
-The first section of 4.8 in the Hennessey and Patterson book may be helpful here.
+Again, section 4.8 of Patterson and Hennessy will be helpful here.
 
-After this, you can remove the `hazard.io := DontCare` from the top of the file.
+After this, you can remove the `hazard.io := DontCare`line from the top of the file.
 
-## Testing Part IV
+## Testing your hazard detection unit
 
 With the full hazard detection implemented, you should now be able to execute any RISC-V application!
 The following tests should now pass.
@@ -235,14 +269,14 @@ sbt:dinocpu> testOnly dinocpu.MemoryMultiCycleTesterLab3
 sbt:dinocpu> testOnly dinocpu.ApplicationsTesterLab3
 ```
 
-Don't forget about [Debugging the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md)
+Don't forget about [how to single-step through the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md).
 
 # Feedback
 
-This time, instead of uploading a paper version to Gradescope, you will give feedback via a [Google form](https://goo.gl/forms/).
-Note that the assignment will be out of 90 points and the last 10 points from the feedback will appear in Canvas sometime later.
+Again, instead of uploading a paper version to Gradescope, you will give feedback via a [Google form](https://goo.gl/forms/).
+Note that the assignment will be out of 90 points, and the last 10 points from the feedback will appear in Canvas sometime later.
 
-[Feedback form link](https://goo.gl/forms/).
+[Here is a link to the feedback form](https://goo.gl/forms/).
 
 # Grading
 
@@ -264,7 +298,7 @@ Failure to adhere to the instructions will result in a loss of points.
 
 ## Code portion
 
-You will upload the three files that you changed to Gradescope on the [Lab 3](https://www.gradescope.com/courses/35106/assignments/) assignment.
+You will upload the three files that you changed to Gradescope on the [Lab 3](https://www.gradescope.com/courses/35106/assignments/158237) assignment.
 
 - `src/main/scala/components/forwarding.scala`
 - `src/main/scala/components/hazard.scala`

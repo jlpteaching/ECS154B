@@ -1,12 +1,12 @@
 ---
-authors: Jason Lowe-Power, Filipe Eduardo Borges
-editor: Justin Perona
-title: ECS 154B Lab 2, Winter 2019
+Authors: Jason Lowe-Power, Filipe Eduardo Borges
+Editor: Justin Perona
+Title: ECS 154B Lab 2, Winter 2019
 ---
 
 # ECS 154B Lab 2, Winter 2019
 
-**Due by 12:00 AM on February 4, 2019**
+**Due by 12:00 AM on February 4, 2019.**
 
 *Turn in via Gradescope*.
 [See below for details.](#Submission)
@@ -122,7 +122,7 @@ git add .
 git commit -m "Add my lab1 solution"
 git fetch
 git merge origin/master
-``` 
+```
 
 This will merge the updates in origin (jlpteaching/dinocpu) into your master branch.
 **There will be merge conflicts** since both you and I modified cpu.scala and alucontrol.scala.
