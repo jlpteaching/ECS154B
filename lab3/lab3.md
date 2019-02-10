@@ -68,7 +68,7 @@ After that, you will add to your design to implement forwarding, branch predicti
 We are making one major constraint on how you are implementing your CPU.
 **You may not modify the I/O for any module.**
 This is the same constraint that you had in Lab 2.
-We will be testing your control unit with our datapath, and our datapath with your control unit.
+We will be testing your data path, your hazard detection unit, and our forwarding unit in isolation.
 Therefore, you **must keep the exact same I/O**.
 You will get errors on Gradescope (and thus no credit) if you modify the I/O.
 
@@ -174,6 +174,14 @@ Again, I suggest working your way left to right through the pipeline.
 For each stage, you can copy the datapath for that stage from the previous lab in `src/main/scala/single-cycle/cpu.scala`.
 Then, you can add the required signals to drive the datapath to the register that feeds that stage.
 Throughout the given template code in `src/main/scala/pipelined/cpu.scala`, we have given hints on where to find the datapath components from Lab 2.
+We have also already instantiated each of the pipeline registers for you as shown below.
+
+```
+val if_id      = RegInit(0.U.asTypeOf(new IFIDBundle))
+val id_ex      = RegInit(0.U.asTypeOf(new IDEXBundle))
+val ex_mem     = RegInit(0.U.asTypeOf(new EXMEMBundle))
+val mem_wb     = RegInit(0.U.asTypeOf(new MEMWBBundle))
+```
 
 For Part I, you **do not** need to use the hazard detection unit or the forwarding unit.
 These will be used in later parts of the assignment.
@@ -201,6 +209,8 @@ There are three steps to implementing forwarding.
 1. Add the forwarding MUXes to the execute stage, as seen below.
 2. Wire the forwarding unit into the processor.
 3. Implement the forwarding logic in the forwarding unit.
+
+![Forwarding MUXes](forwarding.png)
 
 For #3, you may want to consult Section 4.7 of Patterson and Hennessy.
 Specifically, Figure 4.53 will be helpful.
