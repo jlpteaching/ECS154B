@@ -1,5 +1,6 @@
 ---
 Author: Jason Lowe-Power
+Editor: Justin Perona
 Title: ECS 154B - Computer Architecture
 ---
 
@@ -17,26 +18,28 @@ ECS 154B - Computer Architecture
     * [Regrade Requests](#regrade-requests)
     * [Accommodations](#accommodations)
 * [Academic Misconduct](#academic-misconduct)
-* [Student support](#student-support)
+* [Student Support](#student-support)
 * [Prerequisites](#prerequisites)
 * [PTAs](#ptas)
 * [Assignments and Tests](#assignments-and-tests)
     * [Grading Breakdown](#grading-breakdown)
     * [Participation](#participation)
     * [Labs](#labs)
-       * [Late Assignments](#late-assignments)
+        * [Late Assignments](#late-assignments)
     * [Tests](#tests)
+        * [Midterm 1: January 31](#midterm-1-january-31)
+        * [Midterm 2: February 28](#midterm-2-february-28)
+        * [Final](#final-march-20)
 * [Reading List and Schedule](#reading-list-and-schedule)
     * [Textbook](#textbook)
     * [Schedule](#schedule)
-
 
 Important Information
 ---------------------
 
 ### Time and Location
 
-*Lecture*: **Chemistry 176** 11:00 AM - 11:50 AM MWF
+*Lecture*: **Chemistry 176** 11:00 AM - 11:50 AM Monday, Wednesday, Friday
 
 *Discussion*: **Olson Hall 6** 3:10 PM - 4:00 PM Thursday
 
@@ -65,8 +68,6 @@ In addition, I taught (as the instructor) ECS 154A in Summer Session II 2018.
 
 #### Filipe Eduardo Borges (<fborges@ucdavis.edu>)
 
-<Insert short bio here>
-
 *Office Hours*: 7:00 - 8:00 PM Wednesday
 
 *Office Location*: 53 Kemper
@@ -94,7 +95,7 @@ All lab assignments will be autograded by Gradescope.
 When you upload your code to Gradescope, a set of tests will be run on it and your grade *will be immediately available*.
 You may submit your code any number of times.
 Only the final submission will be accepted as the grade for your assignment.
-However, if you submit after the deadline, the [late policy](#Late-Assignments) applies.
+However, if you submit after the deadline, the [late policy](#late-assignments) applies.
 
 ### Piazza
 
@@ -163,7 +164,7 @@ ECS 154A; or both EEC 170 and EEC 180A.
 PTAs
 ----
 
-Before asking for a PTA, be sure that you have read the [Computer Science Department's PTA Policy](http://www.cs.ucdavis.edu/blog/pta-policy/).
+Before asking for a PTA, be sure that you have read the [Department of Computer Science's PTA Policy](http://www.cs.ucdavis.edu/blog/pta-policy/).
 PTA numbers will only be issued after the 12th day of instruction, and PTA numbers are only issued for extenuating circumstances related to graduation.
 
 Assignments and Tests
@@ -171,12 +172,12 @@ Assignments and Tests
 
 ### Grading Breakdown
 
-|Category     |Percentage|
-|-------------|---|
-|Participation|10%|
-|Labs (5x)    |40%|
-|Midterm (2x) |30%|
-|Final        |20%|
+| Category      | Percentage |
+|---------------|------------|
+| Participation | 10%        |
+| Labs (5x)     | 40%        |
+| Midterm (2x)  | 30%        |
+| Final         | 20%        |
 
 ### Participation
 
@@ -190,13 +191,13 @@ The labs can be found via the links below.
 All together, the labs are worth 40% of your final grade.
 Each lab is weighted based on the amount of time you are given to complete the lab.
 
-Labs are due at 12 AM (midnight) on Sunday night / Monday morning.
+Labs are due at 12 AM (midnight) on (usually a) Sunday night / Monday morning.
 
--   [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 weeks, 8%). Due January 21.
--   [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 8%). Due February 4.
--   [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 8%). Due February 18.
--   [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 8%). Due March 4.
--   [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (2 weeks, 8%). Due March 15, which is a **Thursday night midnight / Friday morning**.
+- [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 weeks, 8%). Due January 21.
+- [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 8%). Due February 4.
+- [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 8%). Due February 25.
+- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 8%). Due March 11.
+- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (2 weeks, 8%). Due March 15, which is a **Thursday night midnight / Friday morning**.
 
 #### Late Assignments
 
@@ -222,18 +223,21 @@ The final will be cumulative during the final time and will use the full 2 hours
 
 #### Midterm 1: January 31
 
+The first midterm is on Thursday, January 31, from 3:10 - 4:00 PM in 6 Olson.
 You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
 
 The first midterm will cover technology, performance and CPU design basics.
 
 #### Midterm 2: February 28
 
+The second midterm is on Thursday, February 28, from 3:10 - 4:00 PM in 6 Olson.
 You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
 
 The second midterm will cover pipelined CPU design, memory technology, and memory hierarchy.
 
-#### Final: Tuesday, March 20, 2018 at 1 AM
+#### Final: March 20
 
+The final is on Wednesday, March 20, from 1:00 - 3:00 PM in 176 Chemistry.
 You are allowed **two** 8.5" x 11" sheets of *handwritten* notes.
 
 The final will be cumulative with a focus on coalescing the knowledge gained throughout the quarter.
@@ -257,4 +261,4 @@ You can find these books at the [university bookstore](http://ucdavisstores.com/
 
 ### Schedule
 
-<https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv>
+[The schedule is available on GitHub.](https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv)
