@@ -1,6 +1,6 @@
 ---
-author: Justin Perona
-title: ECS 154B Written Problems for Week 2, Winter 2019
+Author: Justin Perona
+Title: ECS 154B Written Problems for Week 2, Winter 2019
 ---
 
 # Written problems for week 2
