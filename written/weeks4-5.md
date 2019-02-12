@@ -41,7 +41,7 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
     * amount of power consumed
     * amount of time consumed
     * amount of energy consumed
-4. We don't usually see extremely large pipelines. (Intel processors peaked at 31 stages in the Prescott and Cedar Mill microarchitectures around 2006.) Part of the reason is due to hold time. Why does hold time influence pipeline length? (Hint: what changes when we split a 5-stage pipeline into, say, 100 stages?)
+4. We don't usually see extremely large pipelines. (Intel processors peaked at 31 stages in the Prescott and Cedar Mill microarchitectures around 2006.) Part of the reason is due to propagation delay from the pipeline registers. Why does that propagation delay influence pipeline length? (Hint: what happens to the cycle time when we split a 5-stage pipeline into a 100-stage one?)
 
 ### Hazards
 
@@ -57,12 +57,12 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
     4. Is is possible to reschedule this code to remove any NOPs? If so, how many NOPs are left?
 
 ```
-0:    lw   R5, 0(R2)
-4:    lw   R2, 4(R6)
-8:    add  R3, R2, R1
-12:   sw   R3, 20(R9)
-16:   sub  R8, R7, R8
-20:   and  R8, R8, R5
+0:    lw   x5, 0(x2)
+4:    lw   x2, 4(x6)
+8:    add  x3, x2, x1
+12:   sw   x3, 20(x9)
+16:   sub  x8, x7, x8
+20:   and  x8, x8, x5
 ```
 
 11. Why do we need to flush instructions? How do we implement this in the hardware?
@@ -70,16 +70,16 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
     1. Assume that, when we execute this code, `R7 = 72` and `R8 = 228`. Can we move the `sw` before the `lw`? Why or why not?
     2. Assume we do not have a forwarding unit. Can we move instruction 8 between instructions 0 and 4 to eliminate some of the NOPs? Why or why not?
 ```
-0:    add  R3, R1, R2
-4:    bne  R3, R4, 16
-8:    lw   R5, 124(R7)
-12:   sw   R6, -32(R8)
-16:   add  R4, R1, R3
+0:    add  x3, x1, x2
+4:    bne  x3, x4, 16
+8:    lw   x5, 124(x7)
+12:   sw   x6, -32(x8)
+16:   add  x4, x1, x3
 20:   ...
 ```
 
 13. What two pieces of information does a processor need in order to make a branch prediction?
-14. What are the two types of branch predictors? Which one requires more hardware to implement?
+14. What is the difference between a static and a dynamic branch predictor? Which one requires more hardware to implement?
 
 ### Exceptions
 
