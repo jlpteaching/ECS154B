@@ -48,7 +48,7 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 5. Another reason why we don't see extremely large pipelines is due to hazards. Why do hazards influence pipeline length? What happens to the hazard and forwarding units in a longer pipeline?
 6. Would pipeline hazards affect your answer to #1 above? Is it possible to get the same CPI if we were executing a more realistic program?
 7. Name the three types of hazards, and a solution to solve some of the problems that each hazard brings.
-8. True or false: forwarding sends the result of an earlier stage in the pipeline to a later stage. (Example: IF comes earlier in the pipeline than ID.)
+8. True or false: forwarding sends the result of an earlier stage in the pipeline to a later stage. (IF comes earlier in the pipeline than ID, as an example.)
 9. True or false: forwarding sends the result of an instruction that comes earlier in program order to a instruction that comes later in program order.
 10. Assume a traditional 5-stage pipeline. Answer the following questions using the code block below.
     1. Indicate all data dependencies between instructions.
@@ -67,7 +67,7 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 
 11. Why do we need to flush instructions? How do we implement this in the hardware?
 12. Assume a traditional 5-stage pipeline. Answer the following questions using the code block below.
-    1. Assume that, when we execute this code, `R7 = 72` and `R8 = 228`. Can we move the `sw` before the `lw`? Why or why not?
+    1. Assume that, when we start executing this code block, `x7 = 72` and `x8 = 228`. Can we move the `sw` before the `lw`? Why or why not?
     2. Assume we do not have a forwarding unit. Can we move instruction 8 between instructions 0 and 4 to eliminate some of the NOPs? Why or why not?
 ```
 0:    add  x3, x1, x2
