@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.7078586"
-     inkscape:cx="441.01392"
-     inkscape:cy="244.58196"
+     inkscape:cx="688.24137"
+     inkscape:cy="148.4345"
      inkscape:document-units="mm"
      inkscape:current-layer="g886-6-5-3"
      showgrid="false"
@@ -558,15 +558,16 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 194.46301,253.44158 h 3.39427"
+       d="m 194.46301,253.44158 h 9.2151"
        id="path1244"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 179.08899,241.62851 h 6.15626 v -6.48887 h 12.47892"
+       d="m 179.08899,241.62851 h 6.15626 v -6.48887 H 203.545"
        id="path1246"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 195.96047,234.64049 v 30.1483 h 46.98729 v 18.33524 h -3.62721"
@@ -581,7 +582,7 @@
        sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 141.94048,253.10727 v 12.71308 h 44.86879 v -26.18842 h 11.08128"
+       d="m 141.94048,253.10727 v 6.36308 h 44.86879 v -19.83842 h 16.90211"
        id="path1256"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
@@ -834,7 +835,7 @@
        sodipodi:nodetypes="cccccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 144.19043,220.73411 v 39.24275 h 49.9908 v -9.60585 h 3.37716"
+       d="m 144.19043,220.73411 v 41.35942 h 49.9908 v -11.72252 h 9.19799"
        id="path1191"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
@@ -1199,7 +1200,7 @@
        sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 64.236761,246.99216 v 21.87466 H 235.45049 v 14.29143 H 66.406376 v -36.57933 h 5.415615"
+       d="m 64.236761,246.99216 v 21.87466 H 235.97966 v 14.29143 H 66.406376 v -36.57933 h 5.415615"
        id="path4119"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
@@ -1328,13 +1329,13 @@
        sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#0000fd;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 101.24,178.91504 92.30955,-0.13638 -0.0924,68.59538 h 4.90232"
+       d="m 101.24,178.91504 92.30955,-0.13638 -0.0924,68.59538 h 10.72315"
        id="path4291"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
     <path
        style="fill:none;stroke:#0000fd;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 112.33111,166.36285 h 26.23285 v 17.16666 h 56.16328 v 60.37263 h 4.21087"
+       d="m 112.33111,166.36285 h 26.23285 v 17.16666 h 56.16328 v 60.37263 h 10.0317"
        id="path4297"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />
@@ -1372,24 +1373,24 @@
        sodipodi:nodetypes="ccc" />
     <g
        id="g886-6"
-       transform="matrix(0.6353771,0,0,0.63524892,155.52249,171.82432)"
+       transform="matrix(0.6353771,0,0,0.63524892,160.28502,171.82432)"
        style="stroke-width:1.5740273">
       <rect
          y="91.961342"
-         x="66.386749"
+         x="66.386742"
          height="40.105808"
-         width="44.138695"
+         width="37.067764"
          id="rect815-8"
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.55528182;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
       <text
          id="text819-4"
          y="96.280586"
-         x="88.376862"
+         x="84.800049"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.41646132"
          xml:space="preserve"><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.41646132"
            y="96.280586"
-           x="88.376862"
+           x="84.800049"
            id="tspan817-88"
            sodipodi:role="line">DataMemory</tspan></text>
       <g
@@ -1475,7 +1476,7 @@
              style="stroke-width:0.41646132">sext</tspan></text>
       </g>
       <g
-         transform="translate(54.886957,1.3363476)"
+         transform="translate(49.057084,1.3363476)"
          id="g865-2"
          style="stroke-width:1.5740273">
         <text
@@ -1541,7 +1542,7 @@
        id="rect1174"
        width="3.1177616"
        height="143.03975"
-       x="229.92276"
+       x="228.33528"
        y="129.3343" />
     <g
        transform="matrix(0.88040215,0,0,0.88038001,103.4304,93.618921)"
@@ -1844,39 +1845,39 @@
     </g>
     <path
        style="fill:none;stroke:#0000fc;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 183.72119,179.95922 V 296.9269 H 159.803"
+       d="M 198.00869,179.95922 V 296.9269 H 159.803"
        id="path1235"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 178.5132,268.68577 v 25.81374 h -18.51732"
+       d="m 200.20903,268.68577 v 25.81374 h -40.21315"
        id="path1237"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <ellipse
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="path1315-79-7-4"
-       cx="178.51318"
-       cy="268.79855"
+       cx="235.8304"
+       cy="283.0513"
        rx="0.52943546"
        ry="0.52942216" />
     <ellipse
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="path1315-79-7-0"
-       cx="183.72118"
+       cx="197.89645"
        cy="180.34497"
        rx="0.52943546"
        ry="0.52942216" />
     <path
        style="fill:none;stroke:#0000ff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 227.065,180.10409 V 302.2416 h -67.37808"
+       d="m 232.88583,284.78717 0,17.45443 h -73.19891"
        id="path1261"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 200.05921,268.75722 v 30.59722 h -40.37229"
+       d="m 236.04254,283.04472 v 16.30972 h -76.35562"
        id="path1263"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -2022,8 +2023,8 @@
     <ellipse
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="path1315-79-7-6"
-       cx="227.06462"
-       cy="180.35667"
+       cx="232.92532"
+       cy="285.08334"
        rx="0.52943546"
        ry="0.52942216" />
     <g
