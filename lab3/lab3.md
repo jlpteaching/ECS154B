@@ -202,6 +202,9 @@ sbt:dinocpu> testOnly dinocpu.MemoryTesterLab3
 
 Don't forget about [how to single-step through the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md).
 
+**Hint**: `auipc1` and `auipc3` actually execute two instructions (the first is a `nop`) so even though this section is about single instructions, you still need to think about the value of the `PC`.
+Note: These instructions *don't* require forwarding.
+
 # Part II: Implementing forwarding
 
 There are three steps to implementing forwarding.
