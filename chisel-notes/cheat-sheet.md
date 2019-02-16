@@ -191,7 +191,44 @@ See [creating your first Chisel hardware](./first-hardware.md).
 
 # Bundles
 
-Under construction.
+Bundles are a way to group a set of wires together.
+For instance, the I/O for each module is a bundle of wires which you can refer to as `module.io`.
+
+You can set a single wire of a bundle by using the `.` operator, kind of like accessing the element of an object or a structure.
+In fact, that's a good way to think of bundles.
+They are kind of like `struct`s in C/C++.
+
+Let's use an complext number with a real and imaginary component as an example.
+
+```
+class Complex extends Bundle {
+  val real = SInt(32.W)
+  val imag = SInt(32.W)
+ }
+```
+
+You can use this new "type" to create a wire:
+
+```
+val wire = Wire(new Complex())
+```
+
+And you can set each component of the wire separtely:
+
+```
+wire.real := 3.S
+wire.imag := -5.S
+```
+
+You can also connect the entire bundle of wires to other objects.
+For instance, the code below creates a register that is connected to the wire above.
+
+```
+val myreg = Reg(new Complex())
+wire := myreg
+```
+
+See [the Chisel wiki](https://github.com/freechipsproject/chisel3/wiki/Bundles-and-Vecs for more information).
 
 # Frequently asked questions
 
