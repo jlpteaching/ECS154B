@@ -26,16 +26,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.7078586"
-     inkscape:cx="688.24137"
-     inkscape:cy="148.4345"
+     inkscape:cx="721.10506"
+     inkscape:cy="248.59816"
      inkscape:document-units="mm"
-     inkscape:current-layer="g886-6-5-3"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="1025"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:lockguides="true"
      showguides="true"
@@ -1032,17 +1032,10 @@
        ry="0.52942216" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 234.33479,236.18679 v 41.69237 H 124.30042 v -32.43395 h 2.74994"
+       d="m 234.33479,286.57784 0,-8.69868 H 124.30042 v -32.43395 h 2.74994"
        id="path2871"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
-    <ellipse
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
-       id="path1315-79-4"
-       cx="234.23747"
-       cy="236.79507"
-       rx="0.52943546"
-       ry="0.52942216" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 129.85565,256.84433 h 6.79037 v -2.35029 -1.98139 h 9.47225"
@@ -1871,7 +1864,7 @@
        ry="0.52942216" />
     <path
        style="fill:none;stroke:#0000ff;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 232.88583,284.78717 0,17.45443 h -73.19891"
+       d="M 231.8275,284.78717 V 302.2416 H 159.68692"
        id="path1261"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -2023,7 +2016,7 @@
     <ellipse
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
        id="path1315-79-7-6"
-       cx="232.92532"
+       cx="231.867"
        cy="285.08334"
        rx="0.52943546"
        ry="0.52942216" />
@@ -2504,6 +2497,13 @@
        id="path1315-0-9-9-5"
        cx="131.4791"
        cy="242.69928"
+       rx="0.52943546"
+       ry="0.52942216" />
+    <ellipse
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="path1315-79-7-4-8"
+       cx="234.31519"
+       cy="286.48141"
        rx="0.52943546"
        ry="0.52942216" />
   </g>
