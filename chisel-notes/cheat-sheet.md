@@ -228,7 +228,13 @@ val myreg = Reg(new Complex())
 wire := myreg
 ```
 
-See [the Chisel wiki](https://github.com/freechipsproject/chisel3/wiki/Bundles-and-Vecs for more information).
+To set the entire bundle to 0 (all of the wires to 0), you need to use an explicit cast.
+
+```
+wire := 0.U.asTypeOf(new Complex) 
+```
+
+See [the Chisel wiki](https://github.com/freechipsproject/chisel3/wiki/Bundles-and-Vecs) for more information.
 
 # Frequently asked questions
 
