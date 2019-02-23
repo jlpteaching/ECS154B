@@ -17,6 +17,8 @@ For cases where a finite number exist, you may work together with a group and th
 |-|-|-|
 | Find a bug and report it | 5 points on the assignment | ∞ |
 | Fix a bug it, open a pull request, and it is committed | 10 points on the assignment | ∞ |
+| Find a documentation error | 2 points on the assignment | ∞ |
+| Fix documentation error, open a pull requests, and it is committed | 5 points on the assignment | ∞ |
 | Create a better logo (I the current one) | 0.2 points *on final grade* | 1 |
 | Implement a visualizer (ask for details) | 1.0 point *on final grade* | 1 |
 | Improve the debug viewer | 0.5 points *on final grade* | 1 |
