@@ -284,6 +284,22 @@ sbt:dinocpu> testOnly dinocpu.ApplicationsTesterLab3
 
 Don't forget about [how to single-step through the pipelined CPU](https://github.com/jlpteaching/dinocpu/blob/master/documentation/single-stepping.md).
 
+## Full application traces
+
+To make debugging easier, below are links to the full application traces from the solution to Lab 3.
+To generate these traces, you can use the following:
+
+```
+singularity exec library://jlowepower/default/dinocpu sbt -mem 2048 "Lab3 / testOnly dinocpu.ApplicationsTesterLab3 -- -z sum" | grep "DASM\|Cycle" | spike-dasm
+```
+
+If you don't have `spike-dasm`, you can skip the last step above.
+
+- [Fibonacci](https://gist.github.com/powerjg/258c7941516f9c66471cd98f9f179d06)
+- [Natural sum](https://gist.github.com/powerjg/974a97de1a54bd85002fc32efe3358c8)
+- [Multiplier](https://gist.github.com/powerjg/fbfc2c993e53ba058e27a10703362f27)
+- [Divider](https://gist.github.com/powerjg/4b836d4c0b6adb7dd4f450b1aadda279)
+
 # Feedback
 
 Again, instead of uploading a paper version to Gradescope, you will give feedback via a [Google form](https://goo.gl/forms/Nf24HWcWSz19IPgE3).
