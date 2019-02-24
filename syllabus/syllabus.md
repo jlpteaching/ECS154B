@@ -193,11 +193,10 @@ Each lab is weighted based on the amount of time you are given to complete the l
 
 Labs are due at 12 AM (midnight) on (usually a) Sunday night / Monday morning.
 
-- [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 weeks, 8%). Due January 21.
-- [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 8%). Due February 4.
-- [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 8%). Due February 25.
-- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 8%). Due March 11.
-- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (2 weeks, 8%). Due March 15, which is a **Thursday night midnight / Friday morning**.
+- [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 weeks, 10%). Due January 21.
+- [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 10%). Due February 4.
+- [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 10%). Due February 25.
+- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab4.md) (2 weeks, 10%). Due March 15, which is a **Thursday night midnight / Friday morning**.
 
 #### Late Assignments
 
