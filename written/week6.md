@@ -12,9 +12,9 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 
 ## Lectures
 
-15. [More pipelining](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/02-11-Lecture-15.pdf)
-16. [Hazards](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/02-13-Lecture-16.pdf)
-17. [Control hazards](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/02-15-Lecture-17.pdf)
+15. [Instruction-level parallelism](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/02-11-Lecture-15.pdf)
+16. [Dynamic ILP and real systems](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/02-13-Lecture-16.pdf)
+17. [Memory technology](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/02-15-Lecture-17.pdf)
 
 ## Topics covered
 
