@@ -13,8 +13,8 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 ## Lectures
 
 4. [Instruction sets + RISC-V introduction](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-14-Lecture-4.pdf)
-5. [Example machine design](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-16-Lecture-5.pdf)
-6. [Single cycle RISC-V](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-18-Lecture-6.pdf)
+5. [Executing instructions](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-16-Lecture-5.pdf)
+6. [Single cycle CPU](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-18-Lecture-6.pdf)
 
 ## Topics covered
 

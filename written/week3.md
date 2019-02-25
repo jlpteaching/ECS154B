@@ -14,8 +14,8 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 ## Lectures
 
 7. [Performance](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-23-Lecture-7.pdf)
-8. [Multi-cycle and pipeline introduction](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-25-Lecture-8.pdf)
-9. [More performance](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-28-Lecture-9.pdf)
+8. [More performance](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-25-Lecture-8.pdf)
+9. [Pipelining introduction](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-28-Lecture-9.pdf)
 10. [Review](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/01-30-Lecture-10.pdf)
 
 ## Topics covered
