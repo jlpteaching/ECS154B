@@ -32,7 +32,7 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
     * Roofline model
 * Memory
     * Characteristics
-    * SRAM and DRAM
+    * Memory types
 
 ## Problems
 
