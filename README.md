@@ -14,10 +14,10 @@ See the [syllabus](syllabus/syllabus.md) for all class details.
 - [Lecture Outlines](lecture%20outlines/): This directory contains the outlines for the lectures. I will try to post outlines for the lectures sometime the morning before lecture when there are complex figures included.
 - Labs
   - [Lab 1](lab1/lab1.md): Chisel intro and beginning DINO CPU
-  - [Lab 2](lab1/lab2.md): Single cycle DINO CPU
-  - [Lab 3](lab1/lab3.md): Pipelined DINO CPU
-  - [Lab 4](lab1/lab4.md): TBD
-  - [Lab 5](lab1/lab5.md): TBD
+  - [Lab 2](lab21/lab2.md): Single cycle DINO CPU
+  - [Lab 3](lab3/lab3.md): Pipelined DINO CPU
+  - [Lab 4](lab4/lab4.md): DINO CPU branch predictor and performance
+  - ~~[Lab 5](lab5/lab5.md): TBD~~
 - Chisel resources
   - [Overview](chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
   - [Getting Started](chisel-notes/getting-started.md): Some simple examples to get you started with Chisel.
