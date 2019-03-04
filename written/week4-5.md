@@ -6,7 +6,7 @@ Title: ECS 154B Written Problems for Weeks 4-5, Winter 2019
 # Written problems for weeks 4-5
 
 This problem set covers lectures 11 through 14.
-(The week numbers are slightly off, due to the fact that the midterm was in the middle of the week.)
+(The week numbers are slightly off, due to the fact that the first midterm was in the middle of the week.)
 
 Solutions won't be posted on GitHub.
 If you'd like answers to the problems, either post on Piazza or go to Jason's or Justin's office hours.
