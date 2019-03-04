@@ -15,12 +15,12 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 
 22. [Virtual memory 1](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-01-Lecture-22.pdf)
 23. [Virtual memory 2](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-04-Lecture-23.pdf)
-24. [Implementing cache controllers](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-06-Lecture-24.pdf)
+24. [Memory: Putting it all together](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-06-Lecture-24.pdf)
 
 ## Topics covered
 
 * Virtual memory
-* Cache controllers
+* Putting it all together
 
 ## Problems
 
