@@ -216,7 +216,7 @@ val index = Wire(UInt(tableIndexBits.W))
 val value = predictionTable(index)
 ```
 
-Note that `tableIndexBits` is the number of bits needed to index the table, $log_2(number of table entries)$.
+Note that `tableIndexBits` is the number of bits needed to index the table, `log_2(number of table entries)`.
 
 Additionally, the `BaseBranchPredictor` has two functions to increment and decrement saturating counters.
 You can pass a Chisel register to these functions to increment/decrement the value and store it back to the same location.
@@ -323,10 +323,10 @@ Assume the following.
 Note: these are made-up numbers.
 Don't use this in your research or job in industry.
 
-| Design              | Area       |
-|---------------------|------------|
-| No branch predictor | 1 $mm^2$   |
-| 1 Kilobyte of SRAM  | 0.1 $mm^2$ |
+| Design              | Area     |
+|---------------------|----------|
+| No branch predictor | 1 mm^2   |
+| 1 Kilobyte of SRAM  | 0.1 mm^2 |
 
 7. What is the size (in bytes, B) of the default branch predictor with 2 bits per saturating counter and 32 entries?
 8. For each workload, what is the performance improvement if you increase the size of the branch predictor to 256 entries for the local predictor?
