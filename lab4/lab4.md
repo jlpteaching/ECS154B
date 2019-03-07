@@ -204,6 +204,8 @@ First, you will implement the prediction such that every cycle given the incomin
 Second, whenever the `io.update` input is high, you need to update the prediction for the *last* PC that was predicted.
 You should update the prediction based on the `io.taken` input (if true, the branch was taken, if false it was not taken).
 
+*Hint on getting the "last" PC*: the predictor is always updated one cycle after the prediction is made.
+
 
 ### Testing the local history predictor
 
