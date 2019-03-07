@@ -208,14 +208,17 @@ val value = predictionTable(index)
 
 Note that `tableIndexBits` is the number of bits needed to index the table. (log(number of table entries)).
 
-Additionally, the `baseBranchPredictor` has two functions to increment and decrement saturating counters.
+Additionally, the `BaseBranchPredictor` has two functions to increment and decrement saturating counters.
 You can pass a Chisel register to these functions to increment/decrement the value and store it back to the same location.
 
 For instance, if you wanted to decrement a saturating counter in the branch history table and store it back to the same location, you could use the following:
 
 ```
-incrCounter(predictionTable(index))
+decrCounter(predictionTable(index))
 ```
+
+`incrCounter` will increment a saturating counter.
+See the code in `BaseBranchPredictor` for details.
 
 ## Local history predictor
 
