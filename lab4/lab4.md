@@ -294,14 +294,14 @@ In this part, you will run different CPU designs from Lab 2 and Lab 3 (you can u
 
 1. For each workload, what is the total number of instructions executed?
 2. For each workload, what is the CPI for the pipelined CPU with an *always not taken* branch predictor?
-3. Given the frequency assumptions above, what is the speedup of the pipelined design over the single cycle design?
+3. Given the frequency assumptions above, what is the speedup of the pipelined design over the single cycle design for each workload?
 
 ## Comparison of branch predictors
 
 In this part, you will run the benchmarks with the new branch predictors you designed, compare their performance, and explain why you see that performance.
 
 4. For each workload, what is the best performing branch predictor?
-5. What is the speedup of the best performing branch predictor compared to *always not taken*?
+5. What is the speedup of the best performing branch predictor compared to *always not taken* for each workload?
 6. Compare the workloads for which the global history predictor does better than the local history predictor. Look at the C code given in the `src/test/resources/c/` directory. Explain why the global history predictor does better than the local history predictor for one of these workloads.
 
 ## Area overhead of branch predictors
@@ -317,10 +317,10 @@ Assume the following (note: these are made up numbers):
 | No branch predictor | 1 $mm^2$   |
 | 1 Kilobyte of SRAM  | 0.1 $mm^2$ |
 
-7. What is the size in KB of the default branch predictor with 2 bits per saturating counter and 32 entries?
+7. What is the size (in bytes, B) of the default branch predictor with 2 bits per saturating counter and 32 entries?
 8. For each workload, what is the performance improvement if you increase the size of the branch predictor to 256 entries for the local predictor?
 9. For each workload, what is the performance improvement if you keep the number of predictor entries at 32 and increase the saturating counter bits to 3 for the local predictor? What about increasing the saturating counter bits to 8? Explain why you see a speedup for 3 bits and a slowdown for 8 bits.
-10. At a high level (e.g., you don't have to show the data), compare the percent area overhead of the above designs to the performance improvement. Do you believe the increased area is worth it? Be sure to talk about the characteristics of the benchmark code in your answer.
+10. At a high level (e.g., you don't have to show the data), compare the percent area overhead of the designs with 256 entries, with 3-bit counters, and with 8-bit counters to the performance improvement. Do you believe the increased area is worth it? Be sure to talk about the characteristics of the benchmark code in your answer.
 
 ## Extra credit
 
