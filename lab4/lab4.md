@@ -1,16 +1,17 @@
 ---
-title: Lab 4 Branch Prediction
-author: Jason Lowe-Power
+Author: Jason Lowe-Power
+Editor: Justin Perona
+Title: ECS 154B Lab 4, Winter 2019
 ---
 
 # ECS 154B Lab 4, Winter 2019
 
 **Due by 10:00 AM on March 15, 2019.**
 
-*Turn in via Gradescope*
-[See below for details.](#Submission)
+*Turn in via Gradescope*.
+[See below for details.](#submission)
 
-# Table of contents
+# Table of Contents
 
 * [Introduction](#introduction)
     * [Pipeline design constraint](#pipeline-design-constraint)
@@ -18,9 +19,11 @@ author: Jason Lowe-Power
     * [Goals](#goals)
 * [Pipelined CPU design](#pipelined-cpu-design)
     * [Running simulations](#running-simulations)
+    * [CPU designs](#cpu-designs)
     * [Understanding the simulator output](#understanding-the-simulator-output)
+    * [Side note on your own code](#side-note-on-your-own-code)
 * [Part I: Implement local and global branch predictors](#part-i-implement-local-and-global-branch-predictors)
-    * [BaseBranchPredictor details](#basebranchpredictor-details)
+    * [`BaseBranchPredictor` details](#basebranchpredictor-details)
     * [Local history predictor](#local-history-predictor)
         * [Testing the local history predictor](#testing-the-local-history-predictor)
     * [Global history predictor](#global-history-predictor)
@@ -47,7 +50,8 @@ You implemented forwarding to reduce the impact of data hazards, but control haz
 At least, that was your assumption.
 
 In this assignment, you will be evaluating the performance of your pipelined design and extending this design with different branch predictor implementations to try to improve its performance.
-You will implement a local history predictor, a global history predictor, and you will compare their performance.
+You will implement a local history predictor and a global history predictor.
+Then, you will compare their performance.
 
 This is the first time we have used this set of assignments, so there may be mistakes.
 To offset this, we will be offering a variety of ways to get extra credit.
@@ -64,49 +68,50 @@ If you use your own pipeline as the basis instead of the template code, **you ma
 
 Follow the same steps as in [Lab 2](../lab2/lab2.md#updating-the-dino-cpu-code) to get the most recent code.
 
-
 ## Goals
 
 - Learn how to implement different branch predictor designs.
 - Evaluate different CPU designs.
-- Evaluate tradeoffs between different designs.
+- Evaluate trade-offs between different designs.
 
 # Pipelined CPU design
 
 Below is an updated design for the DINO CPU pipeline with a branch predictor.
-There are three main differences (highlighted).
+There are three main differences, which are highlighted.
 
 1. The branch adder has been moved to *the decode stage*.
 2. There is now a branch predictor in the decode stage.
 3. There is one more option on the PC select MUX.
 
-(Apologies for the messy diagram. It's gotten a bit complicated at this point.)
+Apologies for the messy diagram.
+It's gotten a bit complicated at this point.
 
 ![Pipelined CPU](../dino-resources/pipelined-bp.svg)
 
-Additionally a few minor differences include:
+Additionally, a few minor differences include:
 
 1. Updates to the hazard detection logic to deal with taken branches in the ID stage.
 2. Updates to the `taken` logic in the execute stage.
 3. Logic to update the branch predictor.
 4. Generally cleaning up of some of the other code in the pipelined CPU.
 
-**BE SURE TO PULL THE LATEST CODE FROM GITHUB!** If you don't, you may get the wrong results below.
-See [Updating the DINO CPU code](Updating-the-DINO-CPU-code).
+**BE SURE TO PULL THE LATEST CODE FROM GITHUB!**
+If you don't, you may get the wrong results below.
+See [Updating the DINO CPU code](Updating-the-DINO-CPU-code) above.
 
 ## Running simulations
 
 In this assignment, you will be running a number of simulations to measure the performance of your CPU designs.
-Some of these simulations may run for 100,000's of cycles.
-They may take a few minutes on the lab computers and possibly longer on your laptops (especially if you are using vagrant/virtualization).
+Some of these simulations may run for hundreds of thousands of cycles.
+They may take a few minutes on the lab computers, and possibly longer on your laptops, especially if you are using Vagrant or virtualization.
 All of the tests run in less than 30 seconds on my desktop.
 
 To run experiments, you are going to use the `simulate` main function.
 The code can be found in [`simulate.scala`](https://github.com/jlpteaching/dinocpu/blob/master/src/main/scala/simulate.scala).
-This main function takes two parameters: the binary to run and the CPU design to create.
+This main function takes two parameters: the binary to run, and the CPU design to create.
 
 ```
-sbt:dinocpu> runMain dinocpu.simulate <BINARY PATH> <CPU DESIGN>
+sbt:dinocpu> runMain dinocpu.simulate <BINARY-PATH> <CPU-DESIGN>
 ```
 
 You can find binaries for the six benchmarks in the `/src/test/resources/c`(https://github.com/jlpteaching/dinocpu/tree/master/src/test/resources/c) directory.
@@ -117,21 +122,10 @@ Binaries:
 - `multiply`: tests the software multiply implementation
 - `qsort`: quick sort
 - `rsort`: radix sort
-- `towers`: simulation of the [Towers of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) solution
+- `towers`: simulation of the solution to the [Towers of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
 - `vvadd`: vector-vector add
 
-
-> **Side note**
->
-> If you would like to compile your own C code or modify the C code in the benchmarks directory, you need to set up a RISC-V cross compiler and us the Makefile in the `src/test/resources/c` directory.
-> It's important to use that Makefile, because it links in the correct starting code (`common/crt.S`) and creates the binary in a way that the simulator will understand it (`common/test.ld`).
-> A set of cross-compiled GCC binaries for RISC-V can be found in my directory on the CSIF machines.
-> Thus, to build the binaries in `src/test/resources/c` you can use `PATH=/home/jlp/riscv/bin/:$PATH make`
-> *You do not need to be able to do this for the assignment!*
-> I am giving you all of the necessary binaries.
-> I am happy to answer questions if you run into problems using the cross compiler, but questions on the assignment will take precedence.
->
-> More information on setting up a cross compiler can be found on the [RISC-V tools repository](https://github.com/riscv/riscv-tools).
+## CPU designs
 
 You will be evaluating five CPU designs: the single cycle from Lab 2, and then the pipelined design from Lab 3 with four different branch predictors.
 
@@ -176,9 +170,26 @@ Note: You'll see a nasty warning if the verification doesn't succeed (and fail t
 
 You will use this output to answer a number of questions below.
 
+## Side note on your own code
+
+If you would like to compile your own C code or modify the C code in the benchmarks directory, you need to set up a RISC-V cross compiler and use the Makefile in the `src/test/resources/c` directory.
+It's important to use that Makefile, because it links in the correct starting code (`common/crt.S`) and creates the binary in a way that the simulator will understand it (`common/test.ld`).
+A set of cross-compiled GCC binaries for RISC-V can be found in my directory on the CSIF machines.
+Thus, to build the binaries in `src/test/resources/c` you can use the following command:
+
+```
+PATH=/home/jlp/riscv/bin/:$PATH make
+```
+
+*You do not need to be able to do this for the assignment!*
+I am giving you all of the necessary binaries.
+I am happy to answer questions if you run into problems using the cross compiler, but questions on the assignment will take precedence.
+
+More information on setting up a cross compiler can be found on the [RISC-V tools repository](https://github.com/riscv/riscv-tools).
+
 # Part I: Implement local and global branch predictors
 
-For this assignment, you will be writing less Chisel code that previous assignments.
+For this assignment, you will be writing less Chisel code than previous assignments.
 Thus, all of the code is in one part.
 
 In this part, you will be modifying the `branchpred.scala` file in `src/main/scala/components`.
@@ -188,8 +199,7 @@ The `AlwaysTakenPredictor` and `AlwaysNotTakenPredictor` have been implemented f
 
 In this file, there is a `BaseBranchPredictor` which has some convenience functions to allow for a very flexible branch predictor implementation.
 Chisel allows for *parameterized* hardware, which, until now, we have not taken advantage of.
-
-Now, the `configuration.scala` file has parameters for the size of the branch prediction table and the number of bits for the table's saturating counters.
+`configuration.scala` has parameters for the size of the branch prediction table and the number of bits for the table's saturating counters.
 The template code handles all of the parameterized logic for you.
 You simply have to use the structures and functions defined in `BaseBranchPredictor`.
 
@@ -199,18 +209,17 @@ The base branch predictor instantiates a set of registers to hold the prediction
 You will use this in your local and global predictors to store the predictions for future branches based on past history.
 Here's a few examples on how to use the table.
 
-To get the current value out of the table for a particular index you can use the following:
+To get the current value out of the table for a particular index, you can use the following:
 
 ```
 val index = Wire(UInt(tableIndexBits.W))
 val value = predictionTable(index)
 ```
 
-Note that `tableIndexBits` is the number of bits needed to index the table. (log(number of table entries)).
+Note that `tableIndexBits` is the number of bits needed to index the table, `log_2(number of table entries)`.
 
 Additionally, the `BaseBranchPredictor` has two functions to increment and decrement saturating counters.
 You can pass a Chisel register to these functions to increment/decrement the value and store it back to the same location.
-
 For instance, if you wanted to decrement a saturating counter in the branch history table and store it back to the same location, you could use the following:
 
 ```
@@ -222,7 +231,7 @@ See the code in `BaseBranchPredictor` for details.
 
 ## Local history predictor
 
-For this predictor, you will use the PC of the branch to predict whether or not the branch is taken or not taken.
+For this predictor, you will use the PC of the branch to predict whether the branch is taken or not taken.
 The figure below shows the high-level function of the local branch predictor.
 
 ![Local history branch predictor](../dino-resources/local-predictor.svg)
@@ -232,8 +241,7 @@ First, you will implement the prediction such that every cycle given the incomin
 Second, whenever the `io.update` input is high, you need to update the prediction for the *last* PC that was predicted.
 You should update the prediction based on the `io.taken` input (if true, the branch was taken, if false it was not taken).
 
-*Hint on getting the "last" PC*: the predictor is always updated one cycle after the prediction is made.
-
+*Hint on getting the 'last' PC*: the predictor is always updated one cycle after the prediction is made.
 
 ### Testing the local history predictor
 
@@ -246,12 +254,12 @@ sbt:dinocpu> testOnly dinocpu.LargeApplicationsLocalTesterLab4
 ```
 ## Global history predictor
 
-Instead of using the PC to predict if a branch is taken or not, the global predictor uses the last N branches.
-For instance, if the last N branches were `TNTNTN`, you might predict the next branch would be taken.
+Instead of using the PC to predict if a branch is taken or not, the global predictor uses the last `N` branches.
+For instance, if the last `N` branches were `TNTNTN`, you might predict the next branch would be taken.
 
 ![Global history branch predictor](../dino-resources/global-predictor.svg)
 
-Thus, you will need to keep track of the history of the last N branches.
+Thus, you will need to keep track of the history of the last `N` branches.
 Then, you can use this history to index into the prediction table as shown below.
 
 To implement this, you will first implement the history shift register which is updated every time `io.update` is true (since this is when branches are known).
@@ -273,9 +281,10 @@ sbt:dinocpu> testOnly dinocpu.LargeApplicationsGlobalTesterLab4
 The bulk of this assignment will be running experiments and answering questions.
 Once you have correct implementations of the local and global history predictors, you can start trying to decide how to design the best CPU!
 
-Assumptions for the questions:
+The workloads are the six benchmark binaries [mentioned above](#running-and-understanding-simulations).
+Make the following assumptions for the questions below:
 
-| CPU design   | frequency |
+| CPU Design   | Frequency |
 |--------------|-----------|
 | Single cycle | 1 GHz     |
 | Pipelined    | 3 GHz     |
@@ -307,15 +316,17 @@ In this part, you will run the benchmarks with the new branch predictors you des
 ## Area overhead of branch predictors
 
 In this section, you will compare the performance and cost of different branch predictor designs.
-You are trying to maximize the area-performance tradeoff.
-You can modify the size of the branch prediction table by changing the `saturatingCounterBits` and `branchPredTableEntries` in `src/main/scala/configuration.scala` (lines 22 and 24).
+You are trying to maximize the area-performance trade-off.
+You can modify the size of the branch prediction table by changing the variables `saturatingCounterBits` and `branchPredTableEntries` in `src/main/scala/configuration.scala` (lines 22 and 24).
 
-Assume the following (note: these are made up numbers):
+Assume the following.
+Note: these are made-up numbers.
+Don't use this in your research or job in industry.
 
-| Design              | Area       |
-|---------------------|------------|
-| No branch predictor | 1 $mm^2$   |
-| 1 Kilobyte of SRAM  | 0.1 $mm^2$ |
+| Design              | Area     |
+|---------------------|----------|
+| No branch predictor | 1 mm^2   |
+| 1 Kilobyte of SRAM  | 0.1 mm^2 |
 
 7. What is the size (in bytes, B) of the default branch predictor with 2 bits per saturating counter and 32 entries?
 8. For each workload, what is the performance improvement if you increase the size of the branch predictor to 256 entries for the local predictor?
@@ -324,7 +335,7 @@ Assume the following (note: these are made up numbers):
 
 ## Extra credit
 
-11. Design a new branch predictor that does better than the others for some workload. Explain your design and why it does better. Hint: Google has many branch predictor suggestions.
+11. Design a new branch predictor that does better than the others for some workload. Explain your design and why it does better. *Hint: Google has many branch predictor suggestions. Make sure to mention where you took your design from, if you didn't create it yourself.*
 
 # Grading
 
@@ -344,7 +355,7 @@ Failure to adhere to the instructions will result in a loss of points.
 
 ## Code portion
 
-You will upload the one file that you changed (`branchpred.scala`) to Gradescope on the [Lab 4](https://www.gradescope.com/courses/35106/) assignment.
+You will upload the one file that you changed (`branchpred.scala`) to Gradescope on the [Lab 4: Code](https://www.gradescope.com/courses/35106/assignments/172593) assignment.
 
 Once uploaded, Gradescope will automatically download and run your code.
 This should take less than 5 minutes.
@@ -357,9 +368,10 @@ Either the test passes or it fails.
 
 ## Written portion
 
-You will upload your answers to gradescope yourself.
-**You should upload a separate page for each answer**.
-Additionally, I believe gradescope allows you to circle the area with your final answer, please do this!
+You will upload your answers to Gradescope yourself, on the [Lab 4: Written](https://www.gradescope.com/courses/35106/assignments/172599/) assignment.
+**You should upload a separate page for each answer!**
+Additionally, I believe Gradescope allows you to circle the area with your final answer.
+Make sure to do this!
 
 We will not grade any questions for which we cannot read.
 Be sure to check your submission to make sure it's legible, right-side-up, etc.
