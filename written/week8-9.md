@@ -15,15 +15,21 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 
 22. [Virtual memory 1](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-01-Lecture-22.pdf)
 23. [Virtual memory 2](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-04-Lecture-23.pdf)
-24. [Memory: Putting it all together](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-06-Lecture-24.pdf)
+24. [Finishing virtual memory](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-06-Lecture-24.pdf)
+
+### Discussion
+
+Questions about the paper covered in this discussion will also be on the final.
+
+9. [Branch prediction](https://github.com/jlpteaching/ECS154B/blob/master/lecture%20notes/03-07-Discussion-9.pdf)
 
 ## Topics covered
 
 * Virtual memory
-* Putting it all together
+* Branch prediction
 
 ## Problems
 
 ### Virtual memory
 
-### Cache controllers
+### Branch prediction
