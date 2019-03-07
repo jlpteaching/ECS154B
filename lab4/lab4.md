@@ -12,6 +12,31 @@ author: Jason Lowe-Power
 
 # Table of contents
 
+* [Introduction](#introduction)
+    * [Pipeline design constraint](#pipeline-design-constraint)
+    * [Updating the DINO CPU code](#updating-the-dino-cpu-code)
+    * [Goals](#goals)
+* [Pipelined CPU design](#pipelined-cpu-design)
+    * [Running simulations](#running-simulations)
+    * [Understanding the simulator output](#understanding-the-simulator-output)
+* [Part I: Implement local and global branch predictors](#part-i-implement-local-and-global-branch-predictors)
+    * [BaseBranchPredictor details](#basebranchpredictor-details)
+    * [Local history predictor](#local-history-predictor)
+        * [Testing the local history predictor](#testing-the-local-history-predictor)
+    * [Global history predictor](#global-history-predictor)
+        * [Testing the global history predictor](#testing-the-global-history-predictor)
+* [Part II: Running experiments](#part-ii-running-experiments)
+    * [Single cycle vs. pipelined](#single-cycle-vs-pipelined)
+    * [Comparison of branch predictors](#comparison-of-branch-predictors)
+    * [Area overhead of branch predictors](#area-overhead-of-branch-predictors)
+    * [Extra credit](#extra-credit)
+* [Grading](#grading)
+* [Submission](#submission)
+    * [Code portion](#code-portion)
+    * [Written portion](#written-portion)
+    * [Academic misconduct reminder](#academic-misconduct-reminder)
+* [Hints](#hints)
+
 
 # Introduction
 
