@@ -97,7 +97,7 @@ Additionally, a few minor differences include:
 
 **BE SURE TO PULL THE LATEST CODE FROM GITHUB!**
 If you don't, you may get the wrong results below.
-See [Updating the DINO CPU code](Updating-the-DINO-CPU-code) above.
+See [Updating the DINO CPU code](#updating-the-dino-cpu-code) above.
 
 ## Running simulations
 
