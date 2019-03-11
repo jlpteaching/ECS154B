@@ -344,6 +344,10 @@ Don't use this in your research or job in industry.
 
 11. Design a new branch predictor that does better than the others for some workload. Explain your design and why it does better. *Hint: Google has many branch predictor suggestions. Make sure to mention where you took your design from, if you didn't create it yourself.*
 
+## Other good questions for next time
+
+#. This branch predictor has less than 1 KB of capacity. Why does it perform well for these applications and yet real branch preditors have 8-16 KB or more capacity?
+
 # Grading
 
 Grading will be done automatically on Gradescope.
