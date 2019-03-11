@@ -3,6 +3,13 @@ Author: Jason Lowe-Power
 Title: Chisel Overview
 ---
 
+## For next time!
+
+Need to document how the print statements work, especially when looking at the values "in" registers.
+Do you get the value at the beginning of the cycle, the end of the cycle, etc.
+
+In the first assignment, the students should play around with print statements and registers to see what happens.
+
 # Chisel Overview
 
 This document explains a little about Chisel.
