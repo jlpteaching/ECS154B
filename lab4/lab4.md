@@ -252,6 +252,10 @@ sbt:dinocpu> testOnly dinocpu.LocalPredictorUnitTesterLab4
 sbt:dinocpu> testOnly dinocpu.SmallApplicationsLocalTesterLab4
 sbt:dinocpu> testOnly dinocpu.LargeApplicationsLocalTesterLab4
 ```
+
+Updated tests (not on Gradescope) are available if you pull from `jlpteaching/dinocpu` after 10am on 3/13.
+This adds three random tests for the local predictor.
+
 ## Global history predictor
 
 Instead of using the PC to predict if a branch is taken or not, the global predictor uses the last `N` branches.
@@ -275,6 +279,9 @@ sbt:dinocpu> testOnly dinocpu.GlobalPredictorUnitTesterLab4
 sbt:dinocpu> testOnly dinocpu.SmallApplicationsGlobalTesterLab4
 sbt:dinocpu> testOnly dinocpu.LargeApplicationsGlobalTesterLab4
 ```
+
+Updated tests (not on Gradescope) are available if you pull from `jlpteaching/dinocpu` after 10am on 3/13.
+This adds two more random tests for the global history predictor.
 
 # Part II: Running experiments
 
