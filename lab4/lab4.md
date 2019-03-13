@@ -337,7 +337,7 @@ Don't use this in your research or job in industry.
 
 7. What is the size (in bytes, B) of the default branch predictor with 2 bits per saturating counter and 32 entries?
 8. For each workload, what is the performance improvement if you increase the size of the branch predictor to 256 entries for the local predictor?
-9. For each workload, what is the performance improvement if you keep the number of predictor entries at 32 and increase the saturating counter bits to 3 for the local predictor? What about increasing the saturating counter bits to 8? Explain why you see a speedup for 3 bits and a slowdown for 8 bits.
+9. For each workload, what is the performance improvement if you keep the number of predictor entries at 32 and increase the saturating counter bits to 3 for the local predictor? What about increasing the saturating counter bits to 8? Explain why you see a speedup for 3 bits and a slowdown for 8 bits **for qsort**.
 10. At a high level (e.g., you don't have to show the data), compare the percent area overhead of the designs with 256 entries, with 3-bit counters, and with 8-bit counters to the performance improvement. Do you believe the increased area is worth it? Be sure to talk about the characteristics of the benchmark code in your answer.
 
 ## Extra credit
