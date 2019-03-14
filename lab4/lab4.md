@@ -310,7 +310,7 @@ In this part, you will run different CPU designs from Lab 2 and Lab 3 (you can u
 
 1. For each workload, what is the total number of instructions executed?
 2. For each workload, what is the CPI for the pipelined CPU with an *always not taken* branch predictor?
-3. Given the frequency assumptions above, what is the speedup of the pipelined design over the single cycle design for each workload?
+3. Given the frequency assumptions above, what is the speedup of the pipelined design with the always not taken branch predictor over the single cycle design for each workload?
 
 ## Comparison of branch predictors
 
