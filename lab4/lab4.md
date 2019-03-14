@@ -114,7 +114,7 @@ This main function takes two parameters: the binary to run, and the CPU design t
 sbt:dinocpu> runMain dinocpu.simulate <BINARY-PATH> <CPU-DESIGN>
 ```
 
-You can find binaries for the six benchmarks in the `/src/test/resources/c`(https://github.com/jlpteaching/dinocpu/tree/master/src/test/resources/c) directory.
+You can find binaries for the six benchmarks in the [`/src/test/resources/c`](https://github.com/jlpteaching/dinocpu/tree/master/src/test/resources/c) directory.
 The source is also included in the subdirectories.
 
 Binaries:
@@ -375,8 +375,8 @@ Either the test passes or it fails.
 
 ## Written portion
 
-You will upload your answers to Gradescope yourself, on the [Lab 4: Written](https://www.gradescope.com/courses/35106/assignments/172599/) assignment.
-**You should upload a separate page for each answer!**
+You will upload your answers for the [Lab 4: Written](https://www.gradescope.com/courses/35106/assignments/172599/submissions/new) assignment to Gradescope.
+**Please upload a separate page for each answer!**
 Additionally, I believe Gradescope allows you to circle the area with your final answer.
 Make sure to do this!
 
