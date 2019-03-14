@@ -288,7 +288,7 @@ This adds two more random tests for the global history predictor.
 The bulk of this assignment will be running experiments and answering questions.
 Once you have correct implementations of the local and global history predictors, you can start trying to decide how to design the best CPU!
 
-The workloads are the six benchmark binaries [mentioned above](#running-and-understanding-simulations).
+The workloads are the six benchmark binaries [mentioned above](#running-simulations).
 Make the following assumptions for the questions below:
 
 | CPU Design   | Frequency |
