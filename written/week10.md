@@ -20,6 +20,10 @@ If you'd like answers to the problems, either post on Piazza or go to Jason's or
 ## Topics covered
 
 * Parallel architectures
+    * Flynn's taxonomy
+    * Parallel processing and memory
+    * Warehouse-scale computing
+    * Accelerators
 
 ## Problems
 
