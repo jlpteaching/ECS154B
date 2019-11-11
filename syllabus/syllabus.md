@@ -4,8 +4,7 @@ Editor: Justin Perona
 Title: ECS 154B - Computer Architecture
 ---
 
-ECS 154B - Computer Architecture
-================================
+# ECS 154B - Computer Architecture
 
 * [Important Information](#important-information)
     * [Time and Location](#time-and-location)
@@ -34,8 +33,7 @@ ECS 154B - Computer Architecture
     * [Textbook](#textbook)
     * [Schedule](#schedule)
 
-Important Information
----------------------
+## Important Information
 
 ### Time and Location
 
@@ -47,7 +45,7 @@ Important Information
 
 **Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>)
 
-*Office Hours*: 4:00 PM - 6:00 PM Wednesday, or by appointment.
+*Office Hours*: 5:10 PM - 6:00 PM Wednesday, or by appointment.
 
 *Office Location*: 3049 Kemper Hall
 
@@ -57,6 +55,8 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 
 ### Teaching Assistants
 
+TBD
+<!--
 #### Justin Perona (<jlperona@ucdavis.edu>)
 
 This is my 8th time TAing for ECS 154B, from 2015 until now.
@@ -71,6 +71,7 @@ In addition, I taught (as the instructor) ECS 154A in Summer Session II 2018.
 *Office Hours*: 7:00 - 8:00 PM Wednesday
 
 *Office Location*: 53 Kemper
+-->
 
 ### GitHub
 
@@ -81,13 +82,9 @@ If I make changes to those documents, they will appear first on GitHub.
 
 GitHub will contain this document and the assignments.
 
-### Canvas
-
-We will be using [Canvas](https://canvas.ucdavis.edu/courses/315466) for grade distribution.
-
 ### Gradescope
 
-We will use [Gradescope](https://www.gradescope.com/courses/35106) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
+We will use [Gradescope](https://www.gradescope.com/courses/73159) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
 Gradescope gives you a graded PDF version of your test, along with a rubric, immediately after we're done grading.
 You will receive an email from Gradescope to make your account early in the quarter.
 
@@ -99,7 +96,7 @@ However, if you submit after the deadline, the [late policy](#late-assignments) 
 
 ### Piazza
 
-We will use [Piazza](https://piazza.com/class/jqitg8o5zp125) for class discussions outside of the classroom.
+We will use [Piazza]() for class discussions outside of the classroom.
 If you haven't used Piazza before, it's a cool tool that is essentially a message board for the class.
 Both the TAs and I will be on Piazza to answer questions.
 
@@ -113,7 +110,7 @@ This way, your question, and the answer to your question, can help somebody else
 We will change questions asked privately to public, if we deem it appropriate.
 If your question involves code you've written, or is about a personal issue, we will leave those private.
 
-10% of your grade is tied to participation, much of which will take place over Piazza.
+10% of your grade is tied to participation, much of which can take place over Piazza.
 The benchmark for good Piazza participation is at least 10 questions asked, answered, or follow-ups throughout the quarter.
 
 ### Regrade Requests
@@ -124,12 +121,13 @@ Regrade requests should be made in person, in office hours or by appointment.
 ### Accommodations
 
 The exam schedule is available on the [schedule](schedule.csv).
-Per [official UC Davis policy](http://catalog.ucdavis.edu/academicinfo/exams.html), if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 14, 2018**.
+Per official UC Davis policy, if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 14, 2018**.
+If you do not notify me by this time, I cannot guarantee I will be able to make the accommodation.
 
-For each test, quiz, etc. you must reach out to me *one week in advance* to schedule specific accomodations for that test, quiz, etc.
+For **each** test, quiz, etc. you must reach out to me *one week in advance* to schedule specific accommodations for that test, quiz, etc.
+If you do not notify me by this time, I cannot guarantee I will be able to make the accommodation.
 
-Academic Misconduct
--------------------
+## Academic Misconduct
 
 Academic misconduct is a serious issue.
 You can find the official UC Davis policy on the [Office of Student Support and Judicial Affairs](http://sja.ucdavis.edu/) website.
@@ -145,8 +143,7 @@ If we find any of the class's code beyond the template files distributed, we wil
 Any violations of this policy will result in reporting the violating student(s) to the Office of Student Support and Judicial Affairs.
 This can result in a 0 on the assignment or an F in the class.
 
-Student Support
----------------
+## Student Support
 
 As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation.
 These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities.
@@ -156,19 +153,16 @@ You can learn more about the broad range of confidential mental health services 
 
 You can also contact me during office hours, via email, or by making a separate office hour appointment: [jlowepower@ucdavis.edu](mailto:jlowepower@ucdavis.edu).
 
-Prerequisites
--------------
+## Prerequisites
 
 ECS 154A; or both EEC 170 and EEC 180A.
 
-PTAs
-----
+## PTAs
 
 Before asking for a PTA, be sure that you have read the [Department of Computer Science's PTA Policy](http://www.cs.ucdavis.edu/blog/pta-policy/).
 PTA numbers will only be issued after the 12th day of instruction, and PTA numbers are only issued for extenuating circumstances related to graduation.
 
-Assignments and Tests
----------------------
+## Assignments and Tests
 
 ### Grading Breakdown
 
@@ -182,7 +176,7 @@ Assignments and Tests
 ### Participation
 
 10% of your grade comes from actively participating in class (defined broadly).
-You are expected to participate on [Piazza](https://piazza.com/class/jqitg8o5zp125) (e.g., at least 10 contributions), lecture discussions, discussion section discussions, **or** office hours.
+You are expected to participate on [Piazza]() (e.g., at least 10 contributions), lecture discussions, discussion section discussions, **or** office hours.
 
 ### Labs
 
@@ -196,7 +190,8 @@ Labs are due at 12 AM (midnight) on (usually a) Sunday night / Monday morning.
 - [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 weeks, 10%). Due January 21.
 - [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 10%). Due February 4.
 - [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 10%). Due February 25.
-- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab4.md) (2 weeks, 10%). Due March 15, which is a **Thursday night midnight / Friday morning**.
+- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 10%). Due March 15, which is a **Thursday night midnight / Friday morning**.
+- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 10%). Due March
 
 #### Late Assignments
 
@@ -241,8 +236,7 @@ You are allowed **two** 8.5" x 11" sheets of *handwritten* notes.
 
 The final will be cumulative with a focus on coalescing the knowledge gained throughout the quarter.
 
-Reading List and Schedule
--------------------------
+## Reading List and Schedule
 
 ### Textbook
 
