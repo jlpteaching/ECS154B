@@ -32,7 +32,7 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
   - [Class resources]()
   - [Academic misconduct](syllabus/syllabus.md#academic-misconduct)
   - [Assignments and tests](syllabus/syllabus.md#assignments-and-tests)
-  - [Reading list and Schedule](syllabus/schedule.csv)
+  - [Schedule and required reading](syllabus/schedule.csv)
 - [Lecture Notes](lecture%20notes/): This directory contains the notes that I write in OneNote during lecture. These will be posted soon after each class.
   - You can find notes from previous offerings by checking out the previous year's branches: [WQ 18](https://github.com/jlpteaching/ECS154B/tree/wq18/lecture%20notes), [WQ 19](https://github.com/jlpteaching/ECS154B/tree/wq19/lecture%20notes).
 - [Lecture Outlines](lecture%20outlines/): This directory contains the outlines for the lectures. I will try to post outlines for the lectures sometime the morning before lecture when there are complex figures included.
