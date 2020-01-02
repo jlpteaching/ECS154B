@@ -170,8 +170,9 @@ PTA numbers will only be issued after the 12th day of instruction, and PTA numbe
 |---------------|------------|
 | Participation | 10%        |
 | Labs (5x)     | 40%        |
-| Midterm (2x)  | 30%        |
-| Final         | 20%        |
+| Quizzes (10x) | 20%        |
+| Midterm       | 15%        |
+| Final         | 15%        |
 
 ### Participation
 
@@ -206,6 +207,15 @@ This will give you partial points up to 72 hours after the due date and penalize
 Note: When submitting late, the reduction in points will not immediately appear in Gradescope.
 Rest assured, we will go through and double check all of the submission times ;).
 
+### Quizzes
+
+There will be a quiz every week on Canvas that will be due before lecture on Wednesdays.
+The quiz will be published by Tuesday morning each week.
+
+The quizzes are open book/notes/internet.
+However, you *must* take the quiz on your own, and you cannot work together on the quizzes.
+See 
+
 ### Tests
 
 Note that for each test, there will be a practice test available at least four days in advance.
@@ -215,26 +225,21 @@ The two midterms will be held during the discussion time and will be 50 minute t
 
 The final will be cumulative during the final time and will use the full 2 hours.
 
-#### Midterm 1: January 31
+#### Midterm: February 10
 
-The first midterm is on Thursday, January 31, from 3:10 - 4:00 PM in 6 Olson.
+The first midterm is on Monday, February 31, from 4:10 - 5:00 PM.
 You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
 
-The first midterm will cover technology, performance and CPU design basics.
-
-#### Midterm 2: February 28
-
-The second midterm is on Thursday, February 28, from 3:10 - 4:00 PM in 6 Olson.
-You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
-
-The second midterm will cover pipelined CPU design, memory technology, and memory hierarchy.
+The first midterm will cover technology, performance and CPU design.
+This is chapters 1 and 4 of the textbook.
 
 #### Final: March 20
 
-The final is on Wednesday, March 20, from 1:00 - 3:00 PM in 176 Chemistry.
+The final is on Wednesday, March 20, from 10:30 AM - 12:30 PM <location TBD>.
 You are allowed **two** 8.5" x 11" sheets of *handwritten* notes.
 
-The final will be cumulative with a focus on coalescing the knowledge gained throughout the quarter.
+The final will be have a focus on the second half of the class (chapters 5 and the parts of chapter 6 we cover).
+However, much of this depends on understanding the first half of the class, and the final will have "coalescing" questions which require you to understand everything we've covered over the quarter.
 
 ## Reading List and Schedule
 
