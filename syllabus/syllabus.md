@@ -45,33 +45,21 @@ Title: ECS 154B - Computer Architecture
 
 **Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>)
 
-*Office Hours*: 5:10 PM - 6:00 PM Wednesday, or by appointment.
+*Office Hours*: 4:30 PM - 5:30 PM Tuesdays, or by appointment.
 
 *Office Location*: 3049 Kemper Hall
 
 Please suggest a meeting time when you email me for an appointment.
-You can use [my calendar](http://goo.gl/hmtAH) to quickly find a time I am available.
+You can use [my calendar](https://calendar.google.com/calendar/embed?src=jlowepower%40ucdavis.edu&ctz=America%2FLos_Angeles) to quickly find a time I am available.
 It's not guaranteed to be completely up-to-date, but it gives a good starting point.
 
-### Teaching Assistants
+### Teaching Assistant
 
-TBD
-<!--
-#### Justin Perona (<jlperona@ucdavis.edu>)
+#### Julian Angeles
 
-This is my 8th time TAing for ECS 154B, from 2015 until now.
-In addition, I taught (as the instructor) ECS 154A in Summer Session II 2018.
+*Office Hours*: TBD
 
-*Office Hours*: 2:10 - 3:00 PM Friday
-
-*Office Location*: 3039 Kemper
-
-#### Filipe Eduardo Borges (<fborges@ucdavis.edu>)
-
-*Office Hours*: 7:00 - 8:00 PM Wednesday
-
-*Office Location*: 53 Kemper
--->
+*Office Location*: TBD
 
 ### GitHub
 
@@ -121,7 +109,7 @@ Regrade requests should be made in person, in office hours or by appointment.
 ### Accommodations
 
 The exam schedule is available on the [schedule](schedule.csv).
-Per official UC Davis policy, if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 14, 2018**.
+Per official UC Davis policy, if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 10, 2018**.
 If you do not notify me by this time, I cannot guarantee I will be able to make the accommodation.
 
 For **each** test, quiz, etc. you must reach out to me *one week in advance* to schedule specific accommodations for that test, quiz, etc.
@@ -142,6 +130,7 @@ If we find any of the class's code beyond the template files distributed, we wil
 
 Any violations of this policy will result in reporting the violating student(s) to the Office of Student Support and Judicial Affairs.
 This can result in a 0 on the assignment or an F in the class.
+See the [Computer Science Department's policy](https://www.cs.ucdavis.edu/blog/academic-misconduct-policy/) for more information.
 
 ## Student Support
 
@@ -152,6 +141,9 @@ If you or someone you know is feeling overwhelmed, depressed, and/or in need of 
 You can learn more about the broad range of confidential mental health services available on campus via [Student Health and Counseling Services](https://shcs.ucdavis.edu/).
 
 You can also contact me during office hours, via email, or by making a separate office hour appointment: [jlowepower@ucdavis.edu](mailto:jlowepower@ucdavis.edu).
+If you need additional accommodations due to these or other personal issues, don't hesitate to ask.
+I cannot guarantee that I will be able to make accommodations.
+However, reaching out to me earlier will increase the likelihood that I can make accommodations.
 
 ## Prerequisites
 
@@ -186,13 +178,14 @@ The labs can be found via the links below.
 All together, the labs are worth 40% of your final grade.
 Each lab is weighted based on the amount of time you are given to complete the lab.
 
-Labs are due at 12 AM (midnight) on (usually a) Sunday night / Monday morning.
+Labs are due at 11:59 PM on the date listed below.
 
-- [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (2 weeks, 10%). Due January 21.
-- [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 10%). Due February 4.
-- [Lab 3](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 10%). Due February 25.
-- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 10%). Due March 15, which is a **Thursday night midnight / Friday morning**.
-- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 10%). Due March
+- [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (1.5 weeks, 10%). Due January 15.
+- [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 10%). Due January 27.
+- [Lab 3.1](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (1 week, 5%). Due February 5.
+- [Lab 3.2](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 5%). Due February 19.
+- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 10%). Due March 4.
+- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (1.5 weeks, 10%). Due March 13.
 
 #### Late Assignments
 
@@ -214,7 +207,7 @@ The quiz will be published by Tuesday morning each week.
 
 The quizzes are open book/notes/internet.
 However, you *must* take the quiz on your own, and you cannot work together on the quizzes.
-See 
+See
 
 ### Tests
 
@@ -235,7 +228,7 @@ This is chapters 1 and 4 of the textbook.
 
 #### Final: March 20
 
-The final is on Wednesday, March 20, from 10:30 AM - 12:30 PM <location TBD>.
+The final is on Friday, March 20, from 10:30 AM - 12:30 PM <location TBD>.
 You are allowed **two** 8.5" x 11" sheets of *handwritten* notes.
 
 The final will be have a focus on the second half of the class (chapters 5 and the parts of chapter 6 we cover).
