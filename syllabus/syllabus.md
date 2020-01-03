@@ -37,9 +37,9 @@ Title: ECS 154B - Computer Architecture
 
 ### Time and Location
 
-*Lecture*: **Chemistry 176** 11:00 AM - 11:50 AM Monday, Wednesday, Friday
+*Lecture*: **Wellman 226** 4:10 PM - 5:00 PM Monday, Wednesday, Friday
 
-*Discussion*: **Olson Hall 6** 3:10 PM - 4:00 PM Thursday
+*Discussion*: **Wellman 226** 8:00 AM - 8:50 AM Thursday
 
 ### Instructor
 
