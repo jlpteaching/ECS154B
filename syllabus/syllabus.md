@@ -162,9 +162,9 @@ PTA numbers will only be issued after the 12th day of instruction, and PTA numbe
 |---------------|------------|
 | Participation | 10%        |
 | Labs (5x)     | 40%        |
-| Quizzes (10x) | 20%        |
-| Midterm       | 15%        |
-| Final         | 15%        |
+| Quizzes (10x) | 10%        |
+| Midterm       | 20%        |
+| Final         | 20%        |
 
 ### Participation
 
