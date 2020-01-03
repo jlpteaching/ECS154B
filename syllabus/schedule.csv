@@ -16,7 +16,7 @@ Date,Class Type,Topic Covered,Reading,Milestones
 1/30/2020,Discussion,Pipeining design details (Lab 3),,
 1/31/2020,Lecture,More pipelining,P&H 4.9,
 2/3/2020,Lecture,Instruction-level parallelism,P&H 4.1,
-2/5/2020,Lecture,Speculation and out of order,P&H 4.10-4.12,
+2/5/2020,Lecture,Speculation and out of order,P&H 4.10-4.12,Lab 3.1 Due
 2/6/2020,Discussion,More Pipeline design details (Lab 3),,
 2/7/2020,Lecture,More speculation and out of order,,
 2/10/2020,Lecture,Midterm,"Technology and Performance (Chapter 1), CPU design (Chapter 4)",
@@ -24,7 +24,7 @@ Date,Class Type,Topic Covered,Reading,Milestones
 2/13/2020,Discussion,More Pipeline design details (Lab 3),,
 2/14/2020,Lecture,Memory hierarchy,P&H 5.3,
 2/17/2020,Lecture,President’s Day Holiday,,
-2/19/2020,Lecture,Memory hierarchy,P&H 5.3,Lab 3 Due
+2/19/2020,Lecture,Memory hierarchy,P&H 5.3,Lab 3.2 Due
 2/20/2020,Discussion,Cache details (Lab 4),,
 2/21/2020,Lecture,Multi-level cache hierarchies,P&H 5.8,
 2/24/2020,Lecture,Virtual memory 1,P&H  5.6-5.7,
