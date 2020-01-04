@@ -9,7 +9,7 @@ Title: ECS 154B - Computer Architecture
 * [Important Information](#important-information)
     * [Time and Location](#time-and-location)
     * [Instructor](#instructor)
-    * [Teaching Assistants](#teaching-assistants)
+    * [Teaching Assistants](#teaching-assistant)
     * [GitHub](#github)
     * [Canvas](#canvas)
     * [Gradescope](#gradescope)
@@ -26,8 +26,7 @@ Title: ECS 154B - Computer Architecture
     * [Labs](#labs)
         * [Late Assignments](#late-assignments)
     * [Tests](#tests)
-        * [Midterm 1: January 31](#midterm-1-january-31)
-        * [Midterm 2: February 28](#midterm-2-february-28)
+        * [Midterm: February 10](#midterm-february-10)
         * [Final](#final-march-20)
 * [Reading List and Schedule](#reading-list-and-schedule)
     * [Textbook](#textbook)
@@ -57,9 +56,9 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 
 #### Julian Angeles
 
-*Office Hours*: TBD
+*Office Hours*: 6:00 PM - 7:00 PM Mondays
 
-*Office Location*: TBD
+*Office Location*: 53 Kemper Hall
 
 ### GitHub
 
@@ -84,7 +83,7 @@ However, if you submit after the deadline, the [late policy](#late-assignments) 
 
 ### Piazza
 
-We will use [Piazza]() for class discussions outside of the classroom.
+We will use [Piazza](https://piazza.com/ucdavis/winter2020/ecs154b) for class discussions outside of the classroom.
 If you haven't used Piazza before, it's a cool tool that is essentially a message board for the class.
 Both the TAs and I will be on Piazza to answer questions.
 
@@ -169,7 +168,7 @@ PTA numbers will only be issued after the 12th day of instruction, and PTA numbe
 ### Participation
 
 10% of your grade comes from actively participating in class (defined broadly).
-You are expected to participate on [Piazza]() (e.g., at least 10 contributions), lecture discussions, discussion section discussions, **or** office hours.
+You are expected to participate on [Piazza](https://piazza.com/ucdavis/winter2020/ecs154b) (e.g., at least 10 contributions), lecture discussions, discussion section discussions, **or** office hours.
 
 ### Labs
 
@@ -185,7 +184,7 @@ Labs are due at 11:59 PM on the date listed below.
 - [Lab 3.1](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (1 week, 5%). Due February 5.
 - [Lab 3.2](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 5%). Due February 19.
 - [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 10%). Due March 4.
-- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.md) (1.5 weeks, 10%). Due March 13.
+- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.rst) (1.5 weeks, 10%). Due March 13.
 
 #### Late Assignments
 
@@ -207,23 +206,22 @@ The quiz will be published by Tuesday morning each week.
 
 The quizzes are open book/notes/internet.
 However, you *must* take the quiz on your own, and you cannot work together on the quizzes.
-See
 
 ### Tests
 
 Note that for each test, there will be a practice test available at least four days in advance.
 The practice test will have similar questions to the actual tests.
 
-The two midterms will be held during the discussion time and will be 50 minute tests.
+The midterm will be held during the lecture time and will be a 50 minute test.
 
 The final will be cumulative during the final time and will use the full 2 hours.
 
 #### Midterm: February 10
 
-The first midterm is on Monday, February 31, from 4:10 - 5:00 PM.
+The midterm is on Monday, February 10, from 4:10 - 5:00 PM.
 You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
 
-The first midterm will cover technology, performance and CPU design.
+The midterm will cover technology, performance and CPU design.
 This is chapters 1 and 4 of the textbook.
 
 #### Final: March 20

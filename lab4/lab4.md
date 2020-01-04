@@ -1,12 +1,12 @@
 ---
 Author: Jason Lowe-Power
 Editor: Justin Perona
-Title: ECS 154B Lab 4, Winter 2019
+Title: ECS 154B Lab 4, Winter 2020
 ---
 
-# ECS 154B Lab 4, Winter 2019
+# ECS 154B Lab 4, Winter 2020
 
-**Due by 10:00 AM on March 15, 2019.**
+**Due by 11:59 PM on March 4, 2020.**
 
 *Turn in via Gradescope*.
 [See below for details.](#submission)
