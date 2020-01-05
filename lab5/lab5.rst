@@ -1,8 +1,8 @@
 :Author: Jason Lowe-Power
 
-**ECS 154B Lab 5, Winter 2018**
+**ECS 154B Lab 5, Winter 2020**
 
-**Due by 9:00 AM on Mar 19, 2018**
+**Due by 11:59 PM on Mar 13, 2020**
 
 **NOTE: LATE POLICY CHANGE!!**
 
