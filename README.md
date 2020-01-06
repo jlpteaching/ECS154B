@@ -33,9 +33,9 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
   - [Academic misconduct](syllabus/syllabus.md#academic-misconduct)
   - [Assignments and tests](syllabus/syllabus.md#assignments-and-tests)
   - [Schedule and required reading](syllabus/schedule.csv)
-- [Lecture Notes](lecture%20notes/): This directory contains the notes that I write in OneNote during lecture. These will be posted soon after each class.
+- [Lecture Notes](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX): All of my written notes in lecture can be found on [OneNote](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX) which should be viewable online.
   - You can find notes from previous offerings by checking out the previous year's branches: [WQ 18](https://github.com/jlpteaching/ECS154B/tree/wq18/lecture%20notes), [WQ 19](https://github.com/jlpteaching/ECS154B/tree/wq19/lecture%20notes).
-- [Lecture Outlines](lecture%20outlines/): This directory contains the outlines for the lectures. I will try to post outlines for the lectures sometime the morning before lecture when there are complex figures included.
+- [Lecture Outlines](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX): Can also be found on my [OneNote notebook for this class](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX). These will generally be complete before lecture and will sometimes contain complex figures, videos, slides, etc.
 - Labs
   - [Lab 1](lab1/lab1.md): Chisel intro and beginning DINO CPU
   - [Lab 2](lab21/lab2.md): Single cycle DINO CPU
