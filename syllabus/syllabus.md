@@ -224,9 +224,9 @@ You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
 The midterm will cover technology, performance and CPU design.
 This is chapters 1 and 4 of the textbook.
 
-#### Final: March 20
+#### Final: March 19
 
-The final is on Friday, March 20, from 10:30 AM - 12:30 PM <location TBD>.
+The final is on Friday, March 19, from 3:30 pm - 5:30 pm <location TBD>.
 You are allowed **two** 8.5" x 11" sheets of *handwritten* notes.
 
 The final will be have a focus on the second half of the class (chapters 5 and the parts of chapter 6 we cover).
