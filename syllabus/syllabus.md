@@ -179,12 +179,12 @@ Each lab is weighted based on the amount of time you are given to complete the l
 
 Labs are due at 11:59 PM on the date listed below.
 
-- [Lab 1](https://github.com/jlpteaching/ECS154B/blob/master/lab1/lab1.md) (1.5 weeks, 10%). Due January 15.
-- [Lab 2](https://github.com/jlpteaching/ECS154B/blob/master/lab2/lab2.md) (2 weeks, 10%). Due January 27.
-- [Lab 3.1](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (1 week, 5%). Due February 5.
-- [Lab 3.2](https://github.com/jlpteaching/ECS154B/blob/master/lab3/lab3.md) (2 weeks, 5%). Due February 19.
-- [Lab 4](https://github.com/jlpteaching/ECS154B/blob/master/lab4/lab4.md) (2 weeks, 10%). Due March 4.
-- [Lab 5](https://github.com/jlpteaching/ECS154B/blob/master/lab5/lab5.rst) (1.5 weeks, 10%). Due March 13.
+- [Lab 1](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-1.md) (1.5 weeks, 10%). Due January 15.
+- [Lab 2](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-2.md) (2 weeks, 10%). Due January 27.
+- [Lab 3.1](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-3.md) (1 week, 5%). Due February 5.
+- [Lab 3.2](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-3.md) (2 weeks, 5%). Due February 19.
+- [Lab 4](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-4.md) (2 weeks, 10%). Due March 4.
+- [Lab 5](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-5.md) (1.5 weeks, 10%). Due March 13.
 
 #### Late Assignments
 
