@@ -18,7 +18,7 @@ See the [syllabus](syllabus/syllabus.md) for all class details.
 
 **Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>)
 
-*Office Hours*: 5:10 PM - 6:00 PM Wednesday (after class), or by appointment.
+*Office Hours*: 4:30 PM - 5:30 PM Tuesdays, or by appointment.
 
 *Office Location*: 3049 Kemper Hall
 
