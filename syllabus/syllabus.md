@@ -54,7 +54,7 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 
 ### Teaching Assistant
 
-#### Julian Angeles
+**Julian Angeles** (jtangeles@ucdavis.edu )
 
 *Office Hours*: 6:00 PM - 7:00 PM Mondays
 
@@ -147,6 +147,9 @@ However, reaching out to me earlier will increase the likelihood that I can make
 ## Prerequisites
 
 ECS 154A; or both EEC 170 and EEC 180A.
+
+Although not an official prereq, this course requires experience with many programming tools (e.g., Linux, command line, git, etc.).
+A good resource is a recent MIT course on "[The missing semester](https://missing.csail.mit.edu/)" which teaches these important tools that aren't necessarily covered in a "normal" computer science curriculum.
 
 ## PTAs
 
