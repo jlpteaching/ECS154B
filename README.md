@@ -40,8 +40,8 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
   - [Lab 1](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-1.md): Chisel intro and beginning DINO CPU
   - [Lab 2](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-2.md): Single cycle DINO CPU
   - [Lab 3](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-3.md): Pipelined DINO CPU
-  - [Lab 4](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-4.md): DINO CPU cache
-  - [Lab 5](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-5.md): Performance analysis of DINO CPU
+  - [Lab 4](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-4.md): DINO CPU non-combinational memory
+  - [Lab 5](assignment5/assignment-5.md): Matrix multiplication
 - Chisel resources
   - [Overview](chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
   - [Getting Started](chisel-notes/getting-started.md): Some simple examples to get you started with Chisel.
