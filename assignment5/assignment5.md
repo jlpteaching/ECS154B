@@ -14,9 +14,9 @@ Title: ECS 154B Lab 5, Winter 2020
 
 * [Introduction](#introduction)
 * [Base matrix multiplication algorithm](#base-matrix-multiplication-algorithm)
-* [Part I: loop interchange](#part-i--loop-interchange)
-* [Part II: blocking](#part-ii--blocking)
-* [Part III: parallelism](#part-iii--parallelism)
+* [Part I: loop interchange](#part-i-loop-interchange)
+* [Part II: blocking](#part-ii-blocking)
+* [Part III: parallelism](#part-iii-parallelism)
 * [Grading](#grading)
 * [Submission](#submission)
   * [Code portion](#code-portion)
