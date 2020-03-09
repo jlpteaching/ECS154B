@@ -84,7 +84,7 @@ Note: a `double` is 8 bytes. You can ignore the overhead of the pointers in the 
 
 - 64x64
 - 128x128
-- 1024x124
+- 1024x1024
 
 **Question 2c: What is the *working set size* for these inputs (64x64, 128x128, and 1024x1024)?**
 
