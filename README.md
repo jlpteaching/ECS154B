@@ -1,6 +1,10 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-# Welcome to ECS 154B Winter Quarter 2020
+# Welcome to ECS 154B Spring Quarter 2020
+
+**NOTE: This class will be offered fully online this quarter!
+There is *no* requirement for you to be physically on campus!
+We will figure out the details soon.**
 
 **For info on Spring quarter 2020 see [the Spring quarter branch](https://github.com/jlpteaching/ECS154B/blob/sq20/README.md).**
 
