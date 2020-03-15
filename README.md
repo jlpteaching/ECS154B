@@ -2,6 +2,8 @@
 
 # Welcome to ECS 154B Winter Quarter 2020
 
+**For info on Spring quarter 2020 see [the Spring quarter branch](https://github.com/jlpteaching/ECS154B/blob/sq20/README.md).**
+
 This is the canonical version of the ECS 154B class materials.
 The [syllabus](syllabus/syllabus.md) can be found in the syllabus directory.
 See the [syllabus](syllabus/syllabus.md) for all class details.
