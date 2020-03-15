@@ -14,17 +14,17 @@ See the [syllabus](syllabus/syllabus.md) for all class details.
 
 ### Time and Location
 
-*Lecture*: **Wellman 226** 4:10 PM - 5:00 PM Monday, Wednesday, Friday
+*Lecture*: **ONLINE**
 
-*Discussion*: **Wellman 226** 8:00 AM - 8:50 AM Thursday
+*Discussion*: **We will figure this out**
 
 ### Instructor
 
 **Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>)
 
-*Office Hours*: 4:30 PM - 5:30 PM Tuesdays, or by appointment.
+*Office Hours*: TBD
 
-*Office Location*: 3049 Kemper Hall
+*Office Location*: 3049 Kemper Hall (Remote for now!)
 
 Please suggest a meeting time when you email me for an appointment.
 You can use [my calendar](https://calendar.google.com/calendar/embed?src=jlowepower%40ucdavis.edu&ctz=America%2FLos_Angeles) to quickly find a time I am available.
@@ -37,15 +37,15 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
   - [Academic misconduct](syllabus/syllabus.md#academic-misconduct)
   - [Assignments and tests](syllabus/syllabus.md#assignments-and-tests)
   - [Schedule and required reading](syllabus/schedule.csv)
-- [Lecture Notes](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX): All of my written notes in lecture can be found on [OneNote](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX) which should be viewable online.
-  - You can find notes from previous offerings by checking out the previous year's branches: [WQ 18](https://github.com/jlpteaching/ECS154B/tree/wq18/lecture%20notes), [WQ 19](https://github.com/jlpteaching/ECS154B/tree/wq19/lecture%20notes).
-- [Lecture Outlines](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX): Can also be found on my [OneNote notebook for this class](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX). These will generally be complete before lecture and will sometimes contain complex figures, videos, slides, etc.
+- [Lecture Notes](): All of my written notes in lecture can be found on [OneNote]() which should be viewable online.
+  - You can find notes from previous offerings by checking out the previous year's branches: [WQ 18](https://github.com/jlpteaching/ECS154B/tree/wq18/lecture%20notes), [WQ 19](https://github.com/jlpteaching/ECS154B/tree/wq19/lecture%20notes), [WQ 20](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX).
+- [Lecture Outlines](): Can also be found on my [OneNote notebook for this class](). These will generally be complete before lecture and will sometimes contain complex figures, videos, slides, etc.
 - Labs
   - [Lab 1](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-1.md): Chisel intro and beginning DINO CPU
   - [Lab 2](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-2.md): Single cycle DINO CPU
   - [Lab 3](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-3.md): Pipelined DINO CPU
   - [Lab 4](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-4.md): DINO CPU non-combinational memory
-  - [Lab 5](assignment5/assignment5.md): Matrix multiplication
+  - [Lab 5](): TBD
 - Chisel resources
   - [Overview](chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
   - [Getting Started](chisel-notes/getting-started.md): Some simple examples to get you started with Chisel.
