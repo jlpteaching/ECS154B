@@ -4,12 +4,14 @@ Editor: Justin Perona
 Title: ECS 154B - Computer Architecture
 ---
 
-# ECS 154B - Computer Architecture
+# ECS 154B - Computer Architecture Syllabus
 
 * [Important Information](#important-information)
   * [Time and Location](#time-and-location)
   * [Instructor](#instructor)
-  * [Teaching Assistants](#teaching-assistant)
+  * [Teaching Assistant](#teaching-assistant)
+  * [Discussion](#discussion)
+* [Class resources](#class-resources)
   * [GitHub](#github)
   * [Canvas](#canvas)
   * [Gradescope](#gradescope)
@@ -23,11 +25,10 @@ Title: ECS 154B - Computer Architecture
 * [Assignments and Tests](#assignments-and-tests)
   * [Grading Breakdown](#grading-breakdown)
   * [Participation](#participation)
-  * [Labs](#labs)
+  * [Project](#project)
     * [Late Assignments](#late-assignments)
+  * [Quizzes](#quizzes)
   * [Tests](#tests)
-    * [Midterm: February 10](#midterm-february-10)
-    * [Final](#final-march-20)
 * [Reading List and Schedule](#reading-list-and-schedule)
   * [Textbook](#textbook)
   * [Schedule](#schedule)
@@ -36,42 +37,63 @@ Title: ECS 154B - Computer Architecture
 
 ### Time and Location
 
-*Lecture*: **Wellman 226** 4:10 PM - 5:00 PM Monday, Wednesday, Friday
+*Lecture*: **ONLINE**
 
-*Discussion*: **Wellman 226** 8:00 AM - 8:50 AM Thursday
+All lectures will be conducted asynchronously via recorded video.
+Videos for the next week will normally be available at the end of the previous week.
+See the [class materials](../materials/index.md) for all of the lecture videos.
+
+*Discussion*: **ONLINE**. See [Discussion](#discussion) for more information.
+
+Discussion will take place online via Zoom.
+See the [Discussion section](syllabus/syllabus.md#discussion) of the syllabus for more details.
 
 ### Instructor
 
-**Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>)
+**Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>).
 
-*Office Hours*: 4:30 PM - 5:30 PM Tuesdays, or by appointment.
+I prefer Jason, but will likely respond if you say "professor \<something\>".
+My pronouns are he/him/his.
 
-*Office Location*: 3049 Kemper Hall
+[*Office Hours*](https://ucdaviscoe.zoom.us/j/302319952): Tuesdays from 4:30-5:30, or by appointment.
+
+*Office Location*: Use the [Zoom link](https://ucdaviscoe.zoom.us/j/302319952) (<https://ucdaviscoe.zoom.us/j/302319952>) to join during office hours.
 
 Please suggest a meeting time when you email me for an appointment.
 You can use [my calendar](https://calendar.google.com/calendar/embed?src=jlowepower%40ucdavis.edu&ctz=America%2FLos_Angeles) to quickly find a time I am available.
 It's not guaranteed to be completely up-to-date, but it gives a good starting point.
 
+Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
+
 ### Teaching Assistant
 
 **Julian Angeles** (jtangeles@ucdavis.edu )
 
-*Office Hours*: 6:00 PM - 7:00 PM Mondays
+*Office Hours*: TBD
 
-*Office Location*: 53 Kemper Hall
+*Office Location*: TBD Zoom
 
-### GitHub
+### Discussion
 
+Since this quarter will be all online learning, we will be conducting discussion online as well.
+**More information here soon!**
+
+## Class Resources
+
+### Online material
+
+All of the material for this course is online.
 We will use [GitHub](https://github.com/jlpteaching/ECS154B) as the main website and entry point for all course information.
 The version of documents found on GitHub are the canonical versions of all documents.
 Other downloaded versions of documents may become out of date.
 If I make changes to those documents, they will appear first on GitHub.
 
-GitHub will contain this document and the assignments.
+GitHub will contain this document and [the material](../materials/index.md) for the class.
+This will also include links to all of the lecture videos and quizzes.
 
 ### Gradescope
 
-We will use [Gradescope](https://www.gradescope.com/courses/73159) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
+We will use [Gradescope](https://www.gradescope.com/courses/105214) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
 Gradescope gives you a graded PDF version of your test, along with a rubric, immediately after we're done grading.
 You will receive an email from Gradescope to make your account early in the quarter.
 
@@ -83,7 +105,9 @@ However, if you submit after the deadline, the [late policy](#late-assignments) 
 
 ### Piazza
 
-We will use [Piazza](https://piazza.com/ucdavis/winter2020/ecs154b) for class discussions outside of the classroom.
+**This will be updated soon!**
+
+We will use [Piazza]() for class discussions outside of the classroom.
 If you haven't used Piazza before, it's a cool tool that is essentially a message board for the class.
 Both the TAs and I will be on Piazza to answer questions.
 
@@ -103,12 +127,12 @@ The benchmark for good Piazza participation is at least 10 questions asked, answ
 ### Regrade Requests
 
 Regrade requests must be made within one week of the return of the assignment or test.
-Regrade requests should be made in person, in office hours or by appointment.
+Regrade requests should be made in person (online), in (online) office hours or by appointment.
 
 ### Accommodations
 
 The exam schedule is available on the [schedule](schedule.csv).
-Per official UC Davis policy, if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 10, 2018**.
+Per official UC Davis policy, if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, April 9, 2020**.
 If you do not notify me by this time, I cannot guarantee I will be able to make the accommodation.
 
 For **each** test, quiz, etc. you must reach out to me *one week in advance* to schedule specific accommodations for that test, quiz, etc.
@@ -162,36 +186,34 @@ PTA numbers will only be issued after the 12th day of instruction, and PTA numbe
 
 | Category      | Percentage |
 |---------------|------------|
-| Participation | 10%        |
-| Labs (5x)     | 40%        |
-| Quizzes (10x) | 10%        |
-| Midterm       | 20%        |
-| Final         | 20%        |
+| Participation | 20%        |
+| Project (5x)  | 40%        |
+| Quizzes       | 20%        |
+| Tests         | 20%        |
 
 ### Participation
 
-10% of your grade comes from actively participating in class (defined broadly).
-You are expected to participate on [Piazza](https://piazza.com/ucdavis/winter2020/ecs154b) (e.g., at least 10 contributions), lecture discussions, discussion section discussions, **or** office hours.
+20% of your grade comes from actively participating in class (defined broadly).
+You are expected to participate on [online..](), [discussion section discussions](#discussions), **or** office hours.
 
-### Labs
+### Project
 
-You will complete five lab assignments throughout this course.
-The labs can be found via the links below.
+You will complete five project-based assignments throughout this course.
+The assignments can be found via the links below.
 All together, the labs are worth 40% of your final grade.
 Each lab is weighted based on the amount of time you are given to complete the lab.
 
 Labs are due at 11:59 PM on the date listed below.
 
-- [Lab 1](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-1.md) (1.5 weeks, 10%). Due January 15.
-- [Lab 2](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-2.md) (2 weeks, 10%). Due January 27.
-- [Lab 3.1](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-3.md) (1 week, 5%). Due February 5.
-- [Lab 3.2](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-3.md) (2 weeks, 5%). Due February 19.
-- [Lab 4](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-4.md) (2 weeks, 10%). Due March 4.
-- [Lab 5](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-5.md) (1.5 weeks, 10%). Due March 13.
+* [Lab 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) (1.5 weeks, 10%). Due .
+* [Lab 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) (2 weeks, 10%). Due .
+* [Lab 3](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) (1 week, 5%). Due .
+* [Lab 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) (2 weeks, 10%). Due .
+* [Lab 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) (1.5 weeks, 10%). Due .
 
 #### Late Assignments
 
-If you turn in a lab late, you will lose points.
+If you turn in a project assignment late, you will lose points.
 The percentage of points you will lose is given by the equation below.
 This will give you partial points up to 72 hours after the due date and penalizes you less if you barely miss the deadline.
 
@@ -204,36 +226,26 @@ Rest assured, we will go through and double check all of the submission times ;)
 
 ### Quizzes
 
-There will be a quiz every week on Canvas that will be due before lecture on Wednesdays.
-The quiz will be published by Tuesday morning each week.
+There will be many quizzes throughout the quarter.
+The purpose of these quizzes is to make sure you are keeping up with the lectures and you are learning the key ideas.
+Roughly, there will be one after every video.
+Expect 5-8 quizzes per week.
 
 The quizzes are open book/notes/internet.
 However, you *must* take the quiz on your own, and you cannot work together on the quizzes.
 
+You are allowed any number of attempts on the quiz, and you will see which questions you get wrong each time you take it.
+
+Quizzes are due one week after the videos are released to give you ample time to watch the lecture video and take the quiz.
+Due to the extenuating circumstances of this entire quarter, you can take the quizzes late for 50% of the credit.
+
 ### Tests
 
-Note that for each test, there will be a practice test available at least four days in advance.
-The practice test will have similar questions to the actual tests.
+There will be three tests this quarter which together count for only 20% of your grade.
+The tests will be after each of the three main modules, [processor architecture](../materials/processor/index.md), [jmemory architecture](../materials/memory/index.md), and [parallel architecture](../materials/parallel/index.md).
 
-The midterm will be held during the lecture time and will be a 50 minute test.
-
-The final will be cumulative during the final time and will use the full 2 hours.
-
-#### Midterm: February 10
-
-The midterm is on Monday, February 10, from 4:10 - 5:00 PM.
-You are allowed **one** 8.5" x 11" sheet of *handwritten* notes.
-
-The midterm will cover technology, performance and CPU design.
-This is chapters 1 and 4 of the textbook.
-
-#### Final: March 19
-
-The final is on Friday, March 19, from 3:30 pm - 5:30 pm <location TBD>.
-You are allowed **two** 8.5" x 11" sheets of *handwritten* notes.
-
-The final will be have a focus on the second half of the class (chapters 5 and the parts of chapter 6 we cover).
-However, much of this depends on understanding the first half of the class, and the final will have "coalescing" questions which require you to understand everything we've covered over the quarter.
+The tests will be administered on Gradescope.
+You will be given a time limit of 1 hour to take the tests and a window of 1 day to take the test.
 
 ## Reading List and Schedule
 
@@ -244,6 +256,13 @@ In this class, we'll be closely following *Computer Organization and Design RISC
 Importantly, you should get the *RISC-V edition*, not the ARM edition and not the MIPS edition. This is different from versions in years past.
 The correct version is white with a picture of an abacus on a tablet.
 
+To support remote instruction during Spring 2020, all textbooks available in digital format will be provided as e-books.
+To access the e-books available for your courses, click on the BOOKSHELF option in the Canvas navigation menu.
+You have Auto-Access for any required textbooks, but can opt out in the Bookshelf window if you make other arrangements for the text.
+
+**IMPORTANT:** The textbook on Canvas/vitalsource is *opt out*.
+Thus, if you don't want to be charged for the textbook you must *opt out* by 4/16/2020!
+
 Additionally, you may find *The RISC-V Reader: An Open Architecture Atlas* a useful companion, but this book is not required.
 We will be implementing a RISC-V processor in this class and having a physical book with the RISC-V instructions described will be useful.
 If you prefer to not buy yet another book (though I do think it's a useful book to have), you can also use the online version of [the RISC-V specification](https://riscv.org/specifications/).
@@ -252,5 +271,7 @@ Note: the specification has fewer pretty pictures than the book.
 You can find these books at the [university bookstore](http://ucdavisstores.com/SelectTermDept) or through various sites online.
 
 ### Schedule
+
+**This will be updated soon!**
 
 [The schedule is available on GitHub.](https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv)
