@@ -6,8 +6,6 @@
 There is *no* requirement for you to be physically on campus!
 We will figure out the details soon.**
 
-**For info on Spring quarter 2020 see [the Spring quarter branch](https://github.com/jlpteaching/ECS154B/blob/sq20/README.md).**
-
 This is the canonical version of the ECS 154B class materials.
 The [syllabus](syllabus/syllabus.md) can be found in the syllabus directory.
 See the [syllabus](syllabus/syllabus.md) for all class details.
@@ -18,24 +16,31 @@ See the [syllabus](syllabus/syllabus.md) for all class details.
 
 *Lecture*: **ONLINE**
 
-*Discussion*: **We will figure this out**
+All lectures will be conducted asynchronously via recorded video.
+Videos for the next week will normally be available at the end of the previous week.
+
+*Discussion*: **ONLINE**
+
+Discussion will take place online via Zoom.
+See the [Discussion section](syllabus/syllabus.md#discussion) of the syllabus for more details.
 
 ### Instructor
 
 **Professor Jason Lowe-Power** (<jlowepower@ucdavis.edu>)
 
-*Office Hours*: TBD
+[*Office Hours*](https://ucdaviscoe.zoom.us/j/302319952): Tuesdays from 4:30-5:30, or by appointment.
 
-*Office Location*: 3049 Kemper Hall (Remote for now!)
+*Office Location*: Use the [Zoom link](https://ucdaviscoe.zoom.us/j/302319952) (<https://ucdaviscoe.zoom.us/j/302319952>) to join during office hours.
 
 Please suggest a meeting time when you email me for an appointment.
 You can use [my calendar](https://calendar.google.com/calendar/embed?src=jlowepower%40ucdavis.edu&ctz=America%2FLos_Angeles) to quickly find a time I am available.
 It's not guaranteed to be completely up-to-date, but it gives a good starting point.
 
+Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
+
 # Overview of class resources
 
 - [Syllabus](syllabus/syllabus.md)
-  - [Class resources]()
   - [Academic misconduct](syllabus/syllabus.md#academic-misconduct)
   - [Assignments and tests](syllabus/syllabus.md#assignments-and-tests)
   - [Schedule and required reading](syllabus/schedule.csv)
@@ -43,10 +48,10 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
   - You can find notes from previous offerings by checking out the previous year's branches: [WQ 18](https://github.com/jlpteaching/ECS154B/tree/wq18/lecture%20notes), [WQ 19](https://github.com/jlpteaching/ECS154B/tree/wq19/lecture%20notes), [WQ 20](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX).
 - [Lecture Outlines](): Can also be found on my [OneNote notebook for this class](). These will generally be complete before lecture and will sometimes contain complex figures, videos, slides, etc.
 - Labs
-  - [Lab 1](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-1.md): Chisel intro and beginning DINO CPU
-  - [Lab 2](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-2.md): Single cycle DINO CPU
-  - [Lab 3](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-3.md): Pipelined DINO CPU
-  - [Lab 4](https://github.com/jlpteaching/dinocpu-wq20/blob/master/assignments/assignment-4.md): DINO CPU non-combinational memory
+  - [Lab 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md): Chisel intro and beginning DINO CPU
+  - [Lab 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md): Single cycle DINO CPU
+  - [Lab 3](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md): Pipelined DINO CPU
+  - [Lab 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md): DINO CPU non-combinational memory
   - [Lab 5](): TBD
 - Chisel resources
   - [Overview](chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
