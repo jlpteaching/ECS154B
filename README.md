@@ -1,10 +1,9 @@
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
 # Welcome to ECS 154B Spring Quarter 2020
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 **NOTE: This class will be offered fully online this quarter!
-There is *no* requirement for you to be physically on campus!
-We will figure out the details soon.**
+There is *no* requirement for you to be physically on campus.**
 
 This is the canonical version of the ECS 154B class materials.
 The [syllabus](syllabus/syllabus.md) can be found in the syllabus directory.
@@ -38,7 +37,7 @@ It's not guaranteed to be completely up-to-date, but it gives a good starting po
 
 Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 
-# Overview of class resources
+## Overview of class resources
 
 - [Syllabus](syllabus/syllabus.md)
   - [Academic misconduct](syllabus/syllabus.md#academic-misconduct)
@@ -60,7 +59,7 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
   - [Building Systems](chisel-notes/building-systems.md): Examples of using Chisel modules, I/O, and other features to build larger systems.
 - DINO CPU Resources (most of these can be found in the DINO CPU template repository).
 
-# Student Support
+## Student Support
 
 As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation.
 These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities.
