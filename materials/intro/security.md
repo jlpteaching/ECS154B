@@ -6,7 +6,7 @@ Since then, there has been a large number of similar vulnerabilities discovered 
 
 ## Why talk about these vulnerabilities
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 
 Video describing that we are talking about these vulnerabilities because they touch on many concepts that we will learn in this class.
 
@@ -25,7 +25,7 @@ YouTube video explaining Meltdown to a lay person.
 
 ## A little deeper on Meltdown
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 
 Video explaining Meltdown works.
 
@@ -35,13 +35,13 @@ Spectre is actually much worse than Meltdown.
 [Below](), I'll talk about how to mitigate Meltdown, but mitigating Spectre is basically impossible without completely redesigning the processor.
 I explain more about Spectre works below.
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 
 A video explaining how Spectre works.
 
 ## Take away and something to think about
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 
 Video describing the key problems that led to Spectre and Meltdown.
 
@@ -62,7 +62,7 @@ I even wrote one about the [simulator infrastructure development going on here a
 
 ## Quiz 1: Security and architecture
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 
 Link coming soon.
 

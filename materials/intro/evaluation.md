@@ -1,3 +1,3 @@
 # Computer System Performance
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})

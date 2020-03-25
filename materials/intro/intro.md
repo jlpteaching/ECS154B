@@ -19,7 +19,7 @@ These will be taking the place of in-person lecture.
 
 ### Welcome video
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 
 <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/1770401/sp/177040100/embedIframeJs/uiconf_id/29032722/partner_id/1770401?iframeembed=true&playerId=kaltura_player&entry_id=0_zap3vve0&flashvars[mediaProtocol]=rtmp&amp;flashvars[streamerType]=rtmp&amp;flashvars[streamerUrl]=rtmp://www.kaltura.com:1935&amp;flashvars[rtmpFlavors]=1&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_i7bcezb5" width="608" height="402" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 
@@ -32,14 +32,14 @@ There is more information about quizzes [below](#quizzes).
 
 ### Quiz 0: A little about yourself
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 [Use xxxx to complete the quiz.]()
 
 ## Class organization
 
 ### Class organization video
 
-![Under construction](/under-construction.png)
+![Under construction]({{ "/under-construction.png" | relative_url }})
 
 Video describing the class organization.
 
