@@ -76,7 +76,10 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 ### Discussion
 
 Since this quarter will be all online learning, we will be conducting discussion online as well.
+
 **More information here soon!**
+
+**INSERT REMOTE COLLABORATION ETIQUETTE HERE**
 
 ## Class Resources
 
