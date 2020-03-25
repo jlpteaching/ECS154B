@@ -26,8 +26,8 @@ In the first section of the class we will cover some motivation for why you shou
 
 * [Introduction to the class](intro/intro.md)
 * [Security and computer architecture](intro/security.md)
-* [Technology](intro/technology.md)
-* [Performance](intro/performance.md)
+* [Current Computing Technology](intro/technology.md)
+* [Computer System Evaluation](intro/evaluation.md)
 
 ### [Processor Architecture](processor/index.md) (Four weeks)
 
