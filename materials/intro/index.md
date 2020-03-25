@@ -17,7 +17,14 @@ This first module [briefly introduces the class](./intro.md), motivates computer
     * [Tests](./intro.md/#tests)
     * [Books](./intro.md/#books)
 * [Computer Architecture and Security](./security.md)
-  * In progress
+  * [Why talk about these vulnerabilities](./security.md#why-talk-about-these-vulnerabilities)
+  * [A brief overview of Meltdown](./security.md#a-brief-overview-of-meltdown)
+  * [A little deeper on Meltdown](./security.md#a-little-deeper-on-meltdown)
+  * [What about Spectre?](./security.md#what-about-spectre-)
+  * [Take away and something to think about](./security.md#take-away-and-something-to-think-about)
+    * [Required readings](./security.md#required-readings)
+  * [Quiz 1: Security and architecture](./security.md#quiz-1--security-and-architecture) **Due XXX**
+  * [Extra reading](./security.md#extra-reading)
 * [Current Computing Technology](./technology.md)
   * In progress
 * [Computer System Evaluation](./evaluation.md)
