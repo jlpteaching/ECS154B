@@ -1,5 +1,7 @@
 # Computer Architecture and Security
 
+![XKCD about security](https://imgs.xkcd.com/comics/security_advice.png)
+
 In this section, I am going to talk about some recently discovered security vulnerabilities, [Spectre and Meltdown](https://meltdownattack.com/).
 These vulnerabilities were first publicized at the beginning of 2018.
 Since then, there has been a large number of similar vulnerabilities discovered including [Foreshadow](https://foreshadowattack.eu/), [Fallout](https://mdsattacks.com/), and most recently, in March of 2020, [LVI](https://lviattack.eu/) (I guess they ran out of clever names).
