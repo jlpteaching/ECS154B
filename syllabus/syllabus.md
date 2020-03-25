@@ -245,7 +245,7 @@ Due to the extenuating circumstances of this entire quarter, you can take the qu
 ### Tests
 
 There will be three tests this quarter which together count for only 20% of your grade.
-The tests will be after each of the three main modules, [processor architecture](../materials/processor/index.md), [jmemory architecture](../materials/memory/index.md), and [parallel architecture](../materials/parallel/index.md).
+The tests will be after each of the three main modules, [processor architecture](../materials/processor/index.md), [memory architecture](../materials/memory/index.md), and [parallel architecture](../materials/parallel/index.md).
 
 The tests will be administered on Gradescope.
 You will be given a time limit of 1 hour to take the tests and a window of 1 day to take the test.
