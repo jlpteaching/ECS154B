@@ -55,9 +55,17 @@ See the [Discussion section](syllabus/syllabus.md#discussion) of the syllabus fo
 I prefer Jason, but will likely respond if you say "professor \<something\>".
 My pronouns are he/him/his.
 
-[*Office Hours*](https://ucdaviscoe.zoom.us/j/302319952): Tuesdays from 4:30-5:30, or by appointment.
+Please contact me via email if you have a personal request, *not* canvas messages.
+I do not check canvas messages.
+For class-wide questions (e.g., anything more than one person might be interested to know), please use the [online discussion]().
 
-*Office Location*: Use the [Zoom link](https://ucdaviscoe.zoom.us/j/302319952) (<https://ucdaviscoe.zoom.us/j/302319952>) to join during office hours.
+[*Office Hours*](https://ucdaviscoe.zoom.us/my/jlowepower): Tuesdays from 4:30-5:30, or by appointment.
+
+These office hours can be used to discuss anything you would like.
+The discussion topic doesn't have to be class related or even computer architecture related.
+If you need to discuss something in private, let me know (e.g., via chat on zoom) and I can create a waiting room for others while we talk privately.
+
+*Office Location*: Use the [Zoom link](https://ucdaviscoe.zoom.us/my/jlowepower) (<https://ucdaviscoe.zoom.us/my/jlowepower>) to join during office hours.
 
 Please suggest a meeting time when you email me for an appointment.
 You can use [my calendar](https://calendar.google.com/calendar/embed?src=jlowepower%40ucdavis.edu&ctz=America%2FLos_Angeles) to quickly find a time I am available.
