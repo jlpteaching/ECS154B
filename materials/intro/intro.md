@@ -11,13 +11,11 @@ My goal with this class is to encourage as much participation and interaction as
 I learn best from interacting with others.
 So, I'm going to provide you with as many ways to interact with me, with our TA (Julian), and each other as possible.
 
-## What is this class?
+## What is this class? **VIDEO**
 
 Here, we find our first video.
 Throughout these materials, there will be embedded videos for you to watch.
 These will be taking the place of in-person lecture.
-
-### Welcome video
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 
@@ -30,14 +28,12 @@ Usually, these videos will be 5-15 minutes long so that you won't be overwhelmed
 After each video, there will be a short Canvas-based quiz to check your understanding.
 There is more information about quizzes [below](#quizzes).
 
-### Quiz 0: A little about yourself
+### **Quiz** A little about yourself
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 [Use xxxx to complete the quiz.]()
 
-## Class organization
-
-### Class organization video
+## Class organization **VIDEO**
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 
@@ -109,4 +105,4 @@ I have also suggested that you get *The RISC-V Reader: An Open Architecture Atla
 I find this book to be a very useful reference while developing the DINO CPU.
 However, all of the information in this book can be found for free in the [RISC-V specification](https://riscv.org/specifications/isa-spec-pdf/) although the specification isn't as easy to read.
 
-[Next Chapter: Computer Architecture and Security.](./security.md)
+[Next up: Computer Architecture and Security.](./security.md)

@@ -6,13 +6,13 @@ In this section, I am going to talk about some recently discovered security vuln
 These vulnerabilities were first publicized at the beginning of 2018.
 Since then, there has been a large number of similar vulnerabilities discovered including [Foreshadow](https://foreshadowattack.eu/), [Fallout](https://mdsattacks.com/), and most recently, in March of 2020, [LVI](https://lviattack.eu/) (I guess they ran out of clever names).
 
-## Why talk about these vulnerabilities
+## Why talk about these vulnerabilities **VIDEO**
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 
 Video describing that we are talking about these vulnerabilities because they touch on many concepts that we will learn in this class.
 
-## A brief overview of Meltdown
+## A brief overview of Meltdown **VIDEO**
 
 These attacks made huge news when they were first announced from tech-based sites like [Ars Technica](https://arstechnica.com/gadgets/2018/01/meltdown-and-spectre-every-modern-processor-has-unfixable-security-flaws/) and [Wired](https://www.wired.com/story/critical-intel-flaw-breaks-basic-security-for-most-computers/) to mainstream media like [The New York Times](https://www.nytimes.com/2018/01/03/business/computer-flaws.html).
 (BTW, since you're a student at UC Davis, you can access the NYTimes [for free through the library](https://www.library.ucdavis.edu/news/get-free-access-to-the-new-york-times/).)
@@ -25,13 +25,13 @@ After watching this video, I'm going to go through some of the details that it m
 
 YouTube video explaining Meltdown to a lay person.
 
-## A little deeper on Meltdown
+## A little deeper on Meltdown **VIDEO**
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 
 Video explaining Meltdown works.
 
-## What about Spectre?
+## What about Spectre? **VIDEO**
 
 Spectre is actually much worse than Meltdown.
 [Below](), I'll talk about how to mitigate Meltdown, but mitigating Spectre is basically impossible without completely redesigning the processor.
@@ -41,7 +41,7 @@ I explain more about Spectre works below.
 
 A video explaining how Spectre works.
 
-## Take away and something to think about
+## Take away and something to think about **VIDEO**
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 
@@ -62,7 +62,7 @@ This is the professional and research society for computer architects.
 If you're interested in cutting edge computer architecture research and you don't want to wade through 12 page research papers, the [SIGARCH blog](https://www.sigarch.org/blog/) is a great way to see what's going on in the research community.
 I even wrote one about the [simulator infrastructure development going on here at UC Davis](https://www.sigarch.org/re-gem5-building-sustainable-research-infrastructure/)!
 
-## Quiz 1: Security and architecture
+## **QUIZ** Security and architecture
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 
@@ -74,3 +74,5 @@ Actually, this exact bug happened back in 2005, but no one knew it could be used
 They just thought it was a nasty one-off bug.
 
 [This blog post](https://randomascii.wordpress.com/2018/01/07/finding-a-cpu-design-bug-in-the-xbox-360/) describes how a very similar bug was discovered in the Xbox 360 hardware and how it reeked havoc on the game developers before the Xbox engineers "fixed" the problem by removing what they thought was a clever feature.
+
+[Next up: Computing Technology.](./technology.md)
