@@ -59,6 +59,8 @@ Please contact me via email if you have a personal request, *not* canvas message
 I do not check canvas messages.
 For class-wide questions (e.g., anything more than one person might be interested to know), please use the [online discussion]().
 
+#### Office hours
+
 [*Office Hours*](https://ucdaviscoe.zoom.us/my/jlowepower): Tuesdays from 4:30-5:30, or by appointment.
 
 These office hours can be used to discuss anything you would like.
@@ -193,6 +195,13 @@ PTA numbers will only be issued after the 12th day of instruction, and PTA numbe
 
 ## Assignments and Tests
 
+I understand the need for more flexibility this quarter.
+Many of us will have responsibilities beyond just school since we are living at home.
+I'm sure many of you will be taking care of loved ones, working, or have other responsibilities that may conflict with this class.
+I will do everything I can to accommodate individual circumstances while maintaining fairness in the class.
+The most important thing is that **the earlier you communicate with me the more likely I will be able to make accommodations**.
+See also [student support](#student-support).
+
 ### Grading Breakdown
 
 | Category      | Percentage |
@@ -205,7 +214,7 @@ PTA numbers will only be issued after the 12th day of instruction, and PTA numbe
 ### Participation
 
 20% of your grade comes from actively participating in class (defined broadly).
-You are expected to participate on [online..](), [discussion section discussions](#discussions), **or** office hours.
+You are expected to participate on [online..](), [discussion section discussions](#discussions), **or** [office hours](#office-hours).
 
 ### Project
 
@@ -240,7 +249,7 @@ Rest assured, we will go through and double check all of the submission times ;)
 There will be many quizzes throughout the quarter.
 The purpose of these quizzes is to make sure you are keeping up with the lectures and you are learning the key ideas.
 Roughly, there will be one after every video.
-Expect 5-8 quizzes per week.
+Expect 3-6 quizzes per week.
 
 The quizzes are open book/notes/internet.
 However, you *must* take the quiz on your own, and you cannot work together on the quizzes.
