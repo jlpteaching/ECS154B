@@ -52,7 +52,7 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
   - [Assignments and tests](syllabus/syllabus.md#assignments-and-tests)
   - [Schedule and required reading](syllabus/schedule.csv)
 - [Class Materials](materials/index.md): All of the lecture videos, readings, quizzes, and supplemental materials can be found here.
-- [Lecture Notes](): All of my written notes in lecture can be found on [OneNote]() which should be viewable online.
+- [Lecture Notes](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/El-DA5B06wNOpS3DzLCLsWYBLw2X5dl4743mokLQqoQsfQ?e=jGOhK1): All of my written notes in lecture can be found on [OneNote](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/El-DA5B06wNOpS3DzLCLsWYBLw2X5dl4743mokLQqoQsfQ?e=jGOhK1) which should be viewable online.
   - You can find notes from previous offerings by checking out the previous year's branches: [WQ 18](https://github.com/jlpteaching/ECS154B/tree/wq18/lecture%20notes), [WQ 19](https://github.com/jlpteaching/ECS154B/tree/wq19/lecture%20notes), [WQ 20](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX).
 - Labs
   - [Lab 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md): Chisel intro and beginning DINO CPU
