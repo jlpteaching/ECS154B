@@ -41,7 +41,7 @@ However, for this first section *there will be no late penalty*.
 * [Instruction-level parallelism](processor/ilp.md) (Quizzes due 4/28)
 * [Processor architecture summary](processor/summary.md) (Quizzes due 4/30)
 
-* Test on 5/1
+**Test on 5/1**
 
 ### [Memory System Architecture](memory/index.md) (About three weeks)
 
@@ -51,7 +51,7 @@ However, for this first section *there will be no late penalty*.
 * [Virtual memory](memory/virtual.md) (Quizzes due 5/19)
 * [Memory architecture summary](memory/summary.md) (Quizzes Due 5/21) (Assignment 4 Due 5/21)
 
-* Test on 5/22
+**Test on 5/22**
 
 ### [Parallel Architectures](parallel/index.md) (About two weeks)
 
@@ -60,4 +60,4 @@ However, for this first section *there will be no late penalty*.
 * [Parallel memory systems](parallel/memory.md) (Quizzes due on 6/2)
 * [GPUs and accelerators](parallel/accelerators.md) (Quizzes due on 6/4) (Assignment 5 Due 6/4)
 
-* Test on 6/5
+**Test on 6/5**
