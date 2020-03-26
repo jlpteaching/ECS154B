@@ -116,7 +116,7 @@ You may submit your code any number of times.
 Only the final submission will be accepted as the grade for your assignment.
 However, if you submit after the deadline, the [late policy](#late-assignments) applies.
 
-### Piazza
+### Online discussions
 
 **This will be updated soon!**
 
@@ -170,6 +170,8 @@ See the [Computer Science Department's policy](https://www.cs.ucdavis.edu/blog/a
 
 ## Student Support
 
+There is a lot of great information on the [Coronovirus Update Page](https://studentaffairs.ucdavis.edu/news/coronavirus-update) with extensive [FAQs](https://studentaffairs.ucdavis.edu/news/coronavirus-faqs) and specific [student support information](https://studentaffairs.ucdavis.edu/news/coronavirus-faqs#support) in this unique circumstance.
+
 As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation.
 These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities.
 UC Davis is committed to advancing the mental health and well-being of its students.
@@ -213,8 +215,30 @@ See also [student support](#student-support).
 
 ### Participation
 
+I want to encourage participation in my classes.
+I believe that learning is a two way street, and that it's important for you to participate to get the full learning experience.
+Therefore, I encourage participation by making part of your grade dependent on it.
+
+Since this quarter is all online, I am giving more weight than normal to participation.
+This extra weight is for two reasons.
+First, the "activation energy" required for participation will be higher, so I'm increasing the reward function to help encourage more participation.
+Second, by adding more weight to participation, I am reducing the weight on tests.
+
 20% of your grade comes from actively participating in class (defined broadly).
-You are expected to participate on [online..](), [discussion section discussions](#discussions), **or** [office hours](#office-hours).
+You are expected to participate on [online discussions](#online-discussions), [discussion section discussions](#discussions), **or** [office hours](#office-hours).
+
+You are required to attend and participate (say something at least once) in one [discussion section](#discussions) each week.
+We prefer you to attend the one you sign up for, but you can attend any.
+Every week counts as two points on your final grade.
+Thus, if you attend your discussion section each week, you will receive the full points for participation.
+
+However, we understand that this won't necessarily be possible for everyone to attend every week.
+Therefore, you you can also get participation points by using our [online discussion](#online-discussions).
+Participating in [online discussion](#online-discussions) can earn you up to 5 points.
+Importantly, we are looking for substantive contributions to online discussions.
+
+Finally, you can also earn points by attending and participating in office hours.
+For each office hour you attend (and we have a substantive conversation), you can earn one participation point up to 5 points.
 
 ### Project
 
@@ -292,6 +316,4 @@ You can find these books at the [university bookstore](http://ucdavisstores.com/
 
 ### Schedule
 
-**This will be updated soon!**
-
-[The schedule is available on GitHub.](https://github.com/jlpteaching/ECS154B/blob/master/syllabus/schedule.csv)
+See the [class materials](../materials/index.md) for due dates.
