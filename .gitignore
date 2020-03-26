@@ -1,1 +1,5 @@
 venv/
+
+# For jekyll
+Gemfile.lock
+_site
