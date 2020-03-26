@@ -31,15 +31,25 @@ YouTube video explaining Meltdown to a lay person.
 
 Video explaining Meltdown works.
 
+Code taken from <https://github.com/IAIK/meltdown>.
+If you run this code on your computer, you can find out if you're vulnerable to Meltdown.
+If you've updated your OS in the last two years, you should be OK.
+
 ## What about Spectre? **VIDEO**
 
 Spectre is actually much worse than Meltdown.
-[Below](), I'll talk about how to mitigate Meltdown, but mitigating Spectre is basically impossible without completely redesigning the processor.
+[Below](#take-away-and-something-to-think-about---video--), I'll talk about how to mitigate Meltdown, but mitigating Spectre is basically impossible without completely redesigning the processor.
 I explain more about Spectre works below.
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
 
 A video explaining how Spectre works.
+
+Code taken from <https://gist.github.com/ErikAugust/724d4a969fb2c6ae1bbd7b2a9e3d4bb6>.
+If you run this code on your computer, you can find out if you're vulnerable to Spectre.
+Many (most?) systems are still vulnerable to this code!
+
+See [a blog post I wrote](http://www.lowepower.com/jason/visualizing-spectre-with-gem5.html) about simulating Spectre with the [gem5 simulator](https://gem5.org) for more details about how Spectre affects the microarchitecture of an out-of-order core.
 
 ## Take away and something to think about **VIDEO**
 

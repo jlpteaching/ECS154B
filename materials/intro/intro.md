@@ -25,11 +25,6 @@ Usually, these videos will be 5-15 minutes long so that you won't be overwhelmed
 After each video, there will be a short Canvas-based quiz to check your understanding.
 There is more information about quizzes [below](#quizzes).
 
-### **Quiz** A little about yourself
-
-![Under construction]({{ "/under-construction.png" | relative_url }})
-[Use xxxx to complete the quiz.]()
-
 ## Class organization **VIDEO**
 
 ![Under construction]({{ "/under-construction.png" | relative_url }})
@@ -39,6 +34,11 @@ Video describing the class organization.
 As previously mentioned, this class will be all online.
 For details of the class policies, see the [syllabus](../syllabus/syllabus.md).
 Below, I'll briefly discuss some of the changes from a normal "in-person" class.
+
+### **Quiz** A little about yourself
+
+![Under construction]({{ "/under-construction.png" | relative_url }})
+[Use xxxx to complete the quiz.]()
 
 ### Lectures
 
