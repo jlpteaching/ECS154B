@@ -10,7 +10,7 @@ There will be no late penalties for quizzes in the first week.
 * [Introduction](./intro.md)
   * [What is this class? **VIDEO**](./intro.md#what-is-this-class----video--)
   * [Class organization **VIDEO**](./intro.md#class-organization---video--)
-    * [**Quiz** A little about yourself](./intro.md#--quiz---a-little-about-yourself) **DUE 3/31**
+    * [**Quiz** A little about yourself](./intro.md#--quiz---just-testing-you) **DUE 3/31**
     * [Lectures](./intro.md#lectures)
     * [Quizzes](./intro.md#quizzes)
     * [Discussion](./intro.md#discussion)

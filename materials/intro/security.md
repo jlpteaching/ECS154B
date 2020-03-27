@@ -74,9 +74,7 @@ I even wrote one about the [simulator infrastructure development going on here a
 
 ## **QUIZ** Security and architecture
 
-![Under construction]({{ "/under-construction.png" | relative_url }})
-
-Link coming soon.
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/414491)
 
 ## Extra reading
 

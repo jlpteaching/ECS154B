@@ -35,10 +35,9 @@ As previously mentioned, this class will be all online.
 For details of the class policies, see the [syllabus](../syllabus/syllabus.md).
 Below, I'll briefly discuss some of the changes from a normal "in-person" class.
 
-### **Quiz** A little about yourself
+### **Quiz** Just testing you
 
-![Under construction]({{ "/under-construction.png" | relative_url }})
-[Use xxxx to complete the quiz.]()
+[Use gradescope to complete the quiz.](https://www.gradescope.com/courses/105214/assignments/414482/)
 
 ### Lectures
 
