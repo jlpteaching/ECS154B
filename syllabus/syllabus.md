@@ -273,14 +273,14 @@ Rest assured, we will go through and double check all of the submission times ;)
 There will be many quizzes throughout the quarter.
 The purpose of these quizzes is to make sure you are keeping up with the lectures and you are learning the key ideas.
 Roughly, there will be one after every video.
-Expect 3-6 quizzes per week.
+Expect 2-4 quizzes per week.
 
 The quizzes are open book/notes/internet.
 However, you *must* take the quiz on your own, and you cannot work together on the quizzes.
 
 You are allowed any number of attempts on the quiz, and you will see which questions you get wrong each time you take it.
 
-Quizzes are due one week after the videos are released to give you ample time to watch the lecture video and take the quiz.
+Quizzes are due about one week after the videos are released to give you ample time to watch the lecture video and take the quiz.
 Due to the extenuating circumstances of this entire quarter, you can take the quizzes late for 50% of the credit.
 
 ### Tests
