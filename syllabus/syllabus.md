@@ -120,22 +120,20 @@ However, if you submit after the deadline, the [late policy](#late-assignments) 
 
 **This will be updated soon!**
 
-We will use [Piazza]() for class discussions outside of the classroom.
-If you haven't used Piazza before, it's a cool tool that is essentially a message board for the class.
-Both the TAs and I will be on Piazza to answer questions.
+We will use [Campuswire](https://campuswire.com/c/GDBEBE971/) for class discussions outside of the classroom.
+If you haven't used Campuswire before, it's a cool tool that is essentially a message board for the class.
+It is a much more polished and modern website compared to Piazza.
+Both the TAs and I will be on Campuswire to answer questions.
 
-It's best to ask your questions on Piazza.
+It's best to ask your questions on Campuswire.
 That way, all of your classmates can see the answer instead of emailing the TAs or me.
 Additionally, you might get a much faster response from one of your classmates!
-Through asking and answering questions on Piazza, you improve your understanding of the material, and improve other students' understanding as well.
+Through asking and answering questions on Campuswire, you improve your understanding of the material, and improve other students' understanding as well.
 
-In the spirit of the above, please ask questions as public questions on Piazza, if possible.
+In the spirit of the above, please ask questions as public questions on Campuswire, if possible.
 This way, your question, and the answer to your question, can help somebody else who might have the same question.
 We will change questions asked privately to public, if we deem it appropriate.
 If your question involves code you've written, or is about a personal issue, we will leave those private.
-
-10% of your grade is tied to participation, much of which can take place over Piazza.
-The benchmark for good Piazza participation is at least 10 questions asked, answered, or follow-ups throughout the quarter.
 
 ### Regrade Requests
 
