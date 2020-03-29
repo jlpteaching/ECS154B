@@ -79,9 +79,9 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 
 **Julian Angeles** (jtangeles@ucdavis.edu )
 
-*Office Hours*: TBD
+*Office Hours*: Thursdays from 9:00-10:00 A.M.
 
-*Office Location*: TBD Zoom
+*Office Location*: [Zoom link](https://ucdaviscoe.zoom.us/my/jtoya) (<https://ucdaviscoe.zoom.us/my/jtoya>)
 
 ### Discussion
 
