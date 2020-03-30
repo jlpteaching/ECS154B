@@ -26,11 +26,11 @@ There will be no late penalties for quizzes in the first week.
     * [Required readings](./security.md#required-readings)
   * [**QUIZ** Security and architecture](./security.md#--quiz---security-and-architecture) **DUE 3/31**
   * [Extra reading](./security.md#extra-reading)
-* [Current Computing Technology](./technology.md)
+* [Current Computing Technology](./technology.md) (*Computer Organization and Design* Chapter 1)
   * [Turing Lecture **VIDEO**](./technology.md#turing-lecture---video--)
   * [Computing technology past to present **VIDEO**](./technology.md#computing-technology-past-to-present---video--)
   * [Moore's Law and Dennard scaling **VIDEO**](./technology.md#moore-s-law-and-dennard-scaling---video--)
   * [Energy and Power of CMOS Devices **VIDEO**](./technology.md#energy-and-power-of-cmos-devices---video--)
   * [**QUIZ** CMOS Energy, Power, and Moore's Law](./technology.md#--quiz---cmos-energy--power--and-moore-s-law) **DUE 4/2**
-* [Computer System Evaluation](./evaluation.md)
+* [Computer System Evaluation](./evaluation.md) (*Computer Organization and Design* Section 1.6)
   * In progress
