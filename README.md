@@ -52,7 +52,7 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 - [Syllabus](syllabus/syllabus.md)
   - [Academic misconduct](syllabus/syllabus.md#academic-misconduct)
   - [Assignments and tests](syllabus/syllabus.md#assignments-and-tests)
-  - [Schedule and required reading](syllabus/schedule.csv)
+  - [Schedule and required reading](materials/index.md): See the course [material pages](materials/index.md). The detailed pages have due dates and pointers to the readings.
 - [Class Materials](materials/index.md): All of the lecture videos, readings, quizzes, and supplemental materials can be found here.
 - [Lecture videos](https://video.ucdavis.edu/playlist/dedicated/0_8bwr1nkj/): All lecture videos are available via this playlist on [Aggie Video](https://video.ucdavis.edu/playlist/details/0_8bwr1nkj).
 - [Online discussion](https://campuswire.com/c/GDBEBE971/): We will be using [Campuswire](https://campuswire.com/c/GDBEBE971/) for online discussion this quarter.
