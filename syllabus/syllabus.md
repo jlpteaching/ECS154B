@@ -296,7 +296,7 @@ You will be given a time limit of 1 hour to take the tests and a window of 1 day
 In this class, we'll be closely following *Computer Organization and Design RISC-V Edition: The Hardware/Software Interface* by D. A. Patterson and J. L. Hennessy.
 
 Importantly, you should get the *RISC-V edition*, not the ARM edition and not the MIPS edition. This is different from versions in years past.
-The correct version is white with a picture of an abacus on a tablet.
+The correct version is black with a picture of an abacus on a tablet.
 
 To support remote instruction during Spring 2020, all textbooks available in digital format will be provided as e-books.
 To access the e-books available for your courses, click on the BOOKSHELF option in the Canvas navigation menu.
