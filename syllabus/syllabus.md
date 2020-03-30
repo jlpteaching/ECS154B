@@ -86,10 +86,52 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 ### Discussion
 
 Since this quarter will be all online learning, we will be conducting discussion online as well.
+The information here may change as we work out the most effective way to use everyone's time.
 
-**More information here soon!**
+We will be using discussions to reinforce the lectures and help out with the assignments.
+**You are required to attend one discussion each week.**
+See [the participation section below](#participation) for more info.
 
-**INSERT REMOTE COLLABORATION ETIQUETTE HERE**
+There will be six discussion times each with 10-15 people assigned to attend.
+You will be able to sign up for your preferred discussion time during the first week of class.
+
+#### Discussion times and locations
+
+* *Discussion 1*: Tuesday 10:30am-11:10am
+  * [Zoom link](https://ucdaviscoe.zoom.us/j/480815495) <https://ucdaviscoe.zoom.us/j/480815495>
+* *Discussion 2*: Tuesday 11:15am-11:55am
+  * [Zoom link](https://ucdaviscoe.zoom.us/j/413656721) <https://ucdaviscoe.zoom.us/j/413656721>
+* *Discussion 3*: Wednesday 6:00pm-6:40pm
+  * [Zoom link](https://ucdaviscoe.zoom.us/j/714065447) <https://ucdaviscoe.zoom.us/j/714065447>
+* *Discussion 4*: Thursday 10:30am-11:10am
+  * [Zoom link](https://ucdaviscoe.zoom.us/j/778578293) <https://ucdaviscoe.zoom.us/j/778578293>
+* *Discussion 5*: Thursday 11:15am-11:50am
+  * [Zoom link](https://ucdaviscoe.zoom.us/j/702826763) <https://ucdaviscoe.zoom.us/j/702826763>
+* *Discussion 6*: Friday 1:10pm-1:50pm
+  * [Zoom link](https://ucdaviscoe.zoom.us/j/575347577) <https://ucdaviscoe.zoom.us/j/575347577>
+
+Please register for a discussion time on [this document](https://docs.google.com/spreadsheets/d/10cJu_150qJbxrKf4QzPYfvW-MSOis88HVW5jzFo8BXI/edit?usp=sharing).
+Do your best to evenly sign up for times.
+I believe having fewer people in each discussion will help everyone be able to participate and learn better.
+
+I would prefer that you attend the same time each week, but this is not a requirement.
+Either Julian and I will attend every discussion.
+
+#### Discussion etiquette
+
+You may be new to participating in remote meetings this quarter.
+While I'm new to remote teaching, I've been working in distributed environments for years, so remote meetings are the norm for me.
+Below are some common etiquette ideas that I've found work well when participating in remote meetings.
+
+* **Be patient.** Remote meetings introduce communication *latency* and *synchronization* issues (things we'll be learning about this this class, BTW). Please be patient with everyone. This often means pausing for longer than you think is necessary when talking, putting up with minor annoyances (e.g., someone interrupting you), and putting up with poor connections.
+* **Mute your microphone unless you are speaking.** All too often there is feedback between microphones and speakers. Often, you can't tell that it's your computer that's causing feedback issues for everyone else. Also, I've experienced other people in the local environment causing distractions when they don't mean (e.g., my cat likes to meow at me while I'm talking sometimes).
+* **State your name when you speak.** Please state your name before you ask a question/speak. For instance "Hi, this is Jason, why is pipelining so amazing?"
+* **Set your full name in zoom.** Click the "participants button at the bottom, then click "more" next your name. From there you can rename yourself.
+* **Stay engaged.** Don't open up other programs/internet/reddit, etc.
+* **Use the raise hand feature.** This way I can recognize that you would like to speak. This is also under the "participants" menu in zoom.
+* **(Try to) Enable video.** If your bandwidth supports it and you have a webcam, everyone will be more engaged if you can see each others' faces. Using the "gallery view" on zoom allows you to see everyone at once. The option is in the upper right (not speaker view). If you're experiencing lag or poor connection, you can disable video to try to improve your experience.
+* **Use the phone if you have a poor connection.** The zoom invite link will have a phone number that you can call into. You can log into the computer and disable audio and video then use the phone to call in.
+* **Don't use the virtual background.** This is a "cool" feature, but it's distracting to all others.
 
 ## Class Resources
 
@@ -117,8 +159,6 @@ Only the final submission will be accepted as the grade for your assignment.
 However, if you submit after the deadline, the [late policy](#late-assignments) applies.
 
 ### Online discussions
-
-**This will be updated soon!**
 
 We will use [Campuswire](https://campuswire.com/c/GDBEBE971/) for class discussions outside of the classroom.
 If you haven't used Campuswire before, it's a cool tool that is essentially a message board for the class.
