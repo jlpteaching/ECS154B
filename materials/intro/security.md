@@ -61,7 +61,7 @@ Video describing the key problems that led to Spectre and Meltdown.
 
 As mentioned in the video above, in our first discussion we will talk about the ethical implications of disclosing hardware vulnerabilities.
 Before your discussion section, read these two short blog posts and *write one paragraph explaining whether you believe researchers should disclose vulnerabilities.*
-Turn this in on [Gradescope]().
+Turn this in on [Gradescope](https://www.gradescope.com/courses/105214/assignments/420374/submissions).
 
 * Post 1: [Let’s Keep it to Ourselves: Don’t Disclose Vulnerabilities](https://www.sigarch.org/lets-keep-it-to-ourselves-dont-disclose-vulnerabilities/)
 * Post 2: [Please Disclose Security Vulnerabilities!](https://www.sigarch.org/please-disclose-security-vulnerabilities/)
