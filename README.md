@@ -29,7 +29,7 @@ See the [Discussion section](syllabus/syllabus.md#discussion) of the syllabus fo
 
 Please contact me via email if you have a personal request, *not* canvas messages.
 I do not check canvas messages.
-For class-wide questions (e.g., anything more than one person might be interested to know), please use the [online discussion]().
+For class-wide questions (e.g., anything more than one person might be interested to know), please use the [online discussion](https://campuswire.com/c/GDBEBE971).
 
 [*Office Hours*](https://ucdaviscoe.zoom.us/my/jlowepower): Tuesdays from 4:30-5:30, or by appointment.
 
@@ -47,6 +47,8 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 
 ## Overview of class resources
 
+[**All online resources are available starting from this link.**](materials/index.md)
+
 - [Syllabus](syllabus/syllabus.md)
   - [Academic misconduct](syllabus/syllabus.md#academic-misconduct)
   - [Assignments and tests](syllabus/syllabus.md#assignments-and-tests)
@@ -56,18 +58,19 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 - [Online discussion](https://campuswire.com/c/GDBEBE971/): We will be using [Campuswire](https://campuswire.com/c/GDBEBE971/) for online discussion this quarter.
 - [Lecture Notes](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/El-DA5B06wNOpS3DzLCLsWYBLw2X5dl4743mokLQqoQsfQ?e=jGOhK1): All of my written notes in lecture can be found on [OneNote](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/El-DA5B06wNOpS3DzLCLsWYBLw2X5dl4743mokLQqoQsfQ?e=jGOhK1) which should be viewable online.
   - You can find notes from previous offerings by checking out the previous year's branches: [WQ 18](https://github.com/jlpteaching/ECS154B/tree/wq18/lecture%20notes), [WQ 19](https://github.com/jlpteaching/ECS154B/tree/wq19/lecture%20notes), [WQ 20](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EvMxZRE7fVlDi8i7tyjv_pYBAIM9TMFFsX3NkKT68kXhCQ?e=vSLDcX).
-- Labs
-  - [Lab 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md): Chisel intro and beginning DINO CPU
-  - [Lab 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md): Single cycle DINO CPU
-  - [Lab 3](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md): Pipelined DINO CPU
-  - [Lab 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md): DINO CPU non-combinational memory
-  - [Lab 5](): TBD
+- Projects
+  - [Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md): Chisel intro and beginning DINO CPU
+  - [Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md): Single cycle DINO CPU
+  - [Assignment 3](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md): Pipelined DINO CPU
+  - [Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md): DINO CPU non-combinational memory
+  - [Assignment 5](): TBD
+  - [Extra credit](./extra-credit.md): You can be rewarded extra credit for finding and fixing errors in class materials and assignments. See the [extra credit page](./extra-credit.md) for more information.
 - Chisel resources
   - [Overview](chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
   - [Getting Started](chisel-notes/getting-started.md): Some simple examples to get you started with Chisel.
   - [Testing with Chisel](chisel-notes/testing.md): Some examples of writing directed unit tests with Chisel.
   - [Building Systems](chisel-notes/building-systems.md): Examples of using Chisel modules, I/O, and other features to build larger systems.
-- DINO CPU Resources (most of these can be found in the DINO CPU template repository).
+- [DINO CPU Resources](https://github.com/jlpteaching/dinocpu-sq20/): These can be found in the [DINO CPU](https://github.com/jlpteaching/dinocpu-sq20/) template repository.
 
 ## Student Support
 
