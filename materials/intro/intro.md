@@ -66,7 +66,23 @@ More information about the quizzes can be found [on the syllabus](../../syllabus
 Not only will I be presenting lectures asynchronously through video, but discussions will also be online.
 We will be using [Zoom](https://zoom.us/) for discussion groups.
 
-**TODO: More details coming soon**
+I'm going to try something different for lecture/discussion.
+Since this is all remote, I don't believe that synchronous lectures make sense.
+Instead, all lecture material will be available asynchronously as video/text on the [website](https://jlpteaching.github.io/ECS154B/).
+
+However, I do think that some synchronous communication is important!
+Thus, I'm going to convert all lectures/discussion into small group discussion sections.
+There will be 6 sections each week and each section will be 40 minutes.
+Most of the discussion section times are during our scheduled lecture/discussion times, but I've also included one evening time for those of you that have to work or take care of family members during the day.
+
+Attending discussion is *required* (see [participation on the syllabus](https://jlpteaching.github.io/ECS154B/syllabus/syllabus.html#participation) for more details).
+However, you're only required to attend one discussion time each week.
+I would prefer you to attend the same one each week, but it's not required.
+
+The details about the discussion sections can be found [on the syllabus](https://jlpteaching.github.io/ECS154B/syllabus/syllabus.html#discussion).
+
+As always, let me know if there are any questions/comments!
+This is something new to all of us, and if it doesn't work out, we'll try something new :).
 
 ### Project
 
