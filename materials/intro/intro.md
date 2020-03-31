@@ -37,7 +37,7 @@ Oops, I forgot somethings.
 Another video describing how to use videos.
 
 As previously mentioned, this class will be all online.
-For details of the class policies, see the [syllabus](../syllabus/syllabus.md).
+For details of the class policies, see the [syllabus](../../syllabus/syllabus.md).
 Below, I'll briefly discuss some of the changes from a normal "in-person" class.
 
 ### **Quiz** Just testing you
@@ -75,11 +75,11 @@ Thus, I'm going to convert all lectures/discussion into small group discussion s
 There will be 6 sections each week and each section will be 40 minutes.
 Most of the discussion section times are during our scheduled lecture/discussion times, but I've also included one evening time for those of you that have to work or take care of family members during the day.
 
-Attending discussion is *required* (see [participation on the syllabus](https://jlpteaching.github.io/ECS154B/syllabus/syllabus.html#participation) for more details).
+Attending discussion is *required* (see [participation on the syllabus](../../syllabus/syllabus.md#participation) for more details).
 However, you're only required to attend one discussion time each week.
 I would prefer you to attend the same one each week, but it's not required.
 
-The details about the discussion sections can be found [on the syllabus](https://jlpteaching.github.io/ECS154B/syllabus/syllabus.html#discussion).
+The details about the discussion sections can be found [on the syllabus](../../syllabus/syllabus.md#discussion).
 
 As always, let me know if there are any questions/comments!
 This is something new to all of us, and if it doesn't work out, we'll try something new :).
