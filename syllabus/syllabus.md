@@ -210,6 +210,8 @@ See the [Computer Science Department's policy](https://www.cs.ucdavis.edu/blog/a
 
 There is a lot of great information on the [Coronovirus Update Page](https://studentaffairs.ucdavis.edu/news/coronavirus-update) with extensive [FAQs](https://studentaffairs.ucdavis.edu/news/coronavirus-faqs) and specific [student support information](https://studentaffairs.ucdavis.edu/news/coronavirus-faqs#support) in this unique circumstance.
 
+If you need access to computing resources, internet, etc. there's lots of good information on the [Keep Teaching webpage](https://keepteaching.ucdavis.edu/student-resources).
+
 As a student you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation.
 These mental health concerns or stressful events may lead to diminished academic performance or reduce a student’s ability to participate in daily activities.
 UC Davis is committed to advancing the mental health and well-being of its students.
