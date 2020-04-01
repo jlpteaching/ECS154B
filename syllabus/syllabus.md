@@ -321,7 +321,15 @@ However, you *must* take the quiz on your own, and you cannot work together on t
 You are allowed any number of attempts on the quiz, and you will see which questions you get wrong each time you take it.
 
 Quizzes are due about one week after the videos are released to give you ample time to watch the lecture video and take the quiz.
-Due to the extenuating circumstances of this entire quarter, you can take the quizzes late for 50% of the credit.
+They are due at the time I expect you will finish watching the videos.
+This is roughly when the lecture would have occurred if we were in person.
+
+Due to the extenuating circumstances of this entire quarter, there will be no late penalty for any quiz.
+However, submissions for quizzes will close one week after the due date.
+
+Grades for quizzes will be released at the due date, and you can resubmit any questions you got wrong for full credit.
+I strongly suggest taking the quiz before the due date and going back a couple of hours or days later to find out what you got wrong.
+This will help with your comprehension.
 
 ### Tests
 
