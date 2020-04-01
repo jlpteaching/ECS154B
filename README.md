@@ -66,10 +66,10 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
   - [Assignment 5](): TBD
   - [Extra credit](./extra-credit.md): You can be rewarded extra credit for finding and fixing errors in class materials and assignments. See the [extra credit page](./extra-credit.md) for more information.
 - Chisel resources
-  - [Overview](chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
-  - [Getting Started](chisel-notes/getting-started.md): Some simple examples to get you started with Chisel.
-  - [Testing with Chisel](chisel-notes/testing.md): Some examples of writing directed unit tests with Chisel.
-  - [Building Systems](chisel-notes/building-systems.md): Examples of using Chisel modules, I/O, and other features to build larger systems.
+  - [Overview](https://github.com/jlpteaching/dinocpu-sq20/blob/master/documentation/chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
+  - [Getting Started](https://github.com/jlpteaching/dinocpu-sq20/blob/master/documentation/chisel-notes/getting-started.md): Some simple examples to get you started with Chisel.
+  - [Testing with Chisel](https://github.com/jlpteaching/dinocpu-sq20/blob/master/documentation/chisel-notes/testing.md): Some examples of writing directed unit tests with Chisel.
+  - [Building Systems](https://github.com/jlpteaching/dinocpu-sq20/blob/master/documentation/chisel-notes/building-systems.md): Examples of using Chisel modules, I/O, and other features to build larger systems.
 - [DINO CPU Resources](https://github.com/jlpteaching/dinocpu-sq20/): These can be found in the [DINO CPU](https://github.com/jlpteaching/dinocpu-sq20/) template repository.
 
 ## Student Support
