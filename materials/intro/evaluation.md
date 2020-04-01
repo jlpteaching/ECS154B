@@ -1,5 +1,7 @@
 # Computer System Performance
 
+![XKCD comic](https://imgs.xkcd.com/comics/efficiency.png)
+
 In this section, we will discuss how to evaluate the "goodness" of computing systems and some simple models for their performance.
 
 ## Reading for this section
