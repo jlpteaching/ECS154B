@@ -57,7 +57,17 @@ However, there will also be links and further explanation written to go along wi
 There will be a short quiz after each video to help promote learning through this asynchronous medium.
 You can take these quizzes as many times as you like.
 The quizzes are due every couple of days, kind of like a normal lecture.
-However, the [late penalty for quizzes](../../syllabus/syllabus.md#quizzes) will be low, so if something comes up, you can take the quiz after you have found time to watch the video.
+There is no late penalty for quizzes, so if something comes up, you can take the quiz after you have found time to watch the video.
+
+I think you'll learn best if you complete the quiz, then come back later and fix any errors you may have made.
+Therefore, when you submit your quiz, you will not immediately see what you got right and wrong.
+*When the quiz is due,* you will see all of the correct and incorrect answers.
+At that time you can go back and update any questions you got wrong for full credit.
+
+Note: quizzes are due when we would have been covering those topics in "real" lecture.
+By doing the quizzes before the due date (or on the day it's due) you will make sure that you're keeping  up with the course.
+
+Quizzes will close even to late submission 1 week after they are due (except for the first week's quizzes).
 
 More information about the quizzes can be found [on the syllabus](../../syllabus/syllabus.md#quizzes).
 
