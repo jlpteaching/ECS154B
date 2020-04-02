@@ -34,7 +34,7 @@ After covering the basics of processor design, we will start optimizing this des
 Our first optimization will be adding [pipelining](./pipelined.md) to our design.
 This is covered in Section 4.5 and 4.6 of *Computer Organization and Design* and is the basis for [Assignment 3](https://github.com/jlpteaching/dinocpu-sq20/tree/master/assignments/assignment-3.md).
 
-* [Pipelined processor](./single-cycle.md)
+* [Pipelined processor](./pipelined.md)
   * Work in progress. Available 4/10. Due 4/16 and 4/21.
 
 ## Instruction level parallelism
@@ -50,8 +50,10 @@ Most of this topic is covered in the graduate level computer architecture course
 After [summarizing the content covered](./summary.md) by looking at some real systems, we will have a short test on this section of the course.
 
 * [Summary of processor architecture](./summary.md)
-  * Work in progress. Available 4/24. Due 4/30. 
+  * Work in progress. Available 4/24. Due 4/30.
 
 ## Test
 
 Date: 5/1. More information to follow.
+
+[Up next: Memory Architecture.](../memory/index.md)
