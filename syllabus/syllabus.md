@@ -46,7 +46,7 @@ See the [class materials](../materials/index.md) for all of the lecture videos.
 *Discussion*: **ONLINE**. See [Discussion](#discussion) for more information.
 
 Discussion will take place online via Zoom.
-See the [Discussion section](syllabus/syllabus.md#discussion) of the syllabus for more details.
+See the [Discussion section](#discussion) of the syllabus for more details.
 
 ### Instructor
 
