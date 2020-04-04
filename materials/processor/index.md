@@ -27,7 +27,7 @@ If you did not take ECS 50 or find yourself struggling to keep up in this first 
 
 ### [Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) **DUE 4/10**
 
-See [C to machine code **VIDEO**](./isa.md#machine-code-examples-video) for some helpful hints.
+See [Machine code examples **VIDEO**](./isa.md#machine-code-examples-video) for some helpful hints.
 
 ## Single cycle processor design
 
