@@ -56,7 +56,7 @@ You can find *all* of the details about the RISC-V ISA in the [RISC-V Specificat
 These two videos (I got tired after the first one) discuss some details of the RISC-V ISA and give a quick example of a small RISC-V program.
 More details are available in Chapter 2 of *Computer Organization and Design* and the *RISC-V Reader*.
 
-## C to machine code **VIDEO**
+## Machine code examples **VIDEO**
 
 Finally, let's put this all together and look at how an instruction is executed on a simple processor (this is an intro to [the next section](./single-cycle.md)).
 
