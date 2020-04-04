@@ -16,7 +16,18 @@ However, we will be using the [RISC-V open source ISA](https://riscv.org/).
 If you did not take ECS 50 or find yourself struggling to keep up in this first set of lectures, please refer to Chapter 2 in *Computer Organization and Design*.
 
 * [ISA and Machine Representation](./isa.md)
-  * Work in progress. Available 4/3. Due 4/9.
+  * [Reading for this section](./isa.md#reading-for-this-section)
+  * [What is an ISA? **VIDEO**](./isa.md#what-is-an-isa----video--)
+    * [RISC vs CISC **VIDEO**](./isa.md#risc-vs-cisc---video--)
+    * [**QUIZ** ISAs and RISC vs CISC](./isa.md#--quiz---isas-and-risc-vs-cisc) **DUE 4/9**
+  * [RISC-V **VIDEO**](./isa.md#risc-v---video--)
+  * [C to machine code **VIDEO**](./isa.md#c-to-machine-code---video--)
+    * [Optional further reading: Compiling, linking, and assembling](./isa.md#optional-further-reading--compiling--linking--and-assembling)
+  * [**QUIZ** RISC-V and machine representation](./isa.md#--quiz---risc-v-and-machine-representation) **DUE 4/9**
+
+### [Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) **DUE 4/10**
+
+See [C to machine code **VIDEO**](./isa.md#c-to-machine-code---video--) for some helpful hints.
 
 ## Single cycle processor design
 
@@ -27,6 +38,8 @@ This design is covered in Section 4.3 and 4.4 of *Computer Organization and Desi
 
 * [Single cycle processor](./single-cycle.md)
   * Work in progress. Available 4/8. Due 4/14.
+
+### [Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) **DUE 4/17**
 
 ## Pipelined processor design
 
