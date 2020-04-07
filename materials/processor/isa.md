@@ -56,6 +56,20 @@ You can find *all* of the details about the RISC-V ISA in the [RISC-V Specificat
 These two videos (I got tired after the first one) discuss some details of the RISC-V ISA and give a quick example of a small RISC-V program.
 More details are available in Chapter 2 of *Computer Organization and Design* and the *RISC-V Reader*.
 
+### Question: "Why 7 bits for the opcode?"
+
+There was a great question on [campuswire](https://campuswire.com/c/GDBEBE971/feed/91) which asked
+
+> From my understanding, the opcode of an instruction specifies what type of instruction it is or what the instruction does.
+> My question is why is the opcode 7 bits wide (representing 2^7=128 possible operations) when there are only 47 types of instructions in the RISC-V table here.
+> In this table there are much less than 128 unique opcodes.
+> Couldn't we use less bits to represent the opcode?
+> What occurs if a value of say 0b1111111 (which isn't in the table) happens to be the value of the opcode?
+
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/1770401/sp/177040100/embedIframeJs/uiconf_id/29032722/partner_id/1770401?iframeembed=true&playerId=kaltura_player&entry_id=0_xrz5rmxs&flashvars[mediaProtocol]=rtmp&amp;flashvars[streamerType]=rtmp&amp;flashvars[streamerUrl]=rtmp://www.kaltura.com:1935&amp;flashvars[rtmpFlavors]=1&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_rs8uj36z" width="608" height="402" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
+
+This video answers the question above.
+
 ## Machine code examples **VIDEO**
 
 Finally, let's put this all together and look at how an instruction is executed on a simple processor (this is an intro to [the next section](./single-cycle.md)).
