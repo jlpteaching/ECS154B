@@ -61,3 +61,9 @@ However, for this first section *there will be no late penalty*.
 * [GPUs and accelerators](parallel/accelerators.md) (Quizzes due on 6/4) ([Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) Due 6/4)
 
 **Test on 6/5**
+
+## Calendar
+
+Calendar view available [here](https://trello.com/b/bsgvK406/ecs-154b/calendar).
+
+<iframe width=640 height=800 src="https://trello.com/b/bsgvK406.html"></iframe>
