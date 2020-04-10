@@ -66,4 +66,4 @@ However, for this first section *there will be no late penalty*.
 
 Calendar view available [here](https://trello.com/b/bsgvK406/ecs-154b/calendar).
 
-<iframe width=640 height=800 src="http://trello.com/b/bsgvK406.html"></iframe>
+<iframe class="trello" src="https://trello.com/b/bsgvK406.html" height="800"></iframe>
