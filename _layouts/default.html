@@ -22,6 +22,22 @@
           <a href="{{ '/' | relative_url }}"><h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1></a>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
 
+          <nav>
+            <ul>
+              <li><a href="{{ '/materials' | relative_url }}">Lecture Materials</a>
+                <ul class="dropdown">
+                  <li><a href="{{ '/materials/intro/' | relative_url }}">Introduction</a></li>
+                  <li><a href="{{ '/materials/processor/' | relative_url }}">Processor Architecture</a></li>
+                  <li><a href="{{ '/materials/memory/' | relative_url }}">Memory Architecture</a></li>
+                  <li><a href="{{ '/materials/parallel/' | relative_url }}">Parallel Architecture</a></li>
+                </ul>
+              </li>
+
+              <li><a href="https://trello.com/b/bsgvK406/ecs-154b/calendar">Due Date Calendar</a></li>
+              <li><a href="{{ '/syllabus/syllabus.html' | relative_url }}">Syllabus</a></li>
+            </ul>
+          </na>
+
           {% if site.show_downloads %}
             <section id="downloads">
               <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>

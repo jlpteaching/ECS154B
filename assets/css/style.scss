@@ -1,0 +1,33 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#header_wrap .inner { padding: 50px 10px 0px 10px; }
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    ul {
+        //text-align: center;
+        list-style-type: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 15px;
+        li {
+            display: inline;
+            font-size: 17px;
+            a {
+                color: #000000;
+                text-decoration: none;
+                padding: 14px;
+                background-color: rgb(233, 233, 233);
+            }
+        }
+    }
+}
+
+.dropdown {
+    display: none;
+}
