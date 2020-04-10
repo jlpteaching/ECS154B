@@ -35,21 +35,21 @@ However, for this first section *there will be no late penalty*.
 
 ### [Processor Architecture](processor/index.md) (About four weeks)
 
-* [Instruction set architectures and RISC-V](processor/isa.md) (Quizzes due 4/9) ([Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) Due 4/10)
-* [Single cycle CPU design](processor/single-cycle.md) (Quizzes due 4/14) ([Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) Due 4/17)
-* [Pipelined CPU design](processor/pipelined.md) (Quizzes due 4/21) ([Assignment 3.1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 4/24)
-* [Instruction-level parallelism](processor/ilp.md) (Quizzes due 4/28)
-* [Processor architecture summary](processor/summary.md) (Quizzes due 4/30)
+* [Instruction set architectures and RISC-V](processor/isa.md) (Quizzes due 4/9) ([Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) Due 4/13)
+* [Single cycle CPU design](processor/single-cycle.md) (Quizzes due 4/14 & 4/16) ([Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) Due 4/20)
+* [Pipelined CPU design](processor/pipelined.md) (Quizzes due 4/21 & 4/23) ([Assignment 3.1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 4/27)
+* [Instruction-level parallelism](processor/ilp.md) (Quizzes due 4/28 & 4/30)
+* [Processor architecture summary](processor/summary.md) (Quizzes due 5/5)
 
-**Test on 5/1**
+**Test on 5/5**
 
 ### [Memory System Architecture](memory/index.md) (About three weeks)
 
-* [Why memory matters](memory/performance.md) (Quiz due 5/5)
-* [Memory technology](memory/technology.md) (Quiz due 5/5) ([Assignment 3.2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 5/8)
-* [Caches and memory hierarchy](memory/caches.md) (Quizzes due 5/12)
+* [Why memory matters](memory/performance.md) (Quiz due 5/7)
+* [Memory technology](memory/technology.md) (Quiz due 5/7) ([Assignment 3.2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 5/11)
+* [Caches and memory hierarchy](memory/caches.md) (Quizzes due 5/12 & 5/14)
 * [Virtual memory](memory/virtual.md) (Quizzes due 5/19)
-* [Memory architecture summary](memory/summary.md) (Quizzes Due 5/21) ([Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) Due 5/22)
+* [Memory architecture summary](memory/summary.md) (Quizzes Due 5/21) ([Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) Due 5/25)
 
 **Test on 5/22**
 
@@ -58,7 +58,7 @@ However, for this first section *there will be no late penalty*.
 * [Parallel systems' performance](parallel/performance.md) (Quizzes due on 5/26)
 * [Parallel architectures and programming](parallel/architectures.md) (Quizzes due on 5/28)
 * [Parallel memory systems](parallel/memory.md) (Quizzes due on 6/2)
-* [GPUs and accelerators](parallel/accelerators.md) (Quizzes due on 6/4) ([Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) Due 6/4)
+* [GPUs and accelerators](parallel/accelerators.md) (Quizzes due on 6/4) ([Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) Due 6/8)
 
 **Test on 6/5**
 
@@ -66,4 +66,4 @@ However, for this first section *there will be no late penalty*.
 
 Calendar view available [here](https://trello.com/b/bsgvK406/ecs-154b/calendar).
 
-<iframe width=640 height=800 src="https://trello.com/b/bsgvK406.html"></iframe>
+<iframe width=640 height=800 src="http://trello.com/b/bsgvK406.html"></iframe>
