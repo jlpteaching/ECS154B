@@ -1,5 +1,7 @@
 # Pipelined CPU Design
 
+![XKCD comic](https://imgs.xkcd.com/comics/is_it_worth_the_time.png)
+
 We've now seen how to design a simple [single cycle](./single-cycle.md) CPU.
 Next, we're going to start talking about how to improve its performance and look at a more realistic design.
 
