@@ -37,9 +37,15 @@ This design will use combinational logic to do all of the steps to complete an i
 This design is covered in Section 4.3 and 4.4 of *Computer Organization and Design*.
 
 * [Single cycle processor](./single-cycle.md)
-  * Work in progress. Available 4/8. Due 4/14.
+  * [Steps to execute an instruction **VIDEO**](./single-cycle.md#steps-to-execute-an-instruction-video)
+  * [Data path and control path **VIDEO**](./single-cycle.md#data-path-and-control-path-video)
+  * [**QUIZ** Single cycle design](./single-cycle.md#quiz-single-cycle-design)
+  * [Performance and limits to a single cycle design](./single-cycle.md#performance-and-limits-to-a-single-cycle-design)
+    * [Performance of the single cycle design **VIDEO**](./single-cycle.md#performance-of-the-single-cycle-design-video)
+    * [How to improve this design and single cycle limitations **VIDEO**](./single-cycle.md#how-to-improve-this-design-and-single-cycle-limitations-video)
+    * [**QUIZ** The Single cycle design's performance](./single-cycle.md#quiz-the-single-cycle-design-s-performance)
 
-### [Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) **DUE 4/17**
+### [Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) **DUE 4/20**
 
 ## Pipelined processor design
 
@@ -48,7 +54,22 @@ Our first optimization will be adding [pipelining](./pipelined.md) to our design
 This is covered in Section 4.5 and 4.6 of *Computer Organization and Design* and is the basis for [Assignment 3](https://github.com/jlpteaching/dinocpu-sq20/tree/master/assignments/assignment-3.md).
 
 * [Pipelined processor](./pipelined.md)
-  * Work in progress. Available 4/10. Due 4/16 and 4/21.
+  * [Basic pipeline design](./pipelined.md#basic-pipeline-design)
+    * [What is pipelining? **VIDEO**](./pipelined.md#what-is-pipelining-video)
+    * [Pipelined design for the DINO CPU  **VIDEO**](./pipelined.md#pipelined-design-for-the-dino-cpu-video)
+    * [Example execution in pipelined DINO CPU  **VIDEO**](./pipelined.md#example-execution-in-pipelined-dino-cpu-video)
+    * [Pipelined CPU performance **VIDEO**](./pipelined.md#pipelined-cpu-performance-video)
+    * [**QUIZ** Basic pipelining](./pipelined.md#quiz-basic-pipelining) **Due 4/21**
+  * [Pipeline hazards](./pipelined.md#pipeline-hazards)
+    * [Limits of our basic pipelined design and data hazards **VIDEO**](./pipelined.md#limits-of-our-basic-pipelined-design-and-data-hazards-video)
+    * [How to handle data hazards (forwarding) **VIDEO**](./pipelined.md#how-to-handle-data-hazards-forwarding-video)
+      * [Load to use hazards **VIDEO**](./pipelined.md#load-to-use-hazards-video)
+    * [**QUIZ** Data hazards](./pipelined.md#quiz-data-hazards)  **Due 4/23**
+    * [Control hazards and branch prediction **VIDEO**](./pipelined.md#control-hazards-and-branch-prediction-video)
+    * [Other kinds of hazards: Structural hazards **VIDEO**](./pipelined.md#other-kinds-of-hazards-structural-hazards-video)
+  * [Exceptions in a pipelined processor **VIDEO**](./pipelined.md#exceptions-in-a-pipelined-processor-video)
+  * [Putting it all together: examples of pipelined execution **VIDEO**](./pipelined.md#putting-it-all-together-examples-of-pipelined-execution-video)
+    * [**QUIZ** Pipelining review](./pipelined.md#quiz-pipelining-review) **Due 4/23**
 
 ## Instruction level parallelism
 
@@ -56,14 +77,14 @@ Finally, we will introduce the idea of [instruction level parallelism](./ilp.md)
 Most of this topic is covered in the graduate level computer architecture course (ECS 201A), but we will touch on some of these topics in this class.
 
 * [Instruction level parallelism](./ilp.md)
-  * Work in progress. Available 4/22. Due 4/28.
+  * Work in progress. Available 4/23. Due 4/30.
 
 ## Summary
 
 After [summarizing the content covered](./summary.md) by looking at some real systems, we will have a short test on this section of the course.
 
 * [Summary of processor architecture](./summary.md)
-  * Work in progress. Available 4/24. Due 4/30.
+  * Work in progress. Available 4/28. Due 5/5.
 
 ## Test
 
