@@ -61,7 +61,9 @@ This is covered in Section 4.5 and 4.6 of *Computer Organization and Design* and
     * [Pipelined CPU performance **VIDEO**](./pipelined.md#pipelined-cpu-performance-video)
     * [**QUIZ** Basic pipelining](./pipelined.md#quiz-basic-pipelining) **Due 4/21**
   * [Pipeline hazards](./pipelined.md#pipeline-hazards)
-    * [Limits of our basic pipelined design and data hazards **VIDEO**](./pipelined.md#limits-of-our-basic-pipelined-design-and-data-hazards-video)
+    * [Limits of our basic pipelined design and data hazards](./pipelined.md#limits-of-our-basic-pipelined-design-and-data-hazards)
+      * [Detailed examples of data hazards and dependencies **VIDEO**](./pipelined.md#detailed-examples-of-data-hazards-and-dependencies-video)
+      * ["Solving" data hazards with stalling **VIDEO**](./pipelined.md#-solving--data-hazards-with-stalling-video)
     * [How to handle data hazards (forwarding) **VIDEO**](./pipelined.md#how-to-handle-data-hazards-forwarding-video)
       * [Load to use hazards **VIDEO**](./pipelined.md#load-to-use-hazards-video)
     * [**QUIZ** Data hazards](./pipelined.md#quiz-data-hazards)  **Due 4/23**
