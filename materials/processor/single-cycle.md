@@ -70,3 +70,5 @@ This video discusses the limitations of single cycle designs and why real system
 ### **QUIZ** The Single cycle design's performance
 
 [Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/439578)
+
+[Next up: Pipelined processor design.](./pipelined.md)

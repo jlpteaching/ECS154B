@@ -144,3 +144,5 @@ This video should be helpful on [Assignment 3.2](https://github.com/jlpteaching/
 ### **QUIZ** Pipelining review
 
 [Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/464646)
+
+[Next up: Instruction level parallelism.](./ilp.md)
