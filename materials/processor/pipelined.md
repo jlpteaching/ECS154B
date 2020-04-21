@@ -5,15 +5,23 @@
 We've now seen how to design a simple [single cycle](./single-cycle.md) CPU.
 Next, we're going to start talking about how to improve its performance and look at a more realistic design.
 
+## Reading for this section
+
+*Computer Organization and Design* Sections 4.5-4.9.
+
 ## Basic pipeline design
 
 ### What is pipelining? **VIDEO**
+
+**READING:** *Computer Organization and Design* Section 4.5
 
 {% include video.html id="0_w56q0cw5" %}
 
 This is a video introducing the concept of pipelining.
 
 ### Pipelined design for the DINO CPU  **VIDEO**
+
+**READING:** *Computer Organization and Design* Section 4.6
 
 {% include video.html id="0_g7shogls" %}
 
@@ -42,6 +50,8 @@ Now that we understand the basics of pipelining, let's look at some of the limit
 Note: these lectures will be useful when completing [Part II](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md#part-ii-implementing-forwarding) of [assignment 3](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md).
 
 ### Limits of our basic pipelined design and data hazards
+
+**READING:** *Computer Organization and Design* Section 4.7
 
 Through the following videos we will be understanding data hazards and the way the affect the pipeline performance and implementation.
 These videos are bit more detailed than some of the others.
@@ -96,6 +106,8 @@ This video talks about a special kind of data hazard: load to use hazards.
 
 ### Control hazards and branch prediction **VIDEO**
 
+**READING:** *Computer Organization and Design* Section 4.8
+
 {% include video.html id="0_w6v7pbcn" %}
 
 This video introduces control hazards with an example.
@@ -115,6 +127,8 @@ This video discusses the requirements of a branch predictor and some more advanc
 This video talks about structural hazards.
 
 ## Exceptions in a pipelined processor **VIDEO**
+
+**READING:** *Computer Organization and Design* Section 4.9
 
 {% include video.html id="0_b0k5r233" %}
 
