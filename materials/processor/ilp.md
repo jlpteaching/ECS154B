@@ -2,19 +2,17 @@
 
 ![An ancient XKCD](https://imgs.xkcd.com/comics/paths.jpg)
 
-![Under construction]({{ "/under-construction.png" | relative_url }})
-
 ## Static ILP
 
 **READING:** *Computer Organization and Design* Section 4.10
 
-### Instruction scheduling
+### Instruction scheduling **VIDEO**
 
 {% include video.html id="0_h627dgvo" %}
 
 This is a video on how to get parallelism by statically finding independent instructions and how to improve performance with static instruction scheduling.
 
-### A new ISA type: VLIW
+### A new ISA type: VLIW **VIDEO**
 
 {% include video.html id="0_cuql5qo6" %}
 
@@ -24,7 +22,7 @@ This video introduces VLIW ISAs and a little about how they work.
 
 This video talks about their pros and cons.
 
-#### A bit about Intel Itanium (a *real* VLIW design)
+#### A bit about Intel Itanium (a *real* VLIW design) **VIDEO**
 
 Rather than listen to me talk about the history of the Itanium, let's go back to the Turing Lecture and have Dave Patterson explain why it failed!
 
@@ -32,7 +30,7 @@ Rather than listen to me talk about the history of the Itanium, let's go back to
 
 ### **QUIZ** Static scheduling
 
-[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/474132)
 
 ## Dynamic ILP
 
@@ -41,6 +39,8 @@ Rather than listen to me talk about the history of the Itanium, let's go back to
 Now, can we do the same thing as we discussed above, but do it automatically in hardware?
 
 ### Dynamic instruction scheduling
+
+#### A cool historical perspective
 
 Optional **READING:** [*Dynamic Instruction Scheduling* Conway et al.](https://ai.eecs.umich.edu/people/conway/ACS/DIS/DIS.pdf)
 
@@ -61,6 +61,8 @@ It's a great way to see some insight into the human aspects of computer science 
 [This video](https://youtu.be/7ncuhRYmfJw) is long, but similar to the talk she gave at Davis a couple of years ago.
 At around the 20 minute mark is where she starts talking about computer architecture.
 
+#### DIS details **VIDEO**
+
 {% include video.html id="0_4z25jj2k" %}
 
 This is a video introduces how to get parallelism by dynamically finding independent instructions.
@@ -69,8 +71,14 @@ This is a video introduces how to get parallelism by dynamically finding indepen
 
 This video describes an algorithm called DIS which can be implemented in hardware to decide which instructions are allowed to execute at any time.
 
+## Register renaming **VIDEO**
+
 {% include video.html id="0_9nplzxmb" %}
 
 Finally, this video discusses how to overcome WAW and WAR hazards by using register renaming.
+
+### **QUIZ** Dynamic ILP
+
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/474764)
 
 [Next up: A summary of processor design.](./summary.md)
