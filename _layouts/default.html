@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
 
 {% seo %}
   </head>
@@ -35,7 +36,8 @@
 
               <li><a href="https://trello.com/b/bsgvK406/ecs-154b/calendar">Due Date Calendar</a></li>
               <li><a href="{{ '/syllabus/syllabus.html' | relative_url }}">Syllabus</a></li>
-              <li><a href="https://video.ucdavis.edu/playlist/dedicated/0_0w4fhqlc/0_9qlq45sz">DINOCPU Basics</a></li>
+              <li><a href="https://github.com/jlpteaching/dinocpu-sq20">DINO CPU Assignments</a></li>
+              <li><a href="{{ '/materials/dinocpu.html' | relative_url }}">DINO CPU Resources</a></li>
             </ul>
           </na>
 
@@ -85,5 +87,8 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+    <script>
+      anchors.add();
+    </script>
   </body>
 </html>
