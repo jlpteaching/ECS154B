@@ -39,7 +39,7 @@ However, for this first section *there will be no late penalty*.
 * [Single cycle CPU design](processor/single-cycle.md) (Quizzes due 4/14 & 4/16) ([Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) Due 4/20)
 * [Pipelined CPU design](processor/pipelined.md) (Quizzes due 4/21 & 4/23) ([Assignment 3.1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 4/27)
 * [Instruction-level parallelism](processor/ilp.md) (Quizzes due 4/28 & 4/30)
-* [Processor architecture summary](processor/summary.md) (Quizzes due 5/5)
+* [Processor architecture summary](processor/summary.md)
 
 **Test on 5/5**
 

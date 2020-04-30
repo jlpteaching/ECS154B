@@ -96,10 +96,11 @@ Most of this topic is covered in the graduate level computer architecture course
 After [summarizing the content covered](./summary.md) by looking at some real systems, we will have a short test on this section of the course.
 
 * [Summary of processor architecture](./summary.md)
-  * Work in progress. Available 4/28. Due 5/5.
+  * [Summary of what we've learned **VIDEO**](./summary.md#summary-of-what-we-ve-learned-video)
+  * [Real systems **VIDEO**](./summary.md#real-systems-video)
 
 ## Test
 
-Date: 5/1. More information to follow.
+Date: 5/5. More information to follow.
 
 [Up next: Memory Architecture.](../memory/index.md)
