@@ -79,17 +79,17 @@ Finally, we will introduce the idea of [instruction level parallelism](./ilp.md)
 Most of this topic is covered in the graduate level computer architecture course (ECS 201A), but we will touch on some of these topics in this class.
 
 * [Instruction level parallelism](./ilp.md)
-  * [Static ILP](#static-ilp)
-    * [Instruction scheduling **VIDEO**](#instruction-scheduling-video)
-    * [A new ISA type: VLIW **VIDEO**](#a-new-isa-type-vliw-video)
-      * [A bit about Intel Itanium (a *real* VLIW design) **VIDEO**](#a-bit-about-intel-itanium-a-real-vliw-design-video)
-    * [**QUIZ** Static scheduling](#quiz-static-scheduling)
-  * [Dynamic ILP](#dynamic-ilp)
-    * [Dynamic instruction scheduling](#dynamic-instruction-scheduling)
-      * [A cool historical perspective](#a-cool-historical-perspective)
-      * [DIS details **VIDEO**](#dis-details-video)
-  * [Register renaming **VIDEO**](#register-renaming-video)
-    * [**QUIZ** Dynamic ILP](#quiz-dynamic-ilp)
+  * [Static ILP](./ilp.md#static-ilp)
+    * [Instruction scheduling **VIDEO**](./ilp.md#instruction-scheduling-video)
+    * [A new ISA type: VLIW **VIDEO**](./ilp.md#a-new-isa-type-vliw-video)
+      * [A bit about Intel Itanium (a *real* VLIW design) **VIDEO**](./ilp.md#a-bit-about-intel-itanium-a-real-vliw-design-video)
+    * [**QUIZ** Static scheduling](./ilp.md#quiz-static-scheduling)
+  * [Dynamic ILP](./ilp.md#dynamic-ilp)
+    * [Dynamic instruction scheduling](./ilp.md#dynamic-instruction-scheduling)
+      * [A cool historical perspective](./ilp.md#a-cool-historical-perspective)
+      * [DIS details **VIDEO**](./ilp.md#dis-details-video)
+  * [Register renaming **VIDEO**](./ilp.md#register-renaming-video)
+    * [**QUIZ** Dynamic ILP](./ilp.md#quiz-dynamic-ilp)
 
 ## Summary
 
