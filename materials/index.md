@@ -45,7 +45,6 @@ However, for this first section *there will be no late penalty*.
 
 ### [Memory System Architecture](memory/index.md) (About three weeks)
 
-* [Why memory matters](memory/performance.md) (Quiz due 5/12)
 * [Memory technology](memory/technology.md) (Quiz due 5/12) ([Assignment 3.2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 5/11)
 * [Caches and memory hierarchy](memory/caches.md) (Quizzes due 5/14 & 5/19)
 * [Virtual memory](memory/virtual.md) (Quizzes due 5/21 & 5/26)
