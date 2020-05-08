@@ -397,7 +397,7 @@ and t2, t0, a2
 
 add a0, a2, s1; sub t0, a1, s1; mul s3, a1, a2; xor t1, t0, s3; and t2, t0, a2;
 
-
+```
                       1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
 0:  add x1, x2, x3  | F | D | E | M | W |   |   |   |   |   |   |   |   |   |   |
 4:  lw  x3, 0(x1)   |   | F | D | E | M | W.|   |   |   |   |   |   |   |   |   |
@@ -410,5 +410,6 @@ add a0, a2, s1; sub t0, a1, s1; mul s3, a1, a2; xor t1, t0, s3; and t2, t0, a2;
 32: sw  x2, 0(x3)   |   |   |   |   |   |   |   |   | F | D | E | M | W |   |   |
 36: xor x4, x2, x4  |   |   |   |   |   |   |   |   |   | F | D | E | M.| W |   |
 40: and x4, x4, x4  |   |   |   |   |   |   |   |   |   |   | F | D | E^| M | W |
+```
 
 (monospace format)    1   2   3   4   5   6   7   8   9  10  11  12  13  14  15 \n 0:  add x1, x2, x3  | F | D | E | M | W |   |   |   |   |   |   |   |   |   |   | \n  4:  lw  x3, 0(x1)   |   | F | D | E | M | W.|   |   |   |   |   |   |   |   |   | \n  8:  sub x2, x3, x4  |   |   | F | D | D | E^| M.| W |   |   |   |   |   |   |   | \n  12: beq x2, x3, 20  |   |   |   | F | F | D | E^| M | W |   |   |   |   |   |   | \n  16: sw  x2, 0(x3)   |   |   |   |   |   |~F~|~D~|~E~|   |   |   |   |   |   |   | \n  20: xor x4, x2, x4  |   |   |   |   |   |   |~F~|~D~|   |   |   |   |   |   |   | \n  24: and x4, x4, x4  |   |   |   |   |   |   |   |~F~|   |   |   |   |   |   |   | \n ... \n 32: sw  x2, 0(x3)   |   |   |   |   |   |   |   |   | F | D | E | M | W |   |   | \n  36: xor x4, x2, x4  |   |   |   |   |   |   |   |   |   | F | D | E | M.| W |   | \n  40: and x4, x4, x4  |   |   |   |   |   |   |   |   |   |   | F | D | E^| M | W | \n
