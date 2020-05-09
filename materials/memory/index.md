@@ -12,7 +12,10 @@ In this section, we'll be talking about how memory *works* and [memory technolog
 We'll find that while there are many different memory technologies, none are "best".
 
 * [Memory intro and technology](./technology.md)
-  * ![under construction](/under-construction.png)
+  * [Introduction: Why does memory architecture matter? **VIDEO**](./technology.md#introduction-why-does-memory-architecture-matter-video-)
+  * [Memory technology **VIDEO**](./technology.md#memory-technology-video-)
+  * [Moving data around **VIDEO**](./technology.md#moving-data-around-video-)
+  * [**QUIZ** Memory technology](./technology.md#quiz-memory-technology)
 
 ## Caches and the Memory Hierarchy
 
@@ -35,3 +38,5 @@ Finally, we'll step up a level and look at how operating systems allow multiple 
 
 * [Summary](./summary.md)
   * ![under construction](/under-construction.png)
+
+[Up next: Parallel Architecture.](../parallel/index.md)
