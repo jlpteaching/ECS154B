@@ -17,7 +17,7 @@ Here, you can see the squiggly lines that I was talking about to make sure that 
 
 ## Memory technology **VIDEO**
 
-{% include video.html id="0_6hbs8kj5" %}
+{% include video.html id="0_jpfyz8c7" %}
 
 This video introduces the technology behind general memory arrays.
 
@@ -30,7 +30,7 @@ Each sub-array has 2^13 bits or 8192 bits.
 
 ![DRAM die](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/MT4C1024-HD.jpg/1280px-MT4C1024-HD.jpg)
 
-{% include video.html id="0_jpfyz8c7" %}
+{% include video.html id="0_6hbs8kj5" %}
 
 This video talks about how SRAM and DRAM cells work.
 
