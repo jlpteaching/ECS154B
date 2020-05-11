@@ -92,12 +92,12 @@ Space for work, if needed
 
 What is the *power* of **System B *relative to* System A**. If System B uses more power, this number will be above 1, if it uses less power it will be below 1.
 
-[___](=0.9375+-0.05)
+[___](=0.104+-0.05)
 
 Space for work, if needed
 |___|
 
-[[power ~ $$c \times v^2 \times f$$. B_power / A_power = relative c \times B_voltage^2 / A_voltage^2 \times B_freq / A_freq = 0.8 * 0.390625 * 3 = 0.9375]]
+[[power ~ $$c \times v^2 \times f$$. B_power / A_power = relative c \times B_voltage^2 / A_voltage^2 \times B_freq / A_freq = 0.8 * 0.390625 * .3333 = 0.104]]
 
 ### Relative goodness
 
