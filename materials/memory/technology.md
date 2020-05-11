@@ -27,7 +27,6 @@ Each square bank has 4 sub-arrays.
 There are a total of 8*4=32 banks.
 Each sub-array has 2^13 bits or 8192 bits.
 
-
 ![DRAM die](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/MT4C1024-HD.jpg/1280px-MT4C1024-HD.jpg)
 
 {% include video.html id="0_6hbs8kj5" %}
