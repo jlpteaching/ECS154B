@@ -23,7 +23,12 @@ Since no one technology is the best, we want to create a memory hierarchy with [
 We will discuss the underlying principles that make caches efficient, and how hardware caches are designed.
 
 * [Caches and the Memory Hierarchy](./caches.md)
-  * ![under construction](/under-construction.png)
+  * [Memory hierarchy introduction](./caches.md#memory-hierarchy-introduction)
+  * [Basic caching](./caches.md#basic-caching)
+    * [Combining memory technologies into a single system **VIDEO**](./caches.md#combining-memory-technologies-into-a-single-system-video)
+    * [Locality and caching **VIDEO**](./caches.md#locality-and-caching-video)
+    * [Cache performance **VIDEO**](./caches.md#cache-performance-video)
+    * [**QUIZ** Basic caching](./caches.md#quiz-basic-caching)
 
 ### [Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) **DUE 5/25**
 

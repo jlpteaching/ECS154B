@@ -27,7 +27,7 @@ This video talks about different blocks sizes to take advantage of spatial local
 
 ### Cache performance **VIDEO**
 
-{% include video.html id="0_ix2usruv" %}
+{% include video.html id="0_u9ucuipd" %}
 
 This video introduces measuring cache performance with *hit ratio* and *average memory access time* or AMAT.
 
