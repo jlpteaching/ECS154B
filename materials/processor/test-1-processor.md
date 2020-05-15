@@ -320,7 +320,7 @@ How many times did you have to forward *from writeback*?
 
 [___](1)
 
-[[See above]]
+[[See above. Note: This is either 1 or 2. It's ok if you skip the forwarding to the flushed instruction.]]
 
 ### **Optional** diagram
 
@@ -344,7 +344,7 @@ In the program above, find all of the dependencies, both true and false of the t
 
 |___|
 
-[[There's a RAW dependence via `s1` on inst B, a RAW dependence via `s3` on inst C, a WAR dependence via `a0` on inst C and inst D.]]
+[[There's a RAW dependence via `s1` on inst B, a RAW dependence via `s3` on inst C, a WAR dependence via `a1` on inst B and inst C.]]
 
 ### Dependencies 2
 
@@ -354,7 +354,7 @@ In the program above, find all of the dependencies, both true and false of the t
 
 |___|
 
-[[There's a RAW dependence via `s1` on inst B, and a WAW dependence via `a0` on inst A.]]
+[[There's a RAW dependence via `s1` on inst B, a RAW dependence via `a0` on inst A, and a WAW dependence via `a0` on inst A.]]
 
 ### Static scheduling
 
@@ -395,15 +395,29 @@ mul s3, a1, a2
 xor t1, t0, s3
 and t2, t0, a2
 
+A: add t0, a2, s1
+B: sub t1, a1, s1
+C: mul t2, a1, a2
+D: xor t3, t1, t2
+E: and t4, t1, t0
+
+```
+A: add a0, a2, s1
+B: sub s1, a1, s1 **
+C: mul s3, a1, a2
+D: xor a1, s1, s3 **
+E: and a0, s1, a0 **
+```
+
 add a0, a2, s1; sub t0, a1, s1; mul s3, a1, a2; xor t1, t0, s3; and t2, t0, a2;
 
 ```
                       1   2   3   4   5   6   7   8   9  10  11  12  13  14  15
 0:  add x1, x2, x3  | F | D | E | M.| W |   |   |   |   |   |   |   |   |   |   |
 4:  lw  x3, 0(x1)   |   | F | D | E^| M | W.|   |   |   |   |   |   |   |   |   |
-8:  sub x2, x3, x4  |   |   | F | D | D | E^| M.| W |   |   |   |   |   |   |   |
+8:  sub x2, x3, x4  |   |   | F | D | D | E^| M.| W.|   |   |   |   |   |   |   |
 12: beq x2, x3, 20  |   |   |   | F | F | D | E^| M | W |   |   |   |   |   |   |
-16: sw  x2, 0(x3)   |   |   |   |   |   |~F~|~D~|~E~|   |   |   |   |   |   |   |
+16: sw  x2, 0(x3)   |   |   |   |   |   |~F~|~D~|~E^|   |   |   |   |   |   |   |
 20: xor x4, x2, x4  |   |   |   |   |   |   |~F~|~D~|   |   |   |   |   |   |   |
 24: and x4, x4, x4  |   |   |   |   |   |   |   |~F~|   |   |   |   |   |   |   |
 ...
