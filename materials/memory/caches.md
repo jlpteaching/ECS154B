@@ -35,6 +35,89 @@ This video introduces measuring cache performance with *hit ratio* and *average 
 
 [Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
 
-## Much more coming soon!
+## Memory hierarchy **VIDEO**
+
+{% include video.html id="0_39vj4rjv" %}
+
+To motivate a memory hierarchy, this video goes over another AMAT example.
+
+{% include video.html id="0_u9qzm15z" %}
+
+This video talks about how a multi-level hierarchy can improve cache performance.
+
+## Cache design
+
+Now that we've talked about cache performance and how caches fit into the broader memory system, let's dig into how to design a cache.
+
+To motivate cache design, we will be answering three questions.
+
+1. How do we find data for a given address?
+2. What do we do when there isn't enough room in the cache (or, which data should we replace)?
+3. What happens when we want to write data?
+
+The next sections will discuss each of these questions in detail.
+
+### Direct-mapped caches **VIDEO**
+
+First, we'll look at a "simple" direct-mapped cache.
+After understanding this, we can dive into more realistic cache designs.
 
 {% include video.html %}
+
+This video introduces direct-mapped caches and starts to answer the question "How do we find data for a given address?"
+
+{% include video.html %}
+
+This video talks about how to take an address and figure out where in the cache to look for the data.
+
+{% include video.html %}
+
+This video goes deeper into the hardware design of direct-mapped caches and begins to motivate set associativity.
+
+### Set-associative caches **VIDEO**
+
+There are major problems with direct-mapped caches.
+Specifically, many addresses *conflict* for the same index in the cache.
+But! We have set-associative caches coming to the rescue!
+
+{% include video.html %}
+
+This video goes into detail of how to design a set-associative cache and how to figure out where to look in a set-associative cache for data given an address.
+
+{% include video.html %}
+
+This video talks about the area and power overheads of set-associative caches.
+
+### **QUIZ** Cache design
+
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
+![Coming soon](/under-construction.png)
+
+## Replacement policies **VIDEO**
+
+Now, onto the next question: *Which data should we replace?*
+
+{% include video.html %}
+
+This video introduces some replacement policies and some tradeoffs when trying to choose a replacement policy for a cache.
+
+## Write-back policies **VIDEO**
+
+And our final question: *What happens when we want to write data?*
+
+{% include video.html %}
+
+This video discusses what happens when we try to write data to a cache and different write-back policies.
+
+## Summary of caches **VIDEO**
+
+{% include video.html %}
+
+This final video discusses the three C's of cache misses.
+
+### **QUIZ** Summary of caches
+
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
+![Coming soon](/under-construction.png)
+
+[Next up: Virtual memory](./virtual.md)
