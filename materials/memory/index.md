@@ -29,6 +29,15 @@ We will discuss the underlying principles that make caches efficient, and how ha
     * [Locality and caching **VIDEO**](./caches.md#locality-and-caching-video)
     * [Cache performance **VIDEO**](./caches.md#cache-performance-video)
     * [**QUIZ** Basic caching](./caches.md#quiz-basic-caching)
+  * [Memory hierarchy **VIDEO**](./caches.md#memory-hierarchy-video)
+  * [Cache design](./caches.md#cache-design)
+    * [Direct-mapped caches **VIDEO**](./caches.md#direct-mapped-caches-video)
+    * [Set-associative caches **VIDEO**](./caches.md#set-associative-caches-video)
+    * [**QUIZ** Cache design](./caches.md#-quiz-cache-design)
+  * [Replacement policies **VIDEO**](./caches.md#replacement-policies-video)
+  * [Write-back policies **VIDEO**](./caches.md#write-back-policies-video)
+  * [Summary of caches **VIDEO**](./caches.md#summary-of-caches-video)
+    * [**QUIZ** Summary of caches](./caches.md#-quiz-summary-of-caches)
 
 ### [Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) **DUE 5/25**
 

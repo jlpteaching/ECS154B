@@ -7,7 +7,13 @@
 Unfortunately, there isn't a perfect memory device.
 So, we need to construct a system with multiple different memory devices to try to get the best of all possible devices!
 
+## Reading for this section
+
+*Computer Organization and Design* Sections 5.1, 5.3-5.4, 5.8-5.9.
+
 ## Basic caching
+
+**READING:** *Computer Organization and Design* Section 5.3
 
 ### Combining memory technologies into a single system **VIDEO**
 
@@ -37,6 +43,8 @@ This video introduces measuring cache performance with *hit ratio* and *average 
 
 ## Memory hierarchy **VIDEO**
 
+**READING:** *Computer Organization and Design* Section 5.4
+
 {% include video.html id="0_39vj4rjv" %}
 
 To motivate a memory hierarchy, this video goes over another AMAT example.
@@ -46,6 +54,8 @@ To motivate a memory hierarchy, this video goes over another AMAT example.
 This video talks about how a multi-level hierarchy can improve cache performance.
 
 ## Cache design
+
+**READING:** *Computer Organization and Design* Section 5.4,5.8
 
 Now that we've talked about cache performance and how caches fit into the broader memory system, let's dig into how to design a cache.
 
@@ -58,6 +68,8 @@ To motivate cache design, we will be answering three questions.
 The next sections will discuss each of these questions in detail.
 
 ### Direct-mapped caches **VIDEO**
+
+**READING:** *Computer Organization and Design* Section 5.3
 
 First, we'll look at a "simple" direct-mapped cache.
 After understanding this, we can dive into more realistic cache designs.
@@ -75,6 +87,8 @@ This video talks about how to take an address and figure out where in the cache 
 This video goes deeper into the hardware design of direct-mapped caches and begins to motivate set associativity.
 
 ### Set-associative caches **VIDEO**
+
+**READING:** *Computer Organization and Design* Section 5.4
 
 There are major problems with direct-mapped caches.
 Specifically, many addresses *conflict* for the same index in the cache.
@@ -95,6 +109,8 @@ This video talks about the area and power overheads of set-associative caches.
 
 ## Replacement policies **VIDEO**
 
+**READING:** *Computer Organization and Design* Section 5.4
+
 Now, onto the next question: *Which data should we replace?*
 
 {% include video.html id="0_ped6e37e" %}
@@ -102,6 +118,8 @@ Now, onto the next question: *Which data should we replace?*
 This video introduces some replacement policies and some tradeoffs when trying to choose a replacement policy for a cache.
 
 ## Write-back policies **VIDEO**
+
+**READING:** *Computer Organization and Design* Section 5.8
 
 And our final question: *What happens when we want to write data?*
 

@@ -2,6 +2,10 @@
 
 ![XKCD comic](https://imgs.xkcd.com/comics/obsolete_technology.png)
 
+## Reading for this section
+
+*Computer Organization and Design* Sections 5.1-5.2.
+
 ## Introduction: Why does memory architecture matter? **VIDEO**
 
 {% include video.html id="0_t7ft823s" %}
@@ -16,6 +20,8 @@ Here, you can see the squiggly lines that I was talking about to make sure that 
 ![PCB trace for memory](./pcbtrace.png)
 
 ## Memory technology **VIDEO**
+
+**READING:** *Computer Organization and Design* Section 5.2
 
 {% include video.html id="0_jpfyz8c7" %}
 
