@@ -53,6 +53,10 @@ To motivate a memory hierarchy, this video goes over another AMAT example.
 
 This video talks about how a multi-level hierarchy can improve cache performance.
 
+### **QUIZ** AMAT, hierarchy, and performance
+
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/506877)
+
 ## Cache design
 
 **READING:** *Computer Organization and Design* Section 5.4,5.8
@@ -102,10 +106,9 @@ This video goes into detail of how to design a set-associative cache and how to 
 
 This video talks about the area and power overheads of set-associative caches.
 
-### **QUIZ** Cache design
+### **QUIZ** Cache design 1
 
-[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
-![Coming soon](/under-construction.png)
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/507143)
 
 ## Replacement policies **VIDEO**
 
@@ -135,7 +138,7 @@ This final video discusses the three C's of cache misses.
 
 ### **QUIZ** Summary of caches
 
-[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/507169/)
 ![Coming soon](/under-construction.png)
 
 [Next up: Virtual memory](./virtual.md)
