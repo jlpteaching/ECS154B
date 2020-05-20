@@ -37,17 +37,17 @@ This video goes back and talks about more motivation for virtual memory and intr
 
 This video shows an example simple page table implementation: A flat page table.
 
-{% include video.html id="" %}
+{% include video.html %}
 
 This video discusses a other page table implementations including multi-level page tables.
 
-{% include video.html id="" %}
+{% include video.html %}
 
 This video discusses how the actual RISC-V and x86 page tables are implemented.
 
 ## Performance and virtual memory
 
-{% include video.html id="" %}
+{% include video.html %}
 
 This video discusses a cache structure for virtual address translation: the TLB.
 
