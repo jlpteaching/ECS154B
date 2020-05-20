@@ -139,6 +139,5 @@ This final video discusses the three C's of cache misses.
 ### **QUIZ** Summary of caches
 
 [Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/507169/)
-![Coming soon](/under-construction.png)
 
 [Next up: Virtual memory](./virtual.md)

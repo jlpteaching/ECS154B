@@ -37,6 +37,11 @@ This video goes back and talks about more motivation for virtual memory and intr
 
 This video shows an example simple page table implementation: A flat page table.
 
+### **QUIZ** Introduction to virtual memory
+
+![under construction]({{ "/under-construction.png" | relative_url }})
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
+
 {% include video.html %}
 
 This video discusses a other page table implementations including multi-level page tables.
@@ -54,6 +59,11 @@ This video discusses a cache structure for virtual address translation: the TLB.
 {% include video.html %}
 
 This video covers other virtual memory optimizations such as huge pages.
+
+### **QUIZ** Multi-level page tables and TLBs
+
+![under construction]({{ "/under-construction.png" | relative_url }})
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
 
 ## Virtual virtual memory
 

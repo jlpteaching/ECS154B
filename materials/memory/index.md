@@ -46,7 +46,14 @@ We will discuss the underlying principles that make caches efficient, and how ha
 Finally, we'll step up a level and look at how operating systems allow multiple programs to share a single memory through [virtualization](./virtual.md).
 
 * [Virtual memory](./virtual.md)
-  * ![under construction](/under-construction.png)
+  * [Reading for this section](#reading-for-this-section)
+  * [Virtualization](#virtualization)
+  * [Virtual memory](#virtual-memory)
+    * [Page-based virtual memory](#page-based-virtual-memory)
+    * [**QUIZ** Introduction to virtual memory](#quiz-introduction-to-virtual-memory)
+  * [Performance and virtual memory](#performance-and-virtual-memory)
+    * [**QUIZ** Multi-level page tables and TLBs](#quiz-multi-level-page-tables-and-tlbs)
+  * [Virtual virtual memory](#virtual-virtual-memory)
 
 ## Summary
 
