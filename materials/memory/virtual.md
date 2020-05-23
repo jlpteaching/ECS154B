@@ -41,21 +41,31 @@ This video shows an example simple page table implementation: A flat page table.
 
 [Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/510207)
 
-{% include video.html %}
+### Multi-level page tables
 
-This video discusses a other page table implementations including multi-level page tables.
+{% include video.html id="0_7tgkv2oo" %}
 
-{% include video.html %}
+This video talks about the downsides of a flat page table and motivates a multi-level page table design.
+
+{% include video.html id="0_omnfnp31" %}
 
 This video discusses how the actual RISC-V and x86 page tables are implemented.
 
+{% include video.html id="0_pfhi6wm6" %}
+
+This videos extends the two-level page table for rv32 to 3 and 4 levels for rv64 and x86.
+
 ## Performance and virtual memory
 
-{% include video.html %}
+{% include video.html id="0_0knma2rd" %}
+
+This video discusses how to access memory now that we're using virtual address translation and the main performance overhead: walking the page table.
+
+{% include video.html id="0_4s9hkfr8" %}
 
 This video discusses a cache structure for virtual address translation: the TLB.
 
-{% include video.html %}
+{% include video.html id="0_juu68l8l" %}
 
 This video covers other virtual memory optimizations such as huge pages.
 
