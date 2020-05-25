@@ -24,10 +24,10 @@ The optional lectures will be clearly marked.
 
 ## Parallel Architectures and Programming
 
-* [Parallel Architectures and Programming](./architecture.md)
-  * [Kinds of parallel architectures](./architecture.md#kinds-of-parallel-architectures)
-  * [**QUIZ** Parallel performance and architectures](./architecture.md#quiz-parallel-performance-and-architectures)
-  * (Optional, but encouraged) [Shared memory architectures](./architecture.md#shared-memory-architectures)
+* [Parallel Architectures and Programming](./architectures.md)
+  * [Kinds of parallel architectures](./architectures.md#kinds-of-parallel-architectures)
+  * [**QUIZ** Parallel performance and architectures](./architectures.md#quiz-parallel-performance-and-architectures)
+  * (Optional, but encouraged) [Shared memory architectures](./architectures.md#shared-memory-architectures)
 
 ## Parallel Memory Systems
 
