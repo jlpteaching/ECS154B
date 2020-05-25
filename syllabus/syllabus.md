@@ -293,8 +293,8 @@ Labs are due at 11:59 PM on the date listed below.
 * [Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) (2 weeks, 10%). Due 4/17.
 * [Assignment 3.1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) (1 week, 5%). Due 4/24.
 * [Assignment 3.2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) (1 week, 5%). Due 5/8.
-* [Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) (2 weeks, 10%). Due 5/22.
-* [Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) (1.5 weeks, 10%). Due 6/4.
+* [Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) (2 weeks, 10%). Due 5/25.
+* [Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) (1.5 weeks, 10%). Due 6/8.
 
 #### Late Assignments
 
@@ -334,11 +334,11 @@ This will help with your comprehension.
 
 ### Tests
 
-There will be three tests this quarter which together count for only 20% of your grade.
-The tests will be after each of the three main modules, [processor architecture](../materials/processor/index.md), [memory architecture](../materials/memory/index.md), and [parallel architecture](../materials/parallel/index.md).
+There will be two tests this quarter which together count for only 20% of your grade.
+The tests will be after each of the two main modules, [processor architecture](../materials/processor/index.md), [memory architecture](../materials/memory/index.md), and [parallel architecture](../materials/parallel/index.md).
 
 The tests will be administered on Gradescope.
-You will be given a time limit of 1 hour to take the tests and a window of 1 day to take the test.
+You will be given a time limit of 2 hours to take the tests and a window of 1 day to take the test.
 
 ## Reading List and Schedule
 
