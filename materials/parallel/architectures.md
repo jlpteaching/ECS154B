@@ -1,6 +1,6 @@
 # Parallel Architectures and Programming
 
-![Relevant xkcd](https://xkcd.com/1838/)
+![Relevant xkcd](https://imgs.xkcd.com/comics/machine_learning.png)
 #howifeelaboutml
 
 ## Kinds of parallel architectures
