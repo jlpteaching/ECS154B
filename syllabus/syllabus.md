@@ -57,7 +57,7 @@ My pronouns are he/him/his.
 
 Please contact me via email if you have a personal request, *not* canvas messages.
 I do not check canvas messages.
-For class-wide questions (e.g., anything more than one person might be interested to know), please use the [online discussion]().
+For class-wide questions (e.g., anything more than one person might be interested to know), please use the [online discussion](#discussion).
 
 #### Office hours
 
