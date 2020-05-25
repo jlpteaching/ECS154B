@@ -71,8 +71,7 @@ This video covers other virtual memory optimizations such as huge pages.
 
 ### **QUIZ** Multi-level page tables and TLBs
 
-![under construction]({{ "/under-construction.png" | relative_url }})
-[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/514369)
 
 ## Virtual virtual memory
 
