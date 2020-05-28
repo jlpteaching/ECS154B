@@ -7,11 +7,11 @@
 
 In this section, we will start by discussing different kinds of parallel architectures.
 
-{% include video.html %}
+{% include video.html id="0_tdlkxuf6" %}
 
 This video discusses Flynn's taxonomy and the different kinds of parallelism (from the perspective of software).
 
-{% include video.html %}
+{% include video.html id="0_2p28yi6y" %}
 
 This video discusses different kinds of parallel architectures (from the perspective of hardware).
 

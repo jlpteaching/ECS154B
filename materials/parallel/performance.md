@@ -4,6 +4,6 @@
 
 ## Amdahl's law revisited
 
-{% include video.html %}
+{% include video.html id="0_yz620ygm" %}
 
 Just a quick video applying Amdahl's Law as it was originally intended, to parallel systems.
