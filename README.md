@@ -63,7 +63,7 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
   - [Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md): Single cycle DINO CPU
   - [Assignment 3](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md): Pipelined DINO CPU
   - [Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md): DINO CPU non-combinational memory
-  - [Assignment 5](): TBD
+  - [Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5/assignment-5.md): Matrix Multiplication
   - [Extra credit](./extra-credit.md): You can be rewarded extra credit for finding and fixing errors in class materials and assignments. See the [extra credit page](./extra-credit.md) for more information.
 - Chisel resources
   - [Overview](https://github.com/jlpteaching/dinocpu-sq20/blob/master/documentation/chisel-notes/overview.md): An overview of what chisel is, how to use it, and how to install it.
