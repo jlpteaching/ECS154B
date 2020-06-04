@@ -5,10 +5,10 @@ authors: Jason Lowe-Power
 
 |                                                                    |                                     |
 |--------------------------------------------------------------------|-------------------------------------|
-| Find a bug and report it via a pull request on github              | 5 points on an the assignment       |
-| Fix a bug it, open a pull request, and it is committed             | 10 points on  an the assignment     |
-| Find a documentation error                                         | 2 points on an the assignment       |
-| Fix documentation error, open a pull requests, and it is committed | 5 points on an the assignment       |
+| Find a bug and report it via a pull request on Github              | 5 points on an assignment           |
+| Fix a bug it, open a pull request, and it is committed             | 10 points on an assignment          |
+| Find a documentation error                                         | 2 points on an assignment           |
+| Fix documentation error, open a pull requests, and it is committed | 5 points on an assignment           |
 | Implement a significant new feature (must consult Jason first)     | 0.5 or more points *on final grade* |
 
 ## Rules for receiving extra credit
