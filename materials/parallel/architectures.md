@@ -17,8 +17,7 @@ This video discusses different kinds of parallel architectures (from the perspec
 
 ## **QUIZ** Parallel performance and architectures
 
-![under construction]({{ "/under-construction.png" | relative_url }})
-[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/)
+[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/521322/)
 
 ## Shared memory architectures
 
