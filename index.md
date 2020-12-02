@@ -1,34 +1,70 @@
 ---
 layout: index
 published: true
+title: ECS 154B Materials
 ---
 
-Course-in-a-Box is a free tool for building and publishing online courses—no prior coding experience required. This guide was made using Course-in-a-Box, so what you see here is what you’ll start with. There are three modules that walk through the course creation process, all linked in the nav bar at the top of the page:
-* **[Setup](/modules/setup/getting-started/)** - Get your instance of Course-in-a-Box up and running
-* **[Content](/modules/content/markdown-and-media)** -  Update the course structure and add your copy & media
-* **[Customize](/modules/customize/favicon)** - Add some (optional) finishing touches
+## Welcome to ECS 154B!
 
-<br> 
+You will find all of the lecture videos, quizzes, and extra information here.
 
-#### Course-in-a-Box Courses We Love ❤️
-Here are some examples of Course-in-a-Box in the wild:
+For more information on the class, see [the syllabus](../syllabus/syllabus.md).
 
-* [Making and Learning](http://p2pu.github.io/makingandlearning/) by Children’s Museum of Pittsburgh
-* [Designing for Documentation and Assessment](https://playfulmit.github.io/beyond-rubrics/) by MIT Playful Journey Lab
-* [ExplOERer Course](http://www.exploerercourse.org/en/) by Gothenburg University, Open University, and CC Poland
-* [Learning about Learning Circles](https://p2pu.github.io/learning-about-learning-circles/)  by P2PU
+The class is broken into four main components: [Introduction to Computer Architecture](intro/index.md), [Processor Architecture](processor/index.md), [Memory Architecture](memory/index.md), and [Parallel Architecture](parallel/index.md).
 
-<br> 
+All lecture videos will be available on [Canvas](https://canvas.ucdavis.edu/courses/461400/external_tools/5280) or on [Aggie Video](https://video.ucdavis.edu/playlist/dedicated/0_8bwr1nkj/).
+The following links provide context and supplemental information for these videos.
+You are responsible for the information in both the videos and found in these pages.
 
-#### Need some help?
-Our [community forum](https://community.p2pu.org/c/tech/course-in-a-box/78) is a great place to ask questions or find help when you get stuck. Feel free to post there anytime!
+The information here is subject to change, especially the parts later in the quarter.
 
-You can also hire P2PU to provide support with learning design, technical setup, course customizations, or web hosting. If you’re interested in collaborating on a project, reach out to us at thepeople@p2pu.org
+## Detailed Class Outline
 
-<br> 
+The class will generally be broken up into three parts, with more emphasis on the first section than the other two.
+Each section will begin with the motivation for why you should care about this architectural component based on the performance or other metrics of the system.
+Then, after going through the design details, we will summarize with specific example from modern systems.
 
-#### About Course-in-a-Box
+Each section will have one or two project-based assignments (e.g., with the [DINO CPU](https://github.com/jlpteaching/dinocpu)) and end with an exam.
 
-P2PU created Course-in-a-Box in 2014 as a free and lightweight tool for building online courses. We wanted to preserve the modular structure of MOOCs outside of the bulky (and often proprietary) environment of learning/content management systems. Course-in-a-Box is open-source, and we welcome contributions [on our Github repo](https://github.com/p2pu/course-in-a-box).
+### [Introduction to Computer Architecture](intro/index.md) (About one week)
 
-p.s. Designing a course for learning circles? [Check out the Learning Circle Course Creation guide](https://docs.google.com/document/u/1/d/116fJM3GS7XDzilUOL_ynMZ0yTncUD6aVUbcQKsTra6U/edit#heading=h.l36tzg40xcgr) for some best practices on course design.
+In the first section of the class we will cover some motivation for why you should care about computer architecture and general computer architecture principles.
+
+This first section is going to be part of the "soft launch" or "transition period" for moving to online learning.
+There are due dates listed for the quizzes.
+However, for this first section *there will be no late penalty*.
+
+* [Introduction to the class](intro/intro.md) (Quiz due 3/31)
+* [Security and computer architecture](intro/security.md) (Quiz due 3/31)
+* [Current Computing Technology](intro/technology.md) (Quizzes due 4/2)
+* [Computer System Evaluation](intro/evaluation.md) (Quizzes due 4/7)
+
+### [Processor Architecture](processor/index.md) (About four weeks)
+
+* [Instruction set architectures and RISC-V](processor/isa.md) (Quizzes due 4/9) ([Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) Due 4/13)
+* [Single cycle CPU design](processor/single-cycle.md) (Quizzes due 4/14 & 4/16) ([Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) Due 4/20)
+* [Pipelined CPU design](processor/pipelined.md) (Quizzes due 4/21 & 4/23) ([Assignment 3.1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 4/27)
+* [Instruction-level parallelism](processor/ilp.md) (Quizzes due 4/28 & 4/30)
+* [Processor architecture summary](processor/summary.md)
+
+**Test on 5/5**
+
+### [Memory System Architecture](memory/index.md) (About three weeks)
+
+* [Memory technology](memory/technology.md) (Quiz due 5/12) ([Assignment 3.2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 5/11)
+* [Caches and memory hierarchy](memory/caches.md) (Quizzes due 5/14 & 5/19 & 5/21)
+* [Virtual memory](memory/virtual.md) (Quizzes due 5/26 & 5/28)
+* [Memory architecture summary](memory/summary.md) ([Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) Due 5/25)
+
+**Test on 6/8**
+
+### [Parallel Architectures](parallel/index.md) (About two weeks)
+
+* [Parallel systems' performance](parallel/performance.md) (Quizzes due on 6/4)
+* [Parallel architectures and programming](parallel/architectures.md) (Quizzes due on 6/4) ([Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) Due 6/8)
+
+## Calendar
+
+Calendar view available [here](https://trello.com/b/BEmhWelG/ecs-154b-wq2021/calendar).
+
+<iframe class="trello" src="https://trello.com/b/BEmhWelG.html" height="800"></iframe>
