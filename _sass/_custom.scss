@@ -1,5 +1,5 @@
 body {
-	background-color: white;
+	background-color: #c9d5e2;
   h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
   }
@@ -19,7 +19,7 @@ body {
 }
 
 .nav-item.active, .nav-item:hover {
-  background-color: #707782;
+  background-color: #375980;
 	transition: all 0.3s linear;
 }
 
@@ -29,9 +29,8 @@ body {
 }
 
 .jumbotron {
-	background: 
-    url('../#{$jumbotron-mask}') repeat, 
-    url('../#{$jumbotron-image}') center/$jumbotron-image-size $jumbotron-color;
+	background:
+    url('../#{$jumbotron-image}') center/$jumbotron-image-size;
 	color: $white;
   text-shadow: 5px 5px 10px $gray-darker;
 
@@ -90,7 +89,7 @@ section {
 }
 
 .sidebar {
-	background-color: $gray-lighter;
+	background-color: #002855;
   font-size: 15px;
   padding-bottom: 10px;
 }
@@ -118,10 +117,14 @@ section {
 }
 
 .sidebar li.active {
-	background-color: $white;
+	background-color: #375980;;
 }
 
 .sidebar li.active a:hover {
+	color: cadetblue;
+}
+
+.sidebar a:hover {
 	color: cadetblue;
 }
 

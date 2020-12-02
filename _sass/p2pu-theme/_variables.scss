@@ -8,8 +8,8 @@
 // Color system
 //
 
-$gray-darker:           #515665;
-$gray-dark:             #707782;
+$gray-darker:           #000;
+$gray-dark:             #000;
 $gray:                  #AAB0BF;
 $gray-light:            #D3D8E6;
 $gray-lighter:          #F3F4F8;
@@ -57,7 +57,7 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$p2pu-blue:     #05C6B4;
+$p2pu-blue:     #DAAA00;
 $p2pu-green:    #B7D500;
 $p2pu-yellow:   #FFBC1A;
 $p2pu-orange:   #FC7100;
@@ -67,14 +67,14 @@ $p2pu-light-green:      transparentize($p2pu-green, 0.85);
 $p2pu-light-yellow:     transparentize($p2pu-yellow, 0.85);
 $p2pu-light-orange:     transparentize($p2pu-orange, 0.85);
 
-$primary:       $gray-darker;
-$secondary:     $gray-lighter;
+$primary:       #DAAA00;
+$secondary:     #002855;
 $success:       $p2pu-green;
 $info:          $p2pu-blue;
 $warning:       $p2pu-yellow;
 $danger:        $p2pu-orange;
 $light:         $gray-snow;
-$dark:          $gray-darker;
+$dark:          #002855;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -120,7 +120,7 @@ $theme-color-interval:      8% !default;
 $yiq-contrasted-threshold:  150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $gray-900 !default;
+$yiq-text-dark:             #000 !default;
 $yiq-text-light:            $white !default;
 
 // Options
@@ -181,15 +181,15 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white;
-$body-color:                $gray-darker;;
+$body-bg:                   mix(#fff, $secondary, 10%);
+$body-color:                $gray-darker;
 
 // Links
 //
 // Style anchor elements.
 
 
-$link-color:                $p2pu-blue;
+$link-color:                #002855;
 $link-decoration:           none !default;
 $link-hover-color:          darken($link-color, 15%);
 $link-hover-decoration:     underline !default;
@@ -319,7 +319,7 @@ $lead-font-weight:            300 !default;
 
 $small-font-size:             80% !default;
 
-$text-muted:                  $gray;
+$text-muted:                  #002855;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
