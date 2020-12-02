@@ -6,6 +6,10 @@ body {
   }
 }
 
+.trello {
+  width: 100%;
+}
+
 @include media-breakpoint-up(md) {
   .navbar {
     line-height: 3;
