@@ -1,4 +1,6 @@
-# Single Cycle CPU Design
+---
+title: Single Cycle CPU Design
+---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/old_days.png)
 
