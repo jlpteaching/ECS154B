@@ -1,5 +1,5 @@
 body {
-	background-color: #e7eef5;
+	background-color: #efefef;
   h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin-bottom: 0.8em;
@@ -137,7 +137,8 @@ section {
 	display: block;
   padding: 0.8em 0.5em;
 	text-transform: uppercase;
-	@include transition(color, 0.3s, linear);
+  @include transition(color, 0.3s, linear);
+  color: $primary;
 }
 
 .pagination-section .title {
@@ -285,4 +286,10 @@ footer {
     text-decoration: none;
     transition: all 0.3s linear;
   }
+}
+
+.content {
+ a {
+   font-weight: bold;
+ }
 }
