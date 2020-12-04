@@ -7,6 +7,7 @@ layout: base
 		{% include side_toolbar.html %}
 		<div class="col-xl-6 col-md-9">
 			<div class="content p-md-2">
+				<h1> {{ page.title }} </h1>
 				{{ content }}
 				{% include next_in_module.html %}
 				{% if prev or next %}<hr />{% endif %}
