@@ -6,6 +6,11 @@ title: ECS 154B Materials
 
 ## Welcome to ECS 154B!
 
+This site is currently **UNDER CONSTRUCTION**.
+All information is subject to change!
+
+![Under construction](/img/under-construction.png)
+
 You will find all of the lecture videos, quizzes, and extra information here.
 
 For more information on the class, see [the syllabus](../syllabus/syllabus.md).
