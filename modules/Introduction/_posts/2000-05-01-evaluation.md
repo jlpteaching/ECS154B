@@ -1,4 +1,6 @@
-# Computer System Performance
+---
+title: Computer System Performance
+---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/efficiency.png)
 

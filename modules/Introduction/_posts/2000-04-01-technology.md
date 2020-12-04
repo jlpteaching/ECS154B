@@ -1,4 +1,6 @@
-# Current Computing Technology
+---
+title: Current Computing Technology
+---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/log_scale.png)
 
