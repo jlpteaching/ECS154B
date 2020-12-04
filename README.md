@@ -1,5 +1,28 @@
-# An open-source project for creating online courses, built by P2PU
-Course-in-a-Box is a free tool for building and publishing online courses — no prior coding experience required. 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+# UC Davis Computer Science ECS 154B
+
+This repository contains the materials and website source for [Jason Lowe-Power](https://faculty.engineering.ucdavis.edu/lowepower/)'s ECS 154B offerings.
+
+See <https://jlpteaching.github.io/ECS154B/> for the webpage.
+
+## Building the web site for local development
+
+```sh
+bundle exec jekyll serve
+```
+
+If you need to install jekyll, first run the following:
+
+```sh
+gem install jekyll bundler
+```
+
+The website template comes from P2PU.
+
+## An open-source project for creating online courses, built by P2PU
+
+Course-in-a-Box is a free tool for building and publishing online courses — no prior coding experience required.
 
 To create your own course, simply fork this repository and delete the CNAME file. Detailed documentation is available at [course-in-a-box.p2pu.org](https://course-in-a-box.p2pu.org).
 
