@@ -10,6 +10,7 @@ exclude: [Gemfile, Gemfile.lock, README.md]
 
 kramdown:
   parse_block_html: true
+  math_engine: mathjax
 
 defaults:
   -
