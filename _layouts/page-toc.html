@@ -4,7 +4,7 @@ layout: base
 <div class="container-fluid d-flex flex-grow-1 flex-column">
     <div class="row flex-grow-1">
         <div class="sidebar-toc col-md-3">
-            {{ content | toc_only }}
+            {% include toc.html html=content %}
         </div>
           <div class="col-xl-6 col-md-9">
               <div class="content p-md-2">
