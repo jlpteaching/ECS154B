@@ -29,7 +29,7 @@ I prefer Jason, but will likely respond if you say "professor \<something\>".
 My pronouns are he/him/his.
 
 Please contact me via email if you have a personal request, *not* canvas messages.
-I do not check canvas messages.
+**I do not check canvas messages.**
 For class-wide questions (e.g., anything more than one person might be interested to know), please use the [online discussion](#discussion).
 
 #### Office hours
@@ -50,78 +50,60 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 
 ### Teaching Assistant
 
-**Julian Angeles** (jtangeles@ucdavis.edu )
+**Maryam Babaie** (<mbabaie@ucdavis.edu>)
 
-*Office Hours*: Thursdays from 9:00-10:00 A.M.
+*Office Hours*: TBA
 
-*Office Location*: [Zoom link](https://ucdaviscoe.zoom.us/my/jtoya) (<https://ucdaviscoe.zoom.us/my/jtoya>)
+*Office Location*: TBA
 
 ### Discussion
 
 Since this quarter will be all online learning, we will be conducting discussion online as well.
-The information here may change as we work out the most effective way to use everyone's time.
+Although, most of the class is asynchronous, I still believe that participation is important to learning this material.
+Thus, I am going to *require* everyone to participate in discussions.
 
 We will be using discussions to reinforce the lectures and help out with the assignments.
-**You are required to attend one discussion each week.**
+We will have eight different times each week you can join synchronously via video or phone.
+However, we also understand that synchronous classes can be a burden, so there will be some flexibility to how you participate in discussions.
 See [the participation section below](#participation) for more info.
 
-There will be six discussion times each with 10-15 people assigned to attend.
+There will be eight discussion times each with 10-15 people assigned to attend.
 You will be able to sign up for your preferred discussion time during the first week of class.
 
 #### Discussion times and locations
 
-* *Discussion 1*: Tuesday 10:30am-11:10am
-  * [Zoom link](https://ucdaviscoe.zoom.us/j/480815495) <https://ucdaviscoe.zoom.us/j/480815495>
-* *Discussion 2*: Tuesday 11:15am-11:55am
-  * [Zoom link](https://ucdaviscoe.zoom.us/j/413656721) <https://ucdaviscoe.zoom.us/j/413656721>
-* *Discussion 3*: Wednesday 6:00pm-6:40pm
-  * [Zoom link](https://ucdaviscoe.zoom.us/j/714065447) <https://ucdaviscoe.zoom.us/j/714065447>
-* *Discussion 4*: Thursday 10:30am-11:10am
-  * [Zoom link](https://ucdaviscoe.zoom.us/j/778578293) <https://ucdaviscoe.zoom.us/j/778578293>
-* *Discussion 5*: Thursday 11:15am-11:50am
-  * [Zoom link](https://ucdaviscoe.zoom.us/j/702826763) <https://ucdaviscoe.zoom.us/j/702826763>
-* *Discussion 6*: Friday 1:10pm-1:50pm
-  * [Zoom link](https://ucdaviscoe.zoom.us/j/575347577) <https://ucdaviscoe.zoom.us/j/575347577>
-
-Please register for a discussion time on [this document](https://docs.google.com/spreadsheets/d/10cJu_150qJbxrKf4QzPYfvW-MSOis88HVW5jzFo8BXI/edit?usp=sharing).
+Please register for a discussion time on [this document]().
 Do your best to evenly sign up for times.
 I believe having fewer people in each discussion will help everyone be able to participate and learn better.
 
 I would prefer that you attend the same time each week, but this is not a requirement.
-Either Julian and I will attend every discussion.
+Either Maryam or I will attend every discussion.
 
 #### Discussion etiquette
 
-You may be new to participating in remote meetings this quarter.
-While I'm new to remote teaching, I've been working in distributed environments for years, so remote meetings are the norm for me.
-Below are some common etiquette ideas that I've found work well when participating in remote meetings.
+We've now all had some experience with participating in remote meetings.
+However, just as a quick reminder below are some common etiquette ideas that I've found work well when participating in remote meetings.
 
 * **Be patient.** Remote meetings introduce communication *latency* and *synchronization* issues (things we'll be learning about this this class, BTW). Please be patient with everyone. This often means pausing for longer than you think is necessary when talking, putting up with minor annoyances (e.g., someone interrupting you), and putting up with poor connections.
 * **Mute your microphone unless you are speaking.** All too often there is feedback between microphones and speakers. Often, you can't tell that it's your computer that's causing feedback issues for everyone else. Also, I've experienced other people in the local environment causing distractions when they don't mean (e.g., my cat likes to meow at me while I'm talking sometimes).
-* **State your name when you speak.** Please state your name before you ask a question/speak. For instance "Hi, this is Jason, why is pipelining so amazing?"
 * **Set your full name in zoom.** Click the "participants button at the bottom, then click "more" next your name. From there you can rename yourself.
-* **Stay engaged.** Don't open up other programs/internet/reddit, etc.
-* **Use the raise hand feature.** This way I can recognize that you would like to speak. This is also under the "participants" menu in zoom.
 * **(Try to) Enable video.** If your bandwidth supports it and you have a webcam, everyone will be more engaged if you can see each others' faces. Using the "gallery view" on zoom allows you to see everyone at once. The option is in the upper right (not speaker view). If you're experiencing lag or poor connection, you can disable video to try to improve your experience.
 * **Use the phone if you have a poor connection.** The zoom invite link will have a phone number that you can call into. You can log into the computer and disable audio and video then use the phone to call in.
-* **Don't use the virtual background.** This is a "cool" feature, but it's distracting to all others.
+* **Use the raise hand feature.** This way I can recognize that you would like to speak. This is also under the "participants" menu in zoom.
+* **Use the chat feature.** If you find that you can't get a word in edgewise because others are dominating the conversation, then type it! I will be watching the chat whenever we're in discussions or office hours.
+* **Stay engaged.** Don't open up other programs/internet/reddit, etc.
 
 ## Class Resources
 
 ### Online material
 
 All of the material for this course is online.
-We will use [GitHub](https://github.com/jlpteaching/ECS154B) as the main website and entry point for all course information.
-The version of documents found on GitHub are the canonical versions of all documents.
-Other downloaded versions of documents may become out of date.
-If I make changes to those documents, they will appear first on GitHub.
-
-GitHub will contain this document and [the material](../materials/index.md) for the class.
+We will use [this website]({{'/' | relative_url}}) as the main website and entry point for all course information.
 This will also include links to all of the lecture videos and quizzes.
-
+You can find the source for this website on [GitHub](https://github.com/jlpteaching/ECS154B).
 ### Gradescope
 
-We will use [Gradescope](https://www.gradescope.com/courses/105214) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
+We will use [Gradescope](https://www.gradescope.com/courses/216663) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
 Gradescope gives you a graded PDF version of your test, along with a rubric, immediately after we're done grading.
 You will receive an email from Gradescope to make your account early in the quarter.
 
@@ -133,7 +115,7 @@ However, if you submit after the deadline, the [late policy](#late-assignments) 
 
 ### Online discussions
 
-We will use [Campuswire](https://campuswire.com/c/GDBEBE971/) for class discussions outside of the classroom.
+We will use TBA for class discussions outside of the classroom.
 If you haven't used Campuswire before, it's a cool tool that is essentially a message board for the class.
 It is a much more polished and modern website compared to Piazza.
 Both the TAs and I will be on Campuswire to answer questions.
@@ -156,7 +138,7 @@ Regrade requests should be made in person (online), in (online) office hours or 
 ### Accommodations
 
 The exam schedule is available on the [materials page](../materials/index.md).
-Per official UC Davis policy, if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, April 9, 2020**.
+Per official UC Davis policy, if you have an accommodation request from the [Student Disability Center](https://sdc.ucdavis.edu/), or have any conflicts with exam times for religious observances, you must notify me **by the fourth class, January 11, 2021**.
 If you do not notify me by this time, I cannot guarantee I will be able to make the accommodation.
 
 For **each** test, quiz, etc. you must reach out to me *one week in advance* to schedule specific accommodations for that test, quiz, etc.
@@ -219,12 +201,12 @@ See also [student support](#student-support).
 
 ### Grading Breakdown
 
-| Category      | Percentage |
-|---------------|------------|
-| Participation | 20%        |
-| Project (5x)  | 40%        |
-| Quizzes       | 20%        |
-| Tests         | 20%        |
+| Category      | Percentage | How to get points? |
+|---------------|------------|--------------------|
+| Participation | 20%        | Attend synchronous discussions, participating in discussion site, attending office hours |
+| Project (5x)  | 40%        | Gradescope will auto-grade most of the project |
+| Quizzes       | 20%        | Quizzes will be on canvas |
+| Tests         | 20%        | Tests will also be on canvas |
 
 ### Participation
 
@@ -242,13 +224,13 @@ You are expected to participate on [online discussions](#online-discussions), [d
 
 You are required to attend and participate (say something at least once) in one [discussion section](#discussions) each week.
 We prefer you to attend the one you sign up for, but you can attend any.
-Every week counts as two points on your final grade.
+**Every week counts as two points on your final grade.**
 Thus, if you attend your discussion section each week, you will receive the full points for participation.
 
 However, we understand that this won't necessarily be possible for everyone to attend every week.
 Therefore, you you can also get participation points by using our [online discussion](#online-discussions).
 Participating in [online discussion](#online-discussions) can earn you up to 5 points.
-Importantly, we are looking for substantive contributions to online discussions.
+Each week a thread will be posted with a discussion topic to help generate substantive conversations.
 
 Finally, you can also earn points by attending and participating in office hours.
 For each office hour you attend (and we have a substantive conversation), you can earn one participation point up to 5 points.
@@ -262,20 +244,20 @@ Each lab is weighted based on the amount of time you are given to complete the l
 
 Labs are due at 11:59 PM on the date listed below.
 
-* [Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) (1.5 weeks, 10%). Due 4/10.
-* [Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) (2 weeks, 10%). Due 4/17.
-* [Assignment 3.1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) (1 week, 5%). Due 4/24.
-* [Assignment 3.2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) (1 week, 5%). Due 5/8.
-* [Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) (2 weeks, 10%). Due 5/25.
-* [Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) (1.5 weeks, 10%). Due 6/8.
+* [Assignment 1](https://jlpteaching.github.io/dinocpu/assignments/assignment-1.html) (2 weeks, 8%). Due 1/18.
+* [Assignment 2](https://jlpteaching.github.io/dinocpu/assignments/assignment-2.html) (1 weeks, 8%). Due 1/25.
+* [Assignment 3.1](https://jlpteaching.github.io/dinocpu/assignments/assignment-3.html) (1 week, 4%). Due 2/5.
+* [Assignment 3.2](https://jlpteaching.github.io/dinocpu/assignments/assignment-3.html#part-ii-implementing-forwarding) (2 week, 4%). Due 2/15.
+* [Assignment 4](https://jlpteaching.github.io/dinocpu/assignments/assignment-4.html) (2 weeks, 8%). Due 3/1.
+* [Assignment 5](https://jlpteaching.github.io/dinocpu/assignments/assignment-5.html) (2 weeks, 8%). Due 3/12.
 
 #### Late Assignments
 
 If you turn in a project assignment late, you will lose points.
 The percentage of points you will lose is given by the equation below.
-This will give you partial points up to 72 hours after the due date and penalizes you less if you barely miss the deadline.
+This will give you partial points up to 48 hours after the due date and penalizes you less if you barely miss the deadline.
 
-![Late policy latex code](http://latex.codecogs.com/gif.latex?fraction%5C%20of%5C%20points%20%3D%20-1%20%5Ctimes%20%5Cfrac%7B%7Bhours%5C%20late%7D%5E2%7D%7B72%5E2%7D%20&plus;%201)
+$$ fraction \: of \: points = -1 \times \frac{ {hours \: late}^2}{48^2} + 1 $$
 
 ![Late policy graph](/img/late_policy.png)
 
@@ -338,4 +320,4 @@ You can find these books at the [university bookstore](http://ucdavisstores.com/
 
 ### Schedule
 
-See the [class materials](../materials/index.md) for due dates.
+See the [Homepage]({{'/' | relative_url}}) for due dates.
