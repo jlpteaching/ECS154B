@@ -14,7 +14,7 @@ toc: true
 
 All lectures will be conducted asynchronously via recorded video.
 Videos for the next week will normally be available at the end of the previous week.
-See the [class materials](../materials/index.md) for all of the lecture videos.
+See the [class materials]({{'/' | relative_url}}) for all of the lecture videos.
 
 *Discussion*: **ONLINE**. See [Discussion](#discussion) for more information.
 

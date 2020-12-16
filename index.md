@@ -13,7 +13,7 @@ All information is subject to change!
 
 You will find all of the lecture videos, quizzes, and extra information here.
 
-For more information on the class, see [the syllabus]({% link syllabus.md %}).
+For more information on the class, see [the syllabus]({{'syllabus' | relative_url}}).
 
 The class is broken into four main components: [Introduction to Computer Architecture](intro/index.md), [Processor Architecture](processor/index.md), [Memory Architecture](memory/index.md), and [Parallel Architecture](parallel/index.md).
 
