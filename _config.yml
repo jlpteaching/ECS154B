@@ -8,6 +8,12 @@ p2pu_ga_tracking_code: UA-55722824-1
 # Some files we need to exclude, so Github can build the site
 exclude: [Gemfile, Gemfile.lock, README.md]
 
+plugins:
+  - jekyll-toc
+
+kramdown:
+  parse_block_html: true
+
 defaults:
   -
     scope:

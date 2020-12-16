@@ -2,35 +2,9 @@
 author: Jason Lowe-Power
 editor: Justin Perona
 title: ECS 154B - Syllabus
-layout: page
+layout: page-toc
+toc: true
 ---
-
-* [Important Information](#important-information)
-  * [Time and Location](#time-and-location)
-  * [Instructor](#instructor)
-  * [Teaching Assistant](#teaching-assistant)
-  * [Discussion](#discussion)
-* [Class resources](#class-resources)
-  * [GitHub](#github)
-  * [Canvas](#canvas)
-  * [Gradescope](#gradescope)
-  * [Piazza](#piazza)
-  * [Regrade Requests](#regrade-requests)
-  * [Accommodations](#accommodations)
-* [Academic Misconduct](#academic-misconduct)
-* [Student Support](#student-support)
-* [Prerequisites](#prerequisites)
-* [PTAs](#ptas)
-* [Assignments and Tests](#assignments-and-tests)
-  * [Grading Breakdown](#grading-breakdown)
-  * [Participation](#participation)
-  * [Project](#project)
-    * [Late Assignments](#late-assignments)
-  * [Quizzes](#quizzes)
-  * [Tests](#tests)
-* [Reading List and Schedule](#reading-list-and-schedule)
-  * [Textbook](#textbook)
-  * [Schedule](#schedule)
 
 ## Important Information
 
@@ -303,7 +277,7 @@ This will give you partial points up to 72 hours after the due date and penalize
 
 ![Late policy latex code](http://latex.codecogs.com/gif.latex?fraction%5C%20of%5C%20points%20%3D%20-1%20%5Ctimes%20%5Cfrac%7B%7Bhours%5C%20late%7D%5E2%7D%7B72%5E2%7D%20&plus;%201)
 
-![Late policy graph](img/late_policy.png)
+![Late policy graph](/img/late_policy.png)
 
 Note: When submitting late, the reduction in points will not immediately appear in Gradescope.
 Rest assured, we will go through and double check all of the submission times ;).

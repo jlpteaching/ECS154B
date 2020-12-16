@@ -99,6 +99,23 @@ section {
   padding-bottom: 10px;
 }
 
+.sidebar-toc {
+  padding-top: 1em;
+	background-color: #002855;
+  font-size: 15px;
+  padding-bottom: 10px;
+
+  ul {
+    font-size: large;
+    list-style-type: none;
+  }
+
+  a:hover, a:focus {
+		text-decoration: none;
+		color: $white;
+	}
+}
+
 .sidebar ul {
 	list-style-type: none;
 	padding: 0;
