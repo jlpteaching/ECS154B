@@ -8,6 +8,7 @@ title: ECS 154B Materials
 
 This site is currently **UNDER CONSTRUCTION**.
 All information is subject to change!
+The content is *currently* being updated from Spring 2020.
 
 ![Under construction](/img/under-construction.png)
 
