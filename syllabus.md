@@ -292,8 +292,9 @@ This will help with your comprehension.
 There will be two tests this quarter which together count for only 20% of your grade.
 The tests will be after each of the two main modules, [processor architecture](../materials/processor/index.md), [memory architecture](../materials/memory/index.md), and [parallel architecture](../materials/parallel/index.md).
 
-The tests will be administered on Gradescope.
+The tests will be administered online.
 You will be given a time limit of 2 hours to take the tests and a window of 1 day to take the test.
+If there is a major internet outage (more than 2 hours during the workday) within 24 hours before the test window or the 24 hours of the test window, the window will be *extended* by 24 hours.
 
 ## Reading List and Schedule
 
