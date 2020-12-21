@@ -1,0 +1,24 @@
+
+<div class="discord">
+
+<h3> Discussion for this module </h3>
+
+{% if include.id %}
+<widgetbot
+server="790645381561712660"
+channel="{{ include.id }}"
+width="100%"
+height="600"
+></widgetbot>
+
+<br/>
+
+<a href="https://discord.com/channels/790645381561712660/{{ include.id }}/" target="_blank"><i class="fas fa-external-link-alt"></i> View in the Discord app</a>
+
+{% else %}
+
+<a href="https://discord.com/channels/790645381561712660/" target="_blank"><i class="fas fa-external-link-alt"></i> Discuss in Discord!</a>
+
+{% endif %}
+
+</div>
