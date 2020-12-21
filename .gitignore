@@ -2,3 +2,4 @@ _site/*
 .idea/
 .sass-cache
 Gemfile.lock
+.jekyll-metadata
