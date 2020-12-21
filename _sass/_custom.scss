@@ -10,6 +10,13 @@ body {
   width: 100%;
 }
 
+.kaltura_frame {
+  p {
+    margin-top: 10px;
+    margin-left: 3px;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .navbar {
     line-height: 3;
