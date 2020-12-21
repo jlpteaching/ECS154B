@@ -32,7 +32,7 @@ Then, after going through the design details, we will summarize with specific ex
 
 Each section will have one or two project-based assignments (e.g., with the [DINO CPU](https://github.com/jlpteaching/dinocpu-wq21)) and end with an exam.
 
-### [Introduction to Computer Architecture](intro/index.md) (About one week)
+### [Introduction to Computer Architecture](intro/index.md) (About one week: 1/4-1/11)
 
 In the first section of the class we will cover some motivation for why you should care about computer architecture and general computer architecture principles.
 
@@ -40,34 +40,34 @@ This first section is going to be part of the "soft launch" or "transition perio
 There are due dates listed for the quizzes.
 However, for this first section *there will be no late penalty*.
 
-* [Introduction to the class](intro/intro.md) (Quiz due 3/31)
-* [Security and computer architecture](intro/security.md) (Quiz due 3/31)
-* [Current Computing Technology](intro/technology.md) (Quizzes due 4/2)
-* [Computer System Evaluation](intro/evaluation.md) (Quizzes due 4/7)
+* [Introduction to the class](intro/intro.md)
+* [Security and computer architecture](intro/security.md)
+* [Current Computing Technology](intro/technology.md)
+* [Computer System Evaluation](intro/evaluation.md)
 
-### [Processor Architecture](processor/index.md) (About four weeks)
+### [Processor Architecture](processor/index.md) (About four weeks: 1/13-2/8)
 
-* [Instruction set architectures and RISC-V](processor/isa.md) (Quizzes due 4/9) ([Assignment 1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-1.md) Due 4/13)
-* [Single cycle CPU design](processor/single-cycle.md) (Quizzes due 4/14 & 4/16) ([Assignment 2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-2.md) Due 4/20)
-* [Pipelined CPU design](processor/pipelined.md) (Quizzes due 4/21 & 4/23) ([Assignment 3.1](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 4/27)
-* [Instruction-level parallelism](processor/ilp.md) (Quizzes due 4/28 & 4/30)
+* [Instruction set architectures and RISC-V](processor/isa.md) ([Assignment 1](https://jlpteaching.github.io/dinocpu/assignments/assignment-1.html) Due 1/17)
+* [Single cycle CPU design](processor/single-cycle.md) ([Assignment 2](https://jlpteaching.github.io/dinocpu/assignments/assignment-2.html) Due 1/24)
+* [Pipelined CPU design](processor/pipelined.md) ([Assignment 3.1](https://jlpteaching.github.io/dinocpu/assignments/assignment-3.html) Part 1 Due 2/5 & Part 2 Due 2/14)
+* [Instruction-level parallelism](processor/ilp.md)
 * [Processor architecture summary](processor/summary.md)
 
-**Test on 5/5**
+**Test on 2/8**
 
-### [Memory System Architecture](memory/index.md) (About three weeks)
+### [Memory System Architecture](memory/index.md) (About three weeks: 2/10-3/3)
 
-* [Memory technology](memory/technology.md) (Quiz due 5/12) ([Assignment 3.2](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-3.md) Due 5/11)
-* [Caches and memory hierarchy](memory/caches.md) (Quizzes due 5/14 & 5/19 & 5/21)
-* [Virtual memory](memory/virtual.md) (Quizzes due 5/26 & 5/28)
-* [Memory architecture summary](memory/summary.md) ([Assignment 4](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-4.md) Due 5/25)
+* [Memory technology](memory/technology.md)
+* [Caches and memory hierarchy](memory/caches.md)
+* [Virtual memory](memory/virtual.md)
+* [Memory architecture summary](memory/summary.md) ([Assignment 4](https://jlpteaching.github.io/dinocpu/assignments/assignment-4.html) Due 2/28)
 
-**Test on 6/8**
+**Test on 3/5**
 
-### [Parallel Architectures](parallel/index.md) (About two weeks)
+### [Parallel Architectures](parallel/index.md) (About two weeks: 3/5-3/12)
 
-* [Parallel systems' performance](parallel/performance.md) (Quizzes due on 6/4)
-* [Parallel architectures and programming](parallel/architectures.md) (Quizzes due on 6/4) ([Assignment 5](https://github.com/jlpteaching/dinocpu-sq20/blob/master/assignments/assignment-5.md) Due 6/8)
+* [Parallel systems' performance](parallel/performance.md)
+* [Parallel architectures and programming](parallel/architectures.md) ([Assignment 5](https://jlpteaching.github.io/dinocpu/assignments/assignment-5.html) Due 3/12)
 
 ## Calendar
 
