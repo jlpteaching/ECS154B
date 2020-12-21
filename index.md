@@ -18,9 +18,9 @@ For more information on the class, see [the syllabus]({{'syllabus' | relative_ur
 
 The class is broken into four main components: [Introduction to Computer Architecture](intro/index.md), [Processor Architecture](processor/index.md), [Memory Architecture](memory/index.md), and [Parallel Architecture](parallel/index.md).
 
-All lecture videos will be available on [Canvas](https://canvas.ucdavis.edu/courses/461400/external_tools/5280) or on [Aggie Video](https://video.ucdavis.edu/playlist/dedicated/0_8bwr1nkj/).
-The following links provide context and supplemental information for these videos.
+All lecture videos will be available on this website.
 You are responsible for the information in both the videos and found in these pages.
+All notes can be found in the [One Note notebook](https://ucdavis365-my.sharepoint.com/:o:/g/personal/jlowepower_ucdavis_edu/EpvsyzTRfnpJoN8rUDnWDSIBTdZenG15a-gExSwGLLJliw?e=rcteh2).
 
 The information here is subject to change, especially the parts later in the quarter.
 
