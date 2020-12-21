@@ -50,6 +50,12 @@ body {
   }
 }
 
+.discord {
+  p {
+    margin-top: 10px;
+  }
+}
+
 @include media-breakpoint-up(md) {
   .navbar {
     line-height: 3;
