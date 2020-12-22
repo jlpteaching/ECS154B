@@ -84,10 +84,18 @@ In this video, I talk about some of the key contributing factors to the energy a
 
 Finally, let's look at the trends in the past ~50 years or so.
 Now that we have an idea of what contributes to the power dissipation of devices, we can see why today's processors aren't as much faster as last year's designs as they used to be.
+This video talks about how power and energy relate, how transistors work, and brings in how this caused the end of Moore's Law
 
 {% include video.html id="1_tlwrtx1k" %}
 
-This video talks about how power and energy relate, how transistors work, and brings in how this caused the end of Moore's Law
+{% include prompt.html content="
+What is the number of cores and frequency of the chip in your laptop or phone?
+Is it "faster" or "slower" than the high-performance chips in 2010 with 8 cores and running at 3 GHz?
+
+What about today's highest performance chips?
+How do they compare?
+"
+%}
 
 ## **QUIZ** CMOS Energy, Power, and Moore's Law
 
