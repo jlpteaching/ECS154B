@@ -6,15 +6,14 @@ title: Current Computing Technology
 
 This section give you some background on historic and modern computing technology.
 
-## Reading for this section
+{% include reading.html section="Chapter 1" %}
 
-*Computer Organization and Design* Chapter 1.
+## Turing Lecture
 
-## Turing Lecture **VIDEO**
-
-**READING:** *Computer Organization and Design* Sections 1.1, 1.2, 1.3.
+{% include reading.html section="Sections 1.1, 1.2, 1.3" %}
 
 Before diving into anything, I'd like you to take about an hour to watch the Turing Lecture given by John Hennessy and David Patterson.
+It's a relatively long video (and the longest I'll ask you to watch), but it's packed full of interesting historical information and future prognostications by two preeminent computer architecture researchers.
 The [Turing Award](https://amturing.acm.org/) is the "Nobel Prize of Computer Science."
 It's given once a year "for major contributions of lasting importance to computing."
 
@@ -26,23 +25,36 @@ We will come back again and again to the themes presented in this lecture.
 
 <iframe width="608" height="402" src="https://www.youtube.com/embed/3LVeEjsn8Ts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Computing technology past to present **VIDEO**
+{% include prompt.html content="
+What surprised you the most in the Turing Lecture?
 
-**READING:** *Computer Organization and Design* Sections 1.4, 1.5.
+What questions do you have?
+The audience was mostly computer architecture researchers, so I'm sure there are many things that didn't make sense and/or didn't have enough context.
+I'm happy to go into more depth on anything!
+"
+%}
+
+## Computing technology past to present
+
+{% include reading.html section="Sections 1.4, 1.5" %}
+
+Now, let's briefly look at computing architecture history and see how we got to where we are today.
+This video describes a brief history of computer architecture and modern process technology.
 
 {% include video.html id="0_rjw5iyf0" %}
 
-Video describes a brief history of computer architecture and modern process technology.
+And, to give this further context, here's an interview with someone who was actually there!
+This is an interview with Jean Bartik, one of the first programmers.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aPweFhhXFvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Video interview with Jean Bartik, one of the first programmers.
+## Moore's Law and Dennard scaling
 
-## Moore's Law and Dennard scaling **VIDEO**
+You all have probably heard of [Moore's Law](https://en.wikipedia.org/wiki/Moore%27s_law) which *doesn't* say "processors get twice as fast every 18 months".
+Instead, Moore's Law is an *economic*, not technical, argument that we'll be able to find a way to manufacture twice as many transistors per chip every 12-24 months.
+This video discusses Moore's Law and the driver of Moore's Law, [*Dennard Scaling*](https://en.wikipedia.org/wiki/Dennard_scaling).
 
 {% include video.html id="0_xb6nu47m" %}
-
-This video discusses Moore's Law and the driver of Moore's Law, Dennard Scaling.
 
 If you are interested, you can read the [original paper by Moore](https://newsroom.intel.com/wp-content/uploads/sites/11/2018/05/moores-law-electronics.pdf) from 1965.
 It's a quick read, and it's interesting to see what a visionary was thinking about back in the 60's!
@@ -53,16 +65,30 @@ Now that we've discussed Moore's Law and Dennard Scaling, I want to call your at
 
 <iframe width="608" height="402" src="https://www.youtube.com/embed/3LVeEjsn8Ts?start=2192&end=2344" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Energy and Power of CMOS Devices **VIDEO**
+Hennessy talked about a paper called ["There's Plenty of Room at the Top"](https://science.sciencemag.org/content/368/6495/eaam9744).
+If you're interested to read more, you can download the [PDF](https://science.sciencemag.org/content/368/6495/eaam9744/tab-pdf) if you log into the Campus VPN.
 
-**READING:** *Computer Organization and Design* Sections 1.7, 1.8.
+{% include prompt.html content="
+Why do you think Python matrix multiply is over 60,000x slower than it could be?
+Why would the Python developers do such a bad job?
+" %}
 
-{% include video.html id="0_zt36nhg3" %}
+## Energy and Power of CMOS Devices
+
+{% include reading.html section="Sections 1.7, 1.8" %}
+
+First, let's talk about how to reason about the energy and power of computer chips (also called [CMOS or complementary metal-oxide semiconductor](https://en.wikipedia.org/wiki/CMOS)).
+In this video, I talk about some of the key contributing factors to the energy and power of these devices.
+
+{% include video.html %}
+
+Finally, let's look at the trends in the past ~50 years or so.
+Now that we have an idea of what contributes to the power dissipation of devices, we can see why today's processors aren't as much faster as last year's designs as they used to be.
+
+{% include video.html id="1_tlwrtx1k" %}
 
 This video talks about how power and energy relate, how transistors work, and brings in how this caused the end of Moore's Law
 
 ## **QUIZ** CMOS Energy, Power, and Moore's Law
 
-[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/420533)
-
-[Next up: How to evaluate computer systems.](./evaluation.md)
+{% include quiz.html id="" %}
