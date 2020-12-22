@@ -15,13 +15,39 @@ body {
     margin-top: 10px;
     margin-left: 3px;
   }
+  width: 100%;
 }
 
 .prompt {
-  padding: 10px;
-  background-color: #002855;
+  padding: 15px;
+  background-color: $secondary;
   border-radius: 25px;
+  margin-bottom: 10px;
   color: white;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.reading {
+  padding: 15px;
+  background-color: $primary;
+  border-radius: 25px;
+  margin-bottom: 10px;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p.section {
+    margin-left: 5px;
+  }
 }
 
 @include media-breakpoint-up(md) {

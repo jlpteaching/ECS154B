@@ -1,0 +1,15 @@
+
+<div class="reading">
+
+<h3> Reading </h3>
+
+<p>
+{% if include.book %}
+<i>{{include.book}}</i>
+{% else %}
+<i> Computer Organization and Design </i>
+{% endif %}
+</p>
+<p class="section"><b>{{ include.section }}</b></p>
+
+</div>
