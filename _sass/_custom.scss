@@ -17,6 +17,13 @@ body {
   }
 }
 
+.prompt {
+  padding: 10px;
+  background-color: #002855;
+  border-radius: 25px;
+  color: white;
+}
+
 @include media-breakpoint-up(md) {
   .navbar {
     line-height: 3;
