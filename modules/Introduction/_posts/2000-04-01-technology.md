@@ -90,7 +90,7 @@ This video talks about how power and energy relate, how transistors work, and br
 
 {% include prompt.html content="
 What is the number of cores and frequency of the chip in your laptop or phone?
-Is it "faster" or "slower" than the high-performance chips in 2010 with 8 cores and running at 3 GHz?
+Is it 'faster' or 'slower' than the high-performance chips in 2010 with 8 cores and running at 3 GHz?
 
 What about today's highest performance chips?
 How do they compare?
