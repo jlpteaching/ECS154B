@@ -1,5 +1,6 @@
 ---
 title: Computer System Performance
+discussion: 791101413332615208
 ---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/efficiency.png)

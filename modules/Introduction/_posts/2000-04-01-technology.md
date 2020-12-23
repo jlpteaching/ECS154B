@@ -1,5 +1,6 @@
 ---
 title: Current Computing Technology
+discussion: 791101292319735848
 ---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/log_scale.png)
