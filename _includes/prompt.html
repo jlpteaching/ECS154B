@@ -8,13 +8,17 @@
 {% if page.discussion %}
 
 <p>
-<a href="https://discord.com/channels/791087361273757726/{{ page.discussion }}/" target="_blank"><i class="fab fa-discord"></i> Discuss in Discord! <i class="fas fa-external-link-alt"></i></a>
+<a href="discord://discordapp.com/channels/791087361273757726/{{ page.discussion }}/"><i class="fab fa-discord"></i> Discuss in the Discord app! <i class="fas fa-external-link-alt"></i></a>
+<br/>
+<a href="https://discord.com/channels/791087361273757726/{{ page.discussion }}/" target="_blank">Or, on the web</a>
 </p>
 
 {% else %}
 
 <p>
-<a href="https://discord.com/channels/791087361273757726/" target="_blank"><i class="fab fa-discord"></i> Discuss in Discord! <i class="fas fa-external-link-alt"></i></a>
+<a href="discord://discordapp.com/channels/791087361273757726/"><i class="fab fa-discord"></i> Discuss in the Discord app! <i class="fas fa-external-link-alt"></i></a>
+<br/>
+<a href="discord://discord.com/channels/791087361273757726/" target="_blank">Or, on the web</a>
 </p>
 {% endif %}
 
