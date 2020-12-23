@@ -34,13 +34,14 @@ For class-wide questions (e.g., anything more than one person might be intereste
 
 #### Office hours
 
-[*Office Hours*](https://ucdaviscoe.zoom.us/my/jlowepower): Tuesdays from 4:30-5:30, or by appointment.
+[*Office Hours*](https://discord.com/channels/791087361273757726/791101824496697375): Tuesdays from 4:30-5:30, or by appointment.
 
 These office hours can be used to discuss anything you would like.
 The discussion topic doesn't have to be class related or even computer architecture related.
 If you need to discuss something in private, let me know (e.g., via chat on zoom) and I can create a waiting room for others while we talk privately.
 
-*Office Location*: Use the [Zoom link](https://ucdaviscoe.zoom.us/my/jlowepower) (<https://ucdaviscoe.zoom.us/my/jlowepower>) to join during office hours.
+*Office Location*: I'll be using the [Office Hours Discord Channel](https://discord.com/channels/791087361273757726/791101824496697375) this quarter.
+However, you can also find me on the following [Zoom link](https://ucdaviscoe.zoom.us/my/jlowepower) (<https://ucdaviscoe.zoom.us/my/jlowepower>) if needed.
 
 Please suggest a meeting time when you email me for an appointment.
 You can use [my calendar](https://calendar.google.com/calendar/embed?src=jlowepower%40ucdavis.edu&ctz=America%2FLos_Angeles) to quickly find a time I am available.
@@ -72,7 +73,7 @@ You will be able to sign up for your preferred discussion time during the first 
 
 #### Discussion times and locations
 
-Please register for a discussion time on [this document]().
+Please register for a discussion time on [Discord](https://discord.com/channels/791087361273757726/791105058917842945).
 Do your best to evenly sign up for times.
 I believe having fewer people in each discussion will help everyone be able to participate and learn better.
 
@@ -86,11 +87,8 @@ However, just as a quick reminder below are some common etiquette ideas that I'v
 
 * **Be patient.** Remote meetings introduce communication *latency* and *synchronization* issues (things we'll be learning about this this class, BTW). Please be patient with everyone. This often means pausing for longer than you think is necessary when talking, putting up with minor annoyances (e.g., someone interrupting you), and putting up with poor connections.
 * **Mute your microphone unless you are speaking.** All too often there is feedback between microphones and speakers. Often, you can't tell that it's your computer that's causing feedback issues for everyone else. Also, I've experienced other people in the local environment causing distractions when they don't mean (e.g., my cat likes to meow at me while I'm talking sometimes).
-* **Set your full name in zoom.** Click the "participants button at the bottom, then click "more" next your name. From there you can rename yourself.
 * **(Try to) Enable video.** If your bandwidth supports it and you have a webcam, everyone will be more engaged if you can see each others' faces. Using the "gallery view" on zoom allows you to see everyone at once. The option is in the upper right (not speaker view). If you're experiencing lag or poor connection, you can disable video to try to improve your experience.
-* **Use the phone if you have a poor connection.** The zoom invite link will have a phone number that you can call into. You can log into the computer and disable audio and video then use the phone to call in.
-* **Use the raise hand feature.** This way I can recognize that you would like to speak. This is also under the "participants" menu in zoom.
-* **Use the chat feature.** If you find that you can't get a word in edgewise because others are dominating the conversation, then type it! I will be watching the chat whenever we're in discussions or office hours.
+* **Use the text channel.** If you find that you can't get a word in edgewise because others are dominating the conversation, then type it! I will be watching the chat whenever we're in discussions or office hours.
 * **Stay engaged.** Don't open up other programs/internet/reddit, etc.
 
 ## Class Resources
@@ -101,6 +99,7 @@ All of the material for this course is online.
 We will use [this website]({{'/' | relative_url}}) as the main website and entry point for all course information.
 This will also include links to all of the lecture videos and quizzes.
 You can find the source for this website on [GitHub](https://github.com/jlpteaching/ECS154B).
+
 ### Gradescope
 
 We will use [Gradescope](https://www.gradescope.com/courses/216663) for all assignments including lab submissions and returning quizzes, the midterm, and the final.
@@ -115,20 +114,26 @@ However, if you submit after the deadline, the [late policy](#late-assignments) 
 
 ### Online discussions
 
-We will use TBA for class discussions outside of the classroom.
-If you haven't used Campuswire before, it's a cool tool that is essentially a message board for the class.
-It is a much more polished and modern website compared to Piazza.
-Both the TAs and I will be on Campuswire to answer questions.
+We will use [Discord](https://discord.com/) for class discussions outside of the classroom.
+After the pre-quarter survey, this was the most liked and least disliked option.
+If you, like me, haven't used Discord before, it's a essentially a place to hang out like a classroom or a lobby with both text and voice/video options.
 
-It's best to ask your questions on Campuswire.
+It's best to ask your questions on Discord.
 That way, all of your classmates can see the answer instead of emailing the TAs or me.
 Additionally, you might get a much faster response from one of your classmates!
-Through asking and answering questions on Campuswire, you improve your understanding of the material, and improve other students' understanding as well.
+Through asking and answering questions on Discord, you improve your understanding of the material, and improve other students' understanding as well.
 
-In the spirit of the above, please ask questions as public questions on Campuswire, if possible.
-This way, your question, and the answer to your question, can help somebody else who might have the same question.
-We will change questions asked privately to public, if we deem it appropriate.
-If your question involves code you've written, or is about a personal issue, we will leave those private.
+#### Using Discord
+
+You should have received an email with an invite to our Discord server.
+If you did not receive the email, Canvas also has a link.
+
+There are a few steps to complete once you click the invite link for the server:
+
+1. Sign the Code of Conduct (required to see any channels)
+2. See the `#start-here` channel (which has this information)
+3. Send a message on the `#verify-email` channel with your email to register yourself. After this, you will be able to see all of the channels in the server.
+4. Sign up for a discussion section on the `#sign-up` channel.
 
 ### Regrade Requests
 
