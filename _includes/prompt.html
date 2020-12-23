@@ -1,8 +1,21 @@
 
 <div class="prompt">
 
-<h3> Discussion Prompt </h3>
+<h3> Discussion </h3>
 
 {{ include.content }}
+
+{% if page.discussion %}
+
+<p>
+<a href="https://discord.com/channels/791087361273757726/{{ page.discussion }}/" target="_blank"><i class="fab fa-discord"></i> Discuss in Discord! <i class="fas fa-external-link-alt"></i></a>
+</p>
+
+{% else %}
+
+<p>
+<a href="https://discord.com/channels/791087361273757726/" target="_blank"><i class="fab fa-discord"></i> Discuss in Discord! <i class="fas fa-external-link-alt"></i></a>
+</p>
+{% endif %}
 
 </div>
