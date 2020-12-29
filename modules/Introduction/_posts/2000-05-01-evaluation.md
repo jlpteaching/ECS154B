@@ -68,5 +68,3 @@ Can you think of other comparison metrics which compare things other than perfor
 ## **QUIZ** Performance and Evaluation
 
 {% include quiz.html id="105390" %}
-
-[Next up: Processor Architecture.](../processor/index.md)
