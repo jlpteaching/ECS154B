@@ -51,7 +51,7 @@ This video shows an example of running a benchmark and applying the Iron Law.
 
 {% include video.html id="0_f53fz5rk" %}
 
-{% include quiz.html %}
+{% include quiz.html id="105248" %}
 
 ## Comparing Systems with Speedup
 
@@ -67,6 +67,6 @@ Can you think of other comparison metrics which compare things other than perfor
 
 ## **QUIZ** Performance and Evaluation
 
-{% include quiz.html %}
+{% include quiz.html id="105390" %}
 
 [Next up: Processor Architecture.](../processor/index.md)
