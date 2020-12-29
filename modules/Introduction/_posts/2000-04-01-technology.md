@@ -100,4 +100,4 @@ How do they compare?
 
 ## **QUIZ** CMOS Energy, Power, and Moore's Law
 
-{% include quiz.html id="" %}
+{% include quiz.html id="105243" %}
