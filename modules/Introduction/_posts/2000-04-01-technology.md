@@ -42,7 +42,7 @@ I'm happy to go into more depth on anything!
 Now, let's briefly look at computing architecture history and see how we got to where we are today.
 This video describes a brief history of computer architecture and modern process technology.
 
-{% include video.html id="0_rjw5iyf0" %}
+{% include video.html id="1_fh2rpo26" %}
 
 And, to give this further context, here's an interview with someone who was actually there!
 This is an interview with Jean Bartik, one of the first programmers.
