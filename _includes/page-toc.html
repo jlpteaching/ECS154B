@@ -1,0 +1,9 @@
+
+{% for post in site.posts %}
+{% assign name=post.id | split: '/' | last %}
+{% if name != include.name %}
+    {% continue %}
+{% endif %}
+{% assign temp = post.content | markdownify %}
+{% include toc.html html=temp base_url=post.url h_max=3 %}
+{% endfor %}
