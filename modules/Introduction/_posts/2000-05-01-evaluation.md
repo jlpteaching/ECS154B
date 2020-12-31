@@ -7,8 +7,6 @@ discussion: 791101413332615208
 
 In this section, we will discuss how to evaluate the "goodness" of computing systems and some simple models for their performance.
 
-## Reading for this section
-
 {% include reading.html section="Section 1.6 and 1.9" %}
 
 ## What determines the "value" of a system?
