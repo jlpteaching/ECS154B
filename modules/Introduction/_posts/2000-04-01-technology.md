@@ -81,7 +81,7 @@ Why would the Python developers do such a bad job?
 First, let's talk about how to reason about the energy and power of computer chips (also called [CMOS or complementary metal-oxide semiconductor](https://en.wikipedia.org/wiki/CMOS)).
 In this video, I talk about some of the key contributing factors to the energy and power of these devices.
 
-{% include video.html %}
+{% include video.html id="1_sqskmnog" %}
 
 Finally, let's look at the trends in the past ~50 years or so.
 Now that we have an idea of what contributes to the power dissipation of devices, we can see why today's processors aren't as much faster as last year's designs as they used to be.
