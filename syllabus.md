@@ -53,9 +53,10 @@ Normally my office location is 3049 Kemper Hall, but now it's home with my cats!
 
 **Maryam Babaie** (<mbabaie@ucdavis.edu>)
 
-*Office Hours*: TBA
+*Office Hours Time*: Tuesdays from 1-2 pm.
 
-*Office Location*: TBA
+*Office Location*: [Office Hours Discord Channel](https://discord.com/channels/791087361273757726/791101824496697375), or [Zoom link](https://ucdavis.zoom.us/my/babaie) if needed.
+
 
 ### Discussion
 
