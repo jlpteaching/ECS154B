@@ -34,7 +34,7 @@ For class-wide questions (e.g., anything more than one person might be intereste
 
 #### Office hours
 
-[*Office Hours*](https://discord.com/channels/791087361273757726/791101824496697375): Tuesdays from 4:30-5:30, or by appointment.
+[*Office Hours*](https://discord.com/channels/791087361273757726/791101824496697375): Wednesdays from 9:30-10:30, or by appointment.
 
 These office hours can be used to discuss anything you would like.
 The discussion topic doesn't have to be class related or even computer architecture related.
