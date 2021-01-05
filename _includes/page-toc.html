@@ -5,6 +5,6 @@
     {% continue %}
 {% endif %}
 {% assign temp = post.content | markdownify %}
-{% assign purl = post.url | relative_url}
+{% assign purl = post.url | relative_url %}
 {% include toc.html html=temp base_url=purl h_max=3 %}
 {% endfor %}
