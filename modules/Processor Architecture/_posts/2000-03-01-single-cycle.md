@@ -59,7 +59,7 @@ In the next video, I go through a couple of example instructions with the datapa
 
 ## **QUIZ** Single cycle design
 
-{% include quiz.html %}
+{% include quiz.html id="109475" %}
 
 ## Performance and limits to a single cycle design
 
@@ -86,4 +86,4 @@ However, we have freedom to make any design that we want, and this is an interes
 
 ### **QUIZ** The Single cycle design's performance
 
-{% include quiz.html %}
+{% include quiz.html id="109748" %}
