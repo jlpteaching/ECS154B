@@ -56,7 +56,7 @@ Now, we can use the following design (what you will be implementing in [Assignme
 
 In the next video, I go through a couple of example instructions with the datapath that you will be implementing in [Assignment 2](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-2.html).
 
-{% include video.html %}
+{% include video.html id="1_lbwfhrfe" %}
 
 ## **QUIZ** Single cycle design
 
