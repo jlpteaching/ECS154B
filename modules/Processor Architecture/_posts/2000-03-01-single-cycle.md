@@ -1,5 +1,6 @@
 ---
 title: Single Cycle CPU Design
+discussion: 796055763403407410
 ---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/old_days.png)
