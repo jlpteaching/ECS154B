@@ -1,5 +1,6 @@
 ---
 title: "Pipelined CPU Design"
+discussion: 796055783183613984
 ---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/is_it_worth_the_time.png)
@@ -31,7 +32,18 @@ So, you're stuck with me talking about laundry.
 
 {% include reading.html section="Section 4.6" %}
 
-This video explains how to modify the single-cycle DINO CPU to be pipelined and goes through an example of how a few instructions may be executed.
+The videos in this section use the DINO CPU design from Spring Quarter 2020 which is slightly different than the design for this quarter.
+The main difference is this quarter we have a `NextPC` unit which outputs the address of the next instruction and also whether a branch is "taken".
+This is equivalent to the two muxes at the "top" of the execute stage in the previous design.
+
+{% include prompt.html content="
+There is one other difference between these two designs: the *extra* adder in the fetch stage.
+
+This extra adder *will be needed* in the design for this quarter as well.
+Think about why we need to have two places where we calculate the next PC value"
+%}
+
+The next video explains how to modify the single-cycle DINO CPU to be pipelined and goes through an example of how a few instructions may be executed.
 
 {% comment %}
 Add video about pc+4 and tying our design to the old one.
@@ -69,6 +81,13 @@ This video discusses the performance of a pipelined CPU.
 
 Now that we understand the basics of pipelining, let's look at some of the limitations and requirements to implement real system.
 
+{% include prompt.html content="
+Before the next section, think about if three are any combinations of instructions that might cause problems for the pipelined implementation.
+
+Can you think of a metaphor with the laundry example above? Or maybe some other example of pipelining in 'real life'?
+"
+%}
+
 Note: these lectures will be useful when completing [Part II](https://github.com/jlpteaching/dinocpu-wq21/blob/master/assignments/assignment-3.md#part-ii-implementing-forwarding) of [assignment 3](https://github.com/jlpteaching/dinocpu-wq21/blob/master/assignments/assignment-3.md).
 
 ### Limits of our basic pipelined design and data hazards
@@ -78,10 +97,6 @@ Note: these lectures will be useful when completing [Part II](https://github.com
 Through the following videos we will be understanding data hazards and the way the affect the pipeline performance and implementation.
 These videos are bit more detailed than some of the others.
 I suggest you give yourself enough time to go through the videos a couple of times to make sure you understand these concepts.
-
-{% include prompt.html content="
-As always, use the discussion board to discuss!
-" %}
 
 #### Detailed examples of data hazards and dependencies
 
@@ -127,6 +142,11 @@ This video introduces forwarding to handle data hazards.
 
 This video talks about a special kind of data hazard: load to use hazards.
 
+{% include prompt.html content="
+So, we don't want to have to make the compiler insert `nop`s and instead we rely on the hardware to detect and handle data hazards.
+However, do you think that if the compiler knew about the microarchitecture it could emit better code?
+" %}
+
 ### **QUIZ** Data hazards
 
 {% include quiz.html id="111159" %}
@@ -163,7 +183,7 @@ This video talks about how to handle exceptions/interrupts/errors in a pipelined
 
 ## Putting it all together: examples of pipelined execution
 
-{% include video.html id="0_irjgkd8a" %}
+{% include video.html %}
 
 This video goes over an end-to-end example of the pipelined DINO CPU.
 This video should be helpful on [Assignment 3.2](https://github.com/jlpteaching/dinocpu-wq21/blob/master/assignments/assignment-3.md#part-ii-implementing-forwarding)
