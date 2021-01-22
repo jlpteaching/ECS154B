@@ -30,13 +30,17 @@ So, you're stuck with me talking about laundry.
 ### Pipelined design for the DINO CPU
 
 {% include reading.html section="Section 4.6" %}
-{% comment %}
-If redo this video, then I want to use a *generic* implementation (e.g., draw one or use the book.)
-{% endcomment  %}
 
 This video explains how to modify the single-cycle DINO CPU to be pipelined and goes through an example of how a few instructions may be executed.
 
+{% comment %}
+Add video about pc+4 and tying our design to the old one.
+{% endcomment  %}
+
 {% include video.html id="0_g7shogls" %}
+{% comment %}
+If redo this video, then I want to use a *generic* implementation (e.g., draw one or use the book.)
+{% endcomment  %}
 
 ### Example execution in pipelined DINO CPU
 
@@ -59,7 +63,7 @@ This video discusses the performance of a pipelined CPU.
 
 ### **QUIZ** Basic pipelining
 
-{% include quiz.html %}
+{% include quiz.html id="111141" %}
 
 ## Pipeline hazards
 
@@ -75,7 +79,9 @@ Through the following videos we will be understanding data hazards and the way t
 These videos are bit more detailed than some of the others.
 I suggest you give yourself enough time to go through the videos a couple of times to make sure you understand these concepts.
 
-As always, don't hesitate to ask questions on [Discord]() or during discussions and office hours.
+{% include prompt.html content="
+As always, use the discussion board to discuss!
+" %}
 
 #### Detailed examples of data hazards and dependencies
 
@@ -84,6 +90,9 @@ This video is *very* detailed.
 You may want to watch the next video first which goes over the example at a higher level and then come back to this video.
 
 {% include video.html id="0_agprwal6" %}
+{% comment %}
+If redo this video, then I want to use a *generic* implementation (e.g., draw one or use the book.)
+{% endcomment  %}
 
 This video introduces data hazards and goes over a very detailed example.
 
@@ -120,7 +129,7 @@ This video talks about a special kind of data hazard: load to use hazards.
 
 ### **QUIZ** Data hazards
 
-{% include quiz.html %}
+{% include quiz.html id="111159" %}
 
 ### Control hazards and branch prediction
 
@@ -161,4 +170,4 @@ This video should be helpful on [Assignment 3.2](https://github.com/jlpteaching/
 
 ### **QUIZ** Pipelining review
 
-{% include quiz.html %}
+{% include quiz.html id="111182" %}
