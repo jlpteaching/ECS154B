@@ -183,7 +183,7 @@ This video talks about how to handle exceptions/interrupts/errors in a pipelined
 
 ## Putting it all together: examples of pipelined execution
 
-{% include video.html %}
+{% include video.html id="1_ip2yuf1h" %}
 
 This video goes over an end-to-end example of the pipelined DINO CPU.
 This video should be helpful on [Assignment 3.2](https://github.com/jlpteaching/dinocpu-wq21/blob/master/assignments/assignment-3.md#part-ii-implementing-forwarding)
