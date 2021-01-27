@@ -1,7 +1,11 @@
 
 <div class="reading">
 
+{% if include.optional %}
+<h3> *Optional* Reading </h3>
+{% else %}
 <h3> Reading </h3>
+{% endif %}
 
 <p>
 {% if include.book %}
