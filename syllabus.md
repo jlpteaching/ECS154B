@@ -253,8 +253,8 @@ Labs are due at 11:59 PM on the date listed below.
 * [Assignment 1](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-1.html) (2 weeks, 8%). Due 1/18.
 * [Assignment 2](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-2.html) (1 weeks, 8%). Due 1/25.
 * [Assignment 3.1](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-3.html) (1 week, 4%). Due 2/5.
-* [Assignment 3.2](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-3.html#part-ii-implementing-forwarding) (2 week, 4%). Due 2/15.
-* [Assignment 4](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-4.html) (2 weeks, 8%). Due 3/1.
+* [Assignment 3.2](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-3.html#part-ii-implementing-forwarding) (2 week, 4%). Due 2/14.
+* [Assignment 4](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-4.html) (2 weeks, 8%). Due 2/28.
 * [Assignment 5](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-5.html) (2 weeks, 8%). Due 3/12.
 
 #### Late Assignments
