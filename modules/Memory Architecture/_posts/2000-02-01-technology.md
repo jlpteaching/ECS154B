@@ -1,18 +1,19 @@
 ---
 title: "Memory Technology"
+discussion: 809206696055668746
 ---
 
 ![XKCD comic](https://imgs.xkcd.com/comics/obsolete_technology.png)
 
 ## Reading for this section
 
-*Computer Organization and Design* Sections 5.1-5.2.
+{% include reading.html section="Sections 5.1-5.2" %}
 
-## Introduction: Why does memory architecture matter? **VIDEO**
-
-{% include video.html id="0_t7ft823s" %}
+## Introduction: Why does memory architecture matter?
 
 This video describes why we're learning about memory architecture and shows an example of memory from a real (old) system.
+
+{% include video.html id="0_t7ft823s" %}
 
 Unfortunately, the video didn't show the board-level wires very well.
 Here's a better picture.
@@ -21,9 +22,9 @@ Here, you can see the squiggly lines that I was talking about to make sure that 
 
 ![PCB trace for memory](/img/pcbtrace.png)
 
-## Memory technology **VIDEO**
+## Memory technology
 
-**READING:** *Computer Organization and Design* Section 5.2
+{% include reading.html section="Section 5.2" %}
 
 {% include video.html id="0_jpfyz8c7" %}
 
@@ -45,7 +46,7 @@ This video talks about how SRAM and DRAM cells work.
 
 This video looks at the characteristics we care about for memory technologies, and also talks about a few other storage-based technologies (Flash, disk, and 3D-XPoint).
 
-## Moving data around **VIDEO**
+## Moving data around
 
 Now that we've talked about how we want to have different places to store data, the next question is "what is the technology required to move data around?"
 
@@ -53,6 +54,4 @@ Now that we've talked about how we want to have different places to store data, 
 
 ## **QUIZ** Memory technology
 
-[Use gradescope to take the quiz.](https://www.gradescope.com/courses/105214/assignments/496443)
-
-[Next up: Caches and the memory hierarchy](./caches.md)
+{% include quiz.html %}
