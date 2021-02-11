@@ -26,9 +26,11 @@ Here, you can see the squiggly lines that I was talking about to make sure that 
 
 {% include reading.html section="Section 5.2" %}
 
-{% include video.html id="0_jpfyz8c7" %}
-
 This video introduces the technology behind general memory arrays.
+This shows what's going on inside your DRAM chips and inside the SRAM arrays that are used for caches.
+At the base, all of these things are just *memory arrays* though they may be used for a variety of different things (e.g., main memory, cache, or even storage).
+
+{% include video.html id="0_jpfyz8c7" %}
 
 Here's a good picture, from wikipedia, showing what a set of DRAM banks looks like.
 This is 1 mega*bit*.
@@ -38,13 +40,18 @@ Each sub-array has 2^13 bits or 8192 bits.
 
 ![DRAM die](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/MT4C1024-HD.jpg/1280px-MT4C1024-HD.jpg)
 
+Now that we've introduced the idea of memory arrays, the next video talks specifically about two memory technologies that are very common: SRAM or *static* random access memory and DRAM or *dynamic* RAM.
+Note that this use of "static" and "dynamic" is different than in the processor section where we were talking about the compiler or runtime.
+Now, *static* means stays there forever (at least until the power is shut off) and *dynamic* means that it loses its data on a read.
+
 {% include video.html id="0_6hbs8kj5" %}
 
-This video talks about how SRAM and DRAM cells work.
+This video looks at the characteristics we care about for memory technologies, and also talks about a few other storage-based technologies (Flash, disk, and 3D-XPoint).
 
 {% include video.html id="0_x6zpqmef" %}
-
-This video looks at the characteristics we care about for memory technologies, and also talks about a few other storage-based technologies (Flash, disk, and 3D-XPoint).
+{% comment %}
+It would be good to add a row to the table which is "RAM" and whether it's byte or block addressable
+{% endcomment %}
 
 ## Moving data around
 
