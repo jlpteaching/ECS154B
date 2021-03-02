@@ -7,7 +7,7 @@ discussion: 816348268388810752
 
 ## Amdahl's law revisited
 
-{% include reading.html section="Section 6.2"}
+{% include reading.html section="Section 6.2" %}
 
 Just a quick video applying Amdahl's Law as it was originally intended, to parallel systems.
 
