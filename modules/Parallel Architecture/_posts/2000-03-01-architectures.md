@@ -41,4 +41,4 @@ This implementation is going to be the motivation our next few videos about the 
 
 ## **QUIZ** Parallel architectures
 
-{% include quiz.html %}
+{% include quiz.html id="116887" %}
