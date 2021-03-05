@@ -15,4 +15,4 @@ Just a quick video applying Amdahl's Law as it was originally intended, to paral
 
 ## **QUIZ** Parallel performance
 
-{% include quiz.html %}
+{% include quiz.html id="116766" %}
