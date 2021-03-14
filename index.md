@@ -61,7 +61,7 @@ However, for this first section *there will be no late penalty*.
 ### [Parallel Architectures]({{"/modules/parallel architecture/index/" | relative_url}}) (About two weeks: 3/5-3/12)
 
 * [Parallel systems' performance]({{"/modules/parallel architecture/performance/" | relative_url}})
-* [Parallel architectures and programming]({{"/modules/parallel architecture/architectures/" | relative_url}}) ([Assignment 5](https://jlpteaching.github.io/dinocpu-wq21/assignments/assignment-5.html) Due 3/12)
+* [Parallel architectures and programming]({{"/modules/parallel architecture/architectures/" | relative_url}}) ([Assignment 5](https://jlpteaching.github.io/dinocpu-wq21/assignments/lab5/assignment5.html) Due 3/12)
 
 ## Calendar
 
